@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f4f7fb" />
+  <title>JPT 學習資料庫</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero database-hero">
+      <div>
+        <p class="eyebrow">JPT Study Database</p>
+        <h1>學習資料庫</h1>
+        <p class="muted">把已經學過的內容整理在這裡，隨時回來快速複習。</p>
+      </div>
+    </header>
+
+    <nav class="top-nav" aria-label="主要導覽">
+      <a class="nav-link" href="./index.html">今日學習</a>
+      <a class="nav-link active" href="./database.html">學習資料庫</a>
+    </nav>
+
+    <section class="card db-intro">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Quick Review</p>
+          <h2>快速複習</h2>
+        </div>
+        <span class="badge">持續更新</span>
+      </div>
+      <p class="goal">目前整理了五十音、已學單字與已學文法。之後每天的新內容都可以繼續累積到這裡。</p>
+      <div class="db-stats">
+        <div><strong id="kanaCount">0</strong><span>基本假名</span></div>
+        <div><strong id="vocabCount">0</strong><span>已學單字</span></div>
+        <div><strong id="grammarCount">0</strong><span>文法重點</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Kana</p>
+          <h2>五十音總表</h2>
+        </div>
+        <button id="randomKanaBtn" class="mini-btn">隨機抽一題</button>
+      </div>
+
+      <div class="segmented" id="kanaMode">
+        <button class="seg-btn active" data-mode="both">平假名＋片假名</button>
+        <button class="seg-btn" data-mode="hiragana">平假名</button>
+        <button class="seg-btn" data-mode="katakana">片假名</button>
+      </div>
+
+      <div id="randomKanaBox" class="random-box hidden">
+        <span class="muted">這個假名怎麼念？</span>
+        <strong id="randomKanaChar">ア</strong>
+        <button id="revealKanaBtn" class="ghost">顯示答案</button>
+        <p id="randomKanaAnswer" class="result"></p>
+      </div>
+
+      <div class="gojuon-wrap">
+        <div id="gojuonTable" class="gojuon-table"></div>
+      </div>
+
+      <div class="notes">
+        <strong>易混淆：</strong>
+        シ = shi ／ ツ = tsu ／ ソ = so ／ ン = n ／ ル = ru ／ レ = re
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Vocabulary</p>
+          <h2>已學單字庫</h2>
+        </div>
+      </div>
+      <input id="vocabSearch" class="db-search" type="search" placeholder="搜尋日文、讀音或中文，例如：車站、えき、駅" />
+      <div id="vocabDb" class="db-list"></div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Grammar</p>
+          <h2>已學文法庫</h2>
+        </div>
+      </div>
+      <div id="grammarDb" class="db-list"></div>
+    </section>
+  </main>
+
+  <script src="./database.js"></script>
+</body>
+</html>
