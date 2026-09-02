@@ -7,7 +7,7 @@
   <title>JPT 學習資料庫</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
-<body>
+<body class="database-page">
   <main class="container">
     <header class="hero database-hero">
       <div>
@@ -22,15 +22,39 @@
       <a class="nav-link active" href="./database.html">學習資料庫</a>
     </nav>
 
+    <section class="card quick-panel">
+      <div class="quick-panel-head">
+        <div>
+          <p class="eyebrow">Quick Access</p>
+          <h2>快速尋找</h2>
+        </div>
+        <span class="desktop-shortcut">按 <kbd>/</kbd> 可直接搜尋</span>
+      </div>
+
+      <div class="global-search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="globalSearch" class="global-search" type="search"
+          placeholder="搜尋假名、單字、讀音、中文或文法，例如：駅、車站、ました" />
+        <button id="clearGlobalSearch" class="search-clear hidden" type="button">清除</button>
+      </div>
+
+      <div id="globalSearchResults" class="global-results hidden"></div>
+
+      <div class="jump-links" aria-label="快速前往">
+        <a href="#kana-section"><span>あ</span><strong>五十音</strong></a>
+        <a href="#vocab-section"><span>単</span><strong>單字庫</strong></a>
+        <a href="#grammar-section"><span>文</span><strong>文法庫</strong></a>
+      </div>
+    </section>
+
     <section class="card db-intro">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Quick Review</p>
-          <h2>快速複習</h2>
+          <p class="eyebrow">Overview</p>
+          <h2>目前收錄</h2>
         </div>
         <span class="badge">持續更新</span>
       </div>
-      <p class="goal">目前整理了五十音、已學單字與已學文法。之後每天的新內容都可以繼續累積到這裡。</p>
       <div class="db-stats">
         <div><strong id="kanaCount">0</strong><span>基本假名</span></div>
         <div><strong id="vocabCount">0</strong><span>已學單字</span></div>
@@ -38,7 +62,7 @@
       </div>
     </section>
 
-    <section class="card">
+    <section class="card db-section" id="kana-section">
       <div class="section-head">
         <div>
           <p class="eyebrow">Kana</p>
@@ -70,27 +94,31 @@
       </div>
     </section>
 
-    <section class="card">
+    <section class="card db-section" id="vocab-section">
       <div class="section-head">
         <div>
           <p class="eyebrow">Vocabulary</p>
           <h2>已學單字庫</h2>
         </div>
+        <span id="vocabVisibleCount" class="count-label"></span>
       </div>
-      <input id="vocabSearch" class="db-search" type="search" placeholder="搜尋日文、讀音或中文，例如：車站、えき、駅" />
+      <input id="vocabSearch" class="db-search" type="search"
+        placeholder="只搜尋單字庫，例如：車站、えき、駅" />
       <div id="vocabDb" class="db-list"></div>
     </section>
 
-    <section class="card">
+    <section class="card db-section" id="grammar-section">
       <div class="section-head">
         <div>
           <p class="eyebrow">Grammar</p>
           <h2>已學文法庫</h2>
         </div>
       </div>
-      <div id="grammarDb" class="db-list"></div>
+      <div id="grammarDb" class="db-list grammar-grid"></div>
     </section>
   </main>
+
+  <button id="backTop" class="back-top hidden" type="button" aria-label="回到頁面頂端">↑</button>
 
   <script src="./database.js"></script>
 </body>
