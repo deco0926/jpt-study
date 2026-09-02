@@ -1,4 +1,5 @@
 const CATEGORY_LABELS = {
+  today:"今日專屬",
   vocab:"單字",
   hira:"平假名",
   kata:"片假名",
@@ -138,6 +139,7 @@ let selectedIndex = null;
 let testStartedAt = 0;
 let questionStartedAt = 0;
 let timerId = null;
+let todayLesson = null;
 
 const HISTORY_KEY = "jpt-selftest-history-v1";
 
@@ -289,6 +291,188 @@ function generateQuestions(scopes,count,difficulty,kanaRows){
     list.push(q);
   }
   return shuffle(list);
+}
+
+function cleanReading(reading=""){
+  return String(reading).split("/")[0].trim();
+}
+
+function inferTodayQuizCategory(item, lesson){
+  const text = [item.question,...(item.options || [])].join(" ");
+  const kanaItem = (lesson.kana?.items || []).find(k => text.includes(k.kana));
+  if(kanaItem){
+    const isKata = /[\u30A0-\u30FF]/.test(kanaItem.kana);
+    return {category:isKata ? "kata" : "hira", topic:kanaItem.kana};
+  }
+  const vocabItem = (lesson.vocab || []).find(v =>
+    text.includes(v.word) || (item.options || []).includes(v.meaning)
+  );
+  if(vocabItem) return {category:"vocab", topic:vocabItem.word};
+  const grammarItem = (lesson.grammar || []).find(g =>
+    text.includes(g.pattern.replaceAll("～","")) ||
+    (g.examples || []).some(e => text.includes(e.jp))
+  );
+  return {category:"grammar", topic:grammarItem?.pattern || "今日文法"};
+}
+
+function buildTodayQuestionBank(lesson){
+  const bank = [];
+  const kanaItems = lesson.kana?.items || [];
+  const vocabItems = lesson.vocab || [];
+  const grammarItems = lesson.grammar || [];
+
+  const kanaChars = [...new Set(kanaItems.map(x=>x.kana).filter(Boolean))];
+  const kanaReadings = [...new Set(kanaItems.map(x=>x.romaji).filter(Boolean))];
+
+  if(kanaChars.length >= 4 && kanaReadings.length >= 4){
+    kanaItems.forEach(k=>{
+      const category = /[\u30A0-\u30FF]/.test(k.kana) ? "kata" : "hira";
+      const forward = uniqueChoicesStrict(k.romaji,kanaReadings);
+      if(forward) bank.push({
+        category,topic:k.kana,row:getKanaRow(k.kana),level:1,
+        question:"「"+k.kana+"」的讀音是？",options:forward,answer:k.romaji
+      });
+      if(kanaItems.filter(x=>x.romaji===k.romaji).length===1){
+        const reverse = uniqueChoicesStrict(k.kana,kanaChars);
+        if(reverse) bank.push({
+          category,topic:k.kana,row:getKanaRow(k.kana),level:2,
+          question:"哪一個假名讀作「"+k.romaji+"」？",options:reverse,answer:k.kana
+        });
+      }
+    });
+  }
+
+  if(vocabItems.length >= 4){
+    const words = vocabItems.map(v=>v.word);
+    const meanings = vocabItems.map(v=>v.meaning);
+    vocabItems.forEach(v=>{
+      const meaningOptions = uniqueChoicesStrict(v.meaning,meanings);
+      if(meaningOptions) bank.push({
+        category:"vocab",topic:v.word,level:1,
+        question:"「"+v.word+"」是什麼意思？",options:meaningOptions,answer:v.meaning
+      });
+
+      const wordOptions = uniqueChoicesStrict(v.word,words);
+      if(wordOptions) bank.push({
+        category:"vocab",topic:v.word,level:2,
+        question:"哪個日文最接近「"+v.meaning+"」？",options:wordOptions,answer:v.word
+      });
+
+      const reading = cleanReading(v.reading);
+      if(reading && wordOptions) bank.push({
+        category:"vocab",topic:v.word,level:3,
+        question:"「"+reading+"」對應哪個今日單字？",options:shuffle([...wordOptions]),answer:v.word
+      });
+    });
+  }
+
+  const grammarExamples = [];
+  grammarItems.forEach(g => (g.examples || []).forEach(e=>{
+    if(e.jp && e.zh) grammarExamples.push({pattern:g.pattern,jp:e.jp,zh:e.zh});
+  }));
+  const jpPool = [...new Set(grammarExamples.map(x=>x.jp))];
+  const zhPool = [...new Set(grammarExamples.map(x=>x.zh))];
+  if(jpPool.length >= 4 && zhPool.length >= 4){
+    grammarExamples.forEach(e=>{
+      const zhOptions = uniqueChoicesStrict(e.zh,zhPool);
+      if(zhOptions) bank.push({
+        category:"grammar",topic:e.pattern,level:2,
+        question:"「"+e.jp+"」最接近哪個意思？",options:zhOptions,answer:e.zh
+      });
+      const jpOptions = uniqueChoicesStrict(e.jp,jpPool);
+      if(jpOptions) bank.push({
+        category:"grammar",topic:e.pattern,level:3,
+        question:"哪一句最接近「"+e.zh+"」？",options:jpOptions,answer:e.jp
+      });
+    });
+  }
+
+  (lesson.quiz || []).forEach(item=>{
+    if(item.type !== "choice" || !Array.isArray(item.options) || item.options.length !== 4) return;
+    const correct = item.options[item.answer];
+    if(correct === undefined) return;
+    const inferred = inferTodayQuizCategory(item,lesson);
+    bank.push({
+      category:inferred.category,topic:inferred.topic,level:2,
+      question:item.question,options:shuffle([...item.options]),answer:correct
+    });
+  });
+
+  return bank;
+}
+
+function generateTodayQuestions(lesson,count,difficulty){
+  const bank = buildTodayQuestionBank(lesson);
+  let filtered;
+  if(difficulty === "easy") filtered = bank.filter(q=>q.level===1);
+  else if(difficulty === "hard") filtered = bank.filter(q=>q.level>=2);
+  else filtered = bank.filter(q=>q.level<=2);
+
+  if(filtered.length < Math.min(4,count)) filtered = bank;
+  const unique = [];
+  const seen = new Set();
+  shuffle(filtered).forEach(q=>{
+    const sig=q.category+"|"+q.question+"|"+q.answer;
+    if(!seen.has(sig)){seen.add(sig);unique.push(q);}
+  });
+  return unique.slice(0,Math.min(count,unique.length));
+}
+
+async function loadTodayLesson(){
+  const status=document.querySelector("#todayTestStatus");
+  try{
+    const response=await fetch("./lessons/latest.json",{cache:"no-store"});
+    if(!response.ok) throw new Error("無法讀取今日教材");
+    todayLesson=await response.json();
+    document.querySelector("#todayLessonDate").textContent=todayLesson.date || "今日";
+    document.querySelector("#todayLessonTitle").textContent=todayLesson.title || "今日教材";
+    document.querySelector("#startTodayTest").disabled=false;
+    const bank=buildTodayQuestionBank(todayLesson);
+    status.textContent="目前可隨機組合約 "+bank.length+" 種題型／題目。";
+  }catch(err){
+    todayLesson=null;
+    document.querySelector("#todayLessonTitle").textContent="今日教材載入失敗";
+    status.textContent=err.message;
+    document.querySelector("#startTodayTest").disabled=true;
+  }
+}
+
+function startTodayTest(){
+  if(!todayLesson) return;
+  const count=Number(document.querySelector("#todayQuestionCount").value);
+  const difficulty=document.querySelector("#todayDifficulty").value;
+  const generated=generateTodayQuestions(todayLesson,count,difficulty);
+  if(!generated.length){
+    document.querySelector("#todayTestStatus").textContent="今日教材目前不足以產生四選一考卷。";
+    return;
+  }
+
+  questions=generated;
+  const scopes=[...new Set(generated.map(q=>q.category))];
+  testConfig={
+    mode:"today",
+    scopes,
+    count:generated.length,
+    requestedCount:count,
+    difficulty,
+    kanaRows:[],
+    lessonDate:todayLesson.date || "",
+    lessonTitle:todayLesson.title || ""
+  };
+  currentIndex=0;
+  answers=[];
+  selectedIndex=null;
+  testStartedAt=performance.now();
+  questionStartedAt=performance.now();
+
+  document.querySelector("#setupView").classList.add("hidden");
+  document.querySelector("#resultView").classList.add("hidden");
+  document.querySelector("#quizView").classList.remove("hidden");
+  renderQuestion();
+  updateTimer();
+  clearInterval(timerId);
+  timerId=setInterval(updateTimer,1000);
+  window.scrollTo({top:0,behavior:"smooth"});
 }
 
 function getSelectedScopes(){
@@ -445,6 +629,9 @@ function finishTest(){
     id:Date.now(),
     at:new Date().toISOString(),
     difficulty:testConfig.difficulty,
+    mode:testConfig.mode || "custom",
+    lessonDate:testConfig.lessonDate || "",
+    lessonTitle:testConfig.lessonTitle || "",
     scopes:testConfig.scopes,
     kanaRows:testConfig.kanaRows || [],
     count:answers.length,score,accuracy,totalTime,avgTime,
@@ -461,6 +648,7 @@ function finishTest(){
 }
 
 function renderResult(record){
+  document.querySelector("#retryTest").textContent = record.mode === "today" ? "再隨機一份今日考卷" : "用相同設定再考一次";
   document.querySelector("#resultAccuracy").textContent = record.accuracy+"%";
   document.querySelector("#resultScore").textContent = record.score+" / "+record.count;
   document.querySelector("#resultTime").textContent = formatTime(record.totalTime);
@@ -649,7 +837,9 @@ function renderHistory(){
   list.innerHTML = recent.map(r=>{
     const d = new Date(r.at);
     const date = (d.getMonth()+1)+"/"+d.getDate()+" "+String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0");
-    const scopes = r.scopes.map(x=>CATEGORY_LABELS[x]).join("、");
+    const scopes = r.mode === "today"
+      ? "今日專屬"+(r.lessonDate ? "｜"+r.lessonDate : "")
+      : r.scopes.map(x=>CATEGORY_LABELS[x]).join("、");
     const rowText = r.kanaRows && r.kanaRows.length && r.kanaRows.length < 10 && r.scopes.some(x=>["hira","kata"].includes(x))
       ? "｜"+r.kanaRows.map(x=>KANA_ROW_LABELS[x]).join("、") : "";
     return '<article class="history-row">'+
@@ -674,6 +864,7 @@ document.querySelector("#selectAllKanaRows").addEventListener("click",()=>{
   document.querySelector("#selectAllKanaRows").textContent=allChecked ? "全選" : "全部取消";
 });
 
+document.querySelector("#startTodayTest").addEventListener("click",startTodayTest);
 document.querySelector("#startTest").addEventListener("click",startTest);
 document.querySelector("#nextQuestion").addEventListener("click",nextQuestion);
 
@@ -688,6 +879,10 @@ document.querySelector("#quitTest").addEventListener("click",()=>{
 });
 
 document.querySelector("#retryTest").addEventListener("click",()=>{
+  if(testConfig.mode === "today"){
+    startTodayTest();
+    return;
+  }
   document.querySelectorAll(".scope-option input").forEach(x=>x.checked=testConfig.scopes.includes(x.value));
   document.querySelector("#questionCount").value = String(testConfig.count);
   document.querySelector('input[name="difficulty"][value="'+testConfig.difficulty+'"]').checked = true;
@@ -709,4 +904,6 @@ document.querySelector("#clearHistory").addEventListener("click",()=>{
   }
 });
 
+
 renderHistory();
+loadTodayLesson();
