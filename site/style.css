@@ -371,3 +371,26 @@ kbd{background:#f0f2f6;border:1px solid var(--line);border-bottom-width:2px;bord
   .row-picker-head{display:grid}
   .row-picker-head .mini-btn{justify-self:start}
 }
+
+
+/* Today's personalized test */
+.today-test-card{border-color:#cddcff;background:linear-gradient(180deg,#ffffff 0%,#f8faff 100%)}
+.today-lesson-title{font-size:18px;font-weight:850;line-height:1.5;margin:5px 0 7px}
+.today-test-controls{display:grid;grid-template-columns:150px 150px minmax(220px,1fr);gap:10px;align-items:end;margin-top:14px}
+.today-test-controls label{display:grid;gap:5px}
+.today-test-controls label>span{font-size:12px;color:var(--muted);font-weight:800}
+.today-test-controls select{height:44px;border:1px solid var(--line);border-radius:11px;padding:0 10px;background:#fff;font-size:15px}
+.today-start-btn{margin-top:0;height:44px}
+.today-start-btn:disabled{opacity:.5;cursor:not-allowed}
+.today-test-status{font-size:12px;margin-top:9px}
+.quiz-section-divider{display:flex;align-items:center;gap:12px;margin:5px 0 14px;color:var(--muted);font-size:12px;font-weight:800}
+.quiz-section-divider::before,.quiz-section-divider::after{content:"";height:1px;background:var(--line);flex:1}
+
+@media(max-width:720px){
+  .today-test-controls{grid-template-columns:1fr 1fr}
+  .today-start-btn{grid-column:1 / -1}
+}
+@media(max-width:420px){
+  .today-test-controls{grid-template-columns:1fr}
+  .today-start-btn{grid-column:auto}
+}
