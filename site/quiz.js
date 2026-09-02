@@ -173,10 +173,23 @@ function getKanaRow(char){
   return Object.keys(KANA_ROW_CHARS).find(id => KANA_ROW_CHARS[id].includes(char)) || null;
 }
 
+function uniqueChoicesStrict(correct, candidates){
+  const allowed = [...new Set(candidates.filter(Boolean))];
+  if(!allowed.includes(correct)) allowed.unshift(correct);
+  if(allowed.length < 4) return null;
+  const wrong = shuffle(allowed.filter(x=>x!==correct)).slice(0,3);
+  return shuffle([correct,...wrong]);
+}
+
 function makeKanaQuestion(category, difficulty, selectedRows=[]){
   let pool = category === "hira" ? baseHira : category === "kata" ? baseKata : category === "dakuten" ? dakuten : yoon;
   if(["hira","kata"].includes(category) && selectedRows.length){
     pool = pool.filter(x => selectedRows.includes(getKanaRow(x[0])));
+  }
+  const distinctChars = new Set(pool.map(x=>x[0])).size;
+  const distinctReadings = new Set(pool.map(x=>x[1])).size;
+  if(distinctChars < 4 || distinctReadings < 4){
+    throw new Error("目前選取的五十音範圍不足 4 個不同選項，請再多選一個行別。");
   }
   const item = pool[Math.floor(Math.random()*pool.length)];
   const char = item[0], romaji = item[1];
@@ -185,7 +198,7 @@ function makeKanaQuestion(category, difficulty, selectedRows=[]){
   const reverse = uniqueReverse && Math.random() < reverseChance;
 
   if(reverse){
-    const opts = uniqueChoices(char, pool.map(x=>x[0]));
+    const opts = uniqueChoicesStrict(char, pool.map(x=>x[0]));
     return {
       category, topic:char, row:["hira","kata"].includes(category) ? getKanaRow(char) : null,
       question:"哪一個假名讀作「"+romaji+"」？",
@@ -193,11 +206,13 @@ function makeKanaQuestion(category, difficulty, selectedRows=[]){
     };
   }
 
-  let candidates = pool.map(x=>x[1]);
+  const allowedReadings = [...new Set(pool.map(x=>x[1]))];
+  let candidates = allowedReadings;
   if(difficulty === "hard" && visuallyClose[char]){
-    candidates = visuallyClose[char].concat(candidates);
+    const closeWithinScope = visuallyClose[char].filter(x=>allowedReadings.includes(x));
+    candidates = closeWithinScope.concat(allowedReadings);
   }
-  const opts = uniqueChoices(romaji, candidates);
+  const opts = uniqueChoicesStrict(romaji, candidates);
   return {
     category, topic:char, row:["hira","kata"].includes(category) ? getKanaRow(char) : null,
     question:"「"+char+"」的讀音是？",
@@ -318,6 +333,13 @@ function startTest(){
   if(scopes.some(x=>["hira","kata"].includes(x)) && !kanaRows.length){
     document.querySelector("#setupError").textContent = "你有勾平假名／片假名，請至少再選一個五十音行別。";
     return;
+  }
+  if(scopes.some(x=>["hira","kata"].includes(x))){
+    const selectedKanaCount = baseHira.filter(x=>kanaRows.includes(getKanaRow(x[0]))).length;
+    if(selectedKanaCount < 4){
+      document.querySelector("#setupError").textContent = "四選一需要至少 4 個不同假名。若只選や行或わ行・ん，請再多選一個行別。";
+      return;
+    }
   }
   const count = Number(document.querySelector("#questionCount").value);
   const difficulty = document.querySelector('input[name="difficulty"]:checked').value;
