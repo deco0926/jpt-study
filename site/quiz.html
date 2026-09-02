@@ -49,6 +49,29 @@
               <label class="scope-option"><input type="checkbox" value="yoon"><span><strong>拗音</strong><small>きゃ、しゅ、ちょ 等</small></span></label>
             </div>
           </div>
+
+          <div class="kana-row-picker">
+            <div class="row-picker-head">
+              <div>
+                <strong>基本五十音行別</strong>
+                <small>只影響「平假名／片假名」基本清音題</small>
+              </div>
+              <button id="selectAllKanaRows" class="mini-btn" type="button">全部取消</button>
+            </div>
+            <div class="kana-row-grid">
+              <label><input class="kana-row-input" type="checkbox" value="a" checked><span>あ行</span></label>
+              <label><input class="kana-row-input" type="checkbox" value="k" checked><span>か行</span></label>
+              <label><input class="kana-row-input" type="checkbox" value="s" checked><span>さ行</span></label>
+              <label><input class="kana-row-input" type="checkbox" value="t" checked><span>た行</span></label>
+              <label><input class="kana-row-input" type="checkbox" value="n" checked><span>な行</span></label>
+              <label><input class="kana-row-input" type="checkbox" value="h" checked><span>は行</span></label>
+              <label><input class="kana-row-input" type="checkbox" value="m" checked><span>ま行</span></label>
+              <label><input class="kana-row-input" type="checkbox" value="y" checked><span>や行</span></label>
+              <label><input class="kana-row-input" type="checkbox" value="r" checked><span>ら行</span></label>
+              <label><input class="kana-row-input" type="checkbox" value="w" checked><span>わ行・ん</span></label>
+            </div>
+            <p class="row-picker-note">例如只勾「た行＋ら行」，平假名／片假名就只會從這兩行出題。濁音與拗音目前仍使用各自完整範圍。</p>
+          </div>
         </section>
 
         <section class="card quiz-config">
@@ -84,6 +107,45 @@
           <p id="setupError" class="result bad"></p>
         </section>
       </div>
+
+      <section class="card diagnosis-card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Learning Diagnosis</p>
+            <h2>學習診斷</h2>
+          </div>
+          <span class="badge">最近 10 次測驗</span>
+        </div>
+        <div id="diagnosisHeadline" class="diagnosis-headline"></div>
+        <div id="diagnosisCategories" class="diagnosis-grid"></div>
+
+        <div class="diagnosis-subsection">
+          <div class="section-head">
+            <div>
+              <h3>五十音行別診斷</h3>
+              <p class="history-note">新版本開始記錄行別；每行至少 5 題才給初步判斷。</p>
+            </div>
+          </div>
+          <div id="kanaRowDiagnosis" class="kana-diagnosis-grid"></div>
+        </div>
+
+        <div class="diagnosis-subsection">
+          <h3>近期常錯觀察</h3>
+          <div id="diagnosisFocus" class="focus-list"></div>
+        </div>
+
+        <details class="diagnosis-rules">
+          <summary>查看診斷判斷標準</summary>
+          <div class="rule-grid">
+            <span><b>90～100%</b> 熟練</span>
+            <span><b>80～89%</b> 基本掌握</span>
+            <span><b>70～79%</b> 不穩定</span>
+            <span><b>60～69%</b> 明顯弱項</span>
+            <span><b>0～59%</b> 優先補強</span>
+          </div>
+          <p>分類正式診斷至少需要 10 題樣本；行別至少 5 題先給初步判斷。速度若超過該類型、該難度理想時間的 135%，會標示「速度偏慢」。普通難度基準：平／片假名 6 秒、濁音 8 秒、拗音 9 秒、單字 12 秒、文法 18 秒；簡單 ×0.85、困難 ×1.25。</p>
+        </details>
+      </section>
 
       <section class="card history-card">
         <div class="section-head">
