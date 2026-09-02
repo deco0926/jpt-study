@@ -1,0 +1,238 @@
+{
+  "date": "2026-08-31",
+  "title": "Day 4｜ヤ行・ラ行＋へ／か",
+  "duration": "25～30 分鐘（原定旅途中版本）",
+  "goal": "完成ヤ行、ラ行，學會「へ」表示前往方向與句尾「か」形成疑問句。",
+  "minimum": [
+    "ヤ・ユ・ヨ、ラ・リ・ル・レ・ロ看到後能讀",
+    "分清楚ル＝ru、レ＝re",
+    "記住今日、明日、友達、家、一緒に、誰",
+    "理解「地方＋へ＋行きます」與「～ですか」",
+    "複習「を」與前一日ハ／マ行"
+  ],
+  "kana": {
+    "items": [
+      {
+        "kana": "ヤ",
+        "romaji": "ya"
+      },
+      {
+        "kana": "ユ",
+        "romaji": "yu"
+      },
+      {
+        "kana": "ヨ",
+        "romaji": "yo"
+      },
+      {
+        "kana": "ラ",
+        "romaji": "ra"
+      },
+      {
+        "kana": "リ",
+        "romaji": "ri"
+      },
+      {
+        "kana": "ル",
+        "romaji": "ru"
+      },
+      {
+        "kana": "レ",
+        "romaji": "re"
+      },
+      {
+        "kana": "ロ",
+        "romaji": "ro"
+      }
+    ],
+    "notes": [
+      "ヤ行基本字只有ヤ・ユ・ヨ。",
+      "ル＝ru、レ＝re 是今日重點混淆組。",
+      "實際單字：ホテル（hoteru）、トイレ（toire）、ラーメン（raamen）。"
+    ]
+  },
+  "vocab": [
+    {
+      "word": "今日",
+      "reading": "きょう / kyou",
+      "meaning": "今天",
+      "usage": "常放句首表示時間。",
+      "example": "今日は学校に行きます。",
+      "translation": "今天去學校。"
+    },
+    {
+      "word": "明日",
+      "reading": "あした / ashita",
+      "meaning": "明天",
+      "usage": "常搭配現在／未來的ます形。",
+      "example": "明日、学校に行きます。",
+      "translation": "明天去學校。"
+    },
+    {
+      "word": "友達",
+      "reading": "ともだち / tomodachi",
+      "meaning": "朋友",
+      "usage": "「私の友達」＝我的朋友。",
+      "example": "私の友達です。",
+      "translation": "是我的朋友。"
+    },
+    {
+      "word": "家",
+      "reading": "いえ / ie",
+      "meaning": "家",
+      "usage": "目的地時可接「に」。",
+      "example": "家に行きます。",
+      "translation": "去家裡。"
+    },
+    {
+      "word": "一緒に",
+      "reading": "いっしょに / issho ni",
+      "meaning": "一起",
+      "usage": "常和「行きます／食べます」搭配。",
+      "example": "一緒に行きます。",
+      "translation": "一起去。"
+    },
+    {
+      "word": "誰",
+      "reading": "だれ / dare",
+      "meaning": "誰、哪個人",
+      "usage": "「誰ですか」＝是誰？",
+      "example": "誰ですか。",
+      "translation": "是誰？"
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "地方 ＋ へ ＋ 行きます",
+      "meaning": "前往某地、朝某方向去。",
+      "connection": "地點名詞後加「へ」。當助詞時「へ」通常念 e。",
+      "usage": "初級階段可先理解為和「に」很接近；に較著重目的地，へ較有前往方向感。",
+      "examples": [
+        {
+          "jp": "学校へ行きます。",
+          "zh": "去學校。"
+        },
+        {
+          "jp": "日本へ行きます。",
+          "zh": "去日本。"
+        },
+        {
+          "jp": "ホテルへ行きます。",
+          "zh": "去飯店。"
+        }
+      ]
+    },
+    {
+      "pattern": "～ですか",
+      "meaning": "～嗎？用來形成疑問句。",
+      "connection": "在「です」等句尾後加「か」。",
+      "usage": "看到句尾「か」要先反應為提問。",
+      "examples": [
+        {
+          "jp": "学生ですか。",
+          "zh": "是學生嗎？"
+        },
+        {
+          "jp": "ホテルですか。",
+          "zh": "是飯店嗎？"
+        },
+        {
+          "jp": "誰ですか。",
+          "zh": "是誰？"
+        }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "choice",
+      "question": "「ユ」怎麼念？",
+      "options": [
+        "yo",
+        "ya",
+        "yu",
+        "ru"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "text",
+      "question": "「レ」的羅馬字是？",
+      "answer": [
+        "re"
+      ]
+    },
+    {
+      "type": "choice",
+      "question": "哪一個念作 ru？",
+      "options": [
+        "ラ",
+        "リ",
+        "ル",
+        "ロ"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "question": "「明日」是什麼意思？",
+      "options": [
+        "今天",
+        "明天",
+        "昨天",
+        "每天"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "question": "「誰」是什麼意思？",
+      "options": [
+        "哪裡",
+        "什麼",
+        "誰",
+        "朋友"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "question": "水＿飲みます。",
+      "options": [
+        "に",
+        "を",
+        "で",
+        "の"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "question": "日本＿行きます。今天新學的助詞是？",
+      "options": [
+        "を",
+        "の",
+        "へ",
+        "で"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "question": "学生です＿。要變成疑問句。",
+      "options": [
+        "は",
+        "か",
+        "を",
+        "へ"
+      ],
+      "answer": 1
+    }
+  ],
+  "review": [
+    "再念一次ヤ行、ラ行",
+    "反覆確認ル＝ru、レ＝re",
+    "口頭說出「へ」與「か」的用途",
+    "複習昨天的「を」"
+  ]
+}
