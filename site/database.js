@@ -70,24 +70,32 @@ function esc(s=""){
   return String(s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
 }
 
+function normalize(s=""){
+  return String(s).trim().toLowerCase();
+}
+
 function renderKana(){
   const root = document.querySelector("#gojuonTable");
-  root.innerHTML = kanaRows.map(row => {
+  root.innerHTML = kanaRows.map((row,rowIndex) => {
     const cells = row.r.map((romaji,i) => {
       if(!romaji) return '<div class="gojuon-cell empty"></div>';
       const h = row.h[i] || "";
       const k = row.k[i] || "";
-      let big = kanaMode === "hiragana" ? h : kanaMode === "katakana" ? k : h + "・" + k;
-      return '<div class="gojuon-cell"><strong>'+esc(big)+'</strong><span>'+esc(romaji)+'</span></div>';
+      const big = kanaMode === "hiragana" ? h : kanaMode === "katakana" ? k : h + "・" + k;
+      return '<div class="gojuon-cell" id="kana-'+rowIndex+'-'+i+'"><strong>'+esc(big)+'</strong><span>'+esc(romaji)+'</span></div>';
     }).join("");
     return '<div class="gojuon-row"><div class="gojuon-label">'+esc(row.row)+'</div>'+cells+'</div>';
   }).join("");
 }
 
-function renderVocab(list=vocab){
+function getVocabEntries(list = vocab.map((v,index)=>({v,index}))){
+  return list;
+}
+
+function renderVocab(entries = getVocabEntries()){
   const root = document.querySelector("#vocabDb");
-  root.innerHTML = list.length ? list.map(v => `
-    <article class="db-entry">
+  root.innerHTML = entries.length ? entries.map(({v,index}) => `
+    <article class="db-entry" id="vocab-${index}">
       <div class="db-entry-head">
         <h3>${esc(v[0])}</h3>
         <span class="reading">${esc(v[1])}</span>
@@ -95,11 +103,12 @@ function renderVocab(list=vocab){
       <p class="db-meaning">${esc(v[2])}</p>
       <p class="example">${esc(v[3])}<br><span class="muted">${esc(v[4])}</span></p>
     </article>`).join("") : '<p class="muted">沒有符合的單字。</p>';
+  document.querySelector("#vocabVisibleCount").textContent = `顯示 ${entries.length} / ${vocab.length}`;
 }
 
 function renderGrammar(){
-  document.querySelector("#grammarDb").innerHTML = grammar.map(g => `
-    <article class="db-entry">
+  document.querySelector("#grammarDb").innerHTML = grammar.map((g,index) => `
+    <article class="db-entry" id="grammar-${index}">
       <h3>${esc(g.p)}</h3>
       <p>${esc(g.m)}</p>
       <p class="example">${esc(g.ex)}<br><span class="muted">${esc(g.zh)}</span></p>
@@ -118,6 +127,88 @@ function pickRandomKana(){
   document.querySelector("#randomKanaBox").classList.remove("hidden");
 }
 
+function buildGlobalResults(query){
+  const q = normalize(query);
+  const root = document.querySelector("#globalSearchResults");
+  const clearBtn = document.querySelector("#clearGlobalSearch");
+
+  if(!q){
+    root.classList.add("hidden");
+    root.innerHTML = "";
+    clearBtn.classList.add("hidden");
+    return;
+  }
+
+  clearBtn.classList.remove("hidden");
+  const results = [];
+
+  kanaRows.forEach((row,rowIndex)=>{
+    row.r.forEach((romaji,i)=>{
+      if(!romaji) return;
+      const h = row.h[i] || "";
+      const k = row.k[i] || "";
+      const hay = normalize([h,k,romaji,row.row].join(" "));
+      if(hay.includes(q)){
+        results.push({
+          type:"五十音",
+          title:`${h} / ${k} / ${romaji}`,
+          sub:row.row,
+          href:"#kana-section"
+        });
+      }
+    });
+  });
+
+  vocab.forEach((v,index)=>{
+    if(normalize(v.join(" ")).includes(q)){
+      results.push({
+        type:"單字",
+        title:v[0],
+        sub:`${v[1]}｜${v[2]}`,
+        href:`#vocab-${index}`,
+        vocabIndex:index
+      });
+    }
+  });
+
+  grammar.forEach((g,index)=>{
+    if(normalize([g.p,g.m,g.ex,g.zh].join(" ")).includes(q)){
+      results.push({
+        type:"文法",
+        title:g.p,
+        sub:g.m,
+        href:`#grammar-${index}`
+      });
+    }
+  });
+
+  const shown = results.slice(0,12);
+  root.innerHTML = shown.length ? shown.map((r,i)=>`
+    <a class="global-result-item" href="${r.href}" data-result-index="${i}">
+      <span class="result-type">${esc(r.type)}</span>
+      <div><strong>${esc(r.title)}</strong><small>${esc(r.sub)}</small></div>
+    </a>`).join("") : '<div class="no-result">找不到符合的內容。</div>';
+
+  root.classList.remove("hidden");
+
+  root.querySelectorAll(".global-result-item").forEach((el,i)=>{
+    el.addEventListener("click", ()=>{
+      const result = shown[i];
+      if(result.vocabIndex !== undefined){
+        document.querySelector("#vocabSearch").value = "";
+        renderVocab();
+      }
+      setTimeout(()=>{
+        const target = document.querySelector(result.href);
+        if(target){
+          target.classList.add("flash-target");
+          setTimeout(()=>target.classList.remove("flash-target"),1200);
+        }
+      },100);
+    });
+  });
+}
+
 document.querySelectorAll(".seg-btn").forEach(btn=>{
   btn.addEventListener("click", ()=>{
     document.querySelectorAll(".seg-btn").forEach(x=>x.classList.remove("active"));
@@ -134,10 +225,39 @@ document.querySelector("#revealKanaBtn").addEventListener("click", ()=>{
 });
 
 document.querySelector("#vocabSearch").addEventListener("input", e=>{
-  const q = e.target.value.trim().toLowerCase();
+  const q = normalize(e.target.value);
   if(!q) return renderVocab();
-  renderVocab(vocab.filter(v => v.join(" ").toLowerCase().includes(q)));
+  const entries = vocab
+    .map((v,index)=>({v,index}))
+    .filter(({v}) => normalize(v.join(" ")).includes(q));
+  renderVocab(entries);
 });
+
+document.querySelector("#globalSearch").addEventListener("input", e=>{
+  buildGlobalResults(e.target.value);
+});
+
+document.querySelector("#clearGlobalSearch").addEventListener("click", ()=>{
+  const input = document.querySelector("#globalSearch");
+  input.value = "";
+  buildGlobalResults("");
+  input.focus();
+});
+
+document.addEventListener("keydown", e=>{
+  if(e.key === "/" && !["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){
+    e.preventDefault();
+    document.querySelector("#globalSearch").focus();
+  }
+});
+
+document.querySelector("#backTop").addEventListener("click", ()=>{
+  window.scrollTo({top:0,behavior:"smooth"});
+});
+
+window.addEventListener("scroll", ()=>{
+  document.querySelector("#backTop").classList.toggle("hidden", window.scrollY < 550);
+}, {passive:true});
 
 document.querySelector("#kanaCount").textContent = "46";
 document.querySelector("#vocabCount").textContent = vocab.length;
