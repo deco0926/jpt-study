@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f4f7fb" />
+  <title>JPT 自我測驗</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="quiz-page">
+  <main class="container">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Practice Test</p>
+        <h1>自我測驗</h1>
+        <p class="muted">選擇範圍、題數與難度，做一份屬於自己的隨機測驗。</p>
+      </div>
+    </header>
+
+    <nav class="top-nav" aria-label="主要導覽">
+      <a class="nav-link" href="./index.html">今日學習</a>
+      <a class="nav-link" href="./database.html">學習資料庫</a>
+      <a class="nav-link active" href="./quiz.html">自我測驗</a>
+    </nav>
+
+    <section id="setupView">
+      <div class="quiz-layout">
+        <section class="card quiz-config">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Step 1</p>
+              <h2>選擇考試範圍</h2>
+            </div>
+            <button id="selectAllScope" class="mini-btn" type="button">全選</button>
+          </div>
+
+          <div class="scope-groups">
+            <div class="scope-block">
+              <h3>單字與文法</h3>
+              <label class="scope-option"><input type="checkbox" value="vocab" checked><span><strong>單字</strong><small>目前已學過的單字</small></span></label>
+              <label class="scope-option"><input type="checkbox" value="grammar" checked><span><strong>文法</strong><small>助詞、ます形與目前學過句型</small></span></label>
+            </div>
+
+            <div class="scope-block">
+              <h3>五十音</h3>
+              <label class="scope-option"><input type="checkbox" value="hira" checked><span><strong>平假名</strong><small>基本清音</small></span></label>
+              <label class="scope-option"><input type="checkbox" value="kata" checked><span><strong>片假名</strong><small>基本清音</small></span></label>
+              <label class="scope-option"><input type="checkbox" value="dakuten"><span><strong>濁音・半濁音</strong><small>が、ざ、だ、ば、ぱ 等</small></span></label>
+              <label class="scope-option"><input type="checkbox" value="yoon"><span><strong>拗音</strong><small>きゃ、しゅ、ちょ 等</small></span></label>
+            </div>
+          </div>
+        </section>
+
+        <section class="card quiz-config">
+          <p class="eyebrow">Step 2</p>
+          <h2>測驗設定</h2>
+
+          <div class="config-row">
+            <label for="questionCount"><strong>題數</strong><span>每題皆為四選一</span></label>
+            <select id="questionCount">
+              <option value="5">5 題</option>
+              <option value="10" selected>10 題</option>
+              <option value="15">15 題</option>
+              <option value="20">20 題</option>
+              <option value="30">30 題</option>
+            </select>
+          </div>
+
+          <div class="config-section">
+            <strong>難度</strong>
+            <div class="difficulty-grid">
+              <label><input type="radio" name="difficulty" value="easy"><span><b>簡單</b><small>以直接辨識為主</small></span></label>
+              <label><input type="radio" name="difficulty" value="normal" checked><span><b>普通</b><small>混合正反向與句型判斷</small></span></label>
+              <label><input type="radio" name="difficulty" value="hard"><span><b>困難</b><small>相似選項與較長句型</small></span></label>
+            </div>
+          </div>
+
+          <div class="test-note">
+            <strong>計時方式</strong>
+            <p>開始後會記錄總時間與每題作答時間。結果會保存在這台裝置的瀏覽器中，用來分析答對率與答題速度。</p>
+          </div>
+
+          <button id="startTest" class="primary" type="button">開始測驗</button>
+          <p id="setupError" class="result bad"></p>
+        </section>
+      </div>
+
+      <section class="card history-card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">History</p>
+            <h2>練習紀錄</h2>
+          </div>
+          <button id="clearHistory" class="ghost compact-btn" type="button">清除紀錄</button>
+        </div>
+        <p class="history-note">紀錄只存在目前這台裝置與瀏覽器，不會和其他訪客共用。</p>
+        <div id="historySummary" class="history-summary"></div>
+        <div id="historyList" class="history-list"></div>
+      </section>
+    </section>
+
+    <section id="quizView" class="hidden">
+      <div class="test-toolbar card">
+        <div>
+          <span class="eyebrow">進行中</span>
+          <strong id="testProgress">1 / 10</strong>
+        </div>
+        <div class="timer-box">
+          <span>總時間</span>
+          <strong id="elapsedTime">00:00</strong>
+        </div>
+      </div>
+
+      <section class="card question-card">
+        <div class="question-meta">
+          <span id="questionCategory" class="badge">單字</span>
+          <span id="questionDifficulty" class="muted">普通</span>
+        </div>
+        <h2 id="questionText" class="question-text"></h2>
+        <div id="optionList" class="option-list"></div>
+        <div class="question-actions">
+          <button id="quitTest" class="ghost" type="button">結束測驗</button>
+          <button id="nextQuestion" class="primary inline-primary" type="button" disabled>下一題</button>
+        </div>
+      </section>
+    </section>
+
+    <section id="resultView" class="hidden">
+      <section class="card result-hero">
+        <p class="eyebrow">Result</p>
+        <h2>本次測驗結果</h2>
+        <div class="result-metrics">
+          <div><span>答對率</span><strong id="resultAccuracy">0%</strong></div>
+          <div><span>分數</span><strong id="resultScore">0 / 0</strong></div>
+          <div><span>總時間</span><strong id="resultTime">00:00</strong></div>
+          <div><span>平均每題</span><strong id="resultAvgTime">0 秒</strong></div>
+        </div>
+        <div id="overallAdvice" class="advice-box"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Analysis</p>
+            <h2>分項表現</h2>
+          </div>
+        </div>
+        <div id="categoryAnalysis" class="analysis-grid"></div>
+      </section>
+
+      <section class="card">
+        <p class="eyebrow">Review</p>
+        <h2>需要再看一次的題目</h2>
+        <div id="wrongReview" class="wrong-review"></div>
+      </section>
+
+      <div class="result-actions">
+        <button id="retryTest" class="primary" type="button">用相同設定再考一次</button>
+        <button id="backSetup" class="ghost" type="button">回到測驗設定</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="./quiz.js"></script>
+</body>
+</html>
