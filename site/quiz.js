@@ -421,14 +421,18 @@ function generateTodayQuestions(lesson,count,difficulty){
 async function loadTodayLesson(){
   const status=document.querySelector("#todayTestStatus");
   try{
-    const response=await fetch("./lessons/latest.json",{cache:"no-store"});
-    if(!response.ok) throw new Error("無法讀取今日教材");
-    todayLesson=await response.json();
+    const loadPromise = window.todayLessonPromise || fetch("./lessons/latest.json")
+      .then(response => {
+        if(!response.ok) throw new Error("無法讀取今日教材");
+        return response.json();
+      });
+
+    todayLesson=await loadPromise;
     document.querySelector("#todayLessonDate").textContent=todayLesson.date || "今日";
     document.querySelector("#todayLessonTitle").textContent=todayLesson.title || "今日教材";
     document.querySelector("#startTodayTest").disabled=false;
     const bank=buildTodayQuestionBank(todayLesson);
-    status.textContent="目前可隨機組合約 "+bank.length+" 種題型／題目。";
+    status.textContent="教材已載入｜目前可隨機組合約 "+bank.length+" 種題型／題目。";
   }catch(err){
     todayLesson=null;
     document.querySelector("#todayLessonTitle").textContent="今日教材載入失敗";
