@@ -217,25 +217,36 @@ function makeGrammarQuestion(difficulty){
   };
 }
 
+function generateOne(category,difficulty){
+  if(["hira","kata","dakuten","yoon"].includes(category)) return makeKanaQuestion(category,difficulty);
+  if(category === "vocab") return makeVocabQuestion(difficulty);
+  return makeGrammarQuestion(difficulty);
+}
+
 function generateQuestions(scopes,count,difficulty){
   const list = [];
   const seen = new Set();
   let attempts = 0;
 
+  // 題數足夠時，至少讓每個勾選範圍出現一次，避免小測驗完全漏掉某個範圍。
+  const seededScopes = count >= scopes.length ? shuffle(scopes) : shuffle(scopes).slice(0,count);
+  seededScopes.forEach(category=>{
+    const q = generateOne(category,difficulty);
+    const signature = q.category+"|"+q.question+"|"+q.answer;
+    seen.add(signature);
+    list.push(q);
+  });
+
   while(list.length < count && attempts < count*30){
     attempts++;
     const category = scopes[Math.floor(Math.random()*scopes.length)];
-    let q;
-    if(["hira","kata","dakuten","yoon"].includes(category)) q = makeKanaQuestion(category,difficulty);
-    else if(category === "vocab") q = makeVocabQuestion(difficulty);
-    else q = makeGrammarQuestion(difficulty);
-
+    const q = generateOne(category,difficulty);
     const signature = q.category+"|"+q.question+"|"+q.answer;
     if(seen.has(signature) && attempts < count*12) continue;
     seen.add(signature);
     list.push(q);
   }
-  return list;
+  return shuffle(list);
 }
 
 function getSelectedScopes(){
