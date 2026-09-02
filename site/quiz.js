@@ -9,6 +9,24 @@ const CATEGORY_LABELS = {
 
 const DIFFICULTY_LABELS = {easy:"簡單", normal:"普通", hard:"困難"};
 
+const KANA_ROW_LABELS = {
+  a:"あ行", k:"か行", s:"さ行", t:"た行", n:"な行",
+  h:"は行", m:"ま行", y:"や行", r:"ら行", w:"わ行・ん"
+};
+
+const KANA_ROW_CHARS = {
+  a:"あいうえおアイウエオ",
+  k:"かきくけこカキクケコ",
+  s:"さしすせそサシスセソ",
+  t:"たちつてとタチツテト",
+  n:"なにぬねのナニヌネノ",
+  h:"はひふへほハヒフヘホ",
+  m:"まみむめもマミムメモ",
+  y:"やゆよヤユヨ",
+  r:"らりるれろラリルレロ",
+  w:"わをんワヲン"
+};
+
 const baseHira = [
   ["あ","a"],["い","i"],["う","u"],["え","e"],["お","o"],
   ["か","ka"],["き","ki"],["く","ku"],["け","ke"],["こ","ko"],
@@ -151,8 +169,15 @@ function uniqueChoices(correct, candidates){
   return shuffle([...set].slice(0,4));
 }
 
-function makeKanaQuestion(category, difficulty){
-  const pool = category === "hira" ? baseHira : category === "kata" ? baseKata : category === "dakuten" ? dakuten : yoon;
+function getKanaRow(char){
+  return Object.keys(KANA_ROW_CHARS).find(id => KANA_ROW_CHARS[id].includes(char)) || null;
+}
+
+function makeKanaQuestion(category, difficulty, selectedRows=[]){
+  let pool = category === "hira" ? baseHira : category === "kata" ? baseKata : category === "dakuten" ? dakuten : yoon;
+  if(["hira","kata"].includes(category) && selectedRows.length){
+    pool = pool.filter(x => selectedRows.includes(getKanaRow(x[0])));
+  }
   const item = pool[Math.floor(Math.random()*pool.length)];
   const char = item[0], romaji = item[1];
   const uniqueReverse = pool.filter(x => x[1] === romaji).length === 1;
@@ -162,7 +187,8 @@ function makeKanaQuestion(category, difficulty){
   if(reverse){
     const opts = uniqueChoices(char, pool.map(x=>x[0]));
     return {
-      category, topic:char, question:"哪一個假名讀作「"+romaji+"」？",
+      category, topic:char, row:["hira","kata"].includes(category) ? getKanaRow(char) : null,
+      question:"哪一個假名讀作「"+romaji+"」？",
       options:opts, answer:char
     };
   }
@@ -173,7 +199,8 @@ function makeKanaQuestion(category, difficulty){
   }
   const opts = uniqueChoices(romaji, candidates);
   return {
-    category, topic:char, question:"「"+char+"」的讀音是？",
+    category, topic:char, row:["hira","kata"].includes(category) ? getKanaRow(char) : null,
+    question:"「"+char+"」的讀音是？",
     options:opts, answer:romaji
   };
 }
@@ -217,13 +244,13 @@ function makeGrammarQuestion(difficulty){
   };
 }
 
-function generateOne(category,difficulty){
-  if(["hira","kata","dakuten","yoon"].includes(category)) return makeKanaQuestion(category,difficulty);
+function generateOne(category,difficulty,kanaRows){
+  if(["hira","kata","dakuten","yoon"].includes(category)) return makeKanaQuestion(category,difficulty,kanaRows);
   if(category === "vocab") return makeVocabQuestion(difficulty);
   return makeGrammarQuestion(difficulty);
 }
 
-function generateQuestions(scopes,count,difficulty){
+function generateQuestions(scopes,count,difficulty,kanaRows){
   const list = [];
   const seen = new Set();
   let attempts = 0;
@@ -231,7 +258,7 @@ function generateQuestions(scopes,count,difficulty){
   // 題數足夠時，至少讓每個勾選範圍出現一次，避免小測驗完全漏掉某個範圍。
   const seededScopes = count >= scopes.length ? shuffle(scopes) : shuffle(scopes).slice(0,count);
   seededScopes.forEach(category=>{
-    const q = generateOne(category,difficulty);
+    const q = generateOne(category,difficulty,kanaRows);
     const signature = q.category+"|"+q.question+"|"+q.answer;
     seen.add(signature);
     list.push(q);
@@ -240,7 +267,7 @@ function generateQuestions(scopes,count,difficulty){
   while(list.length < count && attempts < count*30){
     attempts++;
     const category = scopes[Math.floor(Math.random()*scopes.length)];
-    const q = generateOne(category,difficulty);
+    const q = generateOne(category,difficulty,kanaRows);
     const signature = q.category+"|"+q.question+"|"+q.answer;
     if(seen.has(signature) && attempts < count*12) continue;
     seen.add(signature);
@@ -251,6 +278,10 @@ function generateQuestions(scopes,count,difficulty){
 
 function getSelectedScopes(){
   return [...document.querySelectorAll('.scope-option input:checked')].map(x=>x.value);
+}
+
+function getSelectedKanaRows(){
+  return [...document.querySelectorAll('.kana-row-input:checked')].map(x=>x.value);
 }
 
 function readHistory(){
@@ -283,10 +314,15 @@ function startTest(){
     return;
   }
   document.querySelector("#setupError").textContent = "";
+  const kanaRows = getSelectedKanaRows();
+  if(scopes.some(x=>["hira","kata"].includes(x)) && !kanaRows.length){
+    document.querySelector("#setupError").textContent = "你有勾平假名／片假名，請至少再選一個五十音行別。";
+    return;
+  }
   const count = Number(document.querySelector("#questionCount").value);
   const difficulty = document.querySelector('input[name="difficulty"]:checked').value;
-  testConfig = {scopes,count,difficulty};
-  questions = generateQuestions(scopes,count,difficulty);
+  testConfig = {scopes,count,difficulty,kanaRows};
+  questions = generateQuestions(scopes,count,difficulty,kanaRows);
   currentIndex = 0;
   answers = [];
   selectedIndex = null;
@@ -340,8 +376,9 @@ function nextQuestion(){
   const time = (performance.now()-questionStartedAt)/1000;
   const selected = q.options[selectedIndex];
   answers.push({
-    category:q.category,topic:q.topic,question:q.question,
-    selected,correct:q.answer,isCorrect:selected===q.answer,time
+    category:q.category,topic:q.topic,row:q.row || null,question:q.question,
+    selected,correct:q.answer,isCorrect:selected===q.answer,time,
+    benchmark:difficultyBenchmark(q.category,testConfig.difficulty)
   });
 
   if(currentIndex >= questions.length-1){
@@ -360,12 +397,26 @@ function finishTest(){
   const avgTime = answers.reduce((s,x)=>s+x.time,0)/answers.length;
 
   const categoryMap = {};
+  const topicMap = {};
+  const rowMap = {};
   answers.forEach(a=>{
-    if(!categoryMap[a.category]) categoryMap[a.category]={total:0,correct:0,time:0,wrongTopics:[]};
+    if(!categoryMap[a.category]) categoryMap[a.category]={total:0,correct:0,time:0,benchmarkSum:0,wrongTopics:[]};
     const c = categoryMap[a.category];
-    c.total++; c.time+=a.time;
+    c.total++; c.time+=a.time; c.benchmarkSum += a.benchmark || difficultyBenchmark(a.category,testConfig.difficulty);
     if(a.isCorrect)c.correct++;
     else c.wrongTopics.push(a.topic);
+
+    if(!topicMap[a.category]) topicMap[a.category]={};
+    if(!topicMap[a.category][a.topic]) topicMap[a.category][a.topic]={total:0,correct:0,time:0};
+    const t = topicMap[a.category][a.topic];
+    t.total++; t.time+=a.time; if(a.isCorrect)t.correct++;
+
+    if(a.row){
+      if(!rowMap[a.row]) rowMap[a.row]={total:0,correct:0,time:0,benchmarkSum:0};
+      const row = rowMap[a.row];
+      row.total++; row.time+=a.time; row.benchmarkSum += a.benchmark || difficultyBenchmark(a.category,testConfig.difficulty);
+      if(a.isCorrect)row.correct++;
+    }
   });
 
   const record = {
@@ -373,8 +424,11 @@ function finishTest(){
     at:new Date().toISOString(),
     difficulty:testConfig.difficulty,
     scopes:testConfig.scopes,
+    kanaRows:testConfig.kanaRows || [],
     count:answers.length,score,accuracy,totalTime,avgTime,
-    categories:categoryMap
+    categories:categoryMap,
+    topics:topicMap,
+    rows:rowMap
   };
   saveHistory(record);
 
@@ -437,8 +491,122 @@ function renderResult(record){
   renderHistory();
 }
 
+function accuracyStatus(pct){
+  if(pct >= 90) return {label:"熟練", cls:"mastery"};
+  if(pct >= 80) return {label:"基本掌握", cls:"good"};
+  if(pct >= 70) return {label:"不穩定", cls:"warn"};
+  if(pct >= 60) return {label:"明顯弱項", cls:"bad"};
+  return {label:"優先補強", cls:"critical"};
+}
+
+function renderDiagnosis(history){
+  const headline = document.querySelector("#diagnosisHeadline");
+  const grid = document.querySelector("#diagnosisCategories");
+  const rowsRoot = document.querySelector("#kanaRowDiagnosis");
+  const focusRoot = document.querySelector("#diagnosisFocus");
+  if(!headline || !grid || !rowsRoot || !focusRoot) return;
+
+  const recent = history.slice(0,10);
+  if(!recent.length){
+    headline.innerHTML = '<div class="empty-history">目前還沒有足夠資料。完成自我測驗後，這裡會用最近 10 次結果做長期診斷。</div>';
+    grid.innerHTML = "";
+    rowsRoot.innerHTML = '<div class="empty-history">尚無行別資料。</div>';
+    focusRoot.innerHTML = '<div class="empty-history">尚無錯題觀察資料。</div>';
+    return;
+  }
+
+  const cats = {};
+  const rows = {};
+  const topics = {};
+
+  recent.forEach(record=>{
+    Object.entries(record.categories || {}).forEach(([cat,c])=>{
+      if(!cats[cat]) cats[cat]={total:0,correct:0,time:0,benchmarkSum:0};
+      const a = cats[cat];
+      a.total += c.total || 0;
+      a.correct += c.correct || 0;
+      a.time += c.time || 0;
+      a.benchmarkSum += c.benchmarkSum || difficultyBenchmark(cat,record.difficulty)*(c.total || 0);
+    });
+
+    Object.entries(record.rows || {}).forEach(([rowId,row])=>{
+      if(!rows[rowId]) rows[rowId]={total:0,correct:0,time:0,benchmarkSum:0};
+      const a=rows[rowId];
+      a.total += row.total || 0;
+      a.correct += row.correct || 0;
+      a.time += row.time || 0;
+      a.benchmarkSum += row.benchmarkSum || 0;
+    });
+
+    Object.entries(record.topics || {}).forEach(([cat,items])=>{
+      Object.entries(items || {}).forEach(([topic,t])=>{
+        const key=cat+"|"+topic;
+        if(!topics[key]) topics[key]={cat,topic,total:0,correct:0,time:0};
+        topics[key].total += t.total || 0;
+        topics[key].correct += t.correct || 0;
+        topics[key].time += t.time || 0;
+      });
+    });
+  });
+
+  const totalQuestions = Object.values(cats).reduce((s,x)=>s+x.total,0);
+  const formal = Object.values(cats).filter(x=>x.total>=10).length;
+  headline.innerHTML =
+    '<div class="diagnosis-overview"><strong>最近 '+recent.length+' 次測驗，共 '+totalQuestions+' 題</strong>'+
+    '<span>已有 '+formal+' 個分類達到正式診斷樣本（至少 10 題）</span></div>';
+
+  const catEntries = Object.entries(cats).sort((a,b)=>{
+    const pa=a[1].correct/a[1].total, pb=b[1].correct/b[1].total;
+    return pa-pb;
+  });
+
+  grid.innerHTML = catEntries.map(([cat,c])=>{
+    const pct=Math.round(c.correct/c.total*100);
+    const avg=c.time/c.total;
+    const expected=(c.benchmarkSum/c.total);
+    const slow=avg > expected*1.35;
+    const status=accuracyStatus(pct);
+    const enough=c.total>=10;
+    const label=enough ? status.label : "樣本不足 "+c.total+"/10";
+    const cls=enough ? status.cls : "sample";
+    return '<article class="diagnosis-item '+cls+'">'+
+      '<div class="diagnosis-item-head"><strong>'+esc(CATEGORY_LABELS[cat] || cat)+'</strong><span>'+label+'</span></div>'+
+      '<div class="diagnosis-score"><b>'+pct+'%</b><small>'+c.correct+'/'+c.total+' 題</small></div>'+
+      '<div class="accuracy-bar"><i style="width:'+pct+'%"></i></div>'+
+      '<p>平均 '+avg.toFixed(1)+' 秒／題'+(slow?'・<b class="speed-warning">速度偏慢</b>':'・速度正常')+'</p>'+
+      '</article>';
+  }).join("");
+
+  const rowOrder=["a","k","s","t","n","h","m","y","r","w"];
+  const rowItems=rowOrder.filter(id=>rows[id]).map(id=>{
+    const c=rows[id], pct=Math.round(c.correct/c.total*100), avg=c.time/c.total;
+    const status=accuracyStatus(pct), enough=c.total>=5;
+    const expected=c.benchmarkSum ? c.benchmarkSum/c.total : 6;
+    const slow=avg > expected*1.35;
+    return '<article class="kana-diagnosis-item '+(enough?status.cls:"sample")+'">'+
+      '<strong>'+KANA_ROW_LABELS[id]+'</strong>'+
+      '<b>'+pct+'%</b>'+
+      '<span>'+(enough?status.label:"觀察中 "+c.total+"/5")+'</span>'+
+      '<small>'+c.correct+'/'+c.total+' 題・'+avg.toFixed(1)+' 秒'+(slow?'・偏慢':'')+'</small>'+
+      '</article>';
+  });
+  rowsRoot.innerHTML = rowItems.length ? rowItems.join("") :
+    '<div class="empty-history">舊版紀錄沒有行別資料；從下一次平／片假名測驗開始會累積。</div>';
+
+  const weakTopics = Object.values(topics)
+    .filter(t=>t.total>=2 && t.correct<t.total)
+    .map(t=>({...t,pct:Math.round(t.correct/t.total*100)}))
+    .sort((a,b)=>a.pct-b.pct || b.total-a.total)
+    .slice(0,6);
+
+  focusRoot.innerHTML = weakTopics.length ? weakTopics.map(t=>
+    '<div class="focus-chip"><span>'+esc(CATEGORY_LABELS[t.cat] || t.cat)+'</span><strong>'+esc(t.topic)+'</strong><small>'+t.correct+'/'+t.total+'（'+t.pct+'%）</small></div>'
+  ).join("") : '<div class="empty-history">目前沒有累積到重複出錯的項目；新測驗會逐步建立更細的弱點紀錄。</div>';
+}
+
 function renderHistory(){
   const history = readHistory();
+  renderDiagnosis(history);
   const summary = document.querySelector("#historySummary");
   const list = document.querySelector("#historyList");
 
@@ -460,9 +628,11 @@ function renderHistory(){
     const d = new Date(r.at);
     const date = (d.getMonth()+1)+"/"+d.getDate()+" "+String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0");
     const scopes = r.scopes.map(x=>CATEGORY_LABELS[x]).join("、");
+    const rowText = r.kanaRows && r.kanaRows.length && r.kanaRows.length < 10 && r.scopes.some(x=>["hira","kata"].includes(x))
+      ? "｜"+r.kanaRows.map(x=>KANA_ROW_LABELS[x]).join("、") : "";
     return '<article class="history-row">'+
       '<div><strong>'+r.accuracy+'%</strong><span>'+r.score+'/'+r.count+'</span></div>'+
-      '<div><b>'+DIFFICULTY_LABELS[r.difficulty]+'・'+r.count+' 題</b><small>'+esc(scopes)+'</small></div>'+
+      '<div><b>'+DIFFICULTY_LABELS[r.difficulty]+'・'+r.count+' 題</b><small>'+esc(scopes+rowText)+'</small></div>'+
       '<div><span>'+formatTime(r.totalTime)+'</span><small>'+date+'</small></div>'+
       '</article>';
   }).join("");
@@ -473,6 +643,13 @@ document.querySelector("#selectAllScope").addEventListener("click",()=>{
   const allChecked = inputs.every(x=>x.checked);
   inputs.forEach(x=>x.checked=!allChecked);
   document.querySelector("#selectAllScope").textContent = allChecked ? "全選" : "全部取消";
+});
+
+document.querySelector("#selectAllKanaRows").addEventListener("click",()=>{
+  const inputs=[...document.querySelectorAll(".kana-row-input")];
+  const allChecked=inputs.every(x=>x.checked);
+  inputs.forEach(x=>x.checked=!allChecked);
+  document.querySelector("#selectAllKanaRows").textContent=allChecked ? "全選" : "全部取消";
 });
 
 document.querySelector("#startTest").addEventListener("click",startTest);
@@ -492,6 +669,7 @@ document.querySelector("#retryTest").addEventListener("click",()=>{
   document.querySelectorAll(".scope-option input").forEach(x=>x.checked=testConfig.scopes.includes(x.value));
   document.querySelector("#questionCount").value = String(testConfig.count);
   document.querySelector('input[name="difficulty"][value="'+testConfig.difficulty+'"]').checked = true;
+  document.querySelectorAll(".kana-row-input").forEach(x=>x.checked=(testConfig.kanaRows || []).includes(x.value));
   startTest();
 });
 
