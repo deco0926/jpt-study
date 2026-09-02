@@ -1,0 +1,60 @@
+name: Daily JPT lesson
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 23:05 UTC = 08:05 Japan time (JST) next day
+    - cron: "5 23 * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate today's lesson
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python scripts/generate_lesson.py
+
+      - name: Commit generated lesson
+        run: |
+          git config user.name "jpt-study-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add site/lessons
+          git diff --cached --quiet || git commit -m "Add JPT lesson $(date -u +'%Y-%m-%d')"
+          git push
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./site"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

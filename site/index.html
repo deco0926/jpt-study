@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f4f7fb" />
+  <title>JPT 每日衝刺</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">JPT 2026/09/13</p>
+        <h1>每日衝刺</h1>
+        <p id="countdown" class="muted"></p>
+      </div>
+      <div class="score-card">
+        <span>今日進度</span>
+        <strong id="progressText">0%</strong>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="section-head">
+        <div>
+          <p id="lessonDate" class="eyebrow"></p>
+          <h2 id="lessonTitle">載入中…</h2>
+        </div>
+        <span id="duration" class="badge"></span>
+      </div>
+      <p id="goal" class="goal"></p>
+      <div id="minimum" class="checklist"></div>
+    </section>
+
+    <section class="card">
+      <h2>片假名</h2>
+      <div id="kanaGrid" class="kana-grid"></div>
+      <div id="kanaNotes" class="notes"></div>
+    </section>
+
+    <section class="card">
+      <h2>今日單字</h2>
+      <div id="vocabList" class="stack"></div>
+    </section>
+
+    <section class="card">
+      <h2>今日文法</h2>
+      <div id="grammarList" class="stack"></div>
+    </section>
+
+    <section class="card">
+      <h2>快速練習</h2>
+      <div id="quiz"></div>
+      <button id="submitQuiz" class="primary">提交答案</button>
+      <p id="quizResult" class="result"></p>
+    </section>
+
+    <section class="card">
+      <h2>今日收尾</h2>
+      <div id="review" class="checklist"></div>
+      <button id="resetProgress" class="ghost">重設今天進度</button>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

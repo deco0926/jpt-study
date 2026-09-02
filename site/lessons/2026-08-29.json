@@ -1,0 +1,210 @@
+{
+  "date": "2026-08-29",
+  "title": "Day 2｜タ行・ナ行＋に／で",
+  "duration": "25～30 分鐘",
+  "goal": "今天要能讀出タ行、ナ行，並分清楚目的地用「に」、交通工具用「で」。",
+  "minimum": [
+    "タ・チ・ツ・テ・ト、ナ・ニ・ヌ・ネ・ノ看到後能讀出來",
+    "シ（shi）和ツ（tsu）不要混淆",
+    "記住駅、学校、電車、バス、食べる、行く",
+    "看懂「電車で学校に行きます」"
+  ],
+  "kana": {
+    "items": [
+      {
+        "kana": "タ",
+        "romaji": "ta"
+      },
+      {
+        "kana": "チ",
+        "romaji": "chi"
+      },
+      {
+        "kana": "ツ",
+        "romaji": "tsu"
+      },
+      {
+        "kana": "テ",
+        "romaji": "te"
+      },
+      {
+        "kana": "ト",
+        "romaji": "to"
+      },
+      {
+        "kana": "ナ",
+        "romaji": "na"
+      },
+      {
+        "kana": "ニ",
+        "romaji": "ni"
+      },
+      {
+        "kana": "ヌ",
+        "romaji": "nu"
+      },
+      {
+        "kana": "ネ",
+        "romaji": "ne"
+      },
+      {
+        "kana": "ノ",
+        "romaji": "no"
+      }
+    ],
+    "notes": [
+      "シ = shi；ツ = tsu。這兩個很容易混。",
+      "テスト（tesuto）＝考試；タクシー（takushii）＝計程車；トイレ（toire）＝廁所。"
+    ]
+  },
+  "vocab": [
+    {
+      "word": "駅",
+      "reading": "えき / eki",
+      "meaning": "車站",
+      "usage": "常和「に行きます」搭配。",
+      "example": "駅に行きます。",
+      "translation": "去車站。"
+    },
+    {
+      "word": "学校",
+      "reading": "がっこう / gakkou",
+      "meaning": "學校",
+      "usage": "表示目的地時可接「に」。",
+      "example": "学校に行きます。",
+      "translation": "去學校。"
+    },
+    {
+      "word": "電車",
+      "reading": "でんしゃ / densha",
+      "meaning": "電車",
+      "usage": "表示交通手段時可接「で」。",
+      "example": "電車で行きます。",
+      "translation": "搭電車去。"
+    },
+    {
+      "word": "バス",
+      "reading": "basu",
+      "meaning": "公車、巴士",
+      "usage": "表示交通手段時可接「で」。",
+      "example": "バスで行きます。",
+      "translation": "搭公車去。"
+    },
+    {
+      "word": "食べる",
+      "reading": "たべる / taberu",
+      "meaning": "吃",
+      "usage": "初學先記原形；之後會正式學ます形。",
+      "example": "アイスを食べます。",
+      "translation": "吃冰淇淋。"
+    },
+    {
+      "word": "行く",
+      "reading": "いく / iku",
+      "meaning": "去",
+      "usage": "目的地通常放在「に」前面。",
+      "example": "スーパーに行きます。",
+      "translation": "去超市。"
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "目的地 ＋ に ＋ 行きます",
+      "meaning": "去某個地方。",
+      "connection": "地點名詞後加「に」。",
+      "usage": "今天先把「に」當成目的地標記。",
+      "examples": [
+        {
+          "jp": "駅に行きます。",
+          "zh": "去車站。"
+        },
+        {
+          "jp": "学校に行きます。",
+          "zh": "去學校。"
+        },
+        {
+          "jp": "スーパーに行きます。",
+          "zh": "去超市。"
+        }
+      ]
+    },
+    {
+      "pattern": "交通工具 ＋ で ＋ 行きます",
+      "meaning": "搭／使用某種交通工具去。",
+      "connection": "交通工具名詞後加「で」。",
+      "usage": "今天先把「で」當成交通手段標記。",
+      "examples": [
+        {
+          "jp": "電車で行きます。",
+          "zh": "搭電車去。"
+        },
+        {
+          "jp": "バスで行きます。",
+          "zh": "搭公車去。"
+        },
+        {
+          "jp": "タクシーでホテルに行きます。",
+          "zh": "搭計程車去飯店。"
+        }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "choice",
+      "question": "「ツ」的讀音是？",
+      "options": [
+        "shi",
+        "tsu",
+        "chi",
+        "su"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "text",
+      "question": "「テ」的羅馬字是？",
+      "answer": [
+        "te"
+      ]
+    },
+    {
+      "type": "choice",
+      "question": "「駅に行きます」的意思是？",
+      "options": [
+        "搭車去",
+        "去車站",
+        "在車站吃飯",
+        "車站的電車"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "question": "電車＿学校に行きます。",
+      "options": [
+        "に",
+        "で",
+        "の",
+        "は"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "question": "学校＿行きます。",
+      "options": [
+        "で",
+        "に",
+        "の",
+        "は"
+      ],
+      "answer": 1
+    }
+  ],
+  "review": [
+    "再念一次タ行、ナ行",
+    "口頭說出「に」和「で」的差別",
+    "不看答案翻譯「電車で学校に行きます」"
+  ]
+}
