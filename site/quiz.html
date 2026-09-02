@@ -24,6 +24,42 @@
     </nav>
 
     <section id="setupView">
+      <section class="card today-test-card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Today's Personalized Test</p>
+            <h2>今日專屬考卷</h2>
+          </div>
+          <span id="todayLessonDate" class="badge">載入中…</span>
+        </div>
+        <p id="todayLessonTitle" class="today-lesson-title">正在讀取今日教材…</p>
+        <p class="history-note">只從「今日學習」的片假名、單字、文法與快速練習出題。每次開始都會重新抽題、重新排列選項，可以反覆測驗。</p>
+
+        <div class="today-test-controls">
+          <label>
+            <span>題數</span>
+            <select id="todayQuestionCount">
+              <option value="5">5 題</option>
+              <option value="10" selected>10 題</option>
+              <option value="15">15 題</option>
+              <option value="20">20 題</option>
+            </select>
+          </label>
+          <label>
+            <span>難度</span>
+            <select id="todayDifficulty">
+              <option value="easy">簡單</option>
+              <option value="normal" selected>普通</option>
+              <option value="hard">困難</option>
+            </select>
+          </label>
+          <button id="startTodayTest" class="primary today-start-btn" type="button" disabled>隨機產生今日考卷</button>
+        </div>
+        <p id="todayTestStatus" class="today-test-status muted"></p>
+      </section>
+
+      <div class="quiz-section-divider"><span>或自訂測驗範圍</span></div>
+
       <div class="quiz-layout">
         <section class="card quiz-config">
           <div class="section-head">
