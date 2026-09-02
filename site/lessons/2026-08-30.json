@@ -1,0 +1,234 @@
+{
+  "date": "2026-08-30",
+  "title": "Day 3｜ハ行・マ行＋助詞「を」",
+  "duration": "25～30 分鐘",
+  "goal": "能讀出ハ行、マ行，補強チ／ツ，並理解「名詞＋を＋動詞」表示動作對象。",
+  "minimum": [
+    "ハ・ヒ・フ・ヘ・ホ、マ・ミ・ム・メ・モ看到後能讀出來",
+    "再確認チ＝chi、ツ＝tsu",
+    "記住水、ご飯、飲む、買う、見る、本、店",
+    "理解「を」表示動作作用的對象",
+    "能看懂「私は水を飲みます」與「スーパーに行きます。アイスを買います」"
+  ],
+  "kana": {
+    "items": [
+      {
+        "kana": "ハ",
+        "romaji": "ha"
+      },
+      {
+        "kana": "ヒ",
+        "romaji": "hi"
+      },
+      {
+        "kana": "フ",
+        "romaji": "fu"
+      },
+      {
+        "kana": "ヘ",
+        "romaji": "he"
+      },
+      {
+        "kana": "ホ",
+        "romaji": "ho"
+      },
+      {
+        "kana": "マ",
+        "romaji": "ma"
+      },
+      {
+        "kana": "ミ",
+        "romaji": "mi"
+      },
+      {
+        "kana": "ム",
+        "romaji": "mu"
+      },
+      {
+        "kana": "メ",
+        "romaji": "me"
+      },
+      {
+        "kana": "モ",
+        "romaji": "mo"
+      }
+    ],
+    "notes": [
+      "フ＝fu。メ（me）與ヌ（nu）外型容易混淆。",
+      "前日錯題要繼續記：チ＝chi、ツ＝tsu。",
+      "實際單字：ホテル（飯店）、メモ（筆記）、ミルク（牛奶）、ハム（火腿）。"
+    ]
+  },
+  "vocab": [
+    {
+      "word": "水",
+      "reading": "みず / mizu",
+      "meaning": "水",
+      "usage": "常接「を飲みます」。",
+      "example": "水を飲みます。",
+      "translation": "喝水。"
+    },
+    {
+      "word": "ご飯",
+      "reading": "ごはん / gohan",
+      "meaning": "飯、餐",
+      "usage": "可表示白飯或一餐。",
+      "example": "ご飯を食べます。",
+      "translation": "吃飯。"
+    },
+    {
+      "word": "飲む",
+      "reading": "のむ / nomu",
+      "meaning": "喝",
+      "usage": "禮貌形是「飲みます」。",
+      "example": "水を飲みます。",
+      "translation": "喝水。"
+    },
+    {
+      "word": "買う",
+      "reading": "かう / kau",
+      "meaning": "買",
+      "usage": "禮貌形是「買います」。",
+      "example": "アイスを買います。",
+      "translation": "買冰淇淋。"
+    },
+    {
+      "word": "見る",
+      "reading": "みる / miru",
+      "meaning": "看",
+      "usage": "禮貌形是「見ます」。",
+      "example": "テレビを見ます。",
+      "translation": "看電視。"
+    },
+    {
+      "word": "本",
+      "reading": "ほん / hon",
+      "meaning": "書",
+      "usage": "可以接「の」表示誰的書，也可接「を」。",
+      "example": "私の本です。",
+      "translation": "是我的書。"
+    },
+    {
+      "word": "店",
+      "reading": "みせ / mise",
+      "meaning": "店、商店",
+      "usage": "表示目的地時可接「に」。",
+      "example": "店に行きます。",
+      "translation": "去商店。"
+    }
+  ],
+  "grammar": [
+    {
+      "pattern": "名詞 ＋ を ＋ 動詞",
+      "meaning": "表示動作作用的對象。",
+      "connection": "要被吃、喝、買、看等動作作用的名詞後加「を」。助詞「を」通常念 o。",
+      "usage": "先用「做什麼？對什麼做？」來判斷動作對象。",
+      "examples": [
+        {
+          "jp": "アイスを食べます。",
+          "zh": "吃冰淇淋。"
+        },
+        {
+          "jp": "水を飲みます。",
+          "zh": "喝水。"
+        },
+        {
+          "jp": "本を見ます。",
+          "zh": "看書。"
+        }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "choice",
+      "question": "「チ」的讀音是？",
+      "options": [
+        "shi",
+        "tsu",
+        "chi",
+        "ti"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "question": "「フ」的讀音是？",
+      "options": [
+        "fu",
+        "hu",
+        "he",
+        "ho"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "text",
+      "question": "「メ」的羅馬字是？",
+      "answer": [
+        "me"
+      ]
+    },
+    {
+      "type": "choice",
+      "question": "「飲む」是什麼意思？",
+      "options": [
+        "吃",
+        "買",
+        "喝",
+        "看"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "question": "水＿飲みます。",
+      "options": [
+        "に",
+        "で",
+        "を",
+        "の"
+      ],
+      "answer": 2
+    },
+    {
+      "type": "choice",
+      "question": "アイス＿食べます。",
+      "options": [
+        "を",
+        "に",
+        "は",
+        "で"
+      ],
+      "answer": 0
+    },
+    {
+      "type": "choice",
+      "question": "電車＿学校＿行きます。",
+      "options": [
+        "に／で",
+        "で／に",
+        "を／に",
+        "で／を"
+      ],
+      "answer": 1
+    },
+    {
+      "type": "choice",
+      "question": "「スーパーに行きます。アイスを買います。」的意思是？",
+      "options": [
+        "去超市買冰淇淋",
+        "去學校喝水",
+        "搭公車去飯店",
+        "去車站買書"
+      ],
+      "answer": 0
+    }
+  ],
+  "review": [
+    "再念一次ハ行、マ行",
+    "口頭說出「に／で／を」三者差別",
+    "不看答案翻譯「私は水を飲みます」",
+    "再確認チ＝chi、ツ＝tsu"
+  ]
+}
