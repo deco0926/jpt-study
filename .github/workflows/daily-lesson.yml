@@ -3,8 +3,8 @@ name: Daily JPT lesson
 on:
   workflow_dispatch:
   schedule:
-    # 23:05 UTC = 08:05 Japan time (JST) next day
-    - cron: "5 23 * * *"
+    # 00:00 UTC = 08:00 Taiwan time (Asia/Taipei)
+    - cron: "0 0 * * *"
 
 permissions:
   contents: write
