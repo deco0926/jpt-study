@@ -1,33 +1,55 @@
-# JPT Study Starter
+# JPT Study
 
-一個手機優先的 JPT 每日學習網站。
+一個以手機瀏覽為優先設計的日文學習網站，主要用於 JPT 初學者的每日練習與複習。
 
-## 目錄
-- `site/`：GitHub Pages 實際部署內容
-- `site/lessons/latest.json`：首頁載入的最新教材
-- `scripts/generate_lesson.py`：每天呼叫 OpenAI API 產生教材
-- `.github/workflows/daily-lesson.yml`：每天 08:05 JST 自動生成並部署
+目前內容以基礎日文為主，包含片假名、常用單字、基礎文法、短句閱讀，以及每日小測驗。網站會以「每天完成一小段」的方式安排學習內容，適合想建立日文基礎，或正在準備 JPT 入門程度的學習者使用。
 
-## 本機預覽
-在專案根目錄執行：
+## 網站內容
 
-```bash
-python -m http.server 8000 -d site
-```
+- 每日學習任務
+- 片假名與易混淆字練習
+- 常用單字、讀音、中文解釋與例句
+- N5 程度基礎文法
+- 簡短閱讀與情境理解
+- 每日驗收小測驗
+- 學習進度記錄
 
-瀏覽器打開：
+## 使用方式
 
-```text
-http://localhost:8000
-```
+直接開啟網站即可開始學習。
 
-## GitHub Secret
-Repository → Settings → Secrets and variables → Actions → New repository secret
+網站會顯示目前最新的每日教材，完成學習後可以進行小測驗，並在瀏覽器中保存當天的完成狀態。
 
-Name:
-`OPENAI_API_KEY`
+本專案採手機優先設計，也可以使用電腦瀏覽器開啟。
 
-Value:
-你的 OpenAI API key
+## 學習目標
 
-不要把 API key 寫進 HTML、JavaScript 或 commit 到 GitHub。
+目前教材以日文初學者為主要對象，內容大致從：
+
+**平假名基礎 → 片假名 → 常用單字 → 基礎助詞 → 動詞變化 → 簡單閱讀與聽解思維**
+
+逐步增加難度。
+
+教材主要參考 JLPT N5 左右的基礎日文範圍，同時加入適合 JPT 題型的練習方式。
+
+## 關於本專案
+
+這是一個持續更新中的個人學習專案，目標是把每天的日文學習內容整理成更容易閱讀、練習與回顧的網站形式。
+
+未來預計持續加入更多功能，例如：
+
+- 過去教材日期切換
+- 片假名隨機練習
+- 單字複習與錯題整理
+- 更多 JPT 模擬題
+- 學習成績與進度統計
+
+## 技術
+
+網站目前使用 HTML、CSS、JavaScript 製作，並透過 GitHub Pages 部署。
+
+教材資料以 JSON 格式管理，方便持續新增與更新。
+
+---
+
+如果你也正在學日文，希望這個網站能成為一個方便的小工具。
