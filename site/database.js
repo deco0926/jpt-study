@@ -64,7 +64,10 @@ const grammar = [
 ];
 
 let kanaMode = "both";
+let kanaRowFilter = "all";
 let randomKana = null;
+
+const DB_ROW_IDS = ["a","k","s","t","n","h","m","y","r","w","w"];
 
 function esc(s=""){
   return String(s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
@@ -76,7 +79,9 @@ function normalize(s=""){
 
 function renderKana(){
   const root = document.querySelector("#gojuonTable");
-  root.innerHTML = kanaRows.map((row,rowIndex) => {
+  root.innerHTML = kanaRows.map((row,rowIndex) => ({row,rowIndex}))
+    .filter(x => kanaRowFilter === "all" || DB_ROW_IDS[x.rowIndex] === kanaRowFilter)
+    .map(({row,rowIndex}) => {
     const cells = row.r.map((romaji,i) => {
       if(!romaji) return '<div class="gojuon-cell empty"></div>';
       const h = row.h[i] || "";
@@ -117,8 +122,10 @@ function renderGrammar(){
 
 function pickRandomKana(){
   const pool = [];
-  kanaRows.forEach(row => row.r.forEach((r,i)=>{
-    if(r) pool.push({h:row.h[i], k:row.k[i], r});
+  kanaRows.forEach((row,rowIndex) => row.r.forEach((r,i)=>{
+    if(r && (kanaRowFilter === "all" || DB_ROW_IDS[rowIndex] === kanaRowFilter)){
+      pool.push({h:row.h[i], k:row.k[i], r});
+    }
   }));
   randomKana = pool[Math.floor(Math.random()*pool.length)];
   const char = kanaMode === "hiragana" ? randomKana.h : kanaMode === "katakana" ? randomKana.k : (Math.random() < .5 ? randomKana.h : randomKana.k);
@@ -214,6 +221,16 @@ document.querySelectorAll(".seg-btn").forEach(btn=>{
     document.querySelectorAll(".seg-btn").forEach(x=>x.classList.remove("active"));
     btn.classList.add("active");
     kanaMode = btn.dataset.mode;
+    renderKana();
+  });
+});
+
+document.querySelectorAll(".row-filter-btn").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    document.querySelectorAll(".row-filter-btn").forEach(x=>x.classList.remove("active"));
+    btn.classList.add("active");
+    kanaRowFilter = btn.dataset.row;
+    document.querySelector("#randomKanaBox").classList.add("hidden");
     renderKana();
   });
 });
