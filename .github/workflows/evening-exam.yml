@@ -1,9 +1,8 @@
 name: Daily JPT evening exam
 
 on:
-  schedule:
-    # 11:00 UTC = 19:00 Taiwan time (Asia/Taipei)
-    - cron: "0 11 * * *"
+  # Manual API-based fallback only.
+  # The normal 19:00 exam is generated and synced by the Codex automation.
   workflow_dispatch:
 
 permissions:
