@@ -138,6 +138,7 @@ Firebase / 後端同步規則：
 - 必須先設計 migration / fallback
 - 晚間驗收紀錄固定寫入 `users/{uid}/examAttempts`
 - 前端 Firebase 設定不是 secret；服務帳戶金鑰仍不可提交
+- 登入後的「上一份驗收分析」由最近一次 Firebase 驗收紀錄即時計算，供隔日教材排程使用
 
 ## Evening exam generation
 
@@ -153,8 +154,9 @@ Firebase / 後端同步規則：
 
 每日教材由：
 
+- Codex 每日 08:00 排程（正式流程，讀取前一日 Firebase 驗收分析）
 - `scripts/generate_lesson.py`
-- `.github/workflows/daily-lesson.yml`
+- `.github/workflows/daily-lesson.yml`（需要 `OPENAI_API_KEY` 的手動備援）
 
 負責。
 

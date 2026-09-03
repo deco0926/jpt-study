@@ -54,12 +54,12 @@ scripts/
 └─ generate_evening_exam.py # 使用今日教材產生正式晚間考卷
 
 .github/workflows/
-├─ daily-lesson.yml    # 每日自動產教材並部署
+├─ daily-lesson.yml    # 需 API Key 的手動備援產教材流程
 ├─ evening-exam.yml    # 需 API Key 的手動備援產題流程
 └─ deploy-pages.yml    # main push 後部署 GitHub Pages
 ```
 
-正式晚間考卷由 Codex 自動化於台灣時間每日 19:00 產生並同步；GitHub Actions 流程只作手動備援。
+正式早間教材由 Codex 自動化於台灣時間每日 08:00 讀取前一日 Firebase 驗收分析後產生並同步。正式晚間考卷由另一個 Codex 自動化於每日 19:00 產生並同步；兩個 GitHub Actions 產生流程只作需要 API Key 的手動備援。教材或考卷推送至 `main` 後會立即觸發 GitHub Pages 部署。
 
 ## 4. 目前主要功能
 
