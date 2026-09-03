@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-03",
+  "title": "9/3 晚間驗收｜形容詞與片假名弱點",
+  "description": "驗收今天的片假名易混淆字、形容詞變化、名詞修飾與基礎閱讀。",
+  "passScore": 80,
+  "questions": [
+    {"id":"q1","category":"kana","question":"「ユ」怎麼念？","options":["yo","yu","ya","ru"],"answer":1,"explanation":"ユ讀作 yu。"},
+    {"id":"q2","category":"kana","question":"「シ」怎麼念？","options":["tsu","so","shi","n"],"answer":2,"explanation":"シ讀作 shi；注意不要和ツ混淆。"},
+    {"id":"q3","category":"vocab","question":"「安い」是什麼意思？","options":["昂貴的","便宜的","安靜的","方便的"],"answer":1,"explanation":"安い（やすい）表示便宜。"},
+    {"id":"q4","category":"vocab","question":"「便利」是什麼意思？","options":["熱鬧","老舊","方便","好吃"],"answer":2,"explanation":"便利（べんり）表示方便。"},
+    {"id":"q5","category":"grammar","question":"「高いです」的正確否定是？","options":["高いではありません","高くないです","高ないです","高くありませんでした"],"answer":1,"explanation":"い形容詞否定要把最後的い改為くないです。"},
+    {"id":"q6","category":"grammar","question":"「静かです」的正確否定是？","options":["静かくないです","静かないです","静かではありません","静かなではありません"],"answer":2,"explanation":"な形容詞句尾否定使用ではありません。"},
+    {"id":"q7","category":"grammar","question":"「安靜的城鎮」是哪一個？","options":["静か町","静かな町","静かい町","静かの町"],"answer":1,"explanation":"な形容詞修飾名詞時要加な：静かな町。"},
+    {"id":"q8","category":"reading","question":"「昨日、新しい店に行きました。」是什麼意思？","options":["明天要去新店","昨天去了新店","今天沒有去新店","每天都去新店"],"answer":1,"explanation":"昨日是昨天，行きました是去了。"},
+    {"id":"q9","category":"reading","question":"A：このホテルはどうですか。B：安いです。そして、駅に近いです。飯店有什麼特徵？","options":["昂貴而且離車站遠","便宜而且離車站近","安靜但不方便","很新而且很大"],"answer":1,"explanation":"安い表示便宜，駅に近い表示離車站近。"},
+    {"id":"q10","category":"grammar","question":"「一緒に行きませんか。」最接近哪個意思？","options":["昨天一起去了","不可以一起去","要不要一起去？","明天不去"],"answer":2,"explanation":"～ませんか常用來禮貌邀請對方一起做某事。"}
+  ]
+}
