@@ -3,58 +3,63 @@ name: Daily JPT lesson
 on:
   workflow_dispatch:
   schedule:
-    # 00:00 UTC = 08:00 Taiwan time (Asia/Taipei)
+    # Primary run: 00:00 UTC = 08:00 Taiwan time (Asia/Taipei)
     - cron: "0 0 * * *"
+    # Backup run: 00:10 UTC = 08:10 Taiwan time; skips if today's lesson already exists
+    - cron: "10 0 * * *"
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: daily-lesson
+  cancel-in-progress: false
 
 jobs:
-  generate-and-deploy:
+  generate:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout
+      - name: Checkout latest main
         uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Refresh main branch
+        run: git pull --ff-only origin main
+
+      - name: Check whether today's lesson is needed
+        id: lesson
+        run: |
+          TODAY="$(TZ=Asia/Taipei date +'%Y-%m-%d')"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ ! -f "site/lessons/${TODAY}.json" ]; then
+            echo "generate=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "generate=false" >> "$GITHUB_OUTPUT"
+            echo "site/lessons/${TODAY}.json already exists; skipping backup generation."
+          fi
 
       - name: Set up Python
+        if: steps.lesson.outputs.generate == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Install dependencies
+        if: steps.lesson.outputs.generate == 'true'
         run: pip install -r requirements.txt
 
       - name: Generate today's lesson
+        if: steps.lesson.outputs.generate == 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/generate_lesson.py
 
       - name: Commit generated lesson
+        if: steps.lesson.outputs.generate == 'true'
         run: |
           git config user.name "jpt-study-bot"
           git config user.email "actions@users.noreply.github.com"
           git add site/lessons
-          git diff --cached --quiet || git commit -m "Add JPT lesson $(date -u +'%Y-%m-%d')"
+          git diff --cached --quiet || git commit -m "Add JPT lesson $(TZ=Asia/Taipei date +'%Y-%m-%d')"
           git push
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: "./site"
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
