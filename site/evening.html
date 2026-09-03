@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f4f7fb" />
+  <title>JPT 晚間驗收</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="quiz-page evening-page">
+  <main class="container">
+    <header class="hero evening-hero">
+      <div>
+        <p class="eyebrow">Evening Check</p>
+        <h1>晚間驗收</h1>
+        <p class="muted">登入後完成今天的正式驗收，成績只會記錄在你的帳號。</p>
+      </div>
+      <span class="pass-pill">80% 通過</span>
+    </header>
+
+    <nav class="top-nav" aria-label="主要導覽">
+      <a class="nav-link" href="./index.html">今日學習</a>
+      <a class="nav-link" href="./database.html">學習資料庫</a>
+      <a class="nav-link" href="./quiz.html">自我測驗</a>
+      <a class="nav-link active" href="./evening.html">晚間驗收</a>
+    </nav>
+
+    <section id="accountCard" class="card account-card">
+      <div>
+        <p class="eyebrow">Your Account</p>
+        <h2 id="accountTitle">正在確認登入狀態…</h2>
+        <p id="accountDetail" class="muted">請稍候</p>
+      </div>
+      <div class="account-actions">
+        <button id="signInButton" class="primary compact-primary hidden" type="button">使用 Google 登入</button>
+        <button id="signOutButton" class="ghost compact-btn hidden" type="button">登出</button>
+      </div>
+    </section>
+
+    <section id="examSetup" class="card evening-exam-card">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Today's Exam</p>
+          <h2 id="examTitle">正在載入今日考卷…</h2>
+        </div>
+        <span id="examDate" class="badge">載入中</span>
+      </div>
+      <p id="examDescription" class="history-note">今天教材完成後再開始。交卷後會顯示分數、錯題與解說。</p>
+      <div class="exam-facts">
+        <div><span>題數</span><strong id="examCount">—</strong></div>
+        <div><span>通過標準</span><strong id="examPassScore">80%</strong></div>
+        <div><span>紀錄方式</span><strong>帳號同步</strong></div>
+      </div>
+      <button id="startEveningExam" class="primary" type="button" disabled>登入後開始驗收</button>
+      <p id="examStatus" class="result bad"></p>
+    </section>
+
+    <section id="examView" class="hidden">
+      <div class="test-toolbar card">
+        <div>
+          <span class="eyebrow">正式驗收進行中</span>
+          <strong id="examProgress">1 / 10</strong>
+        </div>
+        <div class="timer-box">
+          <span>總時間</span>
+          <strong id="examElapsed">00:00</strong>
+        </div>
+      </div>
+
+      <section class="card question-card">
+        <div class="question-meta">
+          <span id="examCategory" class="badge">綜合</span>
+          <span class="muted">請選一個答案</span>
+        </div>
+        <h2 id="examQuestion" class="question-text"></h2>
+        <div id="examOptions" class="option-list"></div>
+        <div class="question-actions single-action">
+          <button id="nextExamQuestion" class="primary inline-primary" type="button" disabled>下一題</button>
+        </div>
+      </section>
+    </section>
+
+    <section id="examResult" class="hidden">
+      <section class="card result-hero">
+        <p class="eyebrow">Result</p>
+        <h2 id="resultHeadline">本次驗收結果</h2>
+        <div class="result-metrics">
+          <div><span>答對率</span><strong id="eveningAccuracy">0%</strong></div>
+          <div><span>分數</span><strong id="eveningScore">0 / 0</strong></div>
+          <div><span>總時間</span><strong id="eveningTime">00:00</strong></div>
+          <div><span>雲端紀錄</span><strong id="cloudSaveState">儲存中</strong></div>
+        </div>
+        <div id="eveningAdvice" class="advice-box"></div>
+      </section>
+
+      <section class="card">
+        <p class="eyebrow">Review</p>
+        <h2>錯題與解說</h2>
+        <div id="eveningReview" class="wrong-review"></div>
+      </section>
+
+      <div class="result-actions">
+        <button id="retryEveningExam" class="primary" type="button">重新驗收</button>
+        <button id="backToEveningHome" class="ghost" type="button">返回今日驗收</button>
+      </div>
+    </section>
+
+    <section id="cloudHistoryCard" class="card history-card">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Private History</p>
+          <h2>我的晚間驗收紀錄</h2>
+        </div>
+        <span class="badge">最近 10 次</span>
+      </div>
+      <p class="history-note">這裡只讀取目前登入帳號的資料，其他訪客無法查看。</p>
+      <div id="cloudHistory" class="history-list">
+        <div class="empty-history">登入後顯示你的紀錄。</div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./evening.js"></script>
+</body>
+</html>

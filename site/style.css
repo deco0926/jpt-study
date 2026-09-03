@@ -394,3 +394,32 @@ kbd{background:#f0f2f6;border:1px solid var(--line);border-bottom-width:2px;bord
   .today-test-controls{grid-template-columns:1fr}
   .today-start-btn{grid-column:auto}
 }
+
+
+/* Account-backed evening exam */
+.evening-hero{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.pass-pill{display:inline-flex;align-items:center;justify-content:center;padding:9px 13px;border-radius:999px;background:#eaf7ee;color:var(--ok);font-size:13px;font-weight:900;white-space:nowrap}
+.account-card{display:flex;align-items:center;justify-content:space-between;gap:18px;border-color:#cfe0ff;background:linear-gradient(135deg,#fff 0%,#f4f8ff 100%)}
+.account-card h2{margin:3px 0 5px}.account-card p{margin-bottom:0}
+.account-actions{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.compact-primary{width:auto;margin-top:0;padding:10px 15px}
+.evening-exam-card{border-color:#d8deec}
+.exam-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:16px 0}
+.exam-facts>div{display:grid;gap:4px;border:1px solid var(--line);border-radius:13px;padding:12px;background:#fbfcfe}
+.exam-facts span{font-size:11px;color:var(--muted)}
+.exam-facts strong{font-size:17px}
+.single-action{justify-content:flex-end}
+.evening-history-row>div:first-child span{font-weight:800}
+
+@media(max-width:720px){
+  .evening-hero,.account-card{align-items:flex-start}
+  .account-card{display:grid}
+  .exam-facts{grid-template-columns:1fr}
+}
+
+@media(max-width:460px){
+  .evening-hero{display:grid}
+  .pass-pill{justify-self:start}
+  .account-actions{width:100%}
+  .account-actions button{width:100%}
+}
