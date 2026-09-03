@@ -143,10 +143,11 @@ Firebase / 後端同步規則：
 
 晚間考卷由：
 
+- Codex 每日 19:00 排程（正式流程）
 - `scripts/generate_evening_exam.py`
-- `.github/workflows/evening-exam.yml`
+- `.github/workflows/evening-exam.yml`（需要 `OPENAI_API_KEY` 的手動備援）
 
-負責，台灣時間每日 19:00 產生。題目必須保持四選一且只能使用當日教材範圍。
+負責。題目必須保持四選一且只能使用當日教材範圍。
 
 ## Daily lesson generation
 
