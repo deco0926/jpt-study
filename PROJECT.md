@@ -25,9 +25,11 @@ JPT Study 是一個以繁體中文為介面的日文初學者學習網站。
 - JSON 教材
 - GitHub Pages
 - GitHub Actions
-- OpenAI API（僅用於每日教材自動產生）
+- OpenAI API（用於每日教材與晚間考卷自動產生）
+- Firebase Authentication（Google 登入）
+- Cloud Firestore（私人晚間驗收紀錄）
 
-目前沒有前端框架，也沒有後端資料庫。
+目前沒有前端框架。正式晚間驗收使用 Firebase 作為帳號與雲端紀錄後端；其他學習進度與自我測驗仍保留 localStorage。
 
 ## 3. 主要檔案
 
@@ -39,16 +41,21 @@ site/
 ├─ database.js         # 五十音、單字、文法資料庫
 ├─ quiz.html           # 自我測驗
 ├─ quiz.js             # 自訂測驗、今日專屬考卷、學習診斷
+├─ evening.html        # 需登入的正式晚間驗收
+├─ evening.js          # 晚間驗收、計時、交卷與私人歷史
+├─ firebase.js         # Firebase Authentication / Firestore 連線
 ├─ style.css           # 全站樣式
 └─ lessons/
    ├─ latest.json      # 今日教材入口
    └─ YYYY-MM-DD.json  # 每日教材歷史
 
 scripts/
-└─ generate_lesson.py  # 使用 OpenAI API 產生每日教材
+├─ generate_lesson.py       # 使用 OpenAI API 產生每日教材
+└─ generate_evening_exam.py # 使用今日教材產生正式晚間考卷
 
 .github/workflows/
 ├─ daily-lesson.yml    # 每日自動產教材並部署
+├─ evening-exam.yml    # 台灣時間 19:00 自動產生晚間考卷
 └─ deploy-pages.yml    # main push 後部署 GitHub Pages
 ```
 

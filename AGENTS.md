@@ -121,9 +121,9 @@
 
 ## Data persistence
 
-目前沒有登入系統。
+正式晚間驗收已使用 Google 登入與 Cloud Firestore。
 
-以下資料只存在瀏覽器 localStorage：
+以下資料仍只存在瀏覽器 localStorage：
 
 - 今日學習進度
 - 自我測驗歷史
@@ -131,11 +131,22 @@
 
 不要把 localStorage 誤認成全站共享資料。
 
-如果新增 Firebase / 後端同步：
+Firebase / 後端同步規則：
 
 - 必須保留每位使用者資料隔離
 - 不可讓公開訪客看到其他人的學習紀錄
 - 必須先設計 migration / fallback
+- 晚間驗收紀錄固定寫入 `users/{uid}/examAttempts`
+- 前端 Firebase 設定不是 secret；服務帳戶金鑰仍不可提交
+
+## Evening exam generation
+
+晚間考卷由：
+
+- `scripts/generate_evening_exam.py`
+- `.github/workflows/evening-exam.yml`
+
+負責，台灣時間每日 19:00 產生。題目必須保持四選一且只能使用當日教材範圍。
 
 ## Daily lesson generation
 
