@@ -410,11 +410,25 @@ kbd{background:#f0f2f6;border:1px solid var(--line);border-bottom-width:2px;bord
 .exam-facts strong{font-size:17px}
 .single-action{justify-content:flex-end}
 .evening-history-row>div:first-child span{font-weight:800}
+.learning-profile-card{border-color:#cfe0ff;background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)}
+.learning-profile{display:grid;gap:14px}
+.profile-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.profile-summary>div{display:grid;gap:4px;border:1px solid var(--line);border-radius:13px;padding:12px;background:#fff}
+.profile-summary span{font-size:11px;color:var(--muted)}
+.profile-summary strong{font-size:17px}
+.profile-advice{margin:0;padding:12px 14px;border-left:4px solid var(--primary);border-radius:8px;background:var(--soft);line-height:1.65;font-weight:700}
+.profile-category-list{display:flex;flex-wrap:wrap;gap:8px}
+.profile-category-chip{display:inline-flex;gap:6px;align-items:center;padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:12px;color:var(--muted)}
+.profile-category-chip b{color:var(--text)}
+.profile-wrong-list{display:grid;gap:9px}.profile-wrong-list h3{margin:0;font-size:16px}
+.profile-wrong-item{border:1px solid #f0c5c1;border-radius:12px;padding:12px;background:#fffafa}
+.profile-wrong-item p{margin:5px 0 0;font-size:13px;line-height:1.55}
 
 @media(max-width:720px){
   .evening-hero,.account-card{align-items:flex-start}
   .account-card{display:grid}
   .exam-facts{grid-template-columns:1fr}
+  .profile-summary{grid-template-columns:1fr}
 }
 
 @media(max-width:460px){

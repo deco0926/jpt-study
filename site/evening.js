@@ -24,6 +24,7 @@ let answers = [];
 let startedAt = 0;
 let questionStartedAt = 0;
 let timerId = null;
+let examActive = false;
 
 function escapeHtml(value = "") {
   return String(value).replace(/[&<>"']/g, char => ({
@@ -34,6 +35,76 @@ function escapeHtml(value = "") {
 function formatTime(seconds) {
   const whole = Math.max(0, Math.round(seconds));
   return `${String(Math.floor(whole / 60)).padStart(2, "0")}:${String(whole % 60).padStart(2, "0")}`;
+}
+
+function summarizeCategories(attempt) {
+  const categories = new Map();
+  const attemptAnswers = Array.isArray(attempt?.answers) ? attempt.answers : [];
+  attemptAnswers.forEach(answer => {
+    const category = answer.category || "mixed";
+    const current = categories.get(category) || { category, total: 0, correct: 0, totalTime: 0 };
+    current.total += 1;
+    current.correct += answer.isCorrect ? 1 : 0;
+    current.totalTime += Number(answer.time) || 0;
+    categories.set(category, current);
+  });
+  return [...categories.values()].map(item => ({
+    ...item,
+    accuracy: Math.round(item.correct / item.total * 100),
+    averageTime: item.totalTime / item.total
+  })).sort((a, b) => a.accuracy - b.accuracy || b.averageTime - a.averageTime);
+}
+
+function getAdaptiveAdvice(attempt, weakestCategory) {
+  const accuracy = Number(attempt?.accuracy) || 0;
+  const focus = weakestCategory ? CATEGORY_LABELS[weakestCategory.category] || "綜合" : "前次內容";
+  if (accuracy >= 90) return `掌握度穩定，明天以新內容為主，保留少量「${focus}」速度與易錯點複習。`;
+  if (accuracy >= 80) return `已通過，明天正常推進新內容，並安排「${focus}」定向複習。`;
+  if (accuracy >= 70) return `接近通過，明天先補強「${focus}」與錯題觀念，再縮量加入新內容。`;
+  return `基礎仍不穩，明天優先重教「${focus}」及錯題觀念，確認掌握後再增加新內容。`;
+}
+
+function renderLearningProfile(attempt) {
+  const card = $("#learningProfileCard");
+  const root = $("#learningProfile");
+  card.classList.toggle("hidden", examActive);
+  if (!attempt) {
+    $("#profileExamDate").textContent = "尚無紀錄";
+    root.innerHTML = '<div class="empty-history">完成第一份晚間驗收後，這裡會顯示學習重點。</div>';
+    return;
+  }
+
+  const categories = summarizeCategories(attempt);
+  const wrongAnswers = (Array.isArray(attempt.answers) ? attempt.answers : []).filter(answer => !answer.isCorrect);
+  const weakest = categories[0];
+  $("#profileExamDate").textContent = attempt.examDate || "最近一次";
+  root.innerHTML = `
+    <div class="profile-summary">
+      <div><span>答對率</span><strong>${Number(attempt.accuracy) || 0}%</strong></div>
+      <div><span>結果</span><strong>${attempt.passed ? "通過" : "未通過"}</strong></div>
+      <div><span>明日優先</span><strong>${escapeHtml(weakest ? CATEGORY_LABELS[weakest.category] || "綜合" : "穩定複習")}</strong></div>
+    </div>
+    <p class="profile-advice">${escapeHtml(getAdaptiveAdvice(attempt, weakest))}</p>
+    <div class="profile-category-list" aria-label="各類題目表現">
+      ${categories.length ? categories.map(item => `
+        <span class="profile-category-chip">
+          <b>${escapeHtml(CATEGORY_LABELS[item.category] || "綜合")}</b>
+          ${item.correct}/${item.total}・${item.accuracy}%・平均 ${escapeHtml(formatTime(item.averageTime))}
+        </span>
+      `).join("") : '<span class="muted">這筆舊紀錄沒有逐題分類資料。</span>'}
+    </div>
+    <div class="profile-wrong-list">
+      <h3>需要帶入明日教材的錯題</h3>
+      ${wrongAnswers.length ? wrongAnswers.map(answer => `
+        <article class="profile-wrong-item">
+          <strong>${escapeHtml(answer.question)}</strong>
+          <p>你的答案：<b class="bad-text">${escapeHtml(answer.selected)}</b></p>
+          <p>正確答案：<b class="ok-text">${escapeHtml(answer.correct)}</b></p>
+          <p class="muted">${escapeHtml(answer.explanation || "請複習這個觀念。")}</p>
+        </article>
+      `).join("") : '<div class="perfect-box">沒有錯題；明日正常推進，保留少量速度複習。</div>'}
+    </div>
+  `;
 }
 
 function setStatus(message = "") {
@@ -95,12 +166,15 @@ function renderAccount(user) {
     $("#signInButton").classList.remove("hidden");
     $("#signOutButton").classList.add("hidden");
     $("#cloudHistory").innerHTML = '<div class="empty-history">登入後顯示你的紀錄。</div>';
+    $("#learningProfileCard").classList.add("hidden");
+    $("#learningProfile").innerHTML = "";
   }
   updateStartButton();
 }
 
 function startExam() {
   if (!currentUser || !exam) return;
+  examActive = true;
   questionIndex = 0;
   selectedIndex = -1;
   answers = [];
@@ -108,6 +182,7 @@ function startExam() {
   questionStartedAt = startedAt;
   $("#examSetup").classList.add("hidden");
   $("#cloudHistoryCard").classList.add("hidden");
+  $("#learningProfileCard").classList.add("hidden");
   $("#examResult").classList.add("hidden");
   $("#examView").classList.remove("hidden");
   clearInterval(timerId);
@@ -168,6 +243,7 @@ function nextQuestion() {
 
 async function finishExam() {
   clearInterval(timerId);
+  examActive = false;
   const totalTime = (performance.now() - startedAt) / 1000;
   const score = answers.filter(answer => answer.isCorrect).length;
   const accuracy = Math.round(score / answers.length * 100);
@@ -222,14 +298,18 @@ async function finishExam() {
 
 async function renderCloudHistory() {
   if (!currentUser) return;
+  const requestedUid = currentUser.uid;
   const root = $("#cloudHistory");
   root.innerHTML = '<div class="empty-history">正在讀取你的紀錄…</div>';
   try {
     const history = await loadExamAttempts(currentUser, 10);
+    if (currentUser?.uid !== requestedUid) return;
     if (!history.length) {
       root.innerHTML = '<div class="empty-history">尚無紀錄，完成第一份晚間驗收後會顯示在這裡。</div>';
+      renderLearningProfile(null);
       return;
     }
+    renderLearningProfile(history[0]);
     root.innerHTML = history.map(item => {
       const date = item.submittedAt?.toDate ? item.submittedAt.toDate() : null;
       const when = date ? `${date.getMonth() + 1}/${date.getDate()} ${String(date.getHours()).padStart(2, "0")}:${String(date.getMinutes()).padStart(2, "0")}` : item.examDate;
@@ -242,7 +322,9 @@ async function renderCloudHistory() {
       `;
     }).join("");
   } catch (error) {
+    if (currentUser?.uid !== requestedUid) return;
     root.innerHTML = `<div class="empty-history bad-text">讀取失敗：${escapeHtml(error.message)}</div>`;
+    renderLearningProfile(null);
   }
 }
 
@@ -264,9 +346,11 @@ $("#startEveningExam").addEventListener("click", startExam);
 $("#nextExamQuestion").addEventListener("click", nextQuestion);
 $("#retryEveningExam").addEventListener("click", startExam);
 $("#backToEveningHome").addEventListener("click", () => {
+  examActive = false;
   $("#examResult").classList.add("hidden");
   $("#examSetup").classList.remove("hidden");
   $("#cloudHistoryCard").classList.remove("hidden");
+  if (currentUser) renderCloudHistory();
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
