@@ -25,11 +25,11 @@ JPT Study 是一個以繁體中文為介面的日文初學者學習網站。
 - JSON 教材
 - GitHub Pages
 - GitHub Actions
-- OpenAI API（用於每日教材與晚間考卷自動產生）
+- OpenAI API（僅供手動備援產生每日教材與今日驗收考卷）
 - Firebase Authentication（Google 登入）
-- Cloud Firestore（私人晚間驗收紀錄）
+- Cloud Firestore（私人今日驗收紀錄）
 
-目前沒有前端框架。正式晚間驗收使用 Firebase 作為帳號與雲端紀錄後端；其他學習進度與自我測驗仍保留 localStorage。
+目前沒有前端框架。正式今日驗收全天開放，使用 Firebase 作為帳號與雲端紀錄後端；其他學習進度與自我測驗仍保留 localStorage。
 
 ## 3. 主要檔案
 
@@ -41,8 +41,8 @@ site/
 ├─ database.js         # 五十音、單字、文法資料庫
 ├─ quiz.html           # 自我測驗
 ├─ quiz.js             # 自訂測驗、今日專屬考卷、學習診斷
-├─ evening.html        # 需登入的正式晚間驗收
-├─ evening.js          # 晚間驗收、計時、交卷與私人歷史
+├─ evening.html        # 需登入且全天開放的正式今日驗收
+├─ evening.js          # 今日驗收、計時、交卷與私人歷史
 ├─ firebase.js         # Firebase Authentication / Firestore 連線
 ├─ style.css           # 全站樣式
 └─ lessons/
@@ -51,15 +51,15 @@ site/
 
 scripts/
 ├─ generate_lesson.py       # 使用 OpenAI API 產生每日教材
-└─ generate_evening_exam.py # 使用今日教材產生正式晚間考卷
+└─ generate_evening_exam.py # 使用今日教材產生正式今日驗收考卷
 
 .github/workflows/
 ├─ daily-lesson.yml    # 需 API Key 的手動備援產教材流程
-├─ evening-exam.yml    # 需 API Key 的手動備援產題流程
+├─ evening-exam.yml    # 需 API Key 的考卷單獨修復備援
 └─ deploy-pages.yml    # main push 後部署 GitHub Pages
 ```
 
-正式早間教材由 Codex 自動化於台灣時間每日 08:00 讀取前一日 Firebase 驗收分析後產生並同步。正式晚間考卷由另一個 Codex 自動化於每日 19:00 產生並同步；兩個 GitHub Actions 產生流程只作需要 API Key 的手動備援。教材或考卷推送至 `main` 後會立即觸發 GitHub Pages 部署。
+正式每日內容由 ChatGPT 排程於台灣時間每日 10:00 讀取前一日 Firebase 驗收分析，同一次產生並同步今日教材與今日驗收考卷。考卷部署後全天開放，不再使用 19:00 的獨立生成排程。GitHub Actions 產生流程只作需要 API Key 的手動備援；內容推送至 `main` 後會立即觸發 GitHub Pages 部署。
 
 ## 4. 目前主要功能
 

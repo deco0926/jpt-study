@@ -121,7 +121,7 @@
 
 ## Data persistence
 
-正式晚間驗收已使用 Google 登入與 Cloud Firestore。
+正式今日驗收已使用 Google 登入與 Cloud Firestore，考卷全天開放作答。
 
 以下資料仍只存在瀏覽器 localStorage：
 
@@ -136,25 +136,26 @@ Firebase / 後端同步規則：
 - 必須保留每位使用者資料隔離
 - 不可讓公開訪客看到其他人的學習紀錄
 - 必須先設計 migration / fallback
-- 晚間驗收紀錄固定寫入 `users/{uid}/examAttempts`
+- 今日驗收紀錄固定寫入 `users/{uid}/examAttempts`
 - 前端 Firebase 設定不是 secret；服務帳戶金鑰仍不可提交
 - 登入後的「上一份驗收分析」由最近一次 Firebase 驗收紀錄即時計算，供隔日教材排程使用
 
-## Evening exam generation
+## Today's exam generation
 
-晚間考卷由：
+今日驗收考卷由：
 
-- Codex 每日 19:00 排程（正式流程）
+- ChatGPT 每日 10:00 排程與教材一起產生（正式流程）
 - `scripts/generate_evening_exam.py`
-- `.github/workflows/evening-exam.yml`（需要 `OPENAI_API_KEY` 的手動備援）
+- `.github/workflows/daily-lesson.yml`（需要 `OPENAI_API_KEY` 的整批手動備援）
+- `.github/workflows/evening-exam.yml`（需要 `OPENAI_API_KEY` 的考卷單獨修復備援）
 
-負責。題目必須保持四選一且只能使用當日教材範圍。
+負責。題目必須保持四選一且只能使用同一次早上流程產生的當日教材範圍。
 
 ## Daily lesson generation
 
 每日教材由：
 
-- Codex 每日 08:00 排程（正式流程，讀取前一日 Firebase 驗收分析）
+- ChatGPT 每日 10:00 排程（正式流程，讀取前一日 Firebase 驗收分析並同時產生今日驗收）
 - `scripts/generate_lesson.py`
 - `.github/workflows/daily-lesson.yml`（需要 `OPENAI_API_KEY` 的手動備援）
 
