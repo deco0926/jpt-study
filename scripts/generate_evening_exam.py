@@ -25,7 +25,7 @@ if lesson.get("date") != date_str:
 
 prompt = f"""
 你是一位嚴格但清楚的 JPT 初學者老師。
-請只根據下方今日教材，製作今天的正式晚間驗收考卷。
+請只根據下方今日教材，製作今天全天開放的正式今日驗收考卷。
 
 規則：
 - 日期必須是 {date_str}。
@@ -37,6 +37,7 @@ prompt = f"""
 - 干擾選項要合理，不能一眼排除。
 - 每題都要有簡短繁體中文 explanation。
 - 通過標準為 80。
+- title 必須使用「今日驗收」，不可使用「晚間驗收」。
 - 只輸出合法 JSON，不要 Markdown code fence。
 
 JSON schema：
@@ -104,7 +105,7 @@ for attempt in range(2):
     except (json.JSONDecodeError, ValueError) as error:
         last_error = error
 else:
-    raise RuntimeError(f"晚間考卷驗證失敗：{last_error}")
+    raise RuntimeError(f"今日驗收考卷驗證失敗：{last_error}")
 
 dated_path = EXAMS / f"{date_str}.json"
 dated_path.write_text(json.dumps(exam, ensure_ascii=False, indent=2), encoding="utf-8")

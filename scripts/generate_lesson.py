@@ -9,7 +9,7 @@ SITE = ROOT / "site"
 LESSONS = SITE / "lessons"
 LESSONS.mkdir(parents=True, exist_ok=True)
 
-today = datetime.now(ZoneInfo("Asia/Tokyo")).date()
+today = datetime.now(ZoneInfo("Asia/Taipei")).date()
 date_str = today.isoformat()
 exam_date = "2026-09-13"
 
@@ -32,6 +32,7 @@ prompt = f"""
 - 每個文法都要有意思、接續、使用情境、至少 3 個例句。
 - 題目只能考本日教過或前日複習內容。
 - quiz 5～10 題，答案必須能機器判定。
+- 正式考卷統一稱為「今日驗收」，部署後全天開放；不要使用「晚間驗收」。
 - 請只輸出合法 JSON，不要 Markdown code fence。
 
 上一份教材摘要（若有）：
