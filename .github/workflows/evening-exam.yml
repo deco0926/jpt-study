@@ -1,8 +1,8 @@
-name: Daily JPT evening exam
+name: JPT exam-only recovery
 
 on:
   # Manual API-based fallback only.
-  # The normal 19:00 exam is generated and synced by the Codex automation.
+  # Manual recovery only. The normal exam is generated together with the lesson at 10:00.
   workflow_dispatch:
 
 permissions:
@@ -46,7 +46,7 @@ jobs:
         if: steps.exam.outputs.generate == 'true'
         run: pip install -r requirements.txt
 
-      - name: Generate today's evening exam
+      - name: Generate today's exam
         if: steps.exam.outputs.generate == 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -58,5 +58,5 @@ jobs:
           git config user.name "jpt-study-bot"
           git config user.email "actions@users.noreply.github.com"
           git add site/exams
-          git diff --cached --quiet || git commit -m "Add JPT evening exam $(TZ=Asia/Taipei date +'%Y-%m-%d')"
+          git diff --cached --quiet || git commit -m "Add JPT exam $(TZ=Asia/Taipei date +'%Y-%m-%d')"
           git push
