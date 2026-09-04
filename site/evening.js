@@ -70,7 +70,7 @@ function renderLearningProfile(attempt) {
   card.classList.toggle("hidden", examActive);
   if (!attempt) {
     $("#profileExamDate").textContent = "尚無紀錄";
-    root.innerHTML = '<div class="empty-history">完成第一份晚間驗收後，這裡會顯示學習重點。</div>';
+    root.innerHTML = '<div class="empty-history">完成第一份今日驗收後，這裡會顯示學習重點。</div>';
     return;
   }
 
@@ -113,7 +113,7 @@ function setStatus(message = "") {
 
 function validateExam(data) {
   if (!data || !data.date || !Array.isArray(data.questions) || !data.questions.length) {
-    throw new Error("今日晚間考卷格式不完整。");
+    throw new Error("今日驗收考卷格式不完整。");
   }
   data.questions.forEach((question, index) => {
     if (!question.question || !Array.isArray(question.options) || question.options.length !== 4) {
@@ -132,9 +132,9 @@ function validateExam(data) {
 async function loadExam() {
   try {
     const response = await fetch("./exams/latest.json", { cache: "no-store" });
-    if (!response.ok) throw new Error("今日晚間考卷尚未上線。");
+    if (!response.ok) throw new Error("今日驗收考卷尚未上線。");
     exam = validateExam(await response.json());
-    $("#examTitle").textContent = exam.title || "今日晚間驗收";
+    $("#examTitle").textContent = exam.title || "今日驗收";
     $("#examDate").textContent = exam.date;
     $("#examCount").textContent = `${exam.questions.length} 題`;
     $("#examPassScore").textContent = `${exam.passScore || 80}%`;
@@ -149,7 +149,7 @@ async function loadExam() {
 function updateStartButton() {
   const button = $("#startEveningExam");
   button.disabled = !(currentUser && exam);
-  button.textContent = currentUser ? (exam ? "開始今日晚間驗收" : "等待今日考卷") : "登入後開始驗收";
+  button.textContent = currentUser ? (exam ? "開始今日驗收" : "等待今日考卷") : "登入後開始驗收";
 }
 
 function renderAccount(user) {
@@ -278,7 +278,7 @@ async function finishExam() {
     await saveExamAttempt(currentUser, {
       schemaVersion: 1,
       examDate: exam.date,
-      examTitle: exam.title || "晚間驗收",
+      examTitle: exam.title || "今日驗收",
       score,
       total: answers.length,
       accuracy,
@@ -305,7 +305,7 @@ async function renderCloudHistory() {
     const history = await loadExamAttempts(currentUser, 10);
     if (currentUser?.uid !== requestedUid) return;
     if (!history.length) {
-      root.innerHTML = '<div class="empty-history">尚無紀錄，完成第一份晚間驗收後會顯示在這裡。</div>';
+      root.innerHTML = '<div class="empty-history">尚無紀錄，完成第一份今日驗收後會顯示在這裡。</div>';
       renderLearningProfile(null);
       return;
     }
@@ -316,7 +316,7 @@ async function renderCloudHistory() {
       return `
         <article class="history-row evening-history-row">
           <div><strong>${item.accuracy}%</strong><span>${item.passed ? "通過" : "未通過"}</span></div>
-          <div><b>${escapeHtml(item.examTitle || "晚間驗收")}</b><small>${escapeHtml(item.examDate || "")}</small></div>
+          <div><b>${escapeHtml(item.examTitle || "今日驗收")}</b><small>${escapeHtml(item.examDate || "")}</small></div>
           <div><span>${item.score}/${item.total}</span><small>${escapeHtml(when || "")}</small></div>
         </article>
       `;
