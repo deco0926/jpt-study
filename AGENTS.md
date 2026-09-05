@@ -144,7 +144,8 @@ Firebase / 後端同步規則：
 
 今日驗收考卷由：
 
-- ChatGPT 每日 10:00 排程與教材一起產生（正式流程）
+- ChatGPT 每日 10:00 排程與教材一起產生，並只寫入 `pipeline/incoming.json`（正式交稿流程）
+- `.github/workflows/publish-daily-bundle.yml`（驗證交稿並在同一個 commit 發布四個正式 JSON）
 - `scripts/generate_evening_exam.py`
 - `.github/workflows/daily-lesson.yml`（需要 `OPENAI_API_KEY` 的整批手動備援）
 - `.github/workflows/evening-exam.yml`（需要 `OPENAI_API_KEY` 的考卷單獨修復備援）
@@ -155,13 +156,22 @@ Firebase / 後端同步規則：
 
 每日教材由：
 
-- ChatGPT 每日 10:00 排程（正式流程，讀取前一日 Firebase 驗收分析並同時產生今日驗收）
+- ChatGPT 每日 10:00 排程（讀取前一日 Firebase 驗收分析，同時產生教材與今日驗收並寫入單一交稿檔）
+- `.github/workflows/publish-daily-bundle.yml`（正式驗證、拆分、提交與部署）
 - `scripts/generate_lesson.py`
 - `.github/workflows/daily-lesson.yml`（需要 `OPENAI_API_KEY` 的手動備援）
 
 負責。
 
 不要將 `OPENAI_API_KEY` 寫進 repo。
+
+正式交稿檔格式為：
+
+```json
+{"date":"YYYY-MM-DD","lesson":{},"exam":{}}
+```
+
+ChatGPT 排程不可直接建立 Git tree、commit object 或更新 branch ref；只能以 GitHub 的單檔建立／更新功能覆蓋 `pipeline/incoming.json`。正式四檔由 GitHub Actions 使用內建 `GITHUB_TOKEN` 發布。
 
 若修改每日教材 schema：
 

@@ -56,10 +56,11 @@ scripts/
 .github/workflows/
 ├─ daily-lesson.yml    # 需 API Key 的手動備援產教材流程
 ├─ evening-exam.yml    # 需 API Key 的考卷單獨修復備援
+├─ publish-daily-bundle.yml # 驗證 ChatGPT 單檔交稿並發布四個正式 JSON
 └─ deploy-pages.yml    # main push 後部署 GitHub Pages
 ```
 
-正式每日內容由 ChatGPT 排程於台灣時間每日 10:00 讀取前一日 Firebase 驗收分析，同一次產生並同步今日教材與今日驗收考卷。考卷部署後全天開放，不再使用 19:00 的獨立生成排程。GitHub Actions 產生流程只作需要 API Key 的手動備援；內容推送至 `main` 後會立即觸發 GitHub Pages 部署。
+正式每日內容由 ChatGPT 排程於台灣時間每日 10:00 讀取前一日 Firebase 驗收分析，同一次產生今日教材與今日驗收考卷，並使用 GitHub 單檔更新功能寫入 `pipeline/incoming.json`。`publish-daily-bundle.yml` 會驗證交稿、拆成四個正式 JSON、用同一個 commit 更新 `main` 並部署 GitHub Pages。考卷部署後全天開放，不再使用 19:00 的獨立生成排程。需要 OpenAI API Key 的產生流程只作手動備援。
 
 ## 4. 目前主要功能
 

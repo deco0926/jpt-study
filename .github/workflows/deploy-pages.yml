@@ -3,6 +3,8 @@ name: Deploy JPT site
 on:
   push:
     branches: ["main"]
+    paths-ignore:
+      - "pipeline/incoming.json"
   schedule:
     # 01:10 UTC = 09:10 Taiwan time (Asia/Taipei)
     - cron: "10 1 * * *"

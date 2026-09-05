@@ -1,0 +1,63 @@
+name: Publish JPT daily bundle
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "pipeline/incoming.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout triggering revision
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate bundle and materialize site JSON
+        run: python scripts/publish_daily_bundle.py pipeline/incoming.json
+
+      - name: Commit validated daily content
+        run: |
+          CONTENT_DATE="$(python -c 'import json; print(json.load(open("pipeline/incoming.json", encoding="utf-8"))["date"])')"
+          git config user.name "jpt-study-publisher"
+          git config user.email "actions@users.noreply.github.com"
+          git add site/lessons site/exams
+          if git diff --cached --quiet; then
+            echo "Validated daily content is already published."
+          else
+            git commit -m "Publish JPT lesson and exam ${CONTENT_DATE}"
+            git push origin HEAD:main
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload validated site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./site"
+
+      - name: Deploy validated site
+        id: deployment
+        uses: actions/deploy-pages@v4
