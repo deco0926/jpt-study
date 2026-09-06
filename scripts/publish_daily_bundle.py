@@ -7,6 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BUNDLE = ROOT / "pipeline" / "incoming.json"
+LEARNING_DATABASE = ROOT / "site" / "data" / "learning-database.json"
 ALLOWED_CATEGORIES = {"kana", "vocab", "grammar", "reading", "listening", "mixed"}
 TAIPEI_TIMEZONE = timezone(timedelta(hours=8))
 
@@ -105,6 +106,74 @@ def validate_exam(exam, expected_date):
     require(len(set(ids)) == len(ids), "exam.questions 的 id 必須互不重複")
 
 
+def load_learning_database():
+    if not LEARNING_DATABASE.exists():
+        return {"version": 1, "updatedThrough": "", "vocabulary": [], "grammar": []}
+    database = json.loads(LEARNING_DATABASE.read_text(encoding="utf-8"))
+    require(isinstance(database, dict), "learning-database.json 必須是 JSON 物件")
+    require(isinstance(database.get("vocabulary"), list), "learning-database.vocabulary 必須是陣列")
+    require(isinstance(database.get("grammar"), list), "learning-database.grammar 必須是陣列")
+    return database
+
+
+def merge_lesson_into_database(database, lesson):
+    lesson_date = lesson["date"]
+    vocabulary = {
+        item.get("word"): dict(item)
+        for item in database.get("vocabulary", [])
+        if isinstance(item, dict) and item.get("word")
+    }
+    for item in lesson.get("vocab", []):
+        previous = vocabulary.get(item["word"], {})
+        vocabulary[item["word"]] = {
+            "word": item["word"],
+            "reading": item["reading"],
+            "meaning": item["meaning"],
+            "usage": item["usage"],
+            "example": item["example"],
+            "translation": item["translation"],
+            "firstSeen": previous.get("firstSeen", lesson_date),
+            "lastSeen": lesson_date,
+        }
+
+    grammar = {
+        item.get("pattern"): dict(item)
+        for item in database.get("grammar", [])
+        if isinstance(item, dict) and item.get("pattern")
+    }
+    for item in lesson.get("grammar", []):
+        previous = grammar.get(item["pattern"], {})
+        grammar[item["pattern"]] = {
+            "pattern": item["pattern"],
+            "meaning": item["meaning"],
+            "connection": item["connection"],
+            "usage": item["usage"],
+            "examples": item["examples"],
+            "firstSeen": previous.get("firstSeen", lesson_date),
+            "lastSeen": lesson_date,
+        }
+
+    database["version"] = 1
+    database["updatedThrough"] = max(database.get("updatedThrough", ""), lesson_date)
+    database["vocabulary"] = sorted(
+        vocabulary.values(), key=lambda item: (item.get("firstSeen", ""), item["word"])
+    )
+    database["grammar"] = sorted(
+        grammar.values(), key=lambda item: (item.get("firstSeen", ""), item["pattern"])
+    )
+    return database
+
+
+def build_learning_database():
+    database = load_learning_database()
+    dated_lessons = sorted((ROOT / "site" / "lessons").glob("20??-??-??.json"))
+    for lesson_path in dated_lessons:
+        lesson = json.loads(lesson_path.read_text(encoding="utf-8"))
+        if isinstance(lesson, dict) and lesson.get("date"):
+            database = merge_lesson_into_database(database, lesson)
+    return database
+
+
 def main():
     bundle_path = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else DEFAULT_BUNDLE
     expected_date = os.environ.get("JPT_EXPECTED_DATE") or datetime.now(TAIPEI_TIMEZONE).date().isoformat()
@@ -126,12 +195,28 @@ def main():
     for path, content in outputs.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(
-            json.dumps(content, ensure_ascii=False, indent=2) + "\n",
+            json.dumps(content, ensure_ascii=False, indent=2) + "
+",
             encoding="utf-8",
-            newline="\n",
+            newline="
+",
         )
 
-    print(f"Validated and materialized daily bundle for {expected_date}")
+    learning_database = build_learning_database()
+    LEARNING_DATABASE.parent.mkdir(parents=True, exist_ok=True)
+    LEARNING_DATABASE.write_text(
+        json.dumps(learning_database, ensure_ascii=False, indent=2) + "
+",
+        encoding="utf-8",
+        newline="
+",
+    )
+
+    print(
+        f"Validated and materialized daily bundle for {expected_date}; "
+        f"learning database now has {len(learning_database['vocabulary'])} vocabulary items "
+        f"and {len(learning_database['grammar'])} grammar items"
+    )
 
 
 if __name__ == "__main__":
