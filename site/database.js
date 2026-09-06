@@ -85,11 +85,23 @@ const verbForms={
   "閉める":["閉めます","閉めない","閉めました","閉めて"], "開ける":["開けます","開けない","開けました","開けて"]
 };
 
-function vocabCategory(word){
-  return Object.entries(vocabGroups).find(([,words])=>words.has(word))?.[0] || "名詞";
+function vocabCategory(vocabItem){
+  const word=Array.isArray(vocabItem) ? vocabItem[0] : vocabItem;
+  const storedCategory=Array.isArray(vocabItem) ? vocabItem[5]?.category : "";
+  return storedCategory || Object.entries(vocabGroups).find(([,words])=>words.has(word))?.[0] || "名詞";
 }
 
-function grammarCategory(pattern){
+function displayedVerbForms(vocabItem){
+  const stored=vocabItem[5]?.forms;
+  if(stored?.masu && stored?.nai && stored?.past && stored?.te){
+    return [stored.masu,stored.nai,stored.past,stored.te];
+  }
+  return verbForms[vocabItem[0]] || null;
+}
+
+function grammarCategory(grammarItem){
+  const pattern=typeof grammarItem==="string" ? grammarItem : grammarItem.p;
+  if(typeof grammarItem!=="string" && grammarItem.category) return grammarItem.category;
   if(pattern.includes("形容詞")) return "形容詞";
   if(pattern.includes("時間") || pattern.includes("順序") || pattern.includes("てから")) return "時間・順序";
   if(pattern.includes("ませんか") || pattern.includes("ください")) return "請求・邀請";
@@ -138,31 +150,34 @@ function renderKana(){
 
 function getVocabEntries(){
   return vocab.map((v,index)=>({v,index}))
-    .filter(({v})=>vocabFilter==="all" || vocabCategory(v[0])===vocabFilter)
+    .filter(({v})=>vocabFilter==="all" || vocabCategory(v)===vocabFilter)
     .filter(({v})=>!vocabQuery || normalize(v.join(" ")).includes(vocabQuery));
 }
 
 function renderVocab(entries = getVocabEntries()){
   const root = document.querySelector("#vocabDb");
-  root.innerHTML = entries.length ? entries.map(({v,index}) => `
+  root.innerHTML = entries.length ? entries.map(({v,index}) => {
+    const forms=displayedVerbForms(v);
+    return `
     <article class="db-entry" id="vocab-${index}">
       <div class="db-entry-head">
         <h3>${esc(v[0])}</h3>
         <span class="reading">${esc(v[1])}</span>
       </div>
-      <span class="db-category-tag">${esc(vocabCategory(v[0]))}</span>
+      <span class="db-category-tag">${esc(vocabCategory(v))}</span>
       <p class="db-meaning">${esc(v[2])}</p>
-      ${verbForms[v[0]] ? `<div class="verb-forms"><span>ます形 <b>${esc(verbForms[v[0]][0])}</b></span><span>ない形 <b>${esc(verbForms[v[0]][1])}</b></span><span>過去形 <b>${esc(verbForms[v[0]][2])}</b></span><span>て形 <b>${esc(verbForms[v[0]][3])}</b></span></div>` : ""}
+      ${forms ? `<div class="verb-forms"><span>ます形 <b>${esc(forms[0])}</b></span><span>ない形 <b>${esc(forms[1])}</b></span><span>過去形 <b>${esc(forms[2])}</b></span><span>て形 <b>${esc(forms[3])}</b></span></div>` : ""}
       <p class="example">${esc(v[3])}<br><span class="muted">${esc(v[4])}</span></p>
-    </article>`).join("") : '<p class="muted">沒有符合的單字。</p>';
+    </article>`;
+  }).join("") : '<p class="muted">沒有符合的單字。</p>';
   document.querySelector("#vocabVisibleCount").textContent = `顯示 ${entries.length} / ${vocab.length}`;
 }
 
 function renderGrammar(){
-  const entries=grammar.map((g,index)=>({g,index})).filter(({g})=>grammarFilter==="all" || grammarCategory(g.p)===grammarFilter);
+  const entries=grammar.map((g,index)=>({g,index})).filter(({g})=>grammarFilter==="all" || grammarCategory(g)===grammarFilter);
   document.querySelector("#grammarDb").innerHTML = entries.map(({g,index}) => `
     <article class="db-entry" id="grammar-${index}">
-      <span class="db-category-tag">${esc(grammarCategory(g.p))}</span>
+      <span class="db-category-tag">${esc(grammarCategory(g))}</span>
       <h3>${esc(g.p)}</h3>
       <p>${esc(g.m)}</p>
       <p class="example">${esc(g.ex)}<br><span class="muted">${esc(g.zh)}</span></p>

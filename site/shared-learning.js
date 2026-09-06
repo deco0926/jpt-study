@@ -41,7 +41,10 @@
       if(typeof grammarQuestions !== "undefined"){
         vocab.push([item.word,item.reading,item.meaning]);
       }else{
-        vocab.push([item.word,item.reading,item.meaning,item.example || item.usage || "",item.translation || ""]);
+        vocab.push([item.word,item.reading,item.meaning,item.example || item.usage || "",item.translation || "",{
+          category:item.category || "",
+          forms:item.forms || null
+        }]);
       }
     });
 
@@ -84,7 +87,8 @@
           p:display.pattern || item.pattern,
           m:display.summary || item.meaning,
           ex:example?.jp || "",
-          zh:example?.zh || ""
+          zh:example?.zh || "",
+          category:item.category || ""
         });
       });
       renderVocab();
