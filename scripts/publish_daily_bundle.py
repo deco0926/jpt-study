@@ -195,21 +195,17 @@ def main():
     for path, content in outputs.items():
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(
-            json.dumps(content, ensure_ascii=False, indent=2) + "
-",
+            json.dumps(content, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
-            newline="
-",
+            newline="\n",
         )
 
     learning_database = build_learning_database()
     LEARNING_DATABASE.parent.mkdir(parents=True, exist_ok=True)
     LEARNING_DATABASE.write_text(
-        json.dumps(learning_database, ensure_ascii=False, indent=2) + "
-",
+        json.dumps(learning_database, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
-        newline="
-",
+        newline="\n",
     )
 
     print(
