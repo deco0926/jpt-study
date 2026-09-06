@@ -1,4 +1,30 @@
 (async function syncSharedLearningDatabase(){
+  const grammarDisplayOverrides={
+    "9/3快速複習：い形容詞／な形容詞的否定與名詞修飾":{
+      pattern:"い形容詞／な形容詞的否定與名詞修飾",
+      summary:"い形容詞否定：い→くないです；な形容詞否定：ではありません。修飾名詞時，い形容詞直接接名詞，な形容詞加「な」。"
+    },
+    "動詞て形：今天先掌握常用動詞的實際變化":{
+      pattern:"動詞て形",
+      summary:"連接動作或接續其他句型，本身不表示時態。常用變化：食べる→食べて、見る→見て、行く→行って、飲む→飲んで、する→して。"
+    },
+    "時間詞＋動作順序：朝／午前／午後／夜":{
+      pattern:"時間詞＋動作順序",
+      summary:"先用時間詞定位事件，再依動詞與「てから」判斷先後順序。"
+    },
+    "て形速度複習":{
+      pattern:"動詞て形（複習）",
+      summary:"連接動作或接續其他句型。重點：行く→行って。"
+    },
+    "常用て形規則：う／む／く／す":{
+      pattern:"常用て形規則",
+      summary:"う→って；む→んで；く→いて；す→して。例外：行く→行って。"
+    },
+    "て形補強：く→いて、う→って":{
+      pattern:"て形：く→いて／う→って",
+      summary:"書く→書いて、聞く→聞いて；使う→使って。例外：行く→行って。"
+    }
+  };
   const status=document.querySelector("#learningDatabaseStatus");
   const startButton=document.querySelector("#startTest");
   if(startButton) startButton.disabled=true;
@@ -53,9 +79,10 @@
         if(!item?.pattern || !item.meaning || knownPatterns.has(item.pattern)) return;
         knownPatterns.add(item.pattern);
         const example=(item.examples || []).find(value=>value?.jp && value?.zh);
+        const display=grammarDisplayOverrides[item.pattern] || {};
         grammar.push({
-          p:item.pattern,
-          m:[item.meaning,item.connection,item.usage].filter(Boolean).join(" "),
+          p:display.pattern || item.pattern,
+          m:display.summary || item.meaning,
           ex:example?.jp || "",
           zh:example?.zh || ""
         });
