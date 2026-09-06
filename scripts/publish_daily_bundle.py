@@ -11,6 +11,84 @@ LEARNING_DATABASE = ROOT / "site" / "data" / "learning-database.json"
 ALLOWED_CATEGORIES = {"kana", "vocab", "grammar", "reading", "listening", "mixed"}
 TAIPEI_TIMEZONE = timezone(timedelta(hours=8))
 
+VERBS = {
+    "食べる", "行く", "飲む", "買う", "見る", "帰る", "会う", "勉強する",
+    "寝る", "起きる", "休む", "使う", "書く", "聞く", "話す", "読む",
+    "入る", "出る", "待つ", "忘れる", "急ぐ", "持つ", "閉める", "開ける",
+}
+GODAN_RU_VERBS = {"帰る", "入る", "走る", "切る", "知る", "要る", "減る", "滑る", "喋る", "焦る"}
+ADJECTIVES = {"おいしい", "にぎやか", "便利", "古い", "大きい", "安い", "小さい", "新しい", "静か", "高い"}
+ADVERB_TIME_WORDS = {"今日", "明日", "一緒に", "朝", "夜", "毎日", "昨日", "午前", "午後", "今"}
+OTHER_WORDS = {"誰", "ここ"}
+
+
+def vocabulary_category(item):
+    word = item["word"]
+    usage = item.get("usage", "").rstrip("。")
+    if word in VERBS or (
+        word.endswith(("う", "く", "ぐ", "す", "つ", "ぬ", "ぶ", "む", "る"))
+        and usage.endswith(word)
+    ):
+        return "動詞"
+    if word in ADJECTIVES:
+        return "形容詞"
+    if word in ADVERB_TIME_WORDS:
+        return "副詞・時間詞"
+    if word in OTHER_WORDS:
+        return "其他"
+    return "名詞"
+
+
+def verb_forms(word, reading=""):
+    if word.endswith("する"):
+        stem = word[:-2]
+        return {"masu": stem + "します", "nai": stem + "しない", "past": stem + "しました", "te": stem + "して"}
+    if word == "来る":
+        return {"masu": "来ます", "nai": "来ない", "past": "来ました", "te": "来て"}
+
+    ending = word[-1]
+    if ending == "る":
+        kana = reading.split("/")[0].strip()
+        previous_kana = kana[-2] if len(kana) >= 2 else ""
+        ichidan_hint = previous_kana in "きぎしじちぢにひびぴみりいえけげせぜてでねへべぺめれ"
+        if word not in GODAN_RU_VERBS and ichidan_hint:
+            stem = word[:-1]
+            return {"masu": stem + "ます", "nai": stem + "ない", "past": stem + "ました", "te": stem + "て"}
+
+    masu_map = {"う": "い", "く": "き", "ぐ": "ぎ", "す": "し", "つ": "ち", "ぬ": "に", "ぶ": "び", "む": "み", "る": "り"}
+    nai_map = {"う": "わ", "く": "か", "ぐ": "が", "す": "さ", "つ": "た", "ぬ": "な", "ぶ": "ば", "む": "ま", "る": "ら"}
+    te_map = {"う": "って", "つ": "って", "る": "って", "む": "んで", "ぶ": "んで", "ぬ": "んで", "く": "いて", "ぐ": "いで", "す": "して"}
+    if ending not in masu_map:
+        return None
+    stem = word[:-1]
+    te_form = "行って" if word == "行く" else stem + te_map[ending]
+    masu_stem = stem + masu_map[ending]
+    return {"masu": masu_stem + "ます", "nai": stem + nai_map[ending] + "ない", "past": masu_stem + "ました", "te": te_form}
+
+
+def grammar_category(pattern):
+    if "形容詞" in pattern:
+        return "形容詞"
+    if any(term in pattern for term in ("時間", "順序", "てから")):
+        return "時間・順序"
+    if any(term in pattern for term in ("ませんか", "ください")):
+        return "請求・邀請"
+    if any(term in pattern for term in ("てもいい", "てはいけません", "規則句尾")):
+        return "許可・禁止"
+    if "ない形" in pattern:
+        return "ない形"
+    if "て形" in pattern or "～て" in pattern:
+        return "て形"
+    if any(term in pattern for term in (" ＋ に ＋ ", " ＋ で ＋ ", " ＋ を ＋ ", " ＋ へ ＋ ", " ＋ と")):
+        return "助詞"
+    if pattern in {"～ました", "～ませんでした"}:
+        return "過去"
+    if pattern in {"～ます", "～ません", "ます／ません"}:
+        return "現在・未來"
+    if any(term in pattern for term in ("ます", "ません", "時態")):
+        return "時態整理"
+    return "基礎句型"
+
 
 def require(condition, message):
     if not condition:
@@ -125,6 +203,7 @@ def merge_lesson_into_database(database, lesson):
     }
     for item in lesson.get("vocab", []):
         previous = vocabulary.get(item["word"], {})
+        category = vocabulary_category(item)
         vocabulary[item["word"]] = {
             "word": item["word"],
             "reading": item["reading"],
@@ -132,6 +211,8 @@ def merge_lesson_into_database(database, lesson):
             "usage": item["usage"],
             "example": item["example"],
             "translation": item["translation"],
+            "category": category,
+            "forms": verb_forms(item["word"], item["reading"]) if category == "動詞" else None,
             "firstSeen": previous.get("firstSeen", lesson_date),
             "lastSeen": lesson_date,
         }
@@ -149,11 +230,12 @@ def merge_lesson_into_database(database, lesson):
             "connection": item["connection"],
             "usage": item["usage"],
             "examples": item["examples"],
+            "category": grammar_category(item["pattern"]),
             "firstSeen": previous.get("firstSeen", lesson_date),
             "lastSeen": lesson_date,
         }
 
-    database["version"] = 1
+    database["version"] = 2
     database["updatedThrough"] = max(database.get("updatedThrough", ""), lesson_date)
     database["vocabulary"] = sorted(
         vocabulary.values(), key=lambda item: (item.get("firstSeen", ""), item["word"])
