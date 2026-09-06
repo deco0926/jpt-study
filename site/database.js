@@ -63,9 +63,52 @@ const grammar = [
   {p:"～ませんか", m:"常用來禮貌邀請對方「要不要一起～？」", ex:"一緒に行きませんか。", zh:"要不要一起去？"}
 ];
 
+const vocabGroups={
+  "動詞":new Set(["食べる","行く","飲む","買う","見る","帰る","会う","勉強する","寝る","起きる","休む","使う","書く","聞く","話す","読む","入る","出る","待つ","忘れる","急ぐ","持つ","閉める","開ける"]),
+  "形容詞":new Set(["おいしい","にぎやか","便利","古い","大きい","安い","小さい","新しい","静か","高い"]),
+  "副詞・時間詞":new Set(["今日","明日","一緒に","朝","夜","毎日","昨日","午前","午後","今"]),
+  "其他":new Set(["誰","ここ"])
+};
+
+const verbForms={
+  "食べる":["食べます","食べない","食べました","食べて"], "行く":["行きます","行かない","行きました","行って"],
+  "飲む":["飲みます","飲まない","飲みました","飲んで"], "買う":["買います","買わない","買いました","買って"],
+  "見る":["見ます","見ない","見ました","見て"], "帰る":["帰ります","帰らない","帰りました","帰って"],
+  "会う":["会います","会わない","会いました","会って"], "勉強する":["勉強します","勉強しない","勉強しました","勉強して"],
+  "寝る":["寝ます","寝ない","寝ました","寝て"], "起きる":["起きます","起きない","起きました","起きて"],
+  "休む":["休みます","休まない","休みました","休んで"], "使う":["使います","使わない","使いました","使って"],
+  "書く":["書きます","書かない","書きました","書いて"], "聞く":["聞きます","聞かない","聞きました","聞いて"],
+  "話す":["話します","話さない","話しました","話して"], "読む":["読みます","読まない","読みました","読んで"],
+  "入る":["入ります","入らない","入りました","入って"], "出る":["出ます","出ない","出ました","出て"],
+  "待つ":["待ちます","待たない","待ちました","待って"], "忘れる":["忘れます","忘れない","忘れました","忘れて"],
+  "急ぐ":["急ぎます","急がない","急ぎました","急いで"], "持つ":["持ちます","持たない","持ちました","持って"],
+  "閉める":["閉めます","閉めない","閉めました","閉めて"], "開ける":["開けます","開けない","開けました","開けて"]
+};
+
+function vocabCategory(word){
+  return Object.entries(vocabGroups).find(([,words])=>words.has(word))?.[0] || "名詞";
+}
+
+function grammarCategory(pattern){
+  if(pattern.includes("形容詞")) return "形容詞";
+  if(pattern.includes("時間") || pattern.includes("順序") || pattern.includes("てから")) return "時間・順序";
+  if(pattern.includes("ませんか") || pattern.includes("ください")) return "請求・邀請";
+  if(pattern.includes("てもいい") || pattern.includes("てはいけません") || pattern.includes("規則句尾")) return "許可・禁止";
+  if(pattern.includes("ない形")) return "ない形";
+  if(pattern.includes("て形") || pattern.includes("～て")) return "て形";
+  if(pattern.includes(" ＋ に ＋ ") || pattern.includes(" ＋ で ＋ ") || pattern.includes(" ＋ を ＋ ") || pattern.includes(" ＋ へ ＋ ") || pattern.includes(" ＋ と")) return "助詞";
+  if(pattern==="～ました" || pattern==="～ませんでした") return "過去";
+  if(pattern==="～ます" || pattern==="～ません" || pattern==="ます／ません") return "現在・未來";
+  if(pattern.includes("ます") || pattern.includes("ません") || pattern.includes("時態")) return "時態整理";
+  return "基礎句型";
+}
+
 let kanaMode = "both";
 let kanaRowFilter = "all";
 let randomKana = null;
+let vocabFilter="all";
+let grammarFilter="all";
+let vocabQuery="";
 
 const DB_ROW_IDS = ["a","k","s","t","n","h","m","y","r","w","w"];
 
@@ -93,8 +136,10 @@ function renderKana(){
   }).join("");
 }
 
-function getVocabEntries(list = vocab.map((v,index)=>({v,index}))){
-  return list;
+function getVocabEntries(){
+  return vocab.map((v,index)=>({v,index}))
+    .filter(({v})=>vocabFilter==="all" || vocabCategory(v[0])===vocabFilter)
+    .filter(({v})=>!vocabQuery || normalize(v.join(" ")).includes(vocabQuery));
 }
 
 function renderVocab(entries = getVocabEntries()){
@@ -105,15 +150,19 @@ function renderVocab(entries = getVocabEntries()){
         <h3>${esc(v[0])}</h3>
         <span class="reading">${esc(v[1])}</span>
       </div>
+      <span class="db-category-tag">${esc(vocabCategory(v[0]))}</span>
       <p class="db-meaning">${esc(v[2])}</p>
+      ${verbForms[v[0]] ? `<div class="verb-forms"><span>ます形 <b>${esc(verbForms[v[0]][0])}</b></span><span>ない形 <b>${esc(verbForms[v[0]][1])}</b></span><span>過去形 <b>${esc(verbForms[v[0]][2])}</b></span><span>て形 <b>${esc(verbForms[v[0]][3])}</b></span></div>` : ""}
       <p class="example">${esc(v[3])}<br><span class="muted">${esc(v[4])}</span></p>
     </article>`).join("") : '<p class="muted">沒有符合的單字。</p>';
   document.querySelector("#vocabVisibleCount").textContent = `顯示 ${entries.length} / ${vocab.length}`;
 }
 
 function renderGrammar(){
-  document.querySelector("#grammarDb").innerHTML = grammar.map((g,index) => `
+  const entries=grammar.map((g,index)=>({g,index})).filter(({g})=>grammarFilter==="all" || grammarCategory(g.p)===grammarFilter);
+  document.querySelector("#grammarDb").innerHTML = entries.map(({g,index}) => `
     <article class="db-entry" id="grammar-${index}">
+      <span class="db-category-tag">${esc(grammarCategory(g.p))}</span>
       <h3>${esc(g.p)}</h3>
       <p>${esc(g.m)}</p>
       <p class="example">${esc(g.ex)}<br><span class="muted">${esc(g.zh)}</span></p>
@@ -242,13 +291,19 @@ document.querySelector("#revealKanaBtn").addEventListener("click", ()=>{
 });
 
 document.querySelector("#vocabSearch").addEventListener("input", e=>{
-  const q = normalize(e.target.value);
-  if(!q) return renderVocab();
-  const entries = vocab
-    .map((v,index)=>({v,index}))
-    .filter(({v}) => normalize(v.join(" ")).includes(q));
-  renderVocab(entries);
+  vocabQuery=normalize(e.target.value);
+  renderVocab();
 });
+
+document.querySelectorAll("[data-vocab-category]").forEach(btn=>btn.addEventListener("click",()=>{
+  document.querySelectorAll("[data-vocab-category]").forEach(x=>x.classList.remove("active"));
+  btn.classList.add("active"); vocabFilter=btn.dataset.vocabCategory; renderVocab();
+}));
+
+document.querySelectorAll("[data-grammar-category]").forEach(btn=>btn.addEventListener("click",()=>{
+  document.querySelectorAll("[data-grammar-category]").forEach(x=>x.classList.remove("active"));
+  btn.classList.add("active"); grammarFilter=btn.dataset.grammarCategory; renderGrammar();
+}));
 
 document.querySelector("#globalSearch").addEventListener("input", e=>{
   buildGlobalResults(e.target.value);
