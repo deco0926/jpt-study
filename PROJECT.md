@@ -106,11 +106,13 @@ jpt-progress-YYYY-MM-DD
 - 全域搜尋
 - 手機與桌機響應式排版
 
-目前資料庫資料仍有部分直接寫在 `database.js` 中。
+早晨教材發布時，GitHub Actions 會把每日單字與文法累積到 `site/data/learning-database.json`。學習資料庫讀取這份共用資料，`database.js` 內的基礎資料只作為載入失敗時的備援。
 
 ### 自我測驗
 
 `site/quiz.html` + `site/quiz.js`
+
+一般單字與文法測驗會讀取同一份 `site/data/learning-database.json`，因此每天早晨教材發布後，題庫會和學習資料庫同步增加；內建題庫保留作為離線備援。
 
 包含：
 
@@ -288,13 +290,7 @@ OPENAI_API_KEY
 
 ### 重複資料
 
-目前：
-
-- `database.js`
-- `quiz.js`
-- 每日 lesson JSON
-
-之間存在五十音 / 單字 / 文法資料重複。
+目前五十音與部分基礎備援資料仍存在 `database.js`、`quiz.js`；每日新增的單字與文法已集中到 `site/data/learning-database.json`。
 
 未來建議重構成共用資料，例如：
 

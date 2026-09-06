@@ -163,6 +163,8 @@ Firebase / 後端同步規則：
 
 負責。
 
+同一個發布流程也必須把每日單字與文法累積到 `site/data/learning-database.json`，供學習資料庫與自我測驗共用；不可只更新教材與今日驗收。
+
 不要將 `OPENAI_API_KEY` 寫進 repo。
 
 正式交稿檔格式為：
