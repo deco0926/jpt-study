@@ -1,1 +1,78 @@
-<p id="learningDatabaseStatus" class="history-note">正在同步共用題庫…</p>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f4f7fb" />
+  <title>JPT 自我測驗</title>
+  <script>
+    window.todayLessonPromise = fetch("./lessons/latest.json")
+      .then(response => {
+        if (!response.ok) throw new Error("無法讀取今日教材");
+        return response.json();
+      });
+  </script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="quiz-page">
+  <main class="container">
+    <header class="hero"><div><p class="eyebrow">Practice Test</p><h1>自我測驗</h1><p class="muted">選擇範圍、題數與難度，做一份屬於自己的隨機測驗。</p></div></header>
+    <nav class="top-nav" aria-label="主要導覽"><a class="nav-link" href="./index.html">今日學習</a><a class="nav-link" href="./database.html">學習資料庫</a><a class="nav-link active" href="./quiz.html">自我測驗</a><a class="nav-link" href="./evening.html">今日驗收</a></nav>
+    <section id="setupView">
+      <section class="card today-test-card">
+        <div class="section-head"><div><p class="eyebrow">Today's Personalized Test</p><h2>今日專屬考卷</h2></div><span id="todayLessonDate" class="badge">載入中…</span></div>
+        <p id="todayLessonTitle" class="today-lesson-title">正在讀取今日教材…</p>
+        <p class="history-note">只從「今日學習」的片假名、單字、文法與快速練習出題。每次開始都會重新抽題、重新排列選項，可以反覆測驗。</p>
+        <div class="today-test-controls">
+          <label><span>題數</span><select id="todayQuestionCount"><option value="5">5 題</option><option value="10" selected>10 題</option><option value="15">15 題</option><option value="20">20 題</option></select></label>
+          <label><span>難度</span><select id="todayDifficulty"><option value="easy">簡單</option><option value="normal" selected>普通</option><option value="hard">困難</option></select></label>
+          <button id="startTodayTest" class="primary today-start-btn" type="button" disabled>隨機產生今日考卷</button>
+        </div><p id="todayTestStatus" class="today-test-status muted"></p>
+      </section>
+      <div class="quiz-section-divider"><span>或自訂測驗範圍</span></div>
+      <div class="quiz-layout">
+        <section class="card quiz-config">
+          <div class="section-head"><div><p class="eyebrow">Step 1</p><h2>選擇考試範圍</h2></div><button id="selectAllScope" class="mini-btn" type="button">全選</button></div>
+          <p id="learningDatabaseStatus" class="history-note">正在同步共用題庫…</p>
+          <div class="scope-groups">
+            <div class="scope-block"><h3>單字與文法</h3><label class="scope-option"><input type="checkbox" value="vocab" checked><span><strong>單字</strong><small>目前已學過的單字</small></span></label><label class="scope-option"><input type="checkbox" value="grammar" checked><span><strong>文法</strong><small>助詞、ます形與目前學過句型</small></span></label></div>
+            <div class="scope-block"><h3>五十音</h3><label class="scope-option"><input type="checkbox" value="hira" checked><span><strong>平假名</strong><small>基本清音</small></span></label><label class="scope-option"><input type="checkbox" value="kata" checked><span><strong>片假名</strong><small>基本清音</small></span></label><label class="scope-option"><input type="checkbox" value="dakuten"><span><strong>濁音・半濁音</strong><small>が、ざ、だ、ば、ぱ 等</small></span></label><label class="scope-option"><input type="checkbox" value="yoon"><span><strong>拗音</strong><small>きゃ、しゅ、ちょ 等</small></span></label></div>
+          </div>
+          <div class="kana-row-picker">
+            <div class="row-picker-head"><div><strong>基本五十音行別</strong><small>只影響「平假名／片假名」基本清音題</small></div><button id="selectAllKanaRows" class="mini-btn" type="button">全部取消</button></div>
+            <div class="kana-row-grid"><label><input class="kana-row-input" type="checkbox" value="a" checked><span>あ行</span></label><label><input class="kana-row-input" type="checkbox" value="k" checked><span>か行</span></label><label><input class="kana-row-input" type="checkbox" value="s" checked><span>さ行</span></label><label><input class="kana-row-input" type="checkbox" value="t" checked><span>た行</span></label><label><input class="kana-row-input" type="checkbox" value="n" checked><span>な行</span></label><label><input class="kana-row-input" type="checkbox" value="h" checked><span>は行</span></label><label><input class="kana-row-input" type="checkbox" value="m" checked><span>ま行</span></label><label><input class="kana-row-input" type="checkbox" value="y" checked><span>や行</span></label><label><input class="kana-row-input" type="checkbox" value="r" checked><span>ら行</span></label><label><input class="kana-row-input" type="checkbox" value="w" checked><span>わ行・ん</span></label></div>
+            <p class="row-picker-note">例如只勾「か行」，題目與四個選項都只會從 か・き・く・け・こ（或 カ・キ・ク・ケ・コ）中產生。濁音與拗音目前仍使用各自完整範圍。因為固定四選一，單獨選只有 3 個音的や行或わ行・ん時，需要再多選一個行別。</p>
+          </div>
+        </section>
+        <section class="card quiz-config">
+          <p class="eyebrow">Step 2</p><h2>測驗設定</h2>
+          <div class="config-row"><label for="questionCount"><strong>題數</strong><span>每題皆為四選一</span></label><select id="questionCount"><option value="5">5 題</option><option value="10" selected>10 題</option><option value="15">15 題</option><option value="20">20 題</option><option value="30">30 題</option></select></div>
+          <div class="config-section"><strong>難度</strong><div class="difficulty-grid"><label><input type="radio" name="difficulty" value="easy"><span><b>簡單</b><small>以直接辨識為主</small></span></label><label><input type="radio" name="difficulty" value="normal" checked><span><b>普通</b><small>混合正反向與句型判斷</small></span></label><label><input type="radio" name="difficulty" value="hard"><span><b>困難</b><small>相似選項與較長句型</small></span></label></div></div>
+          <div class="test-note"><strong>計時方式</strong><p>開始後會記錄總時間與每題作答時間。結果會保存在這台裝置的瀏覽器中，用來分析答對率與答題速度。</p></div>
+          <button id="startTest" class="primary" type="button">開始測驗</button><p id="setupError" class="result bad"></p>
+        </section>
+      </div>
+      <section class="card diagnosis-card">
+        <div class="section-head"><div><p class="eyebrow">Learning Diagnosis</p><h2>學習診斷</h2></div><span class="badge">最近 10 次測驗</span></div>
+        <div id="diagnosisHeadline" class="diagnosis-headline"></div><div id="diagnosisCategories" class="diagnosis-grid"></div>
+        <div class="diagnosis-subsection"><div class="section-head"><div><h3>五十音行別診斷</h3><p class="history-note">新版本開始記錄行別；每行至少 5 題才給初步判斷。</p></div></div><div id="kanaRowDiagnosis" class="kana-diagnosis-grid"></div></div>
+        <div class="diagnosis-subsection"><h3>近期常錯觀察</h3><div id="diagnosisFocus" class="focus-list"></div></div>
+        <details class="diagnosis-rules"><summary>查看診斷判斷標準</summary><div class="rule-grid"><span><b>90～100%</b> 熟練</span><span><b>80～89%</b> 基本掌握</span><span><b>70～79%</b> 不穩定</span><span><b>60～69%</b> 明顯弱項</span><span><b>0～59%</b> 優先補強</span></div><p>分類正式診斷至少需要 10 題樣本；行別至少 5 題先給初步判斷。速度若超過該類型、該難度理想時間的 135%，會標示「速度偏慢」。普通難度基準：平／片假名 6 秒、濁音 8 秒、拗音 9 秒、單字 12 秒、文法 18 秒；簡單 ×0.85、困難 ×1.25。</p></details>
+      </section>
+      <section class="card history-card"><div class="section-head"><div><p class="eyebrow">History</p><h2>練習紀錄</h2></div><button id="clearHistory" class="ghost compact-btn" type="button">清除紀錄</button></div><p class="history-note">紀錄只存在目前這台裝置與瀏覽器，不會和其他訪客共用。</p><div id="historySummary" class="history-summary"></div><div id="historyList" class="history-list"></div></section>
+    </section>
+    <section id="quizView" class="hidden">
+      <div class="test-toolbar card"><div><span class="eyebrow">進行中</span><strong id="testProgress">1 / 10</strong></div><div class="timer-box"><span>總時間</span><strong id="elapsedTime">00:00</strong></div></div>
+      <section class="card question-card"><div class="question-meta"><span id="questionCategory" class="badge">單字</span><span id="questionDifficulty" class="muted">普通</span></div><h2 id="questionText" class="question-text"></h2><div id="optionList" class="option-list"></div><div class="question-actions"><button id="quitTest" class="ghost" type="button">結束測驗</button><button id="nextQuestion" class="primary inline-primary" type="button" disabled>下一題</button></div></section>
+    </section>
+    <section id="resultView" class="hidden">
+      <section class="card result-hero"><p class="eyebrow">Result</p><h2>本次測驗結果</h2><div class="result-metrics"><div><span>答對率</span><strong id="resultAccuracy">0%</strong></div><div><span>分數</span><strong id="resultScore">0 / 0</strong></div><div><span>總時間</span><strong id="resultTime">00:00</strong></div><div><span>平均每題</span><strong id="resultAvgTime">0 秒</strong></div></div><div id="overallAdvice" class="advice-box"></div></section>
+      <section class="card"><div class="section-head"><div><p class="eyebrow">Analysis</p><h2>分項表現</h2></div></div><div id="categoryAnalysis" class="analysis-grid"></div></section>
+      <section class="card"><p class="eyebrow">Review</p><h2>需要再看一次的題目</h2><div id="wrongReview" class="wrong-review"></div></section>
+      <div class="result-actions"><button id="retryTest" class="primary" type="button">用相同設定再考一次</button><button id="backSetup" class="ghost" type="button">回到測驗設定</button></div>
+    </section>
+  </main>
+  <script src="./quiz.js"></script>
+  <script src="./shared-learning.js"></script>
+</body>
+</html>
