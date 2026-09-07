@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updatedThrough": "2026-09-06",
+  "version": 2,
+  "updatedThrough": "2026-09-07",
   "vocabulary": [
     {
       "word": "バス",
@@ -9,6 +9,8 @@
       "usage": "表示交通手段時可接「で」。",
       "example": "バスで行きます。",
       "translation": "搭公車去。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-08-29",
       "lastSeen": "2026-08-29"
     },
@@ -16,11 +18,13 @@
       "word": "学校",
       "reading": "がっこう / gakkou",
       "meaning": "學校",
-      "usage": "表示目的地時可接「に」。",
+      "usage": "学校に行く＝去學校。",
       "example": "学校に行きます。",
       "translation": "去學校。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-08-29",
-      "lastSeen": "2026-08-29"
+      "lastSeen": "2026-09-07"
     },
     {
       "word": "行く",
@@ -29,6 +33,13 @@
       "usage": "目的地通常放在「に」前面。",
       "example": "スーパーに行きます。",
       "translation": "去超市。",
+      "category": "動詞",
+      "forms": {
+        "masu": "行きます",
+        "nai": "行かない",
+        "past": "行きました",
+        "te": "行って"
+      },
       "firstSeen": "2026-08-29",
       "lastSeen": "2026-08-29"
     },
@@ -39,6 +50,8 @@
       "usage": "表示交通手段時可接「で」。",
       "example": "電車で行きます。",
       "translation": "搭電車去。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-08-29",
       "lastSeen": "2026-08-29"
     },
@@ -49,6 +62,13 @@
       "usage": "初學先記原形；之後會正式學ます形。",
       "example": "アイスを食べます。",
       "translation": "吃冰淇淋。",
+      "category": "動詞",
+      "forms": {
+        "masu": "食べます",
+        "nai": "食べない",
+        "past": "食べました",
+        "te": "食べて"
+      },
       "firstSeen": "2026-08-29",
       "lastSeen": "2026-08-29"
     },
@@ -59,6 +79,8 @@
       "usage": "目的地可接「に／へ」。",
       "example": "駅に行きます。",
       "translation": "去車站。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-08-29",
       "lastSeen": "2026-09-02"
     },
@@ -69,6 +91,8 @@
       "usage": "可表示白飯或一餐。",
       "example": "ご飯を食べます。",
       "translation": "吃飯。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-08-30",
       "lastSeen": "2026-08-30"
     },
@@ -79,6 +103,8 @@
       "usage": "表示目的地時可接「に」。",
       "example": "店に行きます。",
       "translation": "去商店。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-08-30",
       "lastSeen": "2026-08-30"
     },
@@ -89,6 +115,8 @@
       "usage": "可以接「の」表示誰的書，也可接「を」。",
       "example": "私の本です。",
       "translation": "是我的書。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-08-30",
       "lastSeen": "2026-08-30"
     },
@@ -99,6 +127,8 @@
       "usage": "常接「を飲みます」。",
       "example": "水を飲みます。",
       "translation": "喝水。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-08-30",
       "lastSeen": "2026-08-30"
     },
@@ -109,6 +139,13 @@
       "usage": "禮貌形是「見ます」。",
       "example": "テレビを見ます。",
       "translation": "看電視。",
+      "category": "動詞",
+      "forms": {
+        "masu": "見ます",
+        "nai": "見ない",
+        "past": "見ました",
+        "te": "見て"
+      },
       "firstSeen": "2026-08-30",
       "lastSeen": "2026-08-30"
     },
@@ -119,6 +156,13 @@
       "usage": "禮貌形是「買います」。",
       "example": "アイスを買います。",
       "translation": "買冰淇淋。",
+      "category": "動詞",
+      "forms": {
+        "masu": "買います",
+        "nai": "買わない",
+        "past": "買いました",
+        "te": "買って"
+      },
       "firstSeen": "2026-08-30",
       "lastSeen": "2026-08-30"
     },
@@ -129,6 +173,13 @@
       "usage": "禮貌形是「飲みます」。",
       "example": "水を飲みます。",
       "translation": "喝水。",
+      "category": "動詞",
+      "forms": {
+        "masu": "飲みます",
+        "nai": "飲まない",
+        "past": "飲みました",
+        "te": "飲んで"
+      },
       "firstSeen": "2026-08-30",
       "lastSeen": "2026-08-30"
     },
@@ -139,6 +190,8 @@
       "usage": "常和「と」一起出現。",
       "example": "友達と一緒に行きます。",
       "translation": "和朋友一起去。",
+      "category": "副詞・時間詞",
+      "forms": null,
       "firstSeen": "2026-08-31",
       "lastSeen": "2026-09-01"
     },
@@ -149,6 +202,8 @@
       "usage": "常放句首表示今天。",
       "example": "今日は学校に行きます。",
       "translation": "今天去學校。",
+      "category": "副詞・時間詞",
+      "forms": null,
       "firstSeen": "2026-08-31",
       "lastSeen": "2026-09-01"
     },
@@ -159,6 +214,8 @@
       "usage": "可以接「と」表示和朋友一起。",
       "example": "友達と行きます。",
       "translation": "和朋友去。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-08-31",
       "lastSeen": "2026-09-01"
     },
@@ -169,6 +226,8 @@
       "usage": "「家に行きます」＝去家裡。",
       "example": "家に行きます。",
       "translation": "去家裡。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-08-31",
       "lastSeen": "2026-09-01"
     },
@@ -176,11 +235,13 @@
       "word": "明日",
       "reading": "あした / ashita",
       "meaning": "明天",
-      "usage": "常搭配ます形表未來。",
+      "usage": "明日、学校に行く＝明天去學校。",
       "example": "明日、学校に行きます。",
       "translation": "明天去學校。",
+      "category": "副詞・時間詞",
+      "forms": null,
       "firstSeen": "2026-08-31",
-      "lastSeen": "2026-09-01"
+      "lastSeen": "2026-09-07"
     },
     {
       "word": "誰",
@@ -189,6 +250,8 @@
       "usage": "「誰ですか」＝是誰？",
       "example": "誰ですか。",
       "translation": "是誰？",
+      "category": "其他",
+      "forms": null,
       "firstSeen": "2026-08-31",
       "lastSeen": "2026-09-01"
     },
@@ -199,6 +262,8 @@
       "usage": "常見搭配「仕事をします」。",
       "example": "仕事をします。",
       "translation": "工作。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-09-02",
       "lastSeen": "2026-09-02"
     },
@@ -206,11 +271,13 @@
       "word": "会社",
       "reading": "かいしゃ / kaisha",
       "meaning": "公司",
-      "usage": "JPT常見生活／職場詞彙。",
-      "example": "会社に行きます。",
-      "translation": "去公司。",
+      "usage": "会社で働く＝在公司工作。",
+      "example": "会社で働きます。",
+      "translation": "在公司工作。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-09-02",
-      "lastSeen": "2026-09-02"
+      "lastSeen": "2026-09-07"
     },
     {
       "word": "夜",
@@ -219,6 +286,8 @@
       "usage": "可放句首表示時間。",
       "example": "夜、水を飲みます。",
       "translation": "晚上喝水。",
+      "category": "副詞・時間詞",
+      "forms": null,
       "firstSeen": "2026-09-02",
       "lastSeen": "2026-09-02"
     },
@@ -229,6 +298,13 @@
       "usage": "禮貌形是「帰ります」。",
       "example": "家に帰ります。",
       "translation": "回家。",
+      "category": "動詞",
+      "forms": {
+        "masu": "帰ります",
+        "nai": "帰らない",
+        "past": "帰りました",
+        "te": "帰って"
+      },
       "firstSeen": "2026-09-02",
       "lastSeen": "2026-09-02"
     },
@@ -239,6 +315,8 @@
       "usage": "通常搭配過去式。",
       "example": "昨日、学校に行きました。",
       "translation": "昨天去了學校。",
+      "category": "副詞・時間詞",
+      "forms": null,
       "firstSeen": "2026-09-02",
       "lastSeen": "2026-09-02"
     },
@@ -249,6 +327,8 @@
       "usage": "可放句首表示時間。",
       "example": "朝、ご飯を食べます。",
       "translation": "早上吃飯。",
+      "category": "副詞・時間詞",
+      "forms": null,
       "firstSeen": "2026-09-02",
       "lastSeen": "2026-09-02"
     },
@@ -256,11 +336,13 @@
       "word": "毎日",
       "reading": "まいにち / mainichi",
       "meaning": "每天",
-      "usage": "表示每天固定做某事。",
-      "example": "毎日、学校に行きます。",
-      "translation": "每天去學校。",
+      "usage": "常放句首表示每天都做某事。",
+      "example": "毎日、勉強します。",
+      "translation": "每天讀書。",
+      "category": "副詞・時間詞",
+      "forms": null,
       "firstSeen": "2026-09-02",
-      "lastSeen": "2026-09-02"
+      "lastSeen": "2026-09-07"
     },
     {
       "word": "おいしい",
@@ -269,6 +351,8 @@
       "usage": "常用來形容食物。",
       "example": "このご飯はおいしいです。",
       "translation": "這份飯很好吃。",
+      "category": "形容詞",
+      "forms": null,
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -279,6 +363,8 @@
       "usage": "な形容詞。",
       "example": "この町はにぎやかです。",
       "translation": "這個城鎮很熱鬧。",
+      "category": "形容詞",
+      "forms": null,
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -289,6 +375,8 @@
       "usage": "な形容詞；修飾名詞時說「便利な駅」。",
       "example": "駅は便利です。",
       "translation": "車站很方便。",
+      "category": "形容詞",
+      "forms": null,
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -299,6 +387,8 @@
       "usage": "い形容詞；可說「古い家」。",
       "example": "この家は古いです。",
       "translation": "這間房子很舊。",
+      "category": "形容詞",
+      "forms": null,
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -309,6 +399,8 @@
       "usage": "い形容詞；可直接修飾名詞。",
       "example": "この店は大きいです。",
       "translation": "這間店很大。",
+      "category": "形容詞",
+      "forms": null,
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -319,6 +411,8 @@
       "usage": "否定為「安くないです」。",
       "example": "このホテルは安いです。",
       "translation": "這間飯店很便宜。",
+      "category": "形容詞",
+      "forms": null,
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -329,6 +423,8 @@
       "usage": "い形容詞；可說「小さい家」。",
       "example": "この家は小さいです。",
       "translation": "這間房子很小。",
+      "category": "形容詞",
+      "forms": null,
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -339,6 +435,8 @@
       "usage": "い形容詞；可說「新しい車／新しいホテル」。",
       "example": "昨日、新しい店に行きました。",
       "translation": "昨天去了一間新店。",
+      "category": "形容詞",
+      "forms": null,
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -349,6 +447,8 @@
       "usage": "な形容詞；修飾名詞時說「静かな町」。",
       "example": "この町は静かです。",
       "translation": "這個城鎮很安靜。",
+      "category": "形容詞",
+      "forms": null,
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -359,6 +459,8 @@
       "usage": "談價格時常表示「貴」。",
       "example": "このホテルは高いです。",
       "translation": "這間飯店很貴。",
+      "category": "形容詞",
+      "forms": null,
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -369,6 +471,8 @@
       "usage": "「～予定です」表示預計要做某事；今天先認得這個詞。",
       "example": "明日は勉強する予定です。",
       "translation": "明天預計要讀書。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-09-04",
       "lastSeen": "2026-09-04"
     },
@@ -379,6 +483,13 @@
       "usage": "人通常可用「友達と会います」表示和朋友見面。",
       "example": "午後、友達と会います。",
       "translation": "下午和朋友見面。",
+      "category": "動詞",
+      "forms": {
+        "masu": "会います",
+        "nai": "会わない",
+        "past": "会いました",
+        "te": "会って"
+      },
       "firstSeen": "2026-09-04",
       "lastSeen": "2026-09-04"
     },
@@ -389,6 +500,8 @@
       "usage": "地點可說「駅の前」＝車站前面。",
       "example": "駅の前で友達と会います。",
       "translation": "在車站前和朋友見面。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-09-04",
       "lastSeen": "2026-09-04"
     },
@@ -396,11 +509,18 @@
       "word": "勉強する",
       "reading": "べんきょうする / benkyou suru",
       "meaning": "學習、讀書",
-      "usage": "「日本語を勉強する」＝學日文；禮貌形是勉強します。",
-      "example": "日本語を勉強します。",
-      "translation": "學日文。",
+      "usage": "日本語を勉強する＝學日文。",
+      "example": "毎日、日本語を勉強します。",
+      "translation": "每天學日文。",
+      "category": "動詞",
+      "forms": {
+        "masu": "勉強します",
+        "nai": "勉強しない",
+        "past": "勉強しました",
+        "te": "勉強して"
+      },
       "firstSeen": "2026-09-04",
-      "lastSeen": "2026-09-04"
+      "lastSeen": "2026-09-07"
     },
     {
       "word": "午前",
@@ -409,6 +529,8 @@
       "usage": "用來區分上午時段。",
       "example": "午前、会社に行きます。",
       "translation": "上午去公司。",
+      "category": "副詞・時間詞",
+      "forms": null,
       "firstSeen": "2026-09-04",
       "lastSeen": "2026-09-04"
     },
@@ -419,6 +541,8 @@
       "usage": "常放句首表示下午。",
       "example": "午後、友達と会います。",
       "translation": "下午和朋友見面。",
+      "category": "副詞・時間詞",
+      "forms": null,
       "firstSeen": "2026-09-04",
       "lastSeen": "2026-09-04"
     },
@@ -429,6 +553,13 @@
       "usage": "常和夜一起使用；て形是寝て。",
       "example": "夜、寝ます。",
       "translation": "晚上睡覺。",
+      "category": "動詞",
+      "forms": {
+        "masu": "寝ます",
+        "nai": "寝ない",
+        "past": "寝ました",
+        "te": "寝て"
+      },
       "firstSeen": "2026-09-04",
       "lastSeen": "2026-09-04"
     },
@@ -439,6 +570,8 @@
       "usage": "「～の後」可表示某事之後；今天也會搭配「～てから」理解動作順序。",
       "example": "ご飯の後、勉強します。",
       "translation": "吃飯之後讀書。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-09-04",
       "lastSeen": "2026-09-04"
     },
@@ -449,6 +582,8 @@
       "usage": "可表示時間本身，也常出現在詢問時間的句子裡。",
       "example": "勉強する時間です。",
       "translation": "是讀書的時間。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-09-04",
       "lastSeen": "2026-09-04"
     },
@@ -459,6 +594,13 @@
       "usage": "常和朝、毎朝一起使用；禮貌形是起きます。",
       "example": "朝、起きます。",
       "translation": "早上起床。",
+      "category": "動詞",
+      "forms": {
+        "masu": "起きます",
+        "nai": "起きない",
+        "past": "起きました",
+        "te": "起きて"
+      },
       "firstSeen": "2026-09-04",
       "lastSeen": "2026-09-04"
     },
@@ -469,6 +611,8 @@
       "usage": "「ここで＋動作」表示在這裡做某事。",
       "example": "ここで勉強します。",
       "translation": "在這裡學習。",
+      "category": "其他",
+      "forms": null,
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -479,6 +623,8 @@
       "usage": "常和～ています一起表示現在正在進行的動作。",
       "example": "今、日本語を勉強しています。",
       "translation": "現在正在學日文。",
+      "category": "副詞・時間詞",
+      "forms": null,
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -489,6 +635,13 @@
       "usage": "今天先掌握「午後、休みます」的休息用法。",
       "example": "午後、休みます。",
       "translation": "下午休息。",
+      "category": "動詞",
+      "forms": {
+        "masu": "休みます",
+        "nai": "休まない",
+        "past": "休みました",
+        "te": "休んで"
+      },
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -499,6 +652,13 @@
       "usage": "常見搭配：電話を使う。",
       "example": "電話を使います。",
       "translation": "使用電話。",
+      "category": "動詞",
+      "forms": {
+        "masu": "使います",
+        "nai": "使わない",
+        "past": "使いました",
+        "te": "使って"
+      },
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -509,6 +669,8 @@
       "usage": "常見搭配：写真を見る。",
       "example": "写真を見ます。",
       "translation": "看照片。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -519,6 +681,13 @@
       "usage": "常見搭配：名前を書く。",
       "example": "名前を書きます。",
       "translation": "寫名字。",
+      "category": "動詞",
+      "forms": {
+        "masu": "書きます",
+        "nai": "書かない",
+        "past": "書きました",
+        "te": "書いて"
+      },
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -529,6 +698,13 @@
       "usage": "今天先掌握「音楽を聞く」＝聽音樂。",
       "example": "音楽を聞きます。",
       "translation": "聽音樂。",
+      "category": "動詞",
+      "forms": {
+        "masu": "聞きます",
+        "nai": "聞かない",
+        "past": "聞きました",
+        "te": "聞いて"
+      },
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -539,6 +715,13 @@
       "usage": "常見搭配：日本語を話す、友達と話す。",
       "example": "日本語を話します。",
       "translation": "說日文。",
+      "category": "動詞",
+      "forms": {
+        "masu": "話します",
+        "nai": "話さない",
+        "past": "話しました",
+        "te": "話して"
+      },
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -549,6 +732,13 @@
       "usage": "常見搭配：本を読む。",
       "example": "本を読みます。",
       "translation": "讀書。",
+      "category": "動詞",
+      "forms": {
+        "masu": "読みます",
+        "nai": "読まない",
+        "past": "読みました",
+        "te": "読んで"
+      },
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -559,6 +749,8 @@
       "usage": "常見搭配：電話を使う。",
       "example": "ここで電話を使います。",
       "translation": "在這裡使用電話。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -569,6 +761,13 @@
       "usage": "部屋に入る",
       "example": "部屋に入ります。",
       "translation": "進入房間。",
+      "category": "動詞",
+      "forms": {
+        "masu": "入ります",
+        "nai": "入らない",
+        "past": "入りました",
+        "te": "入って"
+      },
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
     },
@@ -579,6 +778,13 @@
       "usage": "部屋を出る",
       "example": "部屋を出ます。",
       "translation": "離開房間。",
+      "category": "動詞",
+      "forms": {
+        "masu": "出ます",
+        "nai": "出ない",
+        "past": "出ました",
+        "te": "出て"
+      },
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
     },
@@ -589,6 +795,8 @@
       "usage": "宿題をする",
       "example": "宿題をします。",
       "translation": "做作業。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
     },
@@ -599,6 +807,13 @@
       "usage": "ここで待つ",
       "example": "ここで待ちます。",
       "translation": "在這裡等。",
+      "category": "動詞",
+      "forms": {
+        "masu": "待ちます",
+        "nai": "待たない",
+        "past": "待ちました",
+        "te": "待って"
+      },
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
     },
@@ -609,6 +824,13 @@
       "usage": "宿題を忘れる",
       "example": "宿題を忘れます。",
       "translation": "忘記作業。",
+      "category": "動詞",
+      "forms": {
+        "masu": "忘れます",
+        "nai": "忘れない",
+        "past": "忘れました",
+        "te": "忘れて"
+      },
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
     },
@@ -619,6 +841,13 @@
       "usage": "急いでください",
       "example": "急ぎます。",
       "translation": "趕快。",
+      "category": "動詞",
+      "forms": {
+        "masu": "急ぎます",
+        "nai": "急がない",
+        "past": "急ぎました",
+        "te": "急いで"
+      },
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
     },
@@ -629,6 +858,13 @@
       "usage": "本を持つ",
       "example": "本を持ちます。",
       "translation": "拿著書。",
+      "category": "動詞",
+      "forms": {
+        "masu": "持ちます",
+        "nai": "持たない",
+        "past": "持ちました",
+        "te": "持って"
+      },
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
     },
@@ -639,6 +875,8 @@
       "usage": "部屋に入る",
       "example": "部屋に入ります。",
       "translation": "進入房間。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
     },
@@ -649,6 +887,13 @@
       "usage": "ドアを閉める",
       "example": "ドアを閉めます。",
       "translation": "關上門。",
+      "category": "動詞",
+      "forms": {
+        "masu": "閉めます",
+        "nai": "閉めない",
+        "past": "閉めました",
+        "te": "閉めて"
+      },
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
     },
@@ -659,8 +904,75 @@
       "usage": "ドアを開ける",
       "example": "ドアを開けます。",
       "translation": "打開門。",
+      "category": "動詞",
+      "forms": {
+        "masu": "開けます",
+        "nai": "開けない",
+        "past": "開けました",
+        "te": "開けて"
+      },
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
+    },
+    {
+      "word": "働く",
+      "reading": "はたらく / hataraku",
+      "meaning": "工作",
+      "usage": "会社で働く＝在公司工作。",
+      "example": "会社で働きます。",
+      "translation": "在公司工作。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-07",
+      "lastSeen": "2026-09-07"
+    },
+    {
+      "word": "必要",
+      "reading": "ひつよう / hitsuyou",
+      "meaning": "必要、需要",
+      "usage": "必要です＝有必要。今天主要用來幫助理解「必須」情境。",
+      "example": "勉強は必要です。",
+      "translation": "學習是必要的。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-07",
+      "lastSeen": "2026-09-07"
+    },
+    {
+      "word": "早い",
+      "reading": "はやい / hayai",
+      "meaning": "早；快",
+      "usage": "今天先掌握時間上的「早」。",
+      "example": "明日は早く起きます。",
+      "translation": "明天會早起。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-07",
+      "lastSeen": "2026-09-07"
+    },
+    {
+      "word": "病院",
+      "reading": "びょういん / byouin",
+      "meaning": "醫院",
+      "usage": "病院に行く＝去醫院。",
+      "example": "病院に行きます。",
+      "translation": "去醫院。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-07",
+      "lastSeen": "2026-09-07"
+    },
+    {
+      "word": "薬",
+      "reading": "くすり / kusuri",
+      "meaning": "藥",
+      "usage": "薬を飲む＝吃藥。",
+      "example": "薬を飲みます。",
+      "translation": "吃藥。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-07",
+      "lastSeen": "2026-09-07"
     }
   ],
   "grammar": [
@@ -683,6 +995,7 @@
           "zh": "搭計程車去飯店。"
         }
       ],
+      "category": "助詞",
       "firstSeen": "2026-08-29",
       "lastSeen": "2026-08-29"
     },
@@ -705,6 +1018,7 @@
           "zh": "去超市。"
         }
       ],
+      "category": "助詞",
       "firstSeen": "2026-08-29",
       "lastSeen": "2026-08-29"
     },
@@ -727,6 +1041,7 @@
           "zh": "看書。"
         }
       ],
+      "category": "助詞",
       "firstSeen": "2026-08-30",
       "lastSeen": "2026-08-30"
     },
@@ -749,6 +1064,7 @@
           "zh": "去飯店。"
         }
       ],
+      "category": "助詞",
       "firstSeen": "2026-08-31",
       "lastSeen": "2026-09-01"
     },
@@ -771,6 +1087,7 @@
           "zh": "是誰？"
         }
       ],
+      "category": "基礎句型",
       "firstSeen": "2026-08-31",
       "lastSeen": "2026-09-01"
     },
@@ -793,6 +1110,7 @@
           "zh": "明天不去學校。"
         }
       ],
+      "category": "現在・未來",
       "firstSeen": "2026-09-01",
       "lastSeen": "2026-09-01"
     },
@@ -815,6 +1133,7 @@
           "zh": "和朋友一起去學校。"
         }
       ],
+      "category": "助詞",
       "firstSeen": "2026-09-01",
       "lastSeen": "2026-09-01"
     },
@@ -841,6 +1160,7 @@
           "zh": "沒有吃冰淇淋。"
         }
       ],
+      "category": "時態整理",
       "firstSeen": "2026-09-02",
       "lastSeen": "2026-09-02"
     },
@@ -863,6 +1183,7 @@
           "zh": "明天不去學校。"
         }
       ],
+      "category": "時間・順序",
       "firstSeen": "2026-09-02",
       "lastSeen": "2026-09-02"
     },
@@ -885,6 +1206,7 @@
           "zh": "明天要不要和朋友一起去車站？"
         }
       ],
+      "category": "請求・邀請",
       "firstSeen": "2026-09-02",
       "lastSeen": "2026-09-02"
     },
@@ -907,6 +1229,7 @@
           "zh": "安靜的城鎮"
         }
       ],
+      "category": "形容詞",
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -929,6 +1252,7 @@
           "zh": "很便宜，而且離車站很近。"
         }
       ],
+      "category": "基礎句型",
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -951,6 +1275,7 @@
           "zh": "昨天去了一間新店。"
         }
       ],
+      "category": "請求・邀請",
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -973,6 +1298,7 @@
           "zh": "這份飯不好吃。"
         }
       ],
+      "category": "形容詞",
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -995,6 +1321,7 @@
           "zh": "車站很方便。"
         }
       ],
+      "category": "形容詞",
       "firstSeen": "2026-09-03",
       "lastSeen": "2026-09-03"
     },
@@ -1017,6 +1344,7 @@
           "zh": "是安靜的城鎮。"
         }
       ],
+      "category": "形容詞",
       "firstSeen": "2026-09-04",
       "lastSeen": "2026-09-04"
     },
@@ -1039,6 +1367,7 @@
           "zh": "和朋友見面後回家。"
         }
       ],
+      "category": "て形",
       "firstSeen": "2026-09-04",
       "lastSeen": "2026-09-04"
     },
@@ -1061,6 +1390,7 @@
           "zh": "請看這本書。"
         }
       ],
+      "category": "請求・邀請",
       "firstSeen": "2026-09-04",
       "lastSeen": "2026-09-04"
     },
@@ -1083,6 +1413,7 @@
           "zh": "學日文，然後回家。"
         }
       ],
+      "category": "て形",
       "firstSeen": "2026-09-04",
       "lastSeen": "2026-09-04"
     },
@@ -1105,6 +1436,7 @@
           "zh": "晚上學完日文後睡覺。"
         }
       ],
+      "category": "時間・順序",
       "firstSeen": "2026-09-04",
       "lastSeen": "2026-09-04"
     },
@@ -1127,6 +1459,7 @@
           "zh": "學完日文後睡覺。"
         }
       ],
+      "category": "て形",
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -1149,6 +1482,7 @@
           "zh": "正在和朋友說話。"
         }
       ],
+      "category": "て形",
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -1171,6 +1505,7 @@
           "zh": "不可以使用這張照片。"
         }
       ],
+      "category": "て形",
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -1193,6 +1528,7 @@
           "zh": "可以看照片。"
         }
       ],
+      "category": "て形",
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -1215,6 +1551,7 @@
           "zh": "和朋友說完話後回家。"
         }
       ],
+      "category": "て形",
       "firstSeen": "2026-09-05",
       "lastSeen": "2026-09-05"
     },
@@ -1237,6 +1574,7 @@
           "zh": "可以使用電話。"
         }
       ],
+      "category": "て形",
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
     },
@@ -1259,6 +1597,7 @@
           "zh": "不進房間。"
         }
       ],
+      "category": "ない形",
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
     },
@@ -1281,6 +1620,7 @@
           "zh": "請不要忘記作業。"
         }
       ],
+      "category": "請求・邀請",
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
     },
@@ -1303,6 +1643,7 @@
           "zh": "請不要進入這個房間。"
         }
       ],
+      "category": "許可・禁止",
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
     },
@@ -1325,8 +1666,124 @@
           "zh": "請在這裡等。"
         }
       ],
+      "category": "請求・邀請",
       "firstSeen": "2026-09-06",
       "lastSeen": "2026-09-06"
+    },
+    {
+      "pattern": "ない形補強：う結尾要變わ＋ない",
+      "meaning": "五段動詞以う結尾時，ない形不是把う直接換成いない，而是變成わない。",
+      "connection": "使う→使わない。今天也複習：書く→書かない、待つ→待たない、入る→入らない。",
+      "usage": "這是今天最優先的舊內容補強；看到使う時要直接反應使わない。",
+      "examples": [
+        {
+          "jp": "今日は電話を使わないです。",
+          "zh": "今天不使用電話。"
+        },
+        {
+          "jp": "この部屋に入らないです。",
+          "zh": "不進入這個房間。"
+        },
+        {
+          "jp": "ここで待たないです。",
+          "zh": "不在這裡等。"
+        }
+      ],
+      "category": "ない形",
+      "firstSeen": "2026-09-07",
+      "lastSeen": "2026-09-07"
+    },
+    {
+      "pattern": "三種否定相關句型對照",
+      "meaning": "～ないでください＝請不要；～なければなりません＝必須；～なくてもいいです＝不必。",
+      "connection": "使わないでください／行かなければなりません／行かなくてもいいです。",
+      "usage": "JPT規則題不要只看到ない就判斷為否定，要看完整句尾。",
+      "examples": [
+        {
+          "jp": "ここで電話を使わないでください。",
+          "zh": "請不要在這裡使用電話。"
+        },
+        {
+          "jp": "病院に行かなければなりません。",
+          "zh": "必須去醫院。"
+        },
+        {
+          "jp": "明日は会社に行かなくてもいいです。",
+          "zh": "明天不必去公司。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-09-07",
+      "lastSeen": "2026-09-07"
+    },
+    {
+      "pattern": "動詞ない形＋なくてもいいです",
+      "meaning": "不～也可以；不必～。",
+      "connection": "把ない形最後的ない換成なくてもいいです。例如：行かない→行かなくてもいいです；使わない→使わなくてもいいです；勉強しない→勉強しなくてもいいです。",
+      "usage": "表示某件事沒有必要做。注意它不是「不可以做」，而是「可以不做」。",
+      "examples": [
+        {
+          "jp": "明日は学校に行かなくてもいいです。",
+          "zh": "明天不去學校也可以／明天不必去學校。"
+        },
+        {
+          "jp": "ここで電話を使わなくてもいいです。",
+          "zh": "在這裡不使用電話也可以。"
+        },
+        {
+          "jp": "今日は勉強しなくてもいいです。",
+          "zh": "今天不讀書也可以／今天不必讀書。"
+        }
+      ],
+      "category": "許可・禁止",
+      "firstSeen": "2026-09-07",
+      "lastSeen": "2026-09-07"
+    },
+    {
+      "pattern": "動詞ない形＋なければなりません",
+      "meaning": "必須～、非做不可。",
+      "connection": "先做ない形，再把最後的ない換成なければなりません。例如：行かない→行かなければなりません；飲まない→飲まなければなりません；勉強しない→勉強しなければなりません。",
+      "usage": "用於義務、規定或必要行動。JPT看到句尾なければなりません，先標記為「必須」。",
+      "examples": [
+        {
+          "jp": "明日、学校に行かなければなりません。",
+          "zh": "明天必須去學校。"
+        },
+        {
+          "jp": "薬を飲まなければなりません。",
+          "zh": "必須吃藥。"
+        },
+        {
+          "jp": "毎日、日本語を勉強しなければなりません。",
+          "zh": "每天必須學日文。"
+        }
+      ],
+      "category": "ない形",
+      "firstSeen": "2026-09-07",
+      "lastSeen": "2026-09-07"
+    },
+    {
+      "pattern": "規則閱讀：先抓句尾再抓動作",
+      "meaning": "閱讀或聽解遇到規則句，先用句尾判斷義務方向，再確認前面的動作。",
+      "connection": "なければなりません→必須；なくてもいいです→不必；ないでください→請不要。",
+      "usage": "可以避免逐字翻譯太慢，也能避免把「不必」誤認為「禁止」。",
+      "examples": [
+        {
+          "jp": "薬を飲まなければなりません。",
+          "zh": "必須吃藥。"
+        },
+        {
+          "jp": "明日は学校に行かなくてもいいです。",
+          "zh": "明天不必去學校。"
+        },
+        {
+          "jp": "この部屋に入らないでください。",
+          "zh": "請不要進入這個房間。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-09-07",
+      "lastSeen": "2026-09-07"
     }
   ]
 }
