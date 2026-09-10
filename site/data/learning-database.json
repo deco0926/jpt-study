@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedThrough": "2026-09-09",
+  "updatedThrough": "2026-09-10",
   "vocabulary": [
     {
       "word": "バス",
@@ -1187,6 +1187,126 @@
       "forms": null,
       "firstSeen": "2026-09-09",
       "lastSeen": "2026-09-09"
+    },
+    {
+      "word": "公園",
+      "reading": "こうえん / kouen",
+      "meaning": "公園",
+      "usage": "公園へ行きます。",
+      "example": "公園へ遊びに行きます。",
+      "translation": "去公園玩。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
+    },
+    {
+      "word": "写真を撮る",
+      "reading": "しゃしんをとる / shashin o toru",
+      "meaning": "拍照",
+      "usage": "常見搭配：写真を撮ります。",
+      "example": "公園で写真を撮ります。",
+      "translation": "在公園拍照。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
+    },
+    {
+      "word": "泳ぐ",
+      "reading": "およぐ / oyogu",
+      "meaning": "游泳",
+      "usage": "泳ぎます；目的形可用泳ぎに行きます。",
+      "example": "海へ泳ぎに行きます。",
+      "translation": "去海邊游泳。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
+    },
+    {
+      "word": "海",
+      "reading": "うみ / umi",
+      "meaning": "海、海邊",
+      "usage": "海へ行きます。",
+      "example": "海へ泳ぎに行きます。",
+      "translation": "去海邊游泳。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
+    },
+    {
+      "word": "行きたい",
+      "reading": "いきたい / ikitai",
+      "meaning": "想去",
+      "usage": "行きます去掉ます＋たい。",
+      "example": "日本に行きたいです。",
+      "translation": "我想去日本。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
+    },
+    {
+      "word": "見たい",
+      "reading": "みたい / mitai",
+      "meaning": "想看",
+      "usage": "見ます去掉ます＋たい。",
+      "example": "映画を見たいです。",
+      "translation": "我想看電影。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
+    },
+    {
+      "word": "買いたい",
+      "reading": "かいたい / kaitai",
+      "meaning": "想買",
+      "usage": "買います去掉ます＋たい。",
+      "example": "本を買いたいです。",
+      "translation": "我想買書。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
+    },
+    {
+      "word": "遊ぶ",
+      "reading": "あそぶ / asobu",
+      "meaning": "玩、遊玩",
+      "usage": "遊びます；目的形可用遊びに行きます。",
+      "example": "公園へ遊びに行きます。",
+      "translation": "去公園玩。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
+    },
+    {
+      "word": "食べたい",
+      "reading": "たべたい / tabetai",
+      "meaning": "想吃",
+      "usage": "食べます去掉ます＋たい。",
+      "example": "すしを食べたいです。",
+      "translation": "我想吃壽司。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
+    },
+    {
+      "word": "飲みたい",
+      "reading": "のみたい / nomitai",
+      "meaning": "想喝",
+      "usage": "飲みます去掉ます＋たい。",
+      "example": "水を飲みたいです。",
+      "translation": "我想喝水。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
     }
   ],
   "grammar": [
@@ -2228,6 +2348,121 @@
       "category": "時間・順序",
       "firstSeen": "2026-09-09",
       "lastSeen": "2026-09-09"
+    },
+    {
+      "pattern": "何をしたいですか",
+      "meaning": "『想做什麼？』，用來詢問願望。",
+      "connection": "何を＋したいですか。回答可用～たいです。",
+      "usage": "聽解時聽到したいですか，要特別找回答裡的動作。",
+      "examples": [
+        {
+          "jp": "何を食べたいですか。",
+          "zh": "想吃什麼？"
+        },
+        {
+          "jp": "何をしたいですか。",
+          "zh": "想做什麼？"
+        },
+        {
+          "jp": "映画を見たいです。",
+          "zh": "我想看電影。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
+    },
+    {
+      "pattern": "動詞ます形去掉ます＋たいです",
+      "meaning": "表示『想做～』。",
+      "connection": "食べます→食べたいです、飲みます→飲みたいです、見ます→見たいです、買います→買いたいです、行きます→行きたいです。",
+      "usage": "用來表達自己的願望；JPT對話題常問『何をしたいですか』。",
+      "examples": [
+        {
+          "jp": "すしを食べたいです。",
+          "zh": "我想吃壽司。"
+        },
+        {
+          "jp": "映画を見たいです。",
+          "zh": "我想看電影。"
+        },
+        {
+          "jp": "日本に行きたいです。",
+          "zh": "我想去日本。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
+    },
+    {
+      "pattern": "動詞ます形去掉ます＋に行きます",
+      "meaning": "表示『去做某事』，前面的動詞是去某地的目的。",
+      "connection": "買います→買いに行きます、食べます→食べに行きます、遊びます→遊びに行きます、泳ぎます→泳ぎに行きます。",
+      "usage": "常和地點＋へ／に一起出現；JPT會問『為什麼去那裡？』。",
+      "examples": [
+        {
+          "jp": "店へ本を買いに行きます。",
+          "zh": "去店裡買書。"
+        },
+        {
+          "jp": "公園へ遊びに行きます。",
+          "zh": "去公園玩。"
+        },
+        {
+          "jp": "海へ泳ぎに行きます。",
+          "zh": "去海邊游泳。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
+    },
+    {
+      "pattern": "昨日複習：～てから vs ～たり～たりします",
+      "meaning": "～てから表示做完A之後再B；～たり～たりします表示列舉代表性活動。",
+      "connection": "洗濯してから買い物をします／本を読んだり映画を見たりします。",
+      "usage": "今天只做速度複習，閱讀看到句型就先判斷『順序』或『列舉』。",
+      "examples": [
+        {
+          "jp": "朝、洗濯してから、買い物をします。",
+          "zh": "早上洗完衣服後去購物。"
+        },
+        {
+          "jp": "週末、本を読んだり、映画を見たりします。",
+          "zh": "週末會讀讀書、看看電影等等。"
+        },
+        {
+          "jp": "夜、映画を見てから寝ます。",
+          "zh": "晚上看完電影後睡覺。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
+    },
+    {
+      "pattern": "～たいです vs ～に行きます",
+      "meaning": "～たいです是願望『想做』；～に行きます是實際行動目的『去做』。",
+      "connection": "日本に行きたいです／店へ本を買いに行きます。",
+      "usage": "看到たい先想『願望』，看到に行きます先想『目的』。",
+      "examples": [
+        {
+          "jp": "映画を見たいです。",
+          "zh": "我想看電影。"
+        },
+        {
+          "jp": "映画を見に行きます。",
+          "zh": "我要去看電影。"
+        },
+        {
+          "jp": "本を買いたいです。店へ本を買いに行きます。",
+          "zh": "我想買書，所以去店裡買書。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
     }
   ]
 }
