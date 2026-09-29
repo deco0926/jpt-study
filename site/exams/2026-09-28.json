@@ -1,0 +1,203 @@
+{
+  "date": "2026-09-28",
+  "title": "今日驗收",
+  "description": "N4 Day 5：普通形＋と思います、普通形與必須／不必。依原對話教材重建，四選一15題，12題通過。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ツ」怎麼念？",
+      "options": [
+        "shi",
+        "tsu",
+        "so",
+        "n"
+      ],
+      "answer": 1,
+      "explanation": "ツ讀作 tsu；シ讀作 shi。"
+    },
+    {
+      "id": "q2",
+      "category": "grammar",
+      "question": "～なくてもいいです表示？",
+      "options": [
+        "必須",
+        "禁止",
+        "不必",
+        "想做"
+      ],
+      "answer": 2,
+      "explanation": "不做也可以，也就是不必。"
+    },
+    {
+      "id": "q3",
+      "category": "grammar",
+      "question": "学校に行かなければなりません。意思是？",
+      "options": [
+        "不必上學",
+        "不能上學",
+        "已經上學",
+        "必須上學"
+      ],
+      "answer": 3,
+      "explanation": "～なければなりません表示必須。"
+    },
+    {
+      "id": "q4",
+      "category": "grammar",
+      "question": "「行く」的過去否定普通形是？",
+      "options": [
+        "行く",
+        "行かない",
+        "行った",
+        "行かなかった"
+      ],
+      "answer": 3,
+      "explanation": "行く→行かない→行った→行かなかった。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「思う」的讀音與意思是？",
+      "options": [
+        "おもう／想、認為",
+        "いう／說",
+        "ふる／下雨",
+        "きく／聽"
+      ],
+      "answer": 0,
+      "explanation": "思う讀作おもう，表示想、認為。"
+    },
+    {
+      "id": "q6",
+      "category": "vocab",
+      "question": "「多分」表示？",
+      "options": [
+        "一定",
+        "大概、可能",
+        "完全不",
+        "已經"
+      ],
+      "answer": 1,
+      "explanation": "多分表示大概、可能，不是百分之百確定。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "田中さんは明日来ないと思います。意思是？",
+      "options": [
+        "我想田中昨天沒來",
+        "我想田中明天會來",
+        "我想田中明天不會來",
+        "田中說他已經來了"
+      ],
+      "answer": 2,
+      "explanation": "来ない是否定；明日表示明天。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「我想去了」應選？",
+      "options": [
+        "行くと思います",
+        "行かないと思います",
+        "行ったと思います",
+        "行かなかったと思います"
+      ],
+      "answer": 2,
+      "explanation": "行った是過去肯定。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "い形容詞「難しい」接法何者正確？",
+      "options": [
+        "難しいだと思います",
+        "難しいなと思います",
+        "難しいですと思います",
+        "難しいと思います"
+      ],
+      "answer": 3,
+      "explanation": "い形容詞普通形直接接と思います。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「我覺得這題很簡單」正確接法是？",
+      "options": [
+        "簡単だと思います",
+        "簡単なと思います",
+        "簡単と思います",
+        "簡単ですと思います"
+      ],
+      "answer": 0,
+      "explanation": "な形容詞現在肯定使用だと思います。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「我想明天是雨天」正確接法是？",
+      "options": [
+        "雨なと思います",
+        "雨だと思います",
+        "雨と思います",
+        "雨ですと思います"
+      ],
+      "answer": 1,
+      "explanation": "雨是名詞，現在肯定接だと思います。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "電車は便利＿＿と思います。空格應填？",
+      "options": [
+        "な",
+        "を",
+        "だ",
+        "に"
+      ],
+      "answer": 2,
+      "explanation": "便利是な形容詞，接便利だと思います。"
+    },
+    {
+      "id": "q13",
+      "category": "reading",
+      "question": "来週、日本語の試験があります。この試験は難しいと思います。哪個正確？",
+      "options": [
+        "明天考試，而且很簡單",
+        "昨天考完了",
+        "下週沒有考試",
+        "下週有考試，說話者覺得很難"
+      ],
+      "answer": 3,
+      "explanation": "来週＝下週；難しいと思います＝覺得很難。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "この場所は便利だと思います。駅も近いです。說話者如何看待這個地點？",
+      "options": [
+        "覺得方便，車站也近",
+        "覺得不方便",
+        "認為車站很遠",
+        "認為沒有車站"
+      ],
+      "answer": 0,
+      "explanation": "便利＝方便；駅も近い＝車站也很近。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "多分、田中さんは来ないと思います。說話者的判斷是？",
+      "options": [
+        "田中一定會來",
+        "田中大概不會來",
+        "田中一定不來",
+        "田中已經來了"
+      ],
+      "answer": 1,
+      "explanation": "多分表示推測，来ない是否定。"
+    }
+  ]
+}
