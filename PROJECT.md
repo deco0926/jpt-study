@@ -60,7 +60,7 @@ scripts/
 └─ deploy-pages.yml    # main push 後部署 GitHub Pages
 ```
 
-正式每日內容由 ChatGPT 排程於台灣時間每日 10:00 讀取前一日 Firebase 驗收分析，同一次產生今日教材與今日驗收考卷，並使用 GitHub 單檔更新功能寫入 `pipeline/incoming.json`。`publish-daily-bundle.yml` 會驗證交稿、拆成四個正式 JSON、用同一個 commit 更新 `main` 並部署 GitHub Pages。考卷部署後全天開放，不再使用 19:00 的獨立生成排程。需要 OpenAI API Key 的產生流程只作手動備援。
+正式每日內容由 ChatGPT 排程於台灣時間每日 10:00 讀取前一日 Firebase 驗收分析，同一次產生今日教材與今日驗收考卷，並使用 GitHub 單檔建立功能寫入 `pipeline/submissions/YYYY-MM-DD.json`（舊 `pipeline/incoming.json` 仍相容）。`publish-daily-bundle.yml` 會驗證交稿、拆成四個正式 JSON、用同一個 commit 更新 `main` 並部署 GitHub Pages。考卷部署後全天開放，不再使用 19:00 的獨立生成排程。需要 OpenAI API Key 的產生流程只作手動備援。
 
 ## 4. 目前主要功能
 
@@ -240,7 +240,7 @@ jpt-selftest-history-v1
 - 寫入 `site/lessons/YYYY-MM-DD.json`
 - 同步覆蓋 `site/lessons/latest.json`
 
-`daily-lesson.yml` 會每日自動執行並部署。
+`daily-lesson.yml` 僅為需要 API Key 的手動備援，非每日排程。正式 `publish-daily-bundle.yml` 在交稿 push 後執行，並每小時補掃；先驗證整批、禁止改寫歷史、維持 latest 日期不倒退，再同一 commit 發布並部署。詳見 `pipeline/README.md`。
 
 OpenAI API Key 必須只存在 GitHub Secrets：
 

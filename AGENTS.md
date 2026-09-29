@@ -144,7 +144,7 @@ Firebase / 後端同步規則：
 
 今日驗收考卷由：
 
-- ChatGPT 每日 10:00 排程與教材一起產生，並只寫入 `pipeline/incoming.json`（正式交稿流程）
+- ChatGPT 每日 10:00 排程與教材一起產生，並建立 `pipeline/submissions/YYYY-MM-DD.json`（正式交稿流程；舊入口仍相容）
 - `.github/workflows/publish-daily-bundle.yml`（驗證交稿並在同一個 commit 發布四個正式 JSON）
 - `scripts/generate_evening_exam.py`
 - `.github/workflows/daily-lesson.yml`（需要 `OPENAI_API_KEY` 的整批手動備援）
@@ -156,7 +156,7 @@ Firebase / 後端同步規則：
 
 每日教材由：
 
-- ChatGPT 每日 10:00 排程（讀取前一日 Firebase 驗收分析，同時產生教材與今日驗收並寫入單一交稿檔）
+- ChatGPT 每日 10:00 排程（讀取前一日 Firebase 驗收分析，同時產生教材與今日驗收並寫入按日期保存的單一交稿檔）
 - `.github/workflows/publish-daily-bundle.yml`（正式驗證、拆分、提交與部署）
 - `scripts/generate_lesson.py`
 - `.github/workflows/daily-lesson.yml`（需要 `OPENAI_API_KEY` 的手動備援）
@@ -173,7 +173,7 @@ Firebase / 後端同步規則：
 {"date":"YYYY-MM-DD","lesson":{},"exam":{}}
 ```
 
-ChatGPT 排程不可直接建立 Git tree、commit object 或更新 branch ref；只能以 GitHub 的單檔建立／更新功能覆蓋 `pipeline/incoming.json`。正式四檔由 GitHub Actions 使用內建 `GITHUB_TOKEN` 發布。
+ChatGPT 排程不可直接建立 Git tree、commit object 或更新 branch ref。正式入口改為以 GitHub 單檔建立功能建立 `pipeline/submissions/YYYY-MM-DD.json`；同日已存在時先比對，相同即視為已交稿，不同則停止並回報，禁止覆蓋。舊 `pipeline/incoming.json` 單檔更新入口仍相容。若 connector safety check 阻擋，不得改用其他 API 繞過；保留完整 JSON 與錯誤，回報未交稿。正式四檔與累積資料庫仍由 GitHub Actions 使用內建 `GITHUB_TOKEN` 驗證後同一 commit 發布。操作細節見 `pipeline/README.md`。
 
 若修改每日教材 schema：
 

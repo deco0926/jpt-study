@@ -1,4 +1,6 @@
+import argparse
 import json
+import re
 import os
 import sys
 from datetime import datetime, timedelta, timezone
@@ -14,11 +16,11 @@ TAIPEI_TIMEZONE = timezone(timedelta(hours=8))
 VERBS = {
     "食べる", "行く", "飲む", "買う", "見る", "帰る", "会う", "勉強する",
     "寝る", "起きる", "休む", "使う", "書く", "聞く", "話す", "読む",
-    "入る", "出る", "待つ", "忘れる", "急ぐ", "持つ", "閉める", "開ける",
+    "思う", "降る", "間に合う", "遅れる", "入る", "出る", "待つ", "忘れる", "急ぐ", "持つ", "閉める", "開ける",
 }
 GODAN_RU_VERBS = {"帰る", "入る", "走る", "切る", "知る", "要る", "減る", "滑る", "喋る", "焦る"}
-ADJECTIVES = {"おいしい", "にぎやか", "便利", "古い", "大きい", "安い", "小さい", "新しい", "静か", "高い"}
-ADVERB_TIME_WORDS = {"今日", "明日", "一緒に", "朝", "夜", "毎日", "昨日", "午前", "午後", "今"}
+ADJECTIVES = {"難しい", "簡単", "必要", "無理", "大丈夫", "おいしい", "にぎやか", "便利", "古い", "大きい", "安い", "小さい", "新しい", "静か", "高い"}
+ADVERB_TIME_WORDS = {"多分", "今日", "明日", "一緒に", "朝", "夜", "毎日", "昨日", "午前", "午後", "今"}
 OTHER_WORDS = {"誰", "ここ"}
 
 
@@ -123,7 +125,7 @@ def validate_choice(question, label, require_metadata=False):
 
 def validate_lesson(lesson, expected_date):
     require(isinstance(lesson, dict), "lesson 必須是物件")
-    require(lesson.get("date") == expected_date, "lesson.date 必須等於台灣今日日期")
+    require(lesson.get("date") == expected_date, "lesson.date 必須等於交稿日期")
 
     for key in ("title", "duration", "goal"):
         require_text(lesson.get(key), f"lesson.{key}")
@@ -169,7 +171,7 @@ def validate_lesson(lesson, expected_date):
 
 def validate_exam(exam, expected_date):
     require(isinstance(exam, dict), "exam 必須是物件")
-    require(exam.get("date") == expected_date, "exam.date 必須等於台灣今日日期")
+    require(exam.get("date") == expected_date, "exam.date 必須等於交稿日期")
     require_text(exam.get("title"), "exam.title")
     require("今日驗收" in exam["title"] and "晚間驗收" not in exam["title"], "exam.title 必須使用「今日驗收」")
     require_text(exam.get("description"), "exam.description")
@@ -213,7 +215,7 @@ def merge_lesson_into_database(database, lesson):
             "translation": item["translation"],
             "category": category,
             "forms": verb_forms(item["word"], item["reading"]) if category == "動詞" else None,
-            "firstSeen": previous.get("firstSeen", lesson_date),
+            "firstSeen": min(previous.get("firstSeen", lesson_date), lesson_date),
             "lastSeen": lesson_date,
         }
 
@@ -231,7 +233,7 @@ def merge_lesson_into_database(database, lesson):
             "usage": item["usage"],
             "examples": item["examples"],
             "category": grammar_category(item["pattern"]),
-            "firstSeen": previous.get("firstSeen", lesson_date),
+            "firstSeen": min(previous.get("firstSeen", lesson_date), lesson_date),
             "lastSeen": lesson_date,
         }
 
@@ -256,45 +258,94 @@ def build_learning_database():
     return database
 
 
+def read_json(path):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def valid_date(value):
+    require(isinstance(value, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", value), "日期必須為 YYYY-MM-DD")
+    datetime.strptime(value, "%Y-%m-%d")
+    return value
+
+
+def plan_publication(paths, today, strict_date=None):
+    """Validate the entire batch and conflicts before changing any output."""
+    valid_date(today)
+    bundles = {}
+    for path in paths:
+        bundle = read_json(path)
+        require(isinstance(bundle, dict), "交稿檔必須是 JSON 物件")
+        day = valid_date(bundle.get("date"))
+        require(day <= today, "不可發布未來日期")
+        if strict_date:
+            require(day == strict_date, "bundle.date 必須等於預期日期")
+        if path.parent.name == "submissions":
+            require(path.stem == day, "交稿檔名必須與 bundle.date 一致")
+        validate_lesson(bundle.get("lesson"), day)
+        validate_exam(bundle.get("exam"), day)
+        require(day not in bundles or bundles[day] == bundle, f"同日交稿內容衝突：{day}")
+        bundles[day] = bundle
+
+    outputs = {}
+    latest = {}
+    for kind in ("lessons", "exams"):
+        path = ROOT / "site" / kind / "latest.json"
+        if path.exists():
+            latest[kind] = read_json(path)
+            valid_date(latest[kind].get("date"))
+            dated = path.parent / (latest[kind]["date"] + ".json")
+            require(dated.exists() and read_json(dated) == latest[kind], f"{kind}/latest 與歷史檔不一致，請先調查")
+    require(len(latest) in (0, 2), "lesson/exam latest 必須成對存在")
+    if latest:
+        require(latest["lessons"]["date"] == latest["exams"]["date"], "lesson/exam latest 日期不同")
+
+    for day, bundle in sorted(bundles.items()):
+        for kind, key in (("lessons", "lesson"), ("exams", "exam")):
+            content = bundle[key]
+            path = ROOT / "site" / kind / f"{day}.json"
+            if path.exists():
+                require(read_json(path) == content, f"禁止覆蓋已發布內容：{path.relative_to(ROOT)}")
+            else:
+                outputs[path] = content
+            if kind not in latest or day > latest[kind]["date"]:
+                latest[kind] = content
+    for kind, content in latest.items():
+        path = ROOT / "site" / kind / "latest.json"
+        if not path.exists() or read_json(path) != content:
+            outputs[path] = content
+
+    # Rebuild in date order, including pending lessons, before writing any file.
+    lessons = {p.stem: read_json(p) for p in sorted((ROOT / "site" / "lessons").glob("20??-??-??.json"))}
+    lessons.update({day: bundle["lesson"] for day, bundle in bundles.items()})
+    database = load_learning_database()
+    for day in sorted(lessons):
+        database = merge_lesson_into_database(database, lessons[day])
+    if not LEARNING_DATABASE.exists() or read_json(LEARNING_DATABASE) != database:
+        outputs[LEARNING_DATABASE] = database
+    return outputs
+
+
 def main():
-    bundle_path = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else DEFAULT_BUNDLE
-    expected_date = os.environ.get("JPT_EXPECTED_DATE") or datetime.now(TAIPEI_TIMEZONE).date().isoformat()
-    bundle = json.loads(bundle_path.read_text(encoding="utf-8"))
-
-    require(isinstance(bundle, dict), "交稿檔必須是 JSON 物件")
-    require(bundle.get("date") == expected_date, "bundle.date 必須等於台灣今日日期")
-    lesson = bundle.get("lesson")
-    exam = bundle.get("exam")
-    validate_lesson(lesson, expected_date)
-    validate_exam(exam, expected_date)
-
-    outputs = {
-        ROOT / "site" / "lessons" / f"{expected_date}.json": lesson,
-        ROOT / "site" / "lessons" / "latest.json": lesson,
-        ROOT / "site" / "exams" / f"{expected_date}.json": exam,
-        ROOT / "site" / "exams" / "latest.json": exam,
-    }
-    for path, content in outputs.items():
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(
-            json.dumps(content, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8",
-            newline="\n",
-        )
-
-    learning_database = build_learning_database()
-    LEARNING_DATABASE.parent.mkdir(parents=True, exist_ok=True)
-    LEARNING_DATABASE.write_text(
-        json.dumps(learning_database, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-        newline="\n",
-    )
-
-    print(
-        f"Validated and materialized daily bundle for {expected_date}; "
-        f"learning database now has {len(learning_database['vocabulary'])} vocabulary items "
-        f"and {len(learning_database['grammar'])} grammar items"
-    )
+    parser = argparse.ArgumentParser(description="Validate and publish immutable daily bundles")
+    parser.add_argument("bundle", nargs="?", type=Path)
+    parser.add_argument("--queue", action="store_true", help="Process legacy inbox and all dated submissions")
+    parser.add_argument("--check", action="store_true", help="Validate without writing")
+    args = parser.parse_args()
+    today = datetime.now(TAIPEI_TIMEZONE).date().isoformat()
+    if args.queue:
+        require(args.bundle is None, "--queue 不可搭配單檔路徑")
+        paths = ([DEFAULT_BUNDLE] if DEFAULT_BUNDLE.exists() else [])
+        paths += sorted((ROOT / "pipeline" / "submissions").glob("*.json"))
+        strict_date = None
+    else:
+        paths = [args.bundle.resolve() if args.bundle else DEFAULT_BUNDLE]
+        strict_date = os.environ.get("JPT_EXPECTED_DATE") or today
+    outputs = plan_publication(paths, today, strict_date)
+    if not args.check:
+        for path, content in outputs.items():
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(content, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    print(f"Validated {len(paths)} bundles; {len(outputs)} output files {'would change' if args.check else 'changed'}")
 
 
 if __name__ == "__main__":

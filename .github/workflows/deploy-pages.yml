@@ -4,10 +4,11 @@ on:
   push:
     branches: ["main"]
     paths-ignore:
-      - "pipeline/incoming.json"
-  schedule:
-    # 01:10 UTC = 09:10 Taiwan time (Asia/Taipei)
-    - cron: "10 1 * * *"
+      - "pipeline/**"
+      - "scripts/publish_daily_bundle.py"
+      - ".github/workflows/publish-daily-bundle.yml"
+      - "tests/**"
+      - "**/*.md"
   workflow_dispatch:
 
 permissions:
@@ -17,7 +18,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -29,13 +30,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Verify today's scheduled lesson
-        if: github.event_name == 'schedule'
-        run: |
-          TODAY="$(TZ=Asia/Taipei date +'%Y-%m-%d')"
-          test -f "site/lessons/${TODAY}.json"
-          grep -q "\"date\": \"${TODAY}\"" site/lessons/latest.json
+        with:
+          ref: main
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

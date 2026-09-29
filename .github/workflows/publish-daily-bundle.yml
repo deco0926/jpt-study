@@ -5,6 +5,12 @@ on:
     branches: ["main"]
     paths:
       - "pipeline/incoming.json"
+      - "pipeline/submissions/*.json"
+      - "scripts/publish_daily_bundle.py"
+      - ".github/workflows/publish-daily-bundle.yml"
+  schedule:
+    # Recovery scan; GitHub may delay scheduled runs. No API key required.
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -22,42 +28,48 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Checkout triggering revision
+      - name: Checkout latest main
         uses: actions/checkout@v4
         with:
           ref: main
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Validate bundle and materialize site JSON
-        run: python scripts/publish_daily_bundle.py pipeline/incoming.json
-
-      - name: Commit validated daily content
+      - name: Test publication safeguards
+        run: python -m unittest discover -s tests -v
+      - name: Validate queue and commit together
+        shell: bash
         run: |
-          CONTENT_DATE="$(python -c 'import json; print(json.load(open("pipeline/incoming.json", encoding="utf-8"))["date"])')"
+          set -euo pipefail
           git config user.name "jpt-study-publisher"
           git config user.email "actions@users.noreply.github.com"
-          git add site/lessons site/exams site/data/learning-database.json
-          if git diff --cached --quiet; then
-            echo "Validated daily content is already published."
-          else
-            git commit -m "Publish JPT lesson and exam ${CONTENT_DATE}"
-            git push origin HEAD:main
-          fi
-
+          for attempt in 1 2 3; do
+            # Re-plan against current main on each attempt. Never force push.
+            git fetch origin main
+            git checkout -B main origin/main
+            python scripts/publish_daily_bundle.py --queue
+            git add site/lessons site/exams site/data/learning-database.json
+            if git diff --cached --quiet; then
+              echo "All submissions already published."
+              break
+            fi
+            git commit -m "Publish validated JPT daily submissions"
+            if git push origin HEAD:main; then
+              break
+            fi
+            if [ "$attempt" = 3 ]; then
+              echo "Publication raced with another writer; scheduled scan will retry."
+              exit 1
+            fi
+          done
       - name: Configure Pages
         uses: actions/configure-pages@v5
-
       - name: Upload validated site
         uses: actions/upload-pages-artifact@v3
         with:
           path: "./site"
-
       - name: Deploy validated site
         id: deployment
         uses: actions/deploy-pages@v4
