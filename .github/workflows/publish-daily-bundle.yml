@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "pipeline/incoming.json"
+      - "pipeline/study-restart.json"
       - "pipeline/submissions/*.json"
       - "scripts/publish_daily_bundle.py"
       - ".github/workflows/publish-daily-bundle.yml"

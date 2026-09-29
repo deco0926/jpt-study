@@ -309,6 +309,24 @@ def plan_publication(paths, today, strict_date=None):
                 outputs[path] = content
             if kind not in latest or day > latest[kind]["date"]:
                 latest[kind] = content
+    # Explicit user-requested restart: keep history intact and select a paired
+    # older lesson until the first newly dated restart submission is published.
+    restart_path = ROOT / "pipeline" / "study-restart.json"
+    if restart_path.exists():
+        restart = read_json(restart_path)
+        require(isinstance(restart, dict), "study-restart 必須是物件")
+        source = valid_date(restart.get("restartFrom"))
+        resume = valid_date(restart.get("restartOn"))
+        require(source < resume, "restartOn 必須晚於 restartFrom")
+        newest = max((item["date"] for item in latest.values()), default="")
+        if newest < resume:
+            for kind, validator in (("lessons", validate_lesson), ("exams", validate_exam)):
+                path = ROOT / "site" / kind / f"{source}.json"
+                require(path.exists(), f"重新學習缺少歷史檔：{kind}/{source}.json")
+                content = read_json(path)
+                validator(content, source)
+                latest[kind] = content
+
     for kind, content in latest.items():
         path = ROOT / "site" / kind / "latest.json"
         if not path.exists() or read_json(path) != content:

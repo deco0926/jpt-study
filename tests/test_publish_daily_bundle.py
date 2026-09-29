@@ -123,6 +123,32 @@ class PublicationTests(unittest.TestCase):
             bundle = self.bundle('2026-09-28'); mutate(bundle['exam'])
             with self.assertRaises(ValueError): p.validate_exam(bundle['exam'], '2026-09-28')
 
+    def test_explicit_restart_survives_rescan_and_new_content_resumes(self):
+        old = self.submit('2026-09-24')
+        later = self.submit('2026-09-29')
+        self.apply(p.plan_publication([old, later], '2026-09-29'))
+        self.write('pipeline/study-restart.json', {'restartFrom': '2026-09-24', 'restartOn': '2026-09-30'})
+        self.apply(p.plan_publication([old, later], '2026-09-29'))
+        for kind in ('lessons', 'exams'):
+            self.assertEqual(p.read_json(self.root / f'site/{kind}/latest.json')['date'], '2026-09-24')
+            self.assertTrue((self.root / f'site/{kind}/2026-09-29.json').exists())
+        self.assertEqual(p.plan_publication([old, later], '2026-09-30'), {})
+        new = self.submit('2026-09-30')
+        self.apply(p.plan_publication([old, later, new], '2026-09-30'))
+        self.assertEqual(p.read_json(self.root / 'site/lessons/latest.json')['date'], '2026-09-30')
+        self.assertEqual(p.plan_publication([old, later, new], '2026-09-30'), {})
+
+    def test_restart_requires_valid_complete_history(self):
+        later = self.submit('2026-09-29')
+        self.apply(p.plan_publication([later], '2026-09-29'))
+        for config in (
+            {'restartFrom': '2026-09-24', 'restartOn': '2026-09-30'},
+            {'restartFrom': '../escape', 'restartOn': '2026-09-30'},
+            {'restartFrom': '2026-09-29', 'restartOn': '2026-09-28'},
+        ):
+            self.write('pipeline/study-restart.json', config)
+            with self.assertRaises(ValueError): p.plan_publication([later], '2026-09-29')
+
     def test_restored_bundles_match_schema(self):
         for path in (REPO / 'pipeline/submissions').glob('*.json'):
             bundle = p.read_json(path)
