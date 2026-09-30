@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedThrough": "2026-09-29",
+  "updatedThrough": "2026-09-30",
   "vocabulary": [
     {
       "word": "バス",
@@ -265,7 +265,7 @@
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-02",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-30"
     },
     {
       "word": "会社",
@@ -466,15 +466,15 @@
     },
     {
       "word": "予定",
-      "reading": "よてい",
+      "reading": "よてい / yotei",
       "meaning": "預定、計畫",
-      "usage": "予定があります",
+      "usage": "常見：予定があります（有安排）。漢字：予（よ）＝預先；定（てい）＝決定。",
       "example": "明日は予定があります。",
       "translation": "明天有安排。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-04",
-      "lastSeen": "2026-09-29"
+      "lastSeen": "2026-09-30"
     },
     {
       "word": "会う",
@@ -928,15 +928,15 @@
     },
     {
       "word": "必要",
-      "reading": "ひつよう",
+      "reading": "ひつよう / hitsuyou",
       "meaning": "必要",
-      "usage": "必要です",
-      "example": "これは必要です。",
-      "translation": "這是必要的。",
+      "usage": "必要です＝有必要、需要。",
+      "example": "勉強が必要です。",
+      "translation": "有學習的必要。",
       "category": "形容詞",
       "forms": null,
       "firstSeen": "2026-09-07",
-      "lastSeen": "2026-09-29"
+      "lastSeen": "2026-09-30"
     },
     {
       "word": "早い",
@@ -1438,19 +1438,19 @@
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-30"
     },
     {
       "word": "大丈夫",
-      "reading": "だいじょうぶ",
-      "meaning": "沒問題",
-      "usage": "大丈夫です",
-      "example": "多分、大丈夫でしょう。",
-      "translation": "大概沒問題吧。",
+      "reading": "だいじょうぶ / daijoubu",
+      "meaning": "沒問題、不要緊",
+      "usage": "會話常用：大丈夫です。",
+      "example": "明日は大丈夫です。",
+      "translation": "明天沒問題。",
       "category": "形容詞",
       "forms": null,
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-29"
+      "lastSeen": "2026-09-30"
     },
     {
       "word": "始める",
@@ -1462,7 +1462,7 @@
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-30"
     },
     {
       "word": "最近",
@@ -1474,7 +1474,7 @@
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-30"
     },
     {
       "word": "用事",
@@ -1486,7 +1486,7 @@
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-30"
     },
     {
       "word": "約束",
@@ -1498,7 +1498,7 @@
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-30"
     },
     {
       "word": "終わる",
@@ -1515,7 +1515,7 @@
         "te": "終わって"
       },
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-30"
     },
     {
       "word": "問題",
@@ -3301,7 +3301,7 @@
       ],
       "category": "基礎句型",
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-30"
     },
     {
       "pattern": "動詞普通形：過去肯定／否定",
@@ -3324,7 +3324,7 @@
       ],
       "category": "基礎句型",
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-30"
     },
     {
       "pattern": "普通形四格整理",
@@ -3347,7 +3347,7 @@
       ],
       "category": "基礎句型",
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-30"
     },
     {
       "pattern": "普通形是什麼？",
@@ -3370,7 +3370,7 @@
       ],
       "category": "基礎句型",
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-30"
     },
     {
       "pattern": "舊內容補強：～なければなりません vs ～なくてもいいです",
@@ -3393,7 +3393,7 @@
       ],
       "category": "許可・禁止",
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-30"
     },
     {
       "pattern": "閱讀辨識：時間詞＋普通形",
@@ -3416,7 +3416,7 @@
       ],
       "category": "時間・順序",
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-24"
+      "lastSeen": "2026-09-30"
     },
     {
       "pattern": "五段動詞的ない形",
