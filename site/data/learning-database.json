@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedThrough": "2026-09-30",
+  "updatedThrough": "2026-10-01",
   "vocabulary": [
     {
       "word": "バス",
@@ -1527,39 +1527,39 @@
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-09-25"
+      "lastSeen": "2026-10-01"
     },
     {
       "word": "多分",
-      "reading": "たぶん",
+      "reading": "たぶん / tabun",
       "meaning": "大概、可能",
-      "usage": "多分～でしょう",
-      "example": "多分、大丈夫でしょう。",
-      "translation": "大概沒問題吧。",
+      "usage": "多分～と思います",
+      "example": "多分、明日は忙しいと思います。",
+      "translation": "我想明天大概很忙。",
       "category": "副詞・時間詞",
       "forms": null,
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-09-29"
+      "lastSeen": "2026-10-01"
     },
     {
       "word": "天気",
-      "reading": "てんき",
+      "reading": "てんき / tenki",
       "meaning": "天氣",
       "usage": "天気がいい",
-      "example": "多分、明日は天気がいいでしょう。",
-      "translation": "明天天氣大概會很好吧。",
+      "example": "今日は天気がいいです。",
+      "translation": "今天天氣很好。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-09-29"
+      "lastSeen": "2026-10-01"
     },
     {
       "word": "思う",
-      "reading": "おもう",
+      "reading": "おもう / omou",
       "meaning": "想、認為",
       "usage": "～と思います",
-      "example": "田中さんは明日来ると思います。",
-      "translation": "我想田中明天會來。",
+      "example": "明日は雨だと思います。",
+      "translation": "我想明天會下雨。",
       "category": "動詞",
       "forms": {
         "masu": "思います",
@@ -1568,7 +1568,7 @@
         "te": "思って"
       },
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-09-28"
+      "lastSeen": "2026-10-01"
     },
     {
       "word": "来週",
@@ -1580,23 +1580,23 @@
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-09-25"
+      "lastSeen": "2026-10-01"
     },
     {
       "word": "簡単",
-      "reading": "かんたん",
+      "reading": "かんたん / kantan",
       "meaning": "簡單的",
       "usage": "簡単な問題",
-      "example": "この問題は簡単だと思います。",
-      "translation": "我覺得這題很簡單。",
+      "example": "問題は簡単だと思います。",
+      "translation": "我覺得題目很簡單。",
       "category": "形容詞",
       "forms": null,
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-09-28"
+      "lastSeen": "2026-10-01"
     },
     {
       "word": "試験",
-      "reading": "しけん",
+      "reading": "しけん / shiken",
       "meaning": "考試",
       "usage": "試験があります",
       "example": "来週、試験があります。",
@@ -1604,12 +1604,12 @@
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-09-28"
+      "lastSeen": "2026-10-01"
     },
     {
       "word": "降る",
-      "reading": "ふる",
-      "meaning": "下雨／下雪",
+      "reading": "ふる / furu",
+      "meaning": "下（雨、雪）",
       "usage": "雨が降る",
       "example": "明日は雨が降ると思います。",
       "translation": "我想明天會下雨。",
@@ -1621,31 +1621,31 @@
         "te": "降って"
       },
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-09-28"
+      "lastSeen": "2026-10-01"
     },
     {
       "word": "難しい",
-      "reading": "むずかしい",
+      "reading": "むずかしい / muzukashii",
       "meaning": "困難的",
       "usage": "試験が難しい",
-      "example": "この試験は難しいと思います。",
-      "translation": "我覺得這個考試很難。",
+      "example": "試験は難しいと思います。",
+      "translation": "我覺得考試很難。",
       "category": "形容詞",
       "forms": null,
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-09-28"
+      "lastSeen": "2026-10-01"
     },
     {
       "word": "雨",
-      "reading": "あめ",
+      "reading": "あめ / ame",
       "meaning": "雨",
       "usage": "雨が降る",
-      "example": "明日は雨だと思います。",
-      "translation": "我想明天是雨天。",
+      "example": "雨が降ると思います。",
+      "translation": "我想會下雨。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-09-28"
+      "lastSeen": "2026-10-01"
     },
     {
       "word": "会議",
@@ -3420,9 +3420,9 @@
     },
     {
       "pattern": "五段動詞的ない形",
-      "meaning": "最後的う段改同一行あ段＋ない；う特別變わない。",
-      "connection": "読む→読まない、話す→話さない、待つ→待たない、買う→買わない、行く→行かない。",
-      "usage": "N4大量文法會使用ない形。",
+      "meaning": "最後的う段改成同一行あ段＋ない；字尾う要變わない。",
+      "connection": "読む→読まない、話す→話さない、待つ→待たない、行く→行かない、買う→買わない。",
+      "usage": "N4很多文法都需要ない形，不能只背行かない。",
       "examples": [
         {
           "jp": "今日は本を読まない。",
@@ -3439,13 +3439,13 @@
       ],
       "category": "ない形",
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-09-25"
+      "lastSeen": "2026-10-01"
     },
     {
       "pattern": "形容詞／名詞＋と思います",
       "meaning": "い形容詞直接接；な形容詞與名詞現在肯定用だ。",
       "connection": "難しいと思います／簡単だと思います／雨だと思います。",
-      "usage": "今天先辨識三個模板。",
+      "usage": "不要說「難しいだと思います」或「簡単なと思います」。",
       "examples": [
         {
           "jp": "試験は難しいと思います。",
@@ -3462,13 +3462,13 @@
       ],
       "category": "形容詞",
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-09-25"
+      "lastSeen": "2026-10-01"
     },
     {
       "pattern": "普通形四格＋と思います",
-      "meaning": "と思います前仍保留時間與肯否。",
+      "meaning": "と思います前仍保留現在／過去與肯定／否定。",
       "connection": "行く／行かない／行った／行かなかった＋と思います。",
-      "usage": "閱讀聽力要看と思います前的普通形。",
+      "usage": "閱讀與聽力不要只聽到「行」，要等動詞形式結束。",
       "examples": [
         {
           "jp": "明日は学校に行くと思います。",
@@ -3485,38 +3485,30 @@
       ],
       "category": "時態整理",
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-09-25"
+      "lastSeen": "2026-10-01"
     },
     {
       "pattern": "普通形＋と思います",
-      "meaning": "我想～／我認為～／我覺得～。",
+      "meaning": "表示「我想／我認為～」。",
       "connection": "動詞普通形＋と思います。",
-      "usage": "先看前面的時態與肯否；と思います本身不決定去或不去。",
+      "usage": "用來表達判斷、想法或推測；要看と思います前面的普通形判斷肯否與時間。",
       "examples": [
         {
-          "jp": "行くと思います。",
-          "zh": "我想會去。"
-        },
-        {
-          "jp": "行かないと思います。",
-          "zh": "我想不會去。"
-        },
-        {
-          "jp": "行ったと思います。",
-          "zh": "我想去了。"
-        },
-        {
-          "jp": "行かなかったと思います。",
-          "zh": "我想沒有去。"
+          "jp": "田中さんは明日来ると思います。",
+          "zh": "我想田中明天會來。"
         },
         {
           "jp": "田中さんは明日来ないと思います。",
           "zh": "我想田中明天不會來。"
+        },
+        {
+          "jp": "田中さんは昨日来たと思います。",
+          "zh": "我想田中昨天有來。"
         }
       ],
       "category": "時態整理",
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-09-28"
+      "lastSeen": "2026-10-01"
     },
     {
       "pattern": "舊內容：～なければなりません vs ～なくてもいいです",
@@ -3801,6 +3793,29 @@
       "category": "基礎句型",
       "firstSeen": "2026-09-29",
       "lastSeen": "2026-09-29"
+    },
+    {
+      "pattern": "Day 1 複習：普通形四格",
+      "meaning": "現在肯定／現在否定／過去肯定／過去否定。",
+      "connection": "行く／行かない／行った／行かなかった。",
+      "usage": "今天所有新句型都建立在普通形上。",
+      "examples": [
+        {
+          "jp": "明日は学校に行く。",
+          "zh": "明天去學校。"
+        },
+        {
+          "jp": "明日は学校に行かない。",
+          "zh": "明天不去學校。"
+        },
+        {
+          "jp": "昨日は学校に行かなかった。",
+          "zh": "昨天沒去學校。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-01",
+      "lastSeen": "2026-10-01"
     }
   ]
 }
