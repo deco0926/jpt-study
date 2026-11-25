@@ -115,241 +115,148 @@ function grammarCategory(grammarItem){
   return "基礎句型";
 }
 
-let kanaMode = "both";
-let kanaRowFilter = "all";
-let randomKana = null;
-let vocabFilter="all";
-let grammarFilter="all";
-let vocabQuery="";
-
+let kanaMode = "both", kanaRowFilter = "all", randomKana = null;
+let vocabFilter = "all", grammarFilter = "all", vocabQuery = "", grammarQuery = "";
+let vocabPage = 1, grammarPage = 1;
+const PAGE_SIZE = 24;
 const DB_ROW_IDS = ["a","k","s","t","n","h","m","y","r","w","w"];
+const $db = selector => document.querySelector(selector);
+function esc(s="") { return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m])); }
+function normalize(s="") { return String(s).normalize("NFKC").trim().toLowerCase().replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60)); }
+function vocabText(v) { return [v.slice(0,5).join(" "),v[5]?.usage || "",...(displayedVerbForms(v)||[])].join(" "); }
+function grammarText(g) { return [g.p,g.m,g.ex,g.zh,g.connection,g.usage,...(g.examples||[]).flatMap(e=>[e.jp,e.zh])].filter(Boolean).join(" "); }
 
-function esc(s=""){
-  return String(s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+function activatePanel(name, updateHash=false) {
+  if(!['vocab','grammar','kana'].includes(name))return;
+  document.querySelectorAll('[data-db-panel]').forEach(p=>p.hidden=p.dataset.dbPanel!==name);
+  document.querySelectorAll('[data-db-tab]').forEach(b=>{const active=b.dataset.dbTab===name;b.setAttribute('aria-selected',String(active));b.tabIndex=active?0:-1;});
+  if(updateHash)history.replaceState(null,'',`#${name}-section`);
 }
-
-function normalize(s=""){
-  return String(s).trim().toLowerCase();
+function activateHash() {
+  const hash=location.hash.slice(1);
+  const name=hash.startsWith('grammar-')?'grammar':hash.startsWith('kana-')?'kana':'vocab';
+  activatePanel(name);
+  const match=/^(vocab|grammar)-(\d+)$/.exec(hash);
+  if(match)showResult({type:match[1]==='vocab'?'單字':'文法',index:Number(match[2]),href:`#${hash}`},false);
 }
-
-function renderKana(){
-  const root = document.querySelector("#gojuonTable");
-  root.innerHTML = kanaRows.map((row,rowIndex) => ({row,rowIndex}))
-    .filter(x => kanaRowFilter === "all" || DB_ROW_IDS[x.rowIndex] === kanaRowFilter)
-    .map(({row,rowIndex}) => {
-    const cells = row.r.map((romaji,i) => {
-      if(!romaji) return '<div class="gojuon-cell empty"></div>';
-      const h = row.h[i] || "";
-      const k = row.k[i] || "";
-      const big = kanaMode === "hiragana" ? h : kanaMode === "katakana" ? k : h + "・" + k;
-      return '<div class="gojuon-cell" id="kana-'+rowIndex+'-'+i+'"><strong>'+esc(big)+'</strong><span>'+esc(romaji)+'</span></div>';
-    }).join("");
-    return '<div class="gojuon-row"><div class="gojuon-label">'+esc(row.row)+'</div>'+cells+'</div>';
-  }).join("");
+function updateFilterCounts(kind, source, category) {
+  document.querySelectorAll(`[data-${kind}-category]`).forEach(b=>{
+    const value=b.dataset[`${kind}Category`], count=value==='all'?source.length:source.filter(v=>category(v)===value).length;
+    b.innerHTML=`${esc(value==='all'?'全部':value)}<span>${count}</span>`;
+    b.classList.toggle('active',value===(kind==='vocab'?vocabFilter:grammarFilter));
+    b.setAttribute('aria-pressed',String(b.classList.contains('active')));
+  });
 }
-
-function getVocabEntries(){
-  return vocab.map((v,index)=>({v,index}))
-    .filter(({v})=>vocabFilter==="all" || vocabCategory(v)===vocabFilter)
-    .filter(({v})=>!vocabQuery || normalize(v.join(" ")).includes(vocabQuery));
+function renderKana() {
+  $db('#gojuonTable').innerHTML=kanaRows.map((row,rowIndex)=>({row,rowIndex}))
+    .filter(x=>kanaRowFilter==='all'||DB_ROW_IDS[x.rowIndex]===kanaRowFilter).map(({row,rowIndex})=>{
+      const cells=row.r.map((romaji,i)=>{
+        if(!romaji)return '<div class="gojuon-cell empty" aria-hidden="true"></div>';
+        const h=row.h[i]||'',k=row.k[i]||'';
+        const display=kanaMode==='both'?`<span lang="ja">${esc(h)}</span><span class="kana-secondary" lang="ja">${esc(k)}</span>`:esc(kanaMode==='hiragana'?h:k);
+        return `<div class="gojuon-cell" id="kana-${rowIndex}-${i}"><strong lang="ja">${display}</strong><span>${esc(romaji)}</span></div>`;
+      }).join('');
+      return `<div class="gojuon-row"><div class="gojuon-label">${esc(row.row)}</div>${cells}</div>`;
+    }).join('');
 }
-
-function renderVocab(entries = getVocabEntries()){
-  const root = document.querySelector("#vocabDb");
-  root.innerHTML = entries.length ? entries.map(({v,index}) => {
-    const forms=displayedVerbForms(v);
-    return `
-    <article class="db-entry" id="vocab-${index}">
-      <div class="db-entry-head">
-        <h3>${esc(v[0])}</h3>
-        <span class="reading">${esc(v[1])}</span>
-      </div>
-      <span class="db-category-tag">${esc(vocabCategory(v))}</span>
-      <p class="db-meaning">${esc(v[2])}</p>
-      ${forms ? `<div class="verb-forms"><span>ます形 <b>${esc(forms[0])}</b></span><span>ない形 <b>${esc(forms[1])}</b></span><span>過去形 <b>${esc(forms[2])}</b></span><span>て形 <b>${esc(forms[3])}</b></span></div>` : ""}
-      <p class="example">${esc(v[3])}<br><span class="muted">${esc(v[4])}</span></p>
-    </article>`;
-  }).join("") : '<p class="muted">沒有符合的單字。</p>';
-  document.querySelector("#vocabVisibleCount").textContent = `顯示 ${entries.length} / ${vocab.length}`;
+function pagination(kind,page,total,render) {
+  const pages=Math.max(1,Math.ceil(total/PAGE_SIZE)),root=$db(`#${kind}Pagination`);
+  root.innerHTML=pages>1?`<button class="ghost small" data-prev ${page===1?'disabled':''}>上一頁</button><span aria-live="polite">${page} / ${pages} 頁</span><button class="ghost small" data-next ${page===pages?'disabled':''}>下一頁</button>`:'';
+  root.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+    if(kind==='vocab')vocabPage+=b.hasAttribute('data-next')?1:-1;else grammarPage+=b.hasAttribute('data-next')?1:-1;
+    render();$db(`#${kind}-section`).scrollIntoView({behavior:'smooth',block:'start'});
+  });
 }
-
-function renderGrammar(){
-  const entries=grammar.map((g,index)=>({g,index})).filter(({g})=>grammarFilter==="all" || grammarCategory(g)===grammarFilter);
-  document.querySelector("#grammarDb").innerHTML = entries.map(({g,index}) => `
-    <article class="db-entry" id="grammar-${index}">
-      <span class="db-category-tag">${esc(grammarCategory(g))}</span>
-      <h3>${esc(g.p)}</h3>
-      <p>${esc(g.m)}</p>
-      <p class="example">${esc(g.ex)}<br><span class="muted">${esc(g.zh)}</span></p>
-    </article>`).join("");
+function getVocabEntries() {
+  return vocab.map((v,index)=>({v,index})).filter(({v})=>vocabFilter==='all'||vocabCategory(v)===vocabFilter).filter(({v})=>!vocabQuery||normalize(vocabText(v)).includes(vocabQuery));
 }
-
-function pickRandomKana(){
-  const pool = [];
-  kanaRows.forEach((row,rowIndex) => row.r.forEach((r,i)=>{
-    if(r && (kanaRowFilter === "all" || DB_ROW_IDS[rowIndex] === kanaRowFilter)){
-      pool.push({h:row.h[i], k:row.k[i], r});
-    }
+function renderVocab() {
+  const entries=getVocabEntries();vocabPage=Math.min(vocabPage,Math.max(1,Math.ceil(entries.length/PAGE_SIZE)));
+  const visible=entries.slice((vocabPage-1)*PAGE_SIZE,vocabPage*PAGE_SIZE);
+  $db('#vocabDb').innerHTML=visible.length?visible.map(({v,index})=>{
+    const forms=displayedVerbForms(v),usage=v[5]?.usage;
+    return `<article class="db-entry" id="vocab-${index}"><div class="db-entry-head"><div><h3 lang="ja">${esc(v[0])}</h3><span class="reading">${esc(v[1])}</span></div><span class="db-category-tag">${esc(vocabCategory(v))}</span></div><p class="db-meaning">${esc(v[2])}</p>${v[3]?`<p class="example"><span lang="ja">${esc(v[3])}</span>${v[4]?`<span class="muted">${esc(v[4])}</span>`:''}</p>`:''}${forms||usage?`<details class="entry-details"><summary>${forms?'動詞變化與用法':'查看用法'}</summary>${usage?`<p class="entry-detail-text">${esc(usage)}</p>`:''}${forms?`<div class="verb-forms">${['ます形','ない形','過去形','て形'].map((label,i)=>`<span>${label}<b lang="ja">${esc(forms[i])}</b></span>`).join('')}</div>`:''}</details>`:''}</article>`;
+  }).join(''):'<div class="empty-db"><b>沒有找到符合的單字</b>試試更短的日文、讀音或中文，也可以切回「全部」。</div>';
+  $db('#vocabVisibleCount').textContent=entries.length?`${(vocabPage-1)*PAGE_SIZE+1}–${Math.min(vocabPage*PAGE_SIZE,entries.length)} / ${entries.length} 筆`:'0 筆結果';
+  updateFilterCounts('vocab',vocab,vocabCategory);pagination('vocab',vocabPage,entries.length,renderVocab);
+}
+function renderGrammar() {
+  const entries=grammar.map((g,index)=>({g,index})).filter(({g})=>grammarFilter==='all'||grammarCategory(g)===grammarFilter).filter(({g})=>!grammarQuery||normalize(grammarText(g)).includes(grammarQuery));
+  grammarPage=Math.min(grammarPage,Math.max(1,Math.ceil(entries.length/PAGE_SIZE)));
+  $db('#grammarDb').innerHTML=entries.length?entries.slice((grammarPage-1)*PAGE_SIZE,grammarPage*PAGE_SIZE).map(({g,index})=>{
+    const extra=(g.examples||[]).filter(e=>e.jp&&e.jp!==g.ex);
+    return `<article class="db-entry" id="grammar-${index}"><span class="db-category-tag">${esc(grammarCategory(g))}</span><h3 lang="ja">${esc(g.p)}</h3><p class="grammar-meaning">${esc(g.m)}</p>${g.ex?`<p class="example"><span lang="ja">${esc(g.ex)}</span><span class="muted">${esc(g.zh)}</span></p>`:''}${g.connection||g.usage||extra.length?`<details class="entry-details"><summary>接續、用法與更多例句</summary>${g.connection?`<p class="entry-detail-text"><b>接續方式</b>${esc(g.connection)}</p>`:''}${g.usage?`<p class="entry-detail-text"><b>使用情境</b>${esc(g.usage)}</p>`:''}${extra.map(e=>`<p class="example"><span lang="ja">${esc(e.jp)}</span><span class="muted">${esc(e.zh)}</span></p>`).join('')}</details>`:''}</article>`;
+  }).join(''):'<div class="empty-db"><b>沒有找到符合的文法</b>可以搜尋句型的一部分，或切回「全部」分類。</div>';
+  $db('#grammarVisibleCount').textContent=entries.length?`${(grammarPage-1)*PAGE_SIZE+1}–${Math.min(grammarPage*PAGE_SIZE,entries.length)} / ${entries.length} 筆`:'0 筆結果';
+  updateFilterCounts('grammar',grammar,grammarCategory);pagination('grammar',grammarPage,entries.length,renderGrammar);
+}
+function pickRandomKana() {
+  const pool=[];kanaRows.forEach((row,rowIndex)=>row.r.forEach((r,i)=>{
+    if(r&&(kanaRowFilter==='all'||DB_ROW_IDS[rowIndex]===kanaRowFilter))pool.push({h:row.h[i],k:row.k[i],r});
   }));
-  randomKana = pool[Math.floor(Math.random()*pool.length)];
-  const char = kanaMode === "hiragana" ? randomKana.h : kanaMode === "katakana" ? randomKana.k : (Math.random() < .5 ? randomKana.h : randomKana.k);
-  document.querySelector("#randomKanaChar").textContent = char;
-  document.querySelector("#randomKanaAnswer").textContent = "";
-  document.querySelector("#randomKanaBox").classList.remove("hidden");
+  if(!pool.length)return;
+  randomKana=pool[Math.floor(Math.random()*pool.length)];
+  $db('#randomKanaChar').textContent=kanaMode==='hiragana'?randomKana.h:kanaMode==='katakana'?randomKana.k:(Math.random()<.5?randomKana.h:randomKana.k);
+  $db('#randomKanaAnswer').textContent='';$db('#randomKanaBox').classList.remove('hidden');
 }
-
-function buildGlobalResults(query){
-  const q = normalize(query);
-  const root = document.querySelector("#globalSearchResults");
-  const clearBtn = document.querySelector("#clearGlobalSearch");
-
-  if(!q){
-    root.classList.add("hidden");
-    root.innerHTML = "";
-    clearBtn.classList.add("hidden");
-    return;
+function showResult(result,scroll=true) {
+  if(result.type==='單字') {
+    vocabFilter='all';vocabQuery='';$db('#vocabSearch').value='';vocabPage=Math.floor(result.index/PAGE_SIZE)+1;renderVocab();activatePanel('vocab');
+  } else if(result.type==='文法') {
+    grammarFilter='all';grammarQuery='';$db('#grammarSearch').value='';grammarPage=Math.floor(result.index/PAGE_SIZE)+1;renderGrammar();activatePanel('grammar');
+  } else {
+    kanaMode='both';document.querySelectorAll('[data-mode]').forEach(b=>{b.classList.toggle('active',b.dataset.mode==='both');b.setAttribute('aria-pressed',String(b.dataset.mode==='both'));});
+    kanaRowFilter='all';document.querySelectorAll('[data-row]').forEach(b=>{b.classList.toggle('active',b.dataset.row==='all');b.setAttribute('aria-pressed',String(b.dataset.row==='all'));});renderKana();activatePanel('kana');
   }
-
-  clearBtn.classList.remove("hidden");
-  const results = [];
-
-  kanaRows.forEach((row,rowIndex)=>{
-    row.r.forEach((romaji,i)=>{
-      if(!romaji) return;
-      const h = row.h[i] || "";
-      const k = row.k[i] || "";
-      const hay = normalize([h,k,romaji,row.row].join(" "));
-      if(hay.includes(q)){
-        results.push({
-          type:"五十音",
-          title:`${h} / ${k} / ${romaji}`,
-          sub:row.row,
-          href:"#kana-section"
-        });
-      }
-    });
-  });
-
-  vocab.forEach((v,index)=>{
-    if(normalize(v.join(" ")).includes(q)){
-      results.push({
-        type:"單字",
-        title:v[0],
-        sub:`${v[1]}｜${v[2]}`,
-        href:`#vocab-${index}`,
-        vocabIndex:index
-      });
-    }
-  });
-
-  grammar.forEach((g,index)=>{
-    if(normalize([g.p,g.m,g.ex,g.zh].join(" ")).includes(q)){
-      results.push({
-        type:"文法",
-        title:g.p,
-        sub:g.m,
-        href:`#grammar-${index}`
-      });
-    }
-  });
-
-  const shown = results.slice(0,12);
-  root.innerHTML = shown.length ? shown.map((r,i)=>`
-    <a class="global-result-item" href="${r.href}" data-result-index="${i}">
-      <span class="result-type">${esc(r.type)}</span>
-      <div><strong>${esc(r.title)}</strong><small>${esc(r.sub)}</small></div>
-    </a>`).join("") : '<div class="no-result">找不到符合的內容。</div>';
-
-  root.classList.remove("hidden");
-
-  root.querySelectorAll(".global-result-item").forEach((el,i)=>{
-    el.addEventListener("click", ()=>{
-      const result = shown[i];
-      if(result.vocabIndex !== undefined){
-        document.querySelector("#vocabSearch").value = "";
-        renderVocab();
-      }
-      setTimeout(()=>{
-        const target = document.querySelector(result.href);
-        if(target){
-          target.classList.add("flash-target");
-          setTimeout(()=>target.classList.remove("flash-target"),1200);
-        }
-      },100);
-    });
-  });
+  const target=$db(result.href);if(!target)return;
+  if(scroll)target.scrollIntoView({behavior:'smooth',block:'start'});
+  target.tabIndex=-1;if(scroll)target.focus({preventScroll:true});
+  target.classList.add('flash-target');setTimeout(()=>target.classList.remove('flash-target'),1400);
 }
-
-document.querySelectorAll(".seg-btn").forEach(btn=>{
-  btn.addEventListener("click", ()=>{
-    document.querySelectorAll(".seg-btn").forEach(x=>x.classList.remove("active"));
-    btn.classList.add("active");
-    kanaMode = btn.dataset.mode;
-    renderKana();
-  });
+function buildGlobalResults(query) {
+  const q=normalize(query),root=$db('#globalSearchResults');$db('#clearGlobalSearch').classList.toggle('hidden',!q);
+  if(!q){root.classList.add('hidden');root.innerHTML='';return;}
+  const results=[];
+  kanaRows.forEach((row,rowIndex)=>row.r.forEach((r,i)=>{
+    if(r&&normalize([row.h[i],row.k[i],r,row.row].join(' ')).includes(q))results.push({type:'五十音',title:`${row.h[i]} / ${row.k[i]}`,sub:`${r} · ${row.row}`,href:`#kana-${rowIndex}-${i}`});
+  }));
+  vocab.forEach((v,index)=>{if(normalize(vocabText(v)).includes(q))results.push({type:'單字',title:v[0],sub:`${v[1]}｜${v[2]}`,href:`#vocab-${index}`,index});});
+  grammar.forEach((g,index)=>{if(normalize(grammarText(g)).includes(q))results.push({type:'文法',title:g.p,sub:g.m,href:`#grammar-${index}`,index});});
+  const shown=results.slice(0,12);
+  root.innerHTML=shown.length?`<div class="search-summary">找到 ${results.length} 筆${results.length>12?'，先顯示前 12 筆；輸入更多文字可縮小範圍':''}</div>`+shown.map((r,i)=>`<a class="global-result-item" href="${r.href}" data-result-index="${i}"><span class="result-type">${r.type}</span><div><strong>${esc(r.title)}</strong><small>${esc(r.sub)}</small></div></a>`).join(''):'<div class="no-result">找不到符合的內容，試試不同的關鍵字。</div>';
+  root.classList.remove('hidden');root.querySelectorAll('[data-result-index]').forEach((el,i)=>el.onclick=e=>{e.preventDefault();history.replaceState(null,'',shown[i].href);showResult(shown[i]);});
+}
+document.querySelectorAll('[data-db-tab]').forEach(b=>{
+  b.onclick=()=>activatePanel(b.dataset.dbTab,true);
+  b.onkeydown=e=>{const tabs=[...document.querySelectorAll('[data-db-tab]')],i=tabs.indexOf(b);let next;
+    if(['ArrowDown','ArrowRight'].includes(e.key))next=(i+1)%tabs.length;
+    if(['ArrowUp','ArrowLeft'].includes(e.key))next=(i+tabs.length-1)%tabs.length;
+    if(e.key==='Home')next=0;if(e.key==='End')next=tabs.length-1;
+    if(next!==undefined){e.preventDefault();tabs[next].focus();activatePanel(tabs[next].dataset.dbTab,true);}
+  };
 });
-
-document.querySelectorAll(".row-filter-btn").forEach(btn=>{
-  btn.addEventListener("click", ()=>{
-    document.querySelectorAll(".row-filter-btn").forEach(x=>x.classList.remove("active"));
-    btn.classList.add("active");
-    kanaRowFilter = btn.dataset.row;
-    document.querySelector("#randomKanaBox").classList.add("hidden");
-    renderKana();
-  });
+document.querySelectorAll('.seg-btn').forEach(b=>b.onclick=()=>{
+  kanaMode=b.dataset.mode;document.querySelectorAll('.seg-btn').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});
+  $db('#randomKanaBox').classList.add('hidden');renderKana();
 });
-
-document.querySelector("#randomKanaBtn").addEventListener("click", pickRandomKana);
-document.querySelector("#revealKanaBtn").addEventListener("click", ()=>{
-  if(!randomKana) return;
-  document.querySelector("#randomKanaAnswer").textContent = randomKana.r;
+document.querySelectorAll('[data-row]').forEach(b=>b.onclick=()=>{
+  kanaRowFilter=b.dataset.row;document.querySelectorAll('[data-row]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));});
+  $db('#randomKanaBox').classList.add('hidden');renderKana();
 });
-
-document.querySelector("#vocabSearch").addEventListener("input", e=>{
-  vocabQuery=normalize(e.target.value);
-  renderVocab();
+$db('#randomKanaBtn').onclick=pickRandomKana;
+$db('#revealKanaBtn').onclick=()=>{if(randomKana)$db('#randomKanaAnswer').textContent=randomKana.r;};
+$db('#vocabSearch').oninput=e=>{vocabQuery=normalize(e.target.value);vocabPage=1;renderVocab();};
+$db('#grammarSearch').oninput=e=>{grammarQuery=normalize(e.target.value);grammarPage=1;renderGrammar();};
+document.querySelectorAll('[data-vocab-category]').forEach(b=>b.onclick=()=>{vocabFilter=b.dataset.vocabCategory;vocabPage=1;renderVocab();});
+document.querySelectorAll('[data-grammar-category]').forEach(b=>b.onclick=()=>{grammarFilter=b.dataset.grammarCategory;grammarPage=1;renderGrammar();});
+$db('#globalSearch').oninput=e=>buildGlobalResults(e.target.value);
+$db('#clearGlobalSearch').onclick=()=>{$db('#globalSearch').value='';buildGlobalResults('');$db('#globalSearch').focus();};
+document.addEventListener('keydown',e=>{
+  if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)&&!document.activeElement.isContentEditable){e.preventDefault();$db('#globalSearch').focus();}
+  if(e.key==='Escape'&&document.activeElement===$db('#globalSearch')){$db('#globalSearch').value='';buildGlobalResults('');}
 });
-
-document.querySelectorAll("[data-vocab-category]").forEach(btn=>btn.addEventListener("click",()=>{
-  document.querySelectorAll("[data-vocab-category]").forEach(x=>x.classList.remove("active"));
-  btn.classList.add("active"); vocabFilter=btn.dataset.vocabCategory; renderVocab();
-}));
-
-document.querySelectorAll("[data-grammar-category]").forEach(btn=>btn.addEventListener("click",()=>{
-  document.querySelectorAll("[data-grammar-category]").forEach(x=>x.classList.remove("active"));
-  btn.classList.add("active"); grammarFilter=btn.dataset.grammarCategory; renderGrammar();
-}));
-
-document.querySelector("#globalSearch").addEventListener("input", e=>{
-  buildGlobalResults(e.target.value);
-});
-
-document.querySelector("#clearGlobalSearch").addEventListener("click", ()=>{
-  const input = document.querySelector("#globalSearch");
-  input.value = "";
-  buildGlobalResults("");
-  input.focus();
-});
-
-document.addEventListener("keydown", e=>{
-  if(e.key === "/" && !["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){
-    e.preventDefault();
-    document.querySelector("#globalSearch").focus();
-  }
-});
-
-document.querySelector("#backTop").addEventListener("click", ()=>{
-  window.scrollTo({top:0,behavior:"smooth"});
-});
-
-window.addEventListener("scroll", ()=>{
-  document.querySelector("#backTop").classList.toggle("hidden", window.scrollY < 550);
-}, {passive:true});
-
-document.querySelector("#kanaCount").textContent = "46";
-document.querySelector("#vocabCount").textContent = vocab.length;
-document.querySelector("#grammarCount").textContent = grammar.length;
-
-renderKana();
-renderVocab();
-renderGrammar();
+$db('#backTop').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+window.addEventListener('scroll',()=>$db('#backTop').classList.toggle('hidden',window.scrollY<550),{passive:true});
+window.addEventListener('hashchange',activateHash);
+$db('#kanaCount').textContent='46';$db('#vocabCount').textContent=vocab.length;$db('#grammarCount').textContent=grammar.length;
+renderKana();renderVocab();renderGrammar();activateHash();

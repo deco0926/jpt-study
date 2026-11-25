@@ -43,7 +43,8 @@
       }else{
         vocab.push([item.word,item.reading,item.meaning,item.example || item.usage || "",item.translation || "",{
           category:item.category || "",
-          forms:item.forms || null
+          forms:item.forms || null,
+          usage:item.usage || ""
         }]);
       }
     });
@@ -88,11 +89,16 @@
           m:display.summary || item.meaning,
           ex:example?.jp || "",
           zh:example?.zh || "",
-          category:item.category || ""
+          category:item.category || "",
+          connection:item.connection || "",
+          usage:item.usage || "",
+          examples:item.examples || []
         });
       });
       renderVocab();
       renderGrammar();
+      if(typeof buildGlobalResults === "function") buildGlobalResults(document.querySelector("#globalSearch").value);
+      if(typeof activateHash === "function") activateHash();
       document.querySelector("#vocabCount").textContent=vocab.length;
       document.querySelector("#grammarCount").textContent=grammar.length;
       document.querySelector("#databaseUpdatedThrough").textContent=data.updatedThrough

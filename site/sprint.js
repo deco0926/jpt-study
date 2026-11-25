@@ -160,12 +160,12 @@ $('#login').onclick=async()=>{try{await api.signInWithGoogle();}catch(e){status(
 $('#logout').onclick=async()=>{pause();try{await api.signOutUser();}catch(e){status(e.message,true);}};
 window.addEventListener('online',syncPending);
 async function init() {
-  try {const response=await fetch('./practice/index.json',{cache:'no-store'});if(!response.ok)throw new Error('每日題庫載入失敗');index=await response.json();const date=new URLSearchParams(location.search).get('date');if(date&&availablePapers(index).some(p=>p.date===date))await openPaper(date);else showToday();}
+  try {const response=await fetch('./practice/index.json',{cache:'no-store'});if(!response.ok)throw new Error('每日題庫載入失敗');index=await response.json();const date=new URLSearchParams(location.search).get('date');if(date&&availablePapers(index).some(p=>p.date===date))await openPaper(date);else if(new URLSearchParams(location.search).get('view')==='archive')showArchive();else if(new URLSearchParams(location.search).get('view')==='history')await showHistory();else showToday();}
   catch(e){main.innerHTML=`<section class="card"><h1>暫時無法載入</h1><p>${html(e.message)}</p><a class="button" href="./index.html">重新載入</a></section>`;}
   try {api=await import('./firebase.js');api.watchAuth(account=>{
     const newOwner=account?.uid || 'guest';if(newOwner!==owner){leaveExam();++loadingToken;}const changed=newOwner!==owner;user=account;owner=newOwner;
     $('#accountName').textContent=account?.displayName || (account?'已登入':'本機練習');$('#login').hidden=!!account;$('#logout').hidden=!account;
-    if(changed&&index)showToday();if(account)syncPending();
+    if(changed&&index){if(view==='history')showHistory();else if(view==='archive')showArchive();else showToday();}if(account)syncPending();
   });}catch(e){$('#accountName').textContent='本機練習';status('帳號服務暫時無法連線。仍可練習並保存本機紀錄；請稍後重新載入登入。',true);}
 }
 init();
