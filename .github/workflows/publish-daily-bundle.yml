@@ -8,6 +8,7 @@ on:
       - "pipeline/study-restart.json"
       - "pipeline/submissions/*.json"
       - "scripts/publish_daily_bundle.py"
+      - "scripts/wait_pages_artifact.py"
       - ".github/workflows/publish-daily-bundle.yml"
   schedule:
     # Recovery scan; GitHub may delay scheduled runs. No API key required.
@@ -16,6 +17,7 @@ on:
 
 permissions:
   contents: write
+  actions: read
   pages: write
   id-token: write
 
@@ -71,9 +73,19 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload validated site
+        id: pages_upload
         uses: actions/upload-pages-artifact@v3
         with:
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
           path: "./site"
+      - name: Wait for Pages artifact registration
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAGES_ARTIFACT_NAME: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+          PAGES_ARTIFACT_ID: ${{ steps.pages_upload.outputs.artifact_id }}
+        run: python3 scripts/wait_pages_artifact.py
       - name: Deploy validated site
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
