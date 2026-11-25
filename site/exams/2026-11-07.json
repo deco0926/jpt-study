@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-07",
+  "title": "今日驗收",
+  "description": "N4 Day 2 補課⑧：る動詞四格、始まる／始める、と思います、片假名、單字與閱讀。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ヌ」的讀音？",
+      "options": [
+        "nu",
+        "su",
+        "n",
+        "so"
+      ],
+      "answer": 0,
+      "explanation": "ヌ讀nu；ス讀su。"
+    },
+    {
+      "id": "q2",
+      "category": "kana",
+      "question": "「ソ」的讀音？",
+      "options": [
+        "n",
+        "shi",
+        "so",
+        "tsu"
+      ],
+      "answer": 2,
+      "explanation": "ソ讀so；ン讀n。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「予定」的意思？",
+      "options": [
+        "約定",
+        "預定、計畫",
+        "必要",
+        "關閉"
+      ],
+      "answer": 1,
+      "explanation": "予定＝預定、計畫。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「必要」的意思？",
+      "options": [
+        "必要的",
+        "忘記",
+        "借入",
+        "結束"
+      ],
+      "answer": 0,
+      "explanation": "必要（ひつよう）＝必要的。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「始める」的意思？",
+      "options": [
+        "自然開始",
+        "回家",
+        "主動開始某事",
+        "停止"
+      ],
+      "answer": 2,
+      "explanation": "始める是他動詞，表示開始某件事。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「切る」的ない形？",
+      "options": [
+        "切りない",
+        "切らない",
+        "切ない",
+        "切るない"
+      ],
+      "answer": 1,
+      "explanation": "切る是五段，變切らない。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「帰る」的た形？",
+      "options": [
+        "帰た",
+        "帰りた",
+        "帰った",
+        "帰んだ"
+      ],
+      "answer": 2,
+      "explanation": "五段る→った。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「借りる」的過去否定？",
+      "options": [
+        "借りなかった",
+        "借らなかった",
+        "借りった",
+        "借りない"
+      ],
+      "answer": 0,
+      "explanation": "借りる→借りない→借りなかった。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「開ける」的た形？",
+      "options": [
+        "開けった",
+        "開けた",
+        "開かった",
+        "開けんだ"
+      ],
+      "answer": 1,
+      "explanation": "一段動詞去る＋た。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「授業が九時に（　）。」填入表示課程九點開始的動詞。",
+      "options": [
+        "始める",
+        "始めます",
+        "始まります",
+        "始めない"
+      ],
+      "answer": 2,
+      "explanation": "授業が始まる；自動詞。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「私は九時に勉強を（　）。」填入表示我九點開始讀書。",
+      "options": [
+        "始まります",
+        "始めます",
+        "始まった",
+        "始まらない"
+      ],
+      "answer": 1,
+      "explanation": "勉強を始める是他動詞。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「友達はもう帰った（　）思います。」",
+      "options": [
+        "だ",
+        "に",
+        "と",
+        "を"
+      ],
+      "answer": 2,
+      "explanation": "動詞普通形＋と思います。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "「この本は必要（　）と思います。」",
+      "options": [
+        "だ",
+        "な",
+        "で",
+        "に"
+      ],
+      "answer": 0,
+      "explanation": "な形容詞現在肯定接と思います用だ。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "「昨日、図書館で本を借りました。そのあと家に帰りました。」哪個正確？",
+      "options": [
+        "昨天買書後出門",
+        "昨天借書後回家",
+        "明天借書",
+        "昨天沒有回家"
+      ],
+      "answer": 1,
+      "explanation": "借りました＝借了；そのあと＝之後。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "「明日は友達と遊ぶ予定です。」哪個正確？",
+      "options": [
+        "昨天與朋友玩",
+        "今天必須讀書",
+        "明天預計與朋友玩",
+        "明天不會出門"
+      ],
+      "answer": 2,
+      "explanation": "明日＝明天；予定＝計畫。"
+    }
+  ]
+}

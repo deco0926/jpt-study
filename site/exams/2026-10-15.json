@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-15",
+  "title": "今日驗收",
+  "description": "N4 Day 2補課⑭：普通形四格、形容詞、と思います、體驗課讀解與文字模擬聽解；15題四選一，12題及格。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ツ」的讀音是？",
+      "options": [
+        "shi",
+        "tsu",
+        "so",
+        "n"
+      ],
+      "answer": 1,
+      "explanation": "ツ讀tsu；注意與シ（shi）區別。"
+    },
+    {
+      "id": "q2",
+      "category": "kana",
+      "question": "「ル」的讀音是？",
+      "options": [
+        "re",
+        "n",
+        "ru",
+        "so"
+      ],
+      "answer": 2,
+      "explanation": "ル讀ru；レ才讀re。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「体験」的讀音是？",
+      "options": [
+        "たいけん",
+        "さんか",
+        "しりょう",
+        "れんらく"
+      ],
+      "answer": 0,
+      "explanation": "体験（たいけん）表示體驗；体（たい）、験（けん）。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「締め切り」是什麼意思？",
+      "options": [
+        "教室",
+        "截止日期",
+        "聯絡",
+        "資料"
+      ],
+      "answer": 1,
+      "explanation": "締め切り（しめきり）是截止日期。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「資料」的讀音是？",
+      "options": [
+        "じゅんび",
+        "きょうしつ",
+        "しりょう",
+        "たいけん"
+      ],
+      "answer": 2,
+      "explanation": "資料讀しりょう，意思是資料。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「申し込む」的現在否定普通形是？",
+      "options": [
+        "申し込みない",
+        "申し込まない",
+        "申し込んだ",
+        "申し込まなかった"
+      ],
+      "answer": 1,
+      "explanation": "五段む→まない，所以申し込まない。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「申し込む」的過去肯定普通形是？",
+      "options": [
+        "申し込んだ",
+        "申し込みた",
+        "申し込むた",
+        "申し込まない"
+      ],
+      "answer": 0,
+      "explanation": "む結尾的五段動詞過去肯定變成んだ。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「参加しませんでした」對應的普通形是？",
+      "options": [
+        "参加しない",
+        "参加した",
+        "参加する",
+        "参加しなかった"
+      ],
+      "answer": 3,
+      "explanation": "する→しない→しなかった，表示過去沒有參加。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「食べません」的普通形是？",
+      "options": [
+        "食べた",
+        "食べなかった",
+        "食べない",
+        "食べる"
+      ],
+      "answer": 2,
+      "explanation": "食べる是一段動詞；現在否定是食べない。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「難しい」的過去否定普通形是？",
+      "options": [
+        "難しくなかった",
+        "難しいじゃなかった",
+        "難しくないだった",
+        "難しかった"
+      ],
+      "answer": 0,
+      "explanation": "い形容詞過去否定為去い＋くなかった。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「この学校は便利（　）と思います。」應填？",
+      "options": [
+        "な",
+        "だ",
+        "です",
+        "だったです"
+      ],
+      "answer": 1,
+      "explanation": "便利是な形容詞，現在肯定普通形是便利だ。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「明日は体験授業に参加しないと思います。」的意思是？",
+      "options": [
+        "我想昨天沒有參加體驗課",
+        "我想明天會參加體驗課",
+        "我想明天不會參加體驗課",
+        "請不要參加體驗課"
+      ],
+      "answer": 2,
+      "explanation": "明日＋参加しない是未來否定，再接と思います表推測。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "「明日は学校に行かなくてもいいです。」的意思是？",
+      "options": [
+        "明天必須去學校",
+        "明天不必去學校",
+        "明天請不要去學校",
+        "明天已經去了學校"
+      ],
+      "answer": 1,
+      "explanation": "～なくてもいいです表示不做也可以。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "閱讀短文：『昨日、学校から連絡があった。体験授業は日曜日になった。』體驗課改到哪天？",
+      "options": [
+        "星期五",
+        "星期六",
+        "星期日",
+        "昨天"
+      ],
+      "answer": 2,
+      "explanation": "『日曜日になった』明確表示改成星期日。"
+    },
+    {
+      "id": "q15",
+      "category": "listening",
+      "question": "文字模擬聽解：女『体験授業は土曜日ですか。』男『いいえ、日曜日だと思います。九時に教室に行きます。』男方認為體驗課在哪天？",
+      "options": [
+        "星期五",
+        "星期六",
+        "星期日",
+        "星期一"
+      ],
+      "answer": 2,
+      "explanation": "男方先用いいえ否定星期六，再說日曜日。九時是去教室的時間。"
+    }
+  ]
+}

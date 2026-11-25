@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-13",
+  "title": "今日驗收",
+  "description": "N4 Day 2 補課⑧：條件形ば／たら、行程詞彙、片假名及N5複習。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ヌ」的讀音？",
+      "options": [
+        "su",
+        "nu",
+        "n",
+        "tsu"
+      ],
+      "answer": 1,
+      "explanation": "ヌ讀nu，注意與ス區分。"
+    },
+    {
+      "id": "q2",
+      "category": "vocab",
+      "question": "「変更（へんこう）」的意思？",
+      "options": [
+        "準備",
+        "抵達",
+        "變更",
+        "出發"
+      ],
+      "answer": 2,
+      "explanation": "変更＝變更；予定を変更する。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「間に合う」的意思？",
+      "options": [
+        "趕得上",
+        "遲到",
+        "通知",
+        "調查"
+      ],
+      "answer": 0,
+      "explanation": "間に合う＝趕得上。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「到着」的讀音？",
+      "options": [
+        "しゅっぱつ",
+        "れんらく",
+        "じゅんび",
+        "とうちゃく"
+      ],
+      "answer": 3,
+      "explanation": "到着讀とうちゃく。"
+    },
+    {
+      "id": "q5",
+      "category": "grammar",
+      "question": "急ぐ的ば形是？",
+      "options": [
+        "急がば",
+        "急げば",
+        "急ぎば",
+        "急ぐれば"
+      ],
+      "answer": 1,
+      "explanation": "五段ぐ改げ＋ば。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "調べる的ば形是？",
+      "options": [
+        "調べれば",
+        "調べば",
+        "調べらば",
+        "調べるば"
+      ],
+      "answer": 0,
+      "explanation": "一段去る＋れば。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "する的ば形是？",
+      "options": [
+        "したら",
+        "するば",
+        "すれば",
+        "しれば"
+      ],
+      "answer": 2,
+      "explanation": "する→すれば。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "早い的ば條件形是？",
+      "options": [
+        "早いば",
+        "早かったら",
+        "早くば",
+        "早ければ"
+      ],
+      "answer": 3,
+      "explanation": "い形容詞去い＋ければ。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「明日（　）、大丈夫です。」表示「如果是明天就沒問題」應填？",
+      "options": [
+        "ければ",
+        "なら",
+        "れば",
+        "たら"
+      ],
+      "answer": 1,
+      "explanation": "名詞明日＋なら。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「駅に着いたら、連絡してください。」意思？",
+      "options": [
+        "到站後請聯絡",
+        "出發前請不要聯絡",
+        "如果不去車站請聯絡",
+        "到站後不必聯絡"
+      ],
+      "answer": 0,
+      "explanation": "着いたら表示抵達後；連絡してください是請聯絡。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「時間を調べたら、知らせます。」表示？",
+      "options": [
+        "不查時間",
+        "已通知但未查",
+        "查完時間就通知",
+        "請不要通知"
+      ],
+      "answer": 2,
+      "explanation": "調べたら表示查完之後。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「授業に遅れないでください。」意思？",
+      "options": [
+        "可以遲到",
+        "必須遲到",
+        "已經遲到",
+        "請不要遲到"
+      ],
+      "answer": 3,
+      "explanation": "ないでください＝請不要做。"
+    },
+    {
+      "id": "q13",
+      "category": "reading",
+      "question": "短文：『雨が降ったら、出発を十時に変更します。』何時改為十點？",
+      "options": [
+        "晴天時",
+        "下雨時",
+        "昨天",
+        "到站後"
+      ],
+      "answer": 1,
+      "explanation": "雨が降ったら＝如果下雨。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "短文：『急げば、十時のバスに間に合います。』正確的是？",
+      "options": [
+        "趕快就趕得上十點公車",
+        "十點公車已經走了",
+        "不用趕也一定搭不上",
+        "要改搭九點電車"
+      ],
+      "answer": 0,
+      "explanation": "急げば＝如果趕快；間に合う＝趕得上。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "短文：『九時に出発して、十時に駅に到着します。』抵達車站時間？",
+      "options": [
+        "八點",
+        "九點",
+        "十點",
+        "十一點"
+      ],
+      "answer": 2,
+      "explanation": "十時に駅に到着します＝十點抵達車站。"
+    }
+  ]
+}

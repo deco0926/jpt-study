@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-22",
+  "title": "今日驗收",
+  "description": "N4 Day 4：意見引用、原因與五段ば形，含假名及N5可能形複習。15題四選一，12題通過。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ヌ」的讀音？",
+      "options": [
+        "su",
+        "nu",
+        "shi",
+        "tsu"
+      ],
+      "answer": 1,
+      "explanation": "ヌ＝nu，注意與ス區別。"
+    },
+    {
+      "id": "q2",
+      "category": "kana",
+      "question": "「ソ」的讀音？",
+      "options": [
+        "n",
+        "so",
+        "shi",
+        "tsu"
+      ],
+      "answer": 1,
+      "explanation": "ソ＝so，ン＝n。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「理由」的讀音？",
+      "options": [
+        "れんらく",
+        "りゆう",
+        "いけん",
+        "じゅんび"
+      ],
+      "answer": 1,
+      "explanation": "理由讀りゆう。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「連絡」的意思？",
+      "options": [
+        "準備",
+        "說明",
+        "聯絡",
+        "回覆"
+      ],
+      "answer": 2,
+      "explanation": "連絡＝聯絡。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「間に合う」的意思？",
+      "options": [
+        "趕得上",
+        "遲到",
+        "擔心",
+        "參加"
+      ],
+      "answer": 0,
+      "explanation": "間に合う＝趕得上。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「我認為明天會下雨」應選？",
+      "options": [
+        "明日は雨が降ると言いました。",
+        "明日は雨が降ると思います。",
+        "明日は雨が降るので。",
+        "明日は雨が降れば。"
+      ],
+      "answer": 1,
+      "explanation": "自己的推測用と思います。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「田中說明天會來」應選？",
+      "options": [
+        "田中さんは明日来ると思います。",
+        "田中さんは明日来るので。",
+        "田中さんは明日来ると言いました。",
+        "田中さんは明日来れば。"
+      ],
+      "answer": 2,
+      "explanation": "轉述田中說的話用と言いました。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「この駅は便利（　）、よく使います。」",
+      "options": [
+        "だので",
+        "なので",
+        "のので",
+        "でので"
+      ],
+      "answer": 1,
+      "explanation": "な形容詞＋なので。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「明日は試験（　）、勉強します。」",
+      "options": [
+        "だので",
+        "にので",
+        "なので",
+        "をので"
+      ],
+      "answer": 2,
+      "explanation": "名詞＋なので。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「時間がない（　）、急ぎます。」",
+      "options": [
+        "ので",
+        "なで",
+        "だので",
+        "をので"
+      ],
+      "answer": 0,
+      "explanation": "い形容詞ない直接接ので。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「急ぐ」的ば形？",
+      "options": [
+        "急ぐば",
+        "急ぎば",
+        "急げば",
+        "急がば"
+      ],
+      "answer": 2,
+      "explanation": "五段ぐ→げば。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「読む」的ば形？",
+      "options": [
+        "読めば",
+        "読まば",
+        "読みば",
+        "読むば"
+      ],
+      "answer": 0,
+      "explanation": "五段む→めば。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "「使えます」和「使ってもいいです」的差別？",
+      "options": [
+        "都表示禁止",
+        "前者能力、後者許可",
+        "前者許可、後者能力",
+        "兩者都是過去式"
+      ],
+      "answer": 1,
+      "explanation": "可能形表能力；てもいい表許可。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "「田中さんはバスが遅れたので、会議に遅れると言いました。」田中遲到的原因？",
+      "options": [
+        "電車停駛",
+        "沒有準備",
+        "公車誤點",
+        "睡過頭"
+      ],
+      "answer": 2,
+      "explanation": "バスが遅れたので＝因為公車誤點。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "「急げば、九時に間に合います。」哪個條件能趕上九點？",
+      "options": [
+        "先回信",
+        "趕快",
+        "明天出發",
+        "不參加"
+      ],
+      "answer": 1,
+      "explanation": "急げば＝如果趕快。"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-28",
+  "title": "今日驗收",
+  "description": "N4 Day 2 補課⑯：とき、まで／までに、前に／てから／後で與N5て形／た形，15題四選一，80%通過。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ツ」的讀音是？",
+      "options": [
+        "shi",
+        "tsu",
+        "so",
+        "ru"
+      ],
+      "answer": 1,
+      "explanation": "ツ讀tsu，シ讀shi。"
+    },
+    {
+      "id": "q2",
+      "category": "vocab",
+      "question": "「受付」的意思是？",
+      "options": [
+        "服務台、受理窗口",
+        "截止日期",
+        "預約",
+        "提交"
+      ],
+      "answer": 0,
+      "explanation": "受付（うけつけ）＝接待處、服務台。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「提出する」的意思是？",
+      "options": [
+        "填寫",
+        "等候",
+        "提交",
+        "結束"
+      ],
+      "answer": 2,
+      "explanation": "提出する（ていしゅつする）＝提交、繳交。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「予約する」的讀音是？",
+      "options": [
+        "きにゅうする",
+        "よやくする",
+        "かくにんする",
+        "とうちゃくする"
+      ],
+      "answer": 1,
+      "explanation": "予約する＝よやくする。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「必要」的意思是？",
+      "options": [
+        "安靜",
+        "遲到",
+        "免費",
+        "必要"
+      ],
+      "answer": 3,
+      "explanation": "必要（ひつよう）＝必要。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「書く」的て形是？",
+      "options": [
+        "書いて",
+        "書いた",
+        "書きて",
+        "書かない"
+      ],
+      "answer": 0,
+      "explanation": "書く→書いて；書いた是た形。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「待つ」的た形是？",
+      "options": [
+        "待つた",
+        "待てた",
+        "待った",
+        "待ちた"
+      ],
+      "answer": 2,
+      "explanation": "待つ→待って→待った。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "電車に乗る（　）、時間を確認します。表示『搭車時』。",
+      "options": [
+        "てから",
+        "とき",
+        "た後で",
+        "までに"
+      ],
+      "answer": 1,
+      "explanation": "辭書形＋とき：乗るとき。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「電車に乗ったとき」通常強調什麼？",
+      "options": [
+        "上車前的準備",
+        "禁止上車",
+        "上車的預定",
+        "已經上車時"
+      ],
+      "answer": 3,
+      "explanation": "た形＋とき常強調該動作已完成的時點。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "金曜日（　）申込書を提出します。表示『最晚星期五前』。",
+      "options": [
+        "までに",
+        "まで",
+        "後で",
+        "とき"
+      ],
+      "answer": 0,
+      "explanation": "までに表示截止期限前完成。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "八時（　）待ちます。表示『一直等到八點』。",
+      "options": [
+        "までに",
+        "まで",
+        "前に",
+        "後で"
+      ],
+      "answer": 1,
+      "explanation": "まで表示持續到某時間為止。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "名前を記入（　）、提出します。表示『填寫後再提交』。",
+      "options": [
+        "する前に",
+        "した前に",
+        "してから",
+        "するまでに"
+      ],
+      "answer": 2,
+      "explanation": "記入する→記入してから。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "申込書を提出した（　）、連絡しました。",
+      "options": [
+        "前に",
+        "までに",
+        "ので",
+        "後で"
+      ],
+      "answer": 3,
+      "explanation": "た形＋後で：提出した後で。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "閱讀：『申込書の締め切りは金曜日です。金曜日までに申込書を提出してください。提出する前に、名前を確認してください。』提交前應做什麼？",
+      "options": [
+        "確認姓名",
+        "預約飯店",
+        "等到星期六",
+        "先回家"
+      ],
+      "answer": 0,
+      "explanation": "提出する前に、名前を確認してください＝提交前確認姓名。"
+    },
+    {
+      "id": "q15",
+      "category": "listening",
+      "question": "文字稿模擬：『女：会議は八時に開始します。いつ受付に行きますか。男：八時までに行きます。申込書を記入してから、受付に行きます。』男生何時到接待處？",
+      "options": [
+        "八點以後",
+        "八點以前",
+        "星期五以後",
+        "會議結束後"
+      ],
+      "answer": 1,
+      "explanation": "八時までに行きます＝八點以前到；此題為文字稿模擬。"
+    }
+  ]
+}

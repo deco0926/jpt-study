@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-17",
+  "title": "今日驗收",
+  "description": "N4 Day 2 補課⑧：普通形四格、と思います、行程詞彙閱讀與N5複習。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ヌ」的讀音是？",
+      "options": [
+        "nu",
+        "su",
+        "tsu",
+        "n"
+      ],
+      "answer": 0,
+      "explanation": "ヌ讀nu，與ス（su）不同。"
+    },
+    {
+      "id": "q2",
+      "category": "vocab",
+      "question": "「確認」的讀音是？",
+      "options": [
+        "れんらく",
+        "かくにん",
+        "じゅんび",
+        "りゆう"
+      ],
+      "answer": 1,
+      "explanation": "確認讀かくにん。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「間に合う」的意思？",
+      "options": [
+        "遲到",
+        "改變",
+        "趕得上",
+        "擔心"
+      ],
+      "answer": 2,
+      "explanation": "間に合う表示趕得上。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「決める」的意思？",
+      "options": [
+        "確認",
+        "出發",
+        "聯絡",
+        "決定"
+      ],
+      "answer": 3,
+      "explanation": "決める＝決定。"
+    },
+    {
+      "id": "q5",
+      "category": "grammar",
+      "question": "「帰る」的ない形？",
+      "options": [
+        "帰ない",
+        "帰りない",
+        "帰らない",
+        "帰るない"
+      ],
+      "answer": 2,
+      "explanation": "帰る是五段動詞，る→ら＋ない。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「決める」的過去否定？",
+      "options": [
+        "決めなかった",
+        "決めらなかった",
+        "決めない",
+        "決めた"
+      ],
+      "answer": 0,
+      "explanation": "一段動詞決める→決めない→決めなかった。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「帰る」的過去肯定？",
+      "options": [
+        "帰りた",
+        "帰った",
+        "帰るた",
+        "帰らた"
+      ],
+      "answer": 1,
+      "explanation": "五段帰る的た形是帰った。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「我覺得他不會遲到」最自然？",
+      "options": [
+        "彼は遅れませんと思います",
+        "彼は遅れないだと思います",
+        "彼は遅れないと思います",
+        "彼は遅れなかったと思います"
+      ],
+      "answer": 2,
+      "explanation": "動詞ない形直接接と思います。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "哪一句正確？",
+      "options": [
+        "便利と思います",
+        "便利ですと思います",
+        "便利なと思います",
+        "便利だと思います"
+      ],
+      "answer": 3,
+      "explanation": "な形容詞現在肯定接と思います需だ。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "哪一句正確？",
+      "options": [
+        "高いと思います",
+        "高いだと思います",
+        "高いですと思います",
+        "高くと思います"
+      ],
+      "answer": 0,
+      "explanation": "い形容詞直接接と思います。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "『我認為他是學生』正確的是？",
+      "options": [
+        "学生と思います",
+        "学生だと思います",
+        "学生ですと思います",
+        "学生なと思います"
+      ],
+      "answer": 1,
+      "explanation": "名詞現在肯定接と思います要だ。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「友達はもう出発したと思います」表示？",
+      "options": [
+        "朋友明天出發",
+        "朋友不會出發",
+        "我想朋友已經出發了",
+        "朋友必須出發"
+      ],
+      "answer": 2,
+      "explanation": "出発した是過去肯定，と思います表看法。"
+    },
+    {
+      "id": "q13",
+      "category": "reading",
+      "question": "『昨日、友達に連絡した。』哪項正確？",
+      "options": [
+        "昨天聯絡了朋友",
+        "明天聯絡朋友",
+        "昨天沒有聯絡",
+        "現在正在聯絡"
+      ],
+      "answer": 0,
+      "explanation": "昨日＝昨天；連絡した＝聯絡了。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "『明日は九時に出発すると思います。』哪項正確？",
+      "options": [
+        "確定昨天九點出發",
+        "認為明天九點出發",
+        "明天九點不出發",
+        "昨天九點沒出發"
+      ],
+      "answer": 1,
+      "explanation": "明日＝明天；と思います是認為，不等於確定。"
+    },
+    {
+      "id": "q15",
+      "category": "grammar",
+      "question": "『明日は来なくてもいいです』意思？",
+      "options": [
+        "明天不能來",
+        "明天必須來",
+        "明天可以來但不必來",
+        "明天已經來了"
+      ],
+      "answer": 2,
+      "explanation": "なくてもいい＝不必做，與禁止不同。"
+    }
+  ]
+}

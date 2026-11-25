@@ -1,75 +1,11 @@
 <!doctype html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#f4f7fb" />
-  <title>JPT 每日衝刺</title>
-  <link rel="stylesheet" href="./style.css" />
-</head>
-<body>
-  <main class="container">
-    <header class="hero">
-      <div>
-        <p class="eyebrow">JPT 2026/09/13</p>
-        <h1>每日衝刺</h1>
-        <p id="countdown" class="muted"></p>
-      </div>
-      <div class="score-card">
-        <span>今日進度</span>
-        <strong id="progressText">0%</strong>
-      </div>
-    </header>
-
-    <nav class="top-nav" aria-label="主要導覽">
-      <a class="nav-link active" href="./index.html">今日學習</a>
-      <a class="nav-link" href="./database.html">學習資料庫</a>
-      <a class="nav-link" href="./quiz.html">自我測驗</a>
-      <a class="nav-link" href="./evening.html">今日驗收</a>
-    </nav>
-
-    <section class="card">
-      <div class="section-head">
-        <div>
-          <p id="lessonDate" class="eyebrow"></p>
-          <h2 id="lessonTitle">載入中…</h2>
-        </div>
-        <span id="duration" class="badge"></span>
-      </div>
-      <p id="goal" class="goal"></p>
-      <div id="minimum" class="checklist"></div>
-    </section>
-
-    <section class="card">
-      <h2>片假名</h2>
-      <div id="kanaGrid" class="kana-grid"></div>
-      <div id="kanaNotes" class="notes"></div>
-    </section>
-
-    <section class="card">
-      <h2>今日單字</h2>
-      <div id="vocabList" class="stack"></div>
-    </section>
-
-    <section class="card">
-      <h2>今日文法</h2>
-      <div id="grammarList" class="stack"></div>
-    </section>
-
-    <section class="card">
-      <h2>快速練習</h2>
-      <div id="quiz"></div>
-      <button id="submitQuiz" class="primary">提交答案</button>
-      <p id="quizResult" class="result"></p>
-    </section>
-
-    <section class="card">
-      <h2>今日收尾</h2>
-      <div id="review" class="checklist"></div>
-      <button id="resetProgress" class="ghost">重設今天進度</button>
-    </section>
-  </main>
-
-  <script src="./app.js"></script>
-</body>
-</html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#102b46"><title>JLPT N4｜每日 30 分鐘刷題</title><link rel="stylesheet" href="./sprint.css"></head>
+<body><div class="shell">
+<header class="brandbar"><a href="./index.html" class="brand">N4 DAILY <small>考前刷題計畫</small></a><div class="account"><span id="accountName">正在確認帳號…</span><button id="login" class="ghost small" hidden>Google 登入</button><button id="logout" class="ghost small" hidden>登出</button></div></header>
+<nav class="nav" aria-label="主要導覽"><button data-view="today" class="active">今日刷題</button><button data-view="archive">每日題庫</button><button data-view="history">作答紀錄</button><a href="./database.html">查單字・文法</a><a href="./lessons.html">舊教材</a></nav>
+<div id="globalStatus" class="status" role="status" aria-live="polite"></div>
+<main id="main"><p class="loading">正在載入每日題組…</p></main>
+<footer class="footer">原創 N4 濃縮練習，非官方試題。練習正確率不等同 JLPT 換算分數。<br>題目按日期留存；登入後成績存入你的私人帳號。音訊使用日語合成語音。<a href="https://www.jlpt.jp/e/samples/sampleindex.html" target="_blank" rel="noopener">官方題型參考</a> · <a href="./evening.html">舊今日驗收與紀錄</a></footer>
+</div>
+<dialog id="submitDialog"><h2>準備交卷了嗎？</h2><p id="submitSummary"></p><p class="muted">交卷後會顯示答案、聽力逐字稿與繁體中文解析。</p><div class="actions"><button id="confirmSubmit" class="button">交卷並看解析</button><button id="cancelSubmit" class="ghost">繼續作答</button></div></dialog>
+<script type="module" src="./sprint.js"></script></body></html>

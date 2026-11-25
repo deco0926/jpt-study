@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-16",
+  "title": "今日驗收",
+  "description": "15題四選一，80%通過；只考今日教材與明確複習。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「シ」的讀音？",
+      "options": [
+        "shi",
+        "tsu",
+        "so",
+        "n"
+      ],
+      "answer": 0,
+      "explanation": "シ＝shi；ツ＝tsu。"
+    },
+    {
+      "id": "q2",
+      "category": "vocab",
+      "question": "「変更」的意思？",
+      "options": [
+        "聯絡",
+        "確認",
+        "變更",
+        "準備"
+      ],
+      "answer": 2,
+      "explanation": "変更＝へんこう，變更。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「間に合う」表示？",
+      "options": [
+        "遲到",
+        "趕得上",
+        "取消",
+        "確認"
+      ],
+      "answer": 1,
+      "explanation": "間に合う＝趕得上。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「受付」在哪裡詢問最符合？",
+      "options": [
+        "櫃台",
+        "教室",
+        "車站月台",
+        "廚房"
+      ],
+      "answer": 0,
+      "explanation": "受付＝櫃台。"
+    },
+    {
+      "id": "q5",
+      "category": "grammar",
+      "question": "雨（　）は、試験を延期します。",
+      "options": [
+        "な場合",
+        "の場合",
+        "場合",
+        "でも場合"
+      ],
+      "answer": 1,
+      "explanation": "雨是名詞，接の場合。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "遅れる（　）は、連絡してください。",
+      "options": [
+        "場合",
+        "の場合",
+        "な場合",
+        "だ場合"
+      ],
+      "answer": 0,
+      "explanation": "動詞普通形直接接場合。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "雨が降っ（　）、行きます。",
+      "options": [
+        "たらも",
+        "ては",
+        "ても",
+        "ないで"
+      ],
+      "answer": 2,
+      "explanation": "降って＋も＝即使下雨。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "高（　）、買います。",
+      "options": [
+        "いでも",
+        "くても",
+        "くでも",
+        "かったも"
+      ],
+      "answer": 1,
+      "explanation": "高い→高くても。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "日曜日（　）、勉強します。",
+      "options": [
+        "ても",
+        "くても",
+        "でも",
+        "の場合も"
+      ],
+      "answer": 2,
+      "explanation": "名詞＋でも＝即使是星期日。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "試験がある（　）、確認します。",
+      "options": [
+        "かどうか",
+        "かどうだ",
+        "どうかだ",
+        "かどうな"
+      ],
+      "answer": 0,
+      "explanation": "普通形＋かどうか。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "予約が必要（　）、聞きます。",
+      "options": [
+        "だかどうか",
+        "なかどうか",
+        "かどうか",
+        "でかどうか"
+      ],
+      "answer": 2,
+      "explanation": "な形容詞必要去だ＋かどうか。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "ここで写真を撮ら（　）ください。",
+      "options": [
+        "なくても",
+        "ないで",
+        "なければ",
+        "ないか"
+      ],
+      "answer": 1,
+      "explanation": "撮らないでください＝請不要拍。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "明日は早く起き（　）。",
+      "options": [
+        "なくてもいいです",
+        "なければなりません",
+        "ないでください",
+        "てもいいです"
+      ],
+      "answer": 1,
+      "explanation": "起きなければなりません＝必須起床。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "「遅れる場合は、受付に連絡してください。」應該何時聯絡？",
+      "options": [
+        "趕得上時",
+        "會遲到時",
+        "考完試時",
+        "每個星期日"
+      ],
+      "answer": 1,
+      "explanation": "遅れる場合＝會遲到的情況。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "「雨が降っても試験はあります。会場が変わるかどうか確認してください。」正確的是？",
+      "options": [
+        "下雨就取消",
+        "會場一定不變",
+        "即使下雨仍有考試，須確認會場是否變更",
+        "不需要確認"
+      ],
+      "answer": 2,
+      "explanation": "ても表即使；かどうか表是否。"
+    }
+  ]
+}

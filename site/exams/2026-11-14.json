@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-14",
+  "title": "今日驗收",
+  "description": "N4 Day 2 補課⑧：順序、情況、行程與N5複習",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「シ」的讀音是？",
+      "options": [
+        "shi",
+        "tsu",
+        "so",
+        "n"
+      ],
+      "answer": 0,
+      "explanation": "シ讀shi，和ツ的筆畫方向不同。"
+    },
+    {
+      "id": "q2",
+      "category": "vocab",
+      "question": "「準備」的讀音？",
+      "options": [
+        "じゅんび",
+        "じゅうび",
+        "じゅんぴ",
+        "じゅびん"
+      ],
+      "answer": 0,
+      "explanation": "準備讀じゅんび。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「変更」的意思？",
+      "options": [
+        "抵達",
+        "變更",
+        "聯絡",
+        "準備"
+      ],
+      "answer": 1,
+      "explanation": "変更是變更計畫。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「間に合う」的意思？",
+      "options": [
+        "遲到",
+        "趕得上",
+        "確認",
+        "出發"
+      ],
+      "answer": 1,
+      "explanation": "間に合う表示趕得上。"
+    },
+    {
+      "id": "q5",
+      "category": "grammar",
+      "question": "出発する（　）、時間を確認します。",
+      "options": [
+        "後で",
+        "前に",
+        "場合",
+        "ても"
+      ],
+      "answer": 1,
+      "explanation": "辭書形＋前に。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "時間を確認した（　）、出発します。",
+      "options": [
+        "前に",
+        "場合",
+        "後で",
+        "の前"
+      ],
+      "answer": 2,
+      "explanation": "た形＋後で。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「寝る前に」的意思？",
+      "options": [
+        "睡覺之後",
+        "睡覺之前",
+        "不睡覺",
+        "正在睡覺"
+      ],
+      "answer": 1,
+      "explanation": "寝る前に表示睡前。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「到着した後で」的意思？",
+      "options": [
+        "抵達之前",
+        "如果抵達",
+        "抵達之後",
+        "尚未抵達"
+      ],
+      "answer": 2,
+      "explanation": "到着した後で表示抵達後。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "雨（　）場合は、予定を変更します。",
+      "options": [
+        "に",
+        "で",
+        "の",
+        "を"
+      ],
+      "answer": 2,
+      "explanation": "名詞＋の＋場合。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "行かない（　）は、連絡します。",
+      "options": [
+        "場合",
+        "前に",
+        "後で",
+        "の"
+      ],
+      "answer": 0,
+      "explanation": "普通形＋場合。"
+    },
+    {
+      "id": "q11",
+      "category": "mixed",
+      "question": "先に出発してもいいです。",
+      "options": [
+        "必須先出發",
+        "可以先出發",
+        "禁止出發",
+        "已經出發"
+      ],
+      "answer": 1,
+      "explanation": "てもいいです表示允許。"
+    },
+    {
+      "id": "q12",
+      "category": "mixed",
+      "question": "ここで食べてはいけません。",
+      "options": [
+        "可以在這裡吃",
+        "想在這裡吃",
+        "不可以在這裡吃",
+        "曾在這裡吃"
+      ],
+      "answer": 2,
+      "explanation": "てはいけません表示禁止。"
+    },
+    {
+      "id": "q13",
+      "category": "reading",
+      "question": "『駅に到着した後で、連絡します。』先做什麼？",
+      "options": [
+        "先聯絡",
+        "先抵達車站",
+        "先吃飯",
+        "先改行程"
+      ],
+      "answer": 1,
+      "explanation": "到着した後で，先抵達再聯絡。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "『雨の場合は、予定を変更します。』下雨時會如何？",
+      "options": [
+        "照原計畫",
+        "取消聯絡",
+        "更改計畫",
+        "提早抵達"
+      ],
+      "answer": 2,
+      "explanation": "雨の場合，會更改計畫。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "『出発する前に時間を確認しました。』正確敘述？",
+      "options": [
+        "出發前確認過時間",
+        "出發後確認時間",
+        "沒有確認時間",
+        "已經遲到"
+      ],
+      "answer": 0,
+      "explanation": "出発する前に，表示出發前確認。"
+    }
+  ]
+}

@@ -1,5 +1,13 @@
 # 每日交稿與復原
 
+## 2026-11-25 修復與刷題切換
+
+10/10起未發布的10份交稿出現category=review、minimum/review誤為字串、vocab jp/zh、grammar title、kana char/reading等schema偏移。依原內容更正欄位與型別，沒有改動已發布日期的歷史檔。驗證後補發布所有已收到的合格稿，latest恢復到11/23；11/24無交稿，不偽造教材。
+
+發布命令改為 `python scripts/publish_daily_bundle.py --queue --isolate-invalid`：一份稿的驗證或歷史衝突只隔離該日期，其他合格日期仍整份發布；錯誤保留在原稿與publication-status.json。未指定隔離旗標的預設仍採整批嚴格失敗，維持原本的原子檢查。單元測試不再把任意新交稿當作固定測試fixture。latest配對與禁止覆寫仍全程檢查。
+
+使用者改為每日刷題。新題庫為 `site/practice/`，11/25–12/5已完整預備，不走舊lesson/exam bundle。原10:00雲端任務改為檢查當日預備題組與提醒，不再產稿、讀私人Firebase橋接或寫GitHub。網站根據台灣日期切換，因此提醒延遲不影響刷題開放。
+
 ## 正式入口
 
 每天只建立一份 `pipeline/submissions/YYYY-MM-DD.json`：

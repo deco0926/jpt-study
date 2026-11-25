@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-02",
+  "title": "今日驗收",
+  "description": "JLPT N4 Day 2補課：假名辨識、寄件預約詞彙、普通形四格、と思います、N5複習與閱讀／模擬聽解。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ツ」的讀音是？",
+      "options": [
+        "shi",
+        "tsu",
+        "so",
+        "nu"
+      ],
+      "answer": 1,
+      "explanation": "ツ＝tsu；シ＝shi。"
+    },
+    {
+      "id": "q2",
+      "category": "kana",
+      "question": "「ヌ」的讀音是？",
+      "options": [
+        "su",
+        "n",
+        "nu",
+        "so"
+      ],
+      "answer": 2,
+      "explanation": "ヌ＝nu；ス＝su。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「届く」最接近哪個意思？",
+      "options": [
+        "變更",
+        "送達",
+        "選擇",
+        "確認"
+      ],
+      "answer": 1,
+      "explanation": "届く（とどく）＝送達、抵達。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「調べる」的意思是？",
+      "options": [
+        "借入",
+        "寄送",
+        "查詢",
+        "關閉"
+      ],
+      "answer": 2,
+      "explanation": "調べる（しらべる）＝查詢、調查。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「集合場所」的意思是？",
+      "options": [
+        "集合地點",
+        "飯店預約",
+        "包裹",
+        "電車時間"
+      ],
+      "answer": 0,
+      "explanation": "場所（ばしょ）＝地點；集合場所＝集合地點。"
+    },
+    {
+      "id": "q6",
+      "category": "vocab",
+      "question": "「確認」的意思是？",
+      "options": [
+        "選擇",
+        "確認",
+        "變更",
+        "收到"
+      ],
+      "answer": 1,
+      "explanation": "確認（かくにん）＝確認。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「送る」的ない形是？",
+      "options": [
+        "送りない",
+        "送るない",
+        "送らない",
+        "送ない"
+      ],
+      "answer": 2,
+      "explanation": "送る是五段動詞，る→ら＋ない。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「調べる」的過去否定普通形是？",
+      "options": [
+        "調べなかった",
+        "調べらなかった",
+        "調べない",
+        "調べた"
+      ],
+      "answer": 0,
+      "explanation": "調べる是一段動詞：調べない→調べなかった。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「届く」的過去肯定普通形是？",
+      "options": [
+        "届んだ",
+        "届いた",
+        "届った",
+        "届きた"
+      ],
+      "answer": 1,
+      "explanation": "く結尾五段動詞一般變いた：届く→届いた。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「選ぶ」的過去肯定普通形是？",
+      "options": [
+        "選いた",
+        "選った",
+        "選んだ",
+        "選べた"
+      ],
+      "answer": 2,
+      "explanation": "ぶ結尾五段動詞的た形為んだ：選ぶ→選んだ。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "荷物は明日届く（　）思います。",
+      "options": [
+        "だと",
+        "な",
+        "と",
+        "に"
+      ],
+      "answer": 2,
+      "explanation": "動詞普通形届く直接接と思います。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "この荷物は大事（　）と思います。",
+      "options": [
+        "な",
+        "だ",
+        "に",
+        "で"
+      ],
+      "answer": 1,
+      "explanation": "大事是な形容詞；接と思います要用大事だ。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "「今日は荷物を送らなくてもいいです。」意思是？",
+      "options": [
+        "今天必須寄包裹",
+        "今天不必寄包裹",
+        "今天禁止寄包裹",
+        "今天已寄包裹"
+      ],
+      "answer": 1,
+      "explanation": "なくてもいいです表示不必做。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "『田中さんは荷物を送らないと思います。でも、友達は昨日荷物を受け取りました。』哪個正確？",
+      "options": [
+        "田中一定已寄出包裹",
+        "朋友明天才會收到",
+        "朋友昨天收到了包裹",
+        "田中昨天已收到包裹"
+      ],
+      "answer": 2,
+      "explanation": "昨日受け取りました＝昨天已收到。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "對話『ホテルを予約しましたか。』『いいえ、まだ予約していません。明日予約すると思います。』目前是否已預約？",
+      "options": [
+        "已預約",
+        "尚未預約，預計明天預約",
+        "不必預約",
+        "昨天取消預約"
+      ],
+      "answer": 1,
+      "explanation": "まだ予約していません＝還沒有預約；明日予約すると思います＝想明天會預約。"
+    }
+  ]
+}

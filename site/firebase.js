@@ -16,7 +16,8 @@ import {
   limit,
   orderBy,
   query,
-  serverTimestamp
+  serverTimestamp,
+  doc, getDoc, setDoc, startAfter
 } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -62,4 +63,23 @@ export async function loadExamAttempts(user, maxItems = 10) {
   const attempts = collection(db, "users", user.uid, "examAttempts");
   const snapshot = await getDocs(query(attempts, orderBy("submittedAt", "desc"), limit(maxItems)));
   return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+}
+
+// Stable IDs make offline retries safe; never duplicate a completed practice run.
+export async function savePracticeAttempt(user, attempt) {
+  if (!user) throw new Error("請先登入。");
+  const ref = doc(db, "users", user.uid, "examAttempts", attempt.attemptId);
+  const existing = await getDoc(ref);
+  if (!existing.exists()) await setDoc(ref, { ...attempt, submittedAt: serverTimestamp() });
+  return ref;
+}
+
+export async function loadAttemptPage(user, cursor = null) {
+  if (!user) return { items: [], cursor: null, hasMore: false };
+  const ref = collection(db, "users", user.uid, "examAttempts");
+  const constraints = [orderBy("submittedAt", "desc")];
+  if (cursor) constraints.push(startAfter(cursor));
+  const snapshot = await getDocs(query(ref, ...constraints, limit(20)));
+  return { items: snapshot.docs.map(d => ({ ...d.data(), id: d.id })),
+    cursor: snapshot.docs.at(-1) || null, hasMore: snapshot.size === 20 };
 }

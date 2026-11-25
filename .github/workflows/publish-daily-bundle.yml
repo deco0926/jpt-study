@@ -40,6 +40,8 @@ jobs:
           python-version: "3.12"
       - name: Test publication safeguards
         run: python -m unittest discover -s tests -v
+      - name: Test practice grading and date boundaries
+        run: node --test tests/practice-core.test.mjs
       - name: Validate queue and commit together
         shell: bash
         run: |
@@ -50,8 +52,9 @@ jobs:
             # Re-plan against current main on each attempt. Never force push.
             git fetch origin main
             git checkout -B main origin/main
-            python scripts/publish_daily_bundle.py --queue
-            git add site/lessons site/exams site/data/learning-database.json
+            python scripts/publish_daily_bundle.py --queue --isolate-invalid
+            python scripts/validate_practice.py
+            git add site/lessons site/exams site/data/learning-database.json site/publication-status.json
             if git diff --cached --quiet; then
               echo "All submissions already published."
               break

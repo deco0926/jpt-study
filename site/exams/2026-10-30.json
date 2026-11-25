@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-30",
+  "title": "今日驗收",
+  "description": "N4 Day 2補課：假名辨識、交通詞彙、普通形四格、と思います、N5請求及短文理解。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ヌ」的讀音是？",
+      "options": [
+        "su",
+        "nu",
+        "shi",
+        "n"
+      ],
+      "answer": 1,
+      "explanation": "ヌ＝nu，與ス（su）字形不同。"
+    },
+    {
+      "id": "q2",
+      "category": "kana",
+      "question": "「ソ」的讀音是？",
+      "options": [
+        "n",
+        "tsu",
+        "so",
+        "shi"
+      ],
+      "answer": 2,
+      "explanation": "ソ＝so，ン＝n。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「間に合う（まにあう）」意思？",
+      "options": [
+        "遲到",
+        "聯絡",
+        "準備",
+        "趕得上"
+      ],
+      "answer": 3,
+      "explanation": "間に合う表示趕得上、來得及。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「降りる（おりる）」的意思？",
+      "options": [
+        "上車",
+        "下車",
+        "回家",
+        "抵達"
+      ],
+      "answer": 1,
+      "explanation": "降りる＝下車；乗る＝搭乘。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「連絡（れんらく）」的意思？",
+      "options": [
+        "聯絡",
+        "準備",
+        "遲到",
+        "約定"
+      ],
+      "answer": 0,
+      "explanation": "連絡する＝聯絡。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「帰る」的ない形是？",
+      "options": [
+        "帰ない",
+        "帰らない",
+        "帰りない",
+        "帰るない"
+      ],
+      "answer": 1,
+      "explanation": "帰る是五段動詞，る→ら＋ない。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「降りる」的ない形是？",
+      "options": [
+        "降らない",
+        "降りらない",
+        "降るない",
+        "降りない"
+      ],
+      "answer": 3,
+      "explanation": "降りる是一段動詞，去る＋ない。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「乗りました」轉普通形是？",
+      "options": [
+        "乗る",
+        "乗らない",
+        "乗った",
+        "乗らなかった"
+      ],
+      "answer": 2,
+      "explanation": "乗る的過去肯定是乗った。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「出ませんでした」轉普通形是？",
+      "options": [
+        "出なかった",
+        "出ない",
+        "出た",
+        "出る"
+      ],
+      "answer": 0,
+      "explanation": "出る是一段動詞，過去否定出なかった。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「田中さんは六時に帰る（　）思います。」應填？",
+      "options": [
+        "だと",
+        "なと",
+        "と",
+        "に"
+      ],
+      "answer": 2,
+      "explanation": "動詞普通形帰る直接接と思います。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「連絡は大切（　）と思います。」應填？",
+      "options": [
+        "な",
+        "だ",
+        "に",
+        "で"
+      ],
+      "answer": 1,
+      "explanation": "大切是な形容詞，普通形現在肯定需用だ。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「この電車は早い（　）思います。」應填？",
+      "options": [
+        "だと",
+        "なと",
+        "で",
+        "と"
+      ],
+      "answer": 3,
+      "explanation": "い形容詞直接接と思います：早いと思います。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "「ここで降りないでください。」表示？",
+      "options": [
+        "請不要在這裡下車",
+        "可以在這裡下車",
+        "必須在這裡下車",
+        "已經在這裡下車"
+      ],
+      "answer": 0,
+      "explanation": "ないでください是請求不要做。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "『田中さんは毎朝、八時に家を出ます。今日は電車に乗らないと思います。』說話者認為今天會搭電車嗎？",
+      "options": [
+        "會搭",
+        "已經搭了",
+        "不會搭",
+        "沒有提到"
+      ],
+      "answer": 2,
+      "explanation": "乗らないと思います＝認為不會搭。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "『九時に駅に着く予定です。友達に連絡しました。』預計幾點到車站？",
+      "options": [
+        "八點",
+        "九點",
+        "六點",
+        "沒有預定"
+      ],
+      "answer": 1,
+      "explanation": "九時に駅に着く予定です＝預計九點抵達車站。"
+    }
+  ]
+}

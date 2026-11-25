@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-15",
+  "title": "今日驗收",
+  "description": "時間順序、計畫表達、片假名與N5舊文法；15題四選一，12題及格。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ヌ」怎麼念？",
+      "options": [
+        "su",
+        "nu",
+        "n",
+        "tsu"
+      ],
+      "answer": 1,
+      "explanation": "ヌ＝nu，與ス＝su不同。"
+    },
+    {
+      "id": "q2",
+      "category": "kana",
+      "question": "「ソ」的讀音？",
+      "options": [
+        "n",
+        "shi",
+        "so",
+        "tsu"
+      ],
+      "answer": 2,
+      "explanation": "ソ＝so，注意與ン區分。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「予約」的意思？",
+      "options": [
+        "確認",
+        "預約",
+        "變更",
+        "遲到"
+      ],
+      "answer": 1,
+      "explanation": "予約（よやく）＝預約。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「変更」的意思？",
+      "options": [
+        "準備",
+        "聯絡",
+        "變更",
+        "趕上"
+      ],
+      "answer": 2,
+      "explanation": "変更（へんこう）＝變更。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「間に合う」表示？",
+      "options": [
+        "趕得上",
+        "忘記",
+        "出發",
+        "休息"
+      ],
+      "answer": 0,
+      "explanation": "間に合う＝趕得上。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "出発（　）、時間を確認します。",
+      "options": [
+        "した後で",
+        "してから",
+        "する前に",
+        "しないつもり"
+      ],
+      "answer": 2,
+      "explanation": "前に前面用辭書形，出発する前に。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "予約（　）、友達に連絡します。",
+      "options": [
+        "する前に",
+        "した後で",
+        "しないつもり",
+        "するつもり"
+      ],
+      "answer": 1,
+      "explanation": "予約した後で＝預約完成後。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "時間を確認（　）、出発します。",
+      "options": [
+        "する前に",
+        "した後で",
+        "するつもり",
+        "してから"
+      ],
+      "answer": 3,
+      "explanation": "確認してから＝確認後再出發。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "明日ホテルを予約（　）。表示打算預約。",
+      "options": [
+        "した後で",
+        "しないつもりです",
+        "するつもりです",
+        "してから"
+      ],
+      "answer": 2,
+      "explanation": "辭書形＋つもりです。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "今日は遅れ（　）。表示打算不遲到。",
+      "options": [
+        "ないつもりです",
+        "た後で",
+        "る前に",
+        "てから"
+      ],
+      "answer": 0,
+      "explanation": "ない形＋つもりです。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「勉強した後で、寝ます。」正確意思？",
+      "options": [
+        "睡醒才讀書",
+        "讀書後睡覺",
+        "正在讀書",
+        "打算不睡"
+      ],
+      "answer": 1,
+      "explanation": "た形＋後で表示做完後。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「食べてから」的食べて屬於？",
+      "options": [
+        "辭書形",
+        "ない形",
+        "て形",
+        "た形"
+      ],
+      "answer": 2,
+      "explanation": "てから接て形。"
+    },
+    {
+      "id": "q13",
+      "category": "reading",
+      "question": "明日は朝、時間を確認してから出発します。先做什麼？",
+      "options": [
+        "出發",
+        "預約",
+        "聯絡",
+        "確認時間"
+      ],
+      "answer": 3,
+      "explanation": "確認してから表示先確認時間。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "ホテルを予約した後で、友達に連絡するつもりです。先做什麼？",
+      "options": [
+        "預約飯店",
+        "聯絡朋友",
+        "睡覺",
+        "趕電車"
+      ],
+      "answer": 0,
+      "explanation": "予約した後で＝預約之後。"
+    },
+    {
+      "id": "q15",
+      "category": "mixed",
+      "question": "「行かなくてもいいです」意思是？",
+      "options": [
+        "必須去",
+        "不必去",
+        "去了",
+        "打算去"
+      ],
+      "answer": 1,
+      "explanation": "N5複習：なくてもいいです＝不必。"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-04",
+  "title": "今日驗收",
+  "description": "N4 Day2補課：假名、單字、五段す／ぐ／む音便、一段變化、と思います及N5複習閱讀。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ツ」的讀音？",
+      "options": [
+        "shi",
+        "tsu",
+        "so",
+        "nu"
+      ],
+      "answer": 1,
+      "explanation": "ツ＝tsu。"
+    },
+    {
+      "id": "q2",
+      "category": "kana",
+      "question": "「ヌ」的讀音？",
+      "options": [
+        "su",
+        "so",
+        "nu",
+        "n"
+      ],
+      "answer": 2,
+      "explanation": "ヌ＝nu；ス＝su。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「探す」的意思？",
+      "options": [
+        "忘記",
+        "尋找",
+        "喝",
+        "閱讀"
+      ],
+      "answer": 1,
+      "explanation": "探す（さがす）＝尋找。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「約束」的意思？",
+      "options": [
+        "約定",
+        "燈",
+        "鑰匙",
+        "游泳"
+      ],
+      "answer": 0,
+      "explanation": "約束（やくそく）＝約定。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「忘れる」的意思？",
+      "options": [
+        "記住",
+        "關掉",
+        "忘記",
+        "說話"
+      ],
+      "answer": 2,
+      "explanation": "忘れる（わすれる）＝忘記。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「話す」的ない形？",
+      "options": [
+        "話しない",
+        "話すない",
+        "話さない",
+        "話せない"
+      ],
+      "answer": 2,
+      "explanation": "す→さない。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「話す」的過去肯定？",
+      "options": [
+        "話した",
+        "話った",
+        "話んだ",
+        "話いた"
+      ],
+      "answer": 0,
+      "explanation": "す→した。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「泳ぐ」的過去肯定？",
+      "options": [
+        "泳いた",
+        "泳いだ",
+        "泳った",
+        "泳んだ"
+      ],
+      "answer": 1,
+      "explanation": "ぐ→いだ。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「読む」的過去肯定？",
+      "options": [
+        "読った",
+        "読みた",
+        "読いた",
+        "読んだ"
+      ],
+      "answer": 3,
+      "explanation": "む→んだ。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「読む」的過去否定？",
+      "options": [
+        "読まなかった",
+        "読んだ",
+        "読めなかった",
+        "読みなかった"
+      ],
+      "answer": 0,
+      "explanation": "読む→読まない→読まなかった。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「忘れる」的ない形？",
+      "options": [
+        "忘れらない",
+        "忘れない",
+        "忘るない",
+        "忘らない"
+      ],
+      "answer": 1,
+      "explanation": "一段去る＋ない。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "田中さんは明日話す（　）思います。",
+      "options": [
+        "だ",
+        "な",
+        "と",
+        "に"
+      ],
+      "answer": 2,
+      "explanation": "動詞普通形＋と思います。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "「ここで話さないでください」意思？",
+      "options": [
+        "請在這裡說話",
+        "可以在這裡說話",
+        "曾在這裡說話",
+        "請不要在這裡說話"
+      ],
+      "answer": 3,
+      "explanation": "ないでください表示請不要。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "『私は昨日、傘を忘れました。』說話者昨天怎麼了？",
+      "options": [
+        "忘了傘",
+        "買了傘",
+        "找到了鑰匙",
+        "關了燈"
+      ],
+      "answer": 0,
+      "explanation": "傘を忘れました＝忘了傘。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "『A：昨日、海で泳ぎましたか。B：いいえ、泳ぎませんでした。本を読みました。』B昨天做什麼？",
+      "options": [
+        "游泳",
+        "讀書",
+        "找鑰匙",
+        "買票"
+      ],
+      "answer": 1,
+      "explanation": "沒有游泳，讀了書。"
+    }
+  ]
+}

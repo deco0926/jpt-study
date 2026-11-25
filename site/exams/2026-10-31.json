@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-31",
+  "title": "今日驗收",
+  "description": "N4 Day2補課：假名速度、交通與生活單字、五段一段、普通形四格、と思います、N5請求及閱讀。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ル」的讀音是？",
+      "options": [
+        "re",
+        "ru",
+        "nu",
+        "ro"
+      ],
+      "answer": 1,
+      "explanation": "ル＝ru；レ＝re，ル比レ多短筆。"
+    },
+    {
+      "id": "q2",
+      "category": "kana",
+      "question": "「ソ」的讀音是？",
+      "options": [
+        "n",
+        "shi",
+        "so",
+        "tsu"
+      ],
+      "answer": 2,
+      "explanation": "ソ＝so；ン＝n。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「借りる」的意思？",
+      "options": [
+        "借入",
+        "剪切",
+        "關閉",
+        "集合"
+      ],
+      "answer": 0,
+      "explanation": "借りる＝借入；切る＝剪切。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「約束」的意思？",
+      "options": [
+        "決定",
+        "圖書館",
+        "約定",
+        "必要"
+      ],
+      "answer": 2,
+      "explanation": "約束（やくそく）是約定。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「閉める」的意思？",
+      "options": [
+        "打開",
+        "忘記",
+        "決定",
+        "關閉"
+      ],
+      "answer": 3,
+      "explanation": "閉める＝關閉；開ける＝打開。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「切る」的ない形是？",
+      "options": [
+        "切ない",
+        "切らない",
+        "切りない",
+        "切るない"
+      ],
+      "answer": 1,
+      "explanation": "切る是五段動詞，る→ら＋ない。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「借りる」的ない形是？",
+      "options": [
+        "借りない",
+        "借らない",
+        "借るない",
+        "借りらない"
+      ],
+      "answer": 0,
+      "explanation": "借りる是一段動詞，去る＋ない。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「切りました」轉普通形是？",
+      "options": [
+        "切る",
+        "切らない",
+        "切らなかった",
+        "切った"
+      ],
+      "answer": 3,
+      "explanation": "切る過去肯定是切った。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「借りませんでした」轉普通形是？",
+      "options": [
+        "借りない",
+        "借りた",
+        "借りなかった",
+        "借る"
+      ],
+      "answer": 2,
+      "explanation": "借りる的過去否定是借りなかった。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「田中さんは九時に集まる（　）思います。」",
+      "options": [
+        "だと",
+        "なと",
+        "と",
+        "に"
+      ],
+      "answer": 2,
+      "explanation": "動詞普通形直接接と思います。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「この駅は便利（　）と思います。」",
+      "options": [
+        "な",
+        "だ",
+        "で",
+        "に"
+      ],
+      "answer": 1,
+      "explanation": "便利是な形容詞，現在肯定普通形需用だ。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「この電車は早くないと思います。」的意思？",
+      "options": [
+        "我認為這班電車不快",
+        "我認為這班電車很快",
+        "我已搭這班車",
+        "請搭這班車"
+      ],
+      "answer": 0,
+      "explanation": "早くない是早い的否定普通形。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "「窓を開けないでください。」的意思？",
+      "options": [
+        "可以開窗",
+        "必須開窗",
+        "已開窗",
+        "請不要開窗"
+      ],
+      "answer": 3,
+      "explanation": "ないでください＝請不要做某事。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "『明日は九時に駅に集まります。田中さんは図書館で本を借りると思います。』田中可能在哪裡借書？",
+      "options": [
+        "車站",
+        "圖書館",
+        "家裡",
+        "教室"
+      ],
+      "answer": 1,
+      "explanation": "図書館で本を借りると思います＝認為會在圖書館借書。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "『山田さんは本を借りないと思います。午後は友達と約束があります。』下午有什麼事？",
+      "options": [
+        "要剪紙",
+        "要開窗",
+        "和朋友有約",
+        "要搭電車"
+      ],
+      "answer": 2,
+      "explanation": "午後は友達と約束があります＝下午和朋友有約。"
+    }
+  ]
+}

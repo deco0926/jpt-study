@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-21",
+  "title": "今日驗收",
+  "description": "N4 Day 3：可能形、片假名速度、核心詞彙、閱讀與許可／能力區分。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「シ」的讀音？",
+      "options": [
+        "shi",
+        "tsu",
+        "so",
+        "n"
+      ],
+      "answer": 0,
+      "explanation": "シ讀shi；與ツ的短筆方向不同。"
+    },
+    {
+      "id": "q2",
+      "category": "kana",
+      "question": "「ヌ」的讀音？",
+      "options": [
+        "su",
+        "nu",
+        "n",
+        "so"
+      ],
+      "answer": 1,
+      "explanation": "ヌ讀nu；和ス（su）不同。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「予約」的意思？",
+      "options": [
+        "參加",
+        "會議",
+        "預約",
+        "練習"
+      ],
+      "answer": 2,
+      "explanation": "予約（よやく）表示預約。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「資料」的讀音？",
+      "options": [
+        "しりょう",
+        "よてい",
+        "かいぎ",
+        "さんか"
+      ],
+      "answer": 0,
+      "explanation": "資料讀しりょう。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「都合がいい」的意思？",
+      "options": [
+        "很忙",
+        "方便、時間合適",
+        "不能使用",
+        "已預約"
+      ],
+      "answer": 1,
+      "explanation": "都合がいい表示方便。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「読む」的可能形？",
+      "options": [
+        "読みる",
+        "読める",
+        "読まない",
+        "読んだ"
+      ],
+      "answer": 1,
+      "explanation": "五段む→める，読む→読める。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「話す」的可能形？",
+      "options": [
+        "話せる",
+        "話した",
+        "話される",
+        "話さない"
+      ],
+      "answer": 0,
+      "explanation": "五段す→せる，話す→話せる。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「泳ぐ」的可能形？",
+      "options": [
+        "泳いだ",
+        "泳がない",
+        "泳げる",
+        "泳ぎる"
+      ],
+      "answer": 2,
+      "explanation": "五段ぐ→げる，泳ぐ→泳げる。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「食べる」的標準可能形？",
+      "options": [
+        "食べた",
+        "食べない",
+        "食べれる",
+        "食べられる"
+      ],
+      "answer": 3,
+      "explanation": "一段去る＋られる，正式學習用食べられる。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「する」的可能形？",
+      "options": [
+        "しれる",
+        "できる",
+        "すれる",
+        "した"
+      ],
+      "answer": 1,
+      "explanation": "する是不規則動詞，可能形できる。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「来る（くる）」的可能形？",
+      "options": [
+        "来ない（こない）",
+        "来た（きた）",
+        "来られる（こられる）",
+        "来る（くる）"
+      ],
+      "answer": 2,
+      "explanation": "来る→来られる（こられる）。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「読める」的過去否定？",
+      "options": [
+        "読めなかった",
+        "読まなかった",
+        "読めない",
+        "読んでいない"
+      ],
+      "answer": 0,
+      "explanation": "読める→読めない→読めなかった。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "「このパソコンを使ってもいいです」表示？",
+      "options": [
+        "有能力使用",
+        "已經使用",
+        "被允許使用",
+        "不能使用"
+      ],
+      "answer": 2,
+      "explanation": "～てもいい表示允許；使える才表示能使用。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "『田中さんは午前中、都合が悪いので、参加できません。』田中上午能參加嗎？",
+      "options": [
+        "可以",
+        "不能",
+        "已參加",
+        "沒有提到"
+      ],
+      "answer": 1,
+      "explanation": "参加できません表示不能參加。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "『資料は今日読めます。』什麼時候能讀資料？",
+      "options": [
+        "昨天",
+        "明天",
+        "下週",
+        "今天"
+      ],
+      "answer": 3,
+      "explanation": "今日＝今天；読めます＝能讀。"
+    }
+  ]
+}

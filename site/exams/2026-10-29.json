@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-29",
+  "title": "今日驗收",
+  "description": "N4 Day 2 補課⑰：普通形四格、前後順序、期限まで／までに、N5必要與禁止、閱讀與文字稿模擬聽解。15題四選一，80%通過。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ヌ」的讀音是？",
+      "options": [
+        "su",
+        "shi",
+        "nu",
+        "tsu"
+      ],
+      "answer": 2,
+      "explanation": "ヌ＝nu，ス＝su；注意ヌ的交叉與小勾。"
+    },
+    {
+      "id": "q2",
+      "category": "vocab",
+      "question": "「集合する」的意思是？",
+      "options": [
+        "遲到",
+        "集合",
+        "確認",
+        "提交"
+      ],
+      "answer": 1,
+      "explanation": "集合する（しゅうごうする）＝集合。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「遅れる」的讀音是？",
+      "options": [
+        "おくれる",
+        "あつまる",
+        "おわる",
+        "かくにんする"
+      ],
+      "answer": 0,
+      "explanation": "遅れる（おくれる）＝遲到、晚到。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「締め切り」的意思是？",
+      "options": [
+        "接待處",
+        "集合地點",
+        "截止期限",
+        "預約"
+      ],
+      "answer": 2,
+      "explanation": "締め切り（しめきり）＝截止期限。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「連絡する」的意思是？",
+      "options": [
+        "等待",
+        "準備",
+        "出發",
+        "聯絡"
+      ],
+      "answer": 3,
+      "explanation": "連絡する（れんらくする）＝聯絡、通知。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「行く」的過去否定普通形是？",
+      "options": [
+        "行かない",
+        "行った",
+        "行かなかった",
+        "行きます"
+      ],
+      "answer": 2,
+      "explanation": "行く／行かない／行った／行かなかった。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「遅れる」的現在否定普通形是？",
+      "options": [
+        "遅れない",
+        "遅れた",
+        "遅らない",
+        "遅れなかった"
+      ],
+      "answer": 0,
+      "explanation": "遅れる是一段動詞，去る加ない＝遅れない。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "九時（　）待ちます。表示一直等到九點。",
+      "options": [
+        "までに",
+        "まで",
+        "てから",
+        "とき"
+      ],
+      "answer": 1,
+      "explanation": "まで表示動作持續到九點。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "九時（　）学校に来てください。表示最晚九點到。",
+      "options": [
+        "まで",
+        "後で",
+        "前に",
+        "までに"
+      ],
+      "answer": 3,
+      "explanation": "までに表示截止期限前完成。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "遅れる（　）は、先生に連絡してください。",
+      "options": [
+        "後で",
+        "とき",
+        "てから",
+        "まで"
+      ],
+      "answer": 1,
+      "explanation": "辭書形＋とき：遅れるとき＝遲到時。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "出発する（　）、時間を確認します。表示出發前確認。",
+      "options": [
+        "前に",
+        "後で",
+        "てから",
+        "まで"
+      ],
+      "answer": 0,
+      "explanation": "動詞辭書形＋前に。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "申込書を提出（　）、受付に行きます。表示提交後再去。",
+      "options": [
+        "する前に",
+        "した前に",
+        "するまで",
+        "してから"
+      ],
+      "answer": 3,
+      "explanation": "提出する→提出してから，先提交再去。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "「金曜日までに提出しなければなりません」的意思是？",
+      "options": [
+        "星期五前不必交",
+        "星期五後才交",
+        "必須在星期五前提交",
+        "請不要提交"
+      ],
+      "answer": 2,
+      "explanation": "なければなりません＝必須；までに＝期限前。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "閱讀：『明日は九時に学校の前で集合します。八時半までに受付に来てください。申込書を提出してから、集合場所に行ってください。』最晚幾點到受付？",
+      "options": [
+        "九點",
+        "八點半",
+        "九點半",
+        "八點"
+      ],
+      "answer": 1,
+      "explanation": "八時半までに＝最晚八點半。九點是集合時間，不是受付期限。"
+    },
+    {
+      "id": "q15",
+      "category": "listening",
+      "question": "文字稿模擬：『女：受付に行く前に何をしますか。男：申込書を準備します。』男生去受付前做什麼？",
+      "options": [
+        "準備申請表",
+        "聯絡老師",
+        "先集合",
+        "先回家"
+      ],
+      "answer": 0,
+      "explanation": "受付に行く前に、申込書を準備します＝去接待處前先準備申請表。"
+    }
+  ]
+}

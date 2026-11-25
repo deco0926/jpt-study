@@ -1,5 +1,7 @@
 # JPT Study — Project Guide
 
+> **2026-11-25 使用者已切換目標：** 準備2026-12-06 JLPT N4。首頁現為每日30分鐘刷題，題組預備至12/5，依台灣日期自動選取；不再生成每日教材。新入口：`site/index.html`、`sprint.js`、`practice-core.js`、`sprint.css`、`practice/YYYY-MM-DD.json`、`audio/*.mp3`。舊首頁移至`lessons.html`，下文原JPT/N5目標與每日教材流程保留作歷史說明。作答紀錄沿用每位使用者的Firebase examAttempts，不改動舊成績。詳見AGENTS.md頂部與README。
+
 這份文件是本專案的長期開發規格與現況說明。  
 任何新的 ChatGPT / Codex 任務開始前，請先閱讀本文件與 `AGENTS.md`。
 

@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-03",
+  "title": "今日驗收",
+  "description": "N4 Day 2補課：假名、單字、普通形、音便、と思います、N5複習及短文閱讀。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ヌ」讀音？",
+      "options": [
+        "su",
+        "nu",
+        "n",
+        "so"
+      ],
+      "answer": 1,
+      "explanation": "ヌ＝nu；ス＝su。"
+    },
+    {
+      "id": "q2",
+      "category": "kana",
+      "question": "「ツ」讀音？",
+      "options": [
+        "shi",
+        "so",
+        "tsu",
+        "n"
+      ],
+      "answer": 2,
+      "explanation": "ツ＝tsu；シ＝shi。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「待つ」意思？",
+      "options": [
+        "寄送",
+        "等待",
+        "使用",
+        "購買"
+      ],
+      "answer": 1,
+      "explanation": "待つ（まつ）＝等待。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「住所」意思？",
+      "options": [
+        "集合",
+        "預約",
+        "地址",
+        "時間"
+      ],
+      "answer": 2,
+      "explanation": "住所（じゅうしょ）＝地址。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「確認」意思？",
+      "options": [
+        "確認",
+        "選擇",
+        "送達",
+        "等待"
+      ],
+      "answer": 0,
+      "explanation": "確認（かくにん）＝確認。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「待つ」的ない形？",
+      "options": [
+        "待つない",
+        "待ちない",
+        "待たない",
+        "待てない"
+      ],
+      "answer": 2,
+      "explanation": "つ→た＋ない。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「持つ」的過去肯定？",
+      "options": [
+        "持ちた",
+        "持った",
+        "持んだ",
+        "持いた"
+      ],
+      "answer": 1,
+      "explanation": "つ結尾的た形為った。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「使う」的ない形？",
+      "options": [
+        "使あない",
+        "使いない",
+        "使うない",
+        "使わない"
+      ],
+      "answer": 3,
+      "explanation": "う→わない。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「買う」的過去否定？",
+      "options": [
+        "買わなかった",
+        "買わない",
+        "買った",
+        "買いなかった"
+      ],
+      "answer": 0,
+      "explanation": "買う→買わない→買わなかった。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「届く」的た形？",
+      "options": [
+        "届きた",
+        "届いた",
+        "届った",
+        "届んだ"
+      ],
+      "answer": 1,
+      "explanation": "く→いた。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「選ぶ」的た形？",
+      "options": [
+        "選った",
+        "選いた",
+        "選んだ",
+        "選びた"
+      ],
+      "answer": 2,
+      "explanation": "ぶ→んだ。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「田中さんは切符を買った（　）思います。」",
+      "options": [
+        "だ",
+        "な",
+        "に",
+        "と"
+      ],
+      "answer": 3,
+      "explanation": "動詞普通形＋と思います。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "「切符を買わなくてもいいです」表示？",
+      "options": [
+        "必須買票",
+        "不必買票",
+        "不能買票",
+        "已買票"
+      ],
+      "answer": 1,
+      "explanation": "なくてもいいです表示不必。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "『明日は駅で友達を待ちます。田中さんはもう切符を買ったと思います。』哪項正確？",
+      "options": [
+        "田中可能已買票",
+        "在家等朋友",
+        "昨天才等朋友",
+        "田中不買票"
+      ],
+      "answer": 0,
+      "explanation": "買ったと思います＝認為已經買了。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "『私はまだ切符を買っていません。午後、旅行の準備をします。』說話者下午做什麼？",
+      "options": [
+        "買票",
+        "寄包裹",
+        "準備旅行",
+        "在車站等"
+      ],
+      "answer": 2,
+      "explanation": "午後、旅行の準備をします＝下午準備旅行。"
+    }
+  ]
+}

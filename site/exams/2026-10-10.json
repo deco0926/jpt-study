@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-10",
+  "title": "今日驗收",
+  "description": "N4 Day 2補課⑨：た形、なかった形、普通形＋と思います、時間線閱讀與N5舊文法。15題四選一；至少12題通過。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ル」的讀音是？",
+      "options": [
+        "re",
+        "ru",
+        "so",
+        "n"
+      ],
+      "answer": 1,
+      "explanation": "ル讀ru；レ讀re。"
+    },
+    {
+      "id": "q2",
+      "category": "vocab",
+      "question": "「連絡（れんらく）」是什麼意思？",
+      "options": [
+        "預定",
+        "聯絡",
+        "車票",
+        "等待"
+      ],
+      "answer": 1,
+      "explanation": "連絡表示聯絡，常見友達に連絡する。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「切符（きっぷ）」是什麼意思？",
+      "options": [
+        "字典",
+        "報紙",
+        "車票",
+        "約定"
+      ],
+      "answer": 2,
+      "explanation": "切符表示車票，常見切符を買う。"
+    },
+    {
+      "id": "q4",
+      "category": "grammar",
+      "question": "「書く」的た形是哪一個？",
+      "options": [
+        "書んだ",
+        "書いた",
+        "書った",
+        "書した"
+      ],
+      "answer": 1,
+      "explanation": "く→いた：書く→書いた。"
+    },
+    {
+      "id": "q5",
+      "category": "grammar",
+      "question": "「読む」的た形是哪一個？",
+      "options": [
+        "読んだ",
+        "読いた",
+        "読った",
+        "読みた"
+      ],
+      "answer": 0,
+      "explanation": "む→んだ：読む→読んだ。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「話す」的た形是哪一個？",
+      "options": [
+        "話んだ",
+        "話った",
+        "話いた",
+        "話した"
+      ],
+      "answer": 3,
+      "explanation": "す→した：話す→話した。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「待つ」的た形是哪一個？",
+      "options": [
+        "待いた",
+        "待った",
+        "待んだ",
+        "待した"
+      ],
+      "answer": 1,
+      "explanation": "つ→った：待つ→待った。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「行く」的た形是哪一個？",
+      "options": [
+        "行いた",
+        "行んだ",
+        "行った",
+        "行した"
+      ],
+      "answer": 2,
+      "explanation": "行く的た形是特例行った。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「買う」的過去否定普通形是？",
+      "options": [
+        "買った",
+        "買わない",
+        "買いなかった",
+        "買わなかった"
+      ],
+      "answer": 3,
+      "explanation": "買う→買わない→買わなかった。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「行きませんでした」的普通形是？",
+      "options": [
+        "行く",
+        "行った",
+        "行かない",
+        "行かなかった"
+      ],
+      "answer": 3,
+      "explanation": "禮貌體過去否定對應行かなかった。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「友達は昨日来なかったと思います。」的意思是？",
+      "options": [
+        "我想朋友明天會來",
+        "我想朋友昨天沒有來",
+        "我請朋友昨天不要來",
+        "朋友昨天一定來了"
+      ],
+      "answer": 1,
+      "explanation": "来なかった＝昨天沒有來；と思います＝我想。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「連絡は必要___と思います。」空格應填？",
+      "options": [
+        "な",
+        "に",
+        "だ",
+        "で"
+      ],
+      "answer": 2,
+      "explanation": "な形容詞必要在現在肯定普通形接と思います要加だ。"
+    },
+    {
+      "id": "q13",
+      "category": "mixed",
+      "question": "「今日は学校に行かなくてもいいです。」的意思是？",
+      "options": [
+        "今天不必去學校",
+        "今天必須去學校",
+        "今天不可以去學校",
+        "今天已經去了學校"
+      ],
+      "answer": 0,
+      "explanation": "～なくてもいいです表示不必做。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "「昨日、山田さんは駅で友達を待った。でも、友達は来なかった。」昨天朋友有來嗎？",
+      "options": [
+        "有來",
+        "沒有來",
+        "明天才到車站",
+        "山田沒有等朋友"
+      ],
+      "answer": 1,
+      "explanation": "でも表示轉折；来なかった表示沒有來。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "「山田さんは家に帰った。そして、友達に連絡した。」山田做了什麼？",
+      "options": [
+        "聯絡後才去車站",
+        "回家後聯絡朋友",
+        "沒有回家",
+        "回家後讀報紙"
+      ],
+      "answer": 1,
+      "explanation": "帰った＝回家了；そして＝然後；連絡した＝聯絡了。"
+    }
+  ]
+}

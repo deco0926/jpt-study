@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-20",
+  "title": "今日驗收",
+  "description": "N4 Day 2 補課⑧：る動詞分類、普通形四格、N5必要與不必、閱讀、假名。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ツ」讀音？",
+      "options": [
+        "shi",
+        "tsu",
+        "so",
+        "n"
+      ],
+      "answer": 1,
+      "explanation": "ツ讀tsu，與シ區別。"
+    },
+    {
+      "id": "q2",
+      "category": "kana",
+      "question": "「ン」讀音？",
+      "options": [
+        "so",
+        "nu",
+        "su",
+        "n"
+      ],
+      "answer": 3,
+      "explanation": "ン讀n，注意與ソ區別。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「忘れる」意思？",
+      "options": [
+        "決定",
+        "忘記",
+        "打開",
+        "繼續"
+      ],
+      "answer": 1,
+      "explanation": "忘れる＝忘記。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「準備」讀音？",
+      "options": [
+        "じゅんび",
+        "じゅぎょう",
+        "としょかん",
+        "よてい"
+      ],
+      "answer": 0,
+      "explanation": "準備讀じゅんび。"
+    },
+    {
+      "id": "q5",
+      "category": "grammar",
+      "question": "「切る」ない形？",
+      "options": [
+        "切ない",
+        "切らない",
+        "切りない",
+        "切るない"
+      ],
+      "answer": 1,
+      "explanation": "切る是五段，る變らない。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「借りる」ない形？",
+      "options": [
+        "借りらない",
+        "借らない",
+        "借りない",
+        "借るない"
+      ],
+      "answer": 2,
+      "explanation": "借りる是一段，去る加ない。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「帰る」た形？",
+      "options": [
+        "帰た",
+        "帰った",
+        "帰りた",
+        "帰れた"
+      ],
+      "answer": 1,
+      "explanation": "帰る五段，過去形帰った。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「開ける」た形？",
+      "options": [
+        "開けった",
+        "開った",
+        "開けた",
+        "開けらた"
+      ],
+      "answer": 2,
+      "explanation": "開ける一段，去る加た。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「閉める」過去否定？",
+      "options": [
+        "閉めない",
+        "閉まなかった",
+        "閉めた",
+        "閉めなかった"
+      ],
+      "answer": 3,
+      "explanation": "閉める→閉めない→閉めなかった。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「切る」是哪類動詞？",
+      "options": [
+        "一段",
+        "五段",
+        "する不規則",
+        "形容詞"
+      ],
+      "answer": 1,
+      "explanation": "切る是五段る動詞。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「借りる」四格正確順序？",
+      "options": [
+        "借りる／借りない／借りた／借りなかった",
+        "借りる／借らない／借った／借らなかった",
+        "借りた／借りる／借りない／借りなかった",
+        "借りない／借りる／借りなかった／借りた"
+      ],
+      "answer": 0,
+      "explanation": "四格為現在肯定、現在否定、過去肯定、過去否定。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「行かなくてもいいです」表示？",
+      "options": [
+        "必須去",
+        "不必去",
+        "不能去",
+        "已經去了"
+      ],
+      "answer": 1,
+      "explanation": "なくてもいいです表示不必。"
+    },
+    {
+      "id": "q13",
+      "category": "reading",
+      "question": "「昨日、図書館で本を借りた。」何時借書？",
+      "options": [
+        "今天",
+        "明天",
+        "昨天",
+        "下週"
+      ],
+      "answer": 2,
+      "explanation": "昨日＝昨天；借りた＝借了。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "「かぎを忘れたので、早く家に帰った。」哪個正確？",
+      "options": [
+        "因忘記鑰匙而早回家",
+        "因借書而晚回家",
+        "沒有回家",
+        "明天回家"
+      ],
+      "answer": 0,
+      "explanation": "忘れた＝忘記；帰った＝回家了。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "「明日は勉強を続ける。」哪個正確？",
+      "options": [
+        "昨天停止念書",
+        "今天不念書",
+        "明天繼續念書",
+        "明天忘記念書"
+      ],
+      "answer": 2,
+      "explanation": "明日＝明天；続ける＝繼續。"
+    }
+  ]
+}

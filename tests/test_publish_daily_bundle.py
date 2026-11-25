@@ -10,7 +10,7 @@ REPO = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('publisher', REPO / 'scripts/publish_daily_bundle.py')
 p = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(p)
-FIXTURE = json.loads((REPO / 'pipeline/incoming.json').read_text(encoding='utf-8'))
+FIXTURE = json.loads((REPO / 'tests/fixtures/daily-bundle.json').read_text(encoding='utf-8'))
 
 
 class PublicationTests(unittest.TestCase):
@@ -150,10 +150,32 @@ class PublicationTests(unittest.TestCase):
             with self.assertRaises(ValueError): p.plan_publication([later], '2026-09-29')
 
     def test_restored_bundles_match_schema(self):
-        for path in (REPO / 'pipeline/submissions').glob('*.json'):
-            bundle = p.read_json(path)
-            p.validate_lesson(bundle['lesson'], path.stem)
-            p.validate_exam(bundle['exam'], path.stem)
+        # Unit fixtures must not depend on live submissions or their directory order.
+        p.validate_lesson(FIXTURE['lesson'], FIXTURE['date'])
+        p.validate_exam(FIXTURE['exam'], FIXTURE['date'])
+
+    def test_isolation_keeps_valid_dates_and_reports_rejected_path(self):
+        good = self.submit('2026-09-28')
+        bad = self.submit('2026-09-29')
+        bundle = p.read_json(bad)
+        bundle['exam']['questions'][0]['category'] = 'review'
+        self.write(bad, bundle)
+        valid, errors = p.isolate_submissions([bad, good], '2026-09-30')
+        self.assertEqual(valid, [good])
+        self.assertEqual(errors[0]['path'], 'pipeline/submissions/2026-09-29.json')
+        self.apply(p.plan_publication(valid, '2026-09-30'))
+        self.assertTrue((self.root / 'site/exams/2026-09-28.json').exists())
+        self.assertFalse((self.root / 'site/exams/2026-09-29.json').exists())
+
+    def test_isolation_rejects_conflicting_date_without_overwriting_history(self):
+        good = self.submit('2026-09-28')
+        self.apply(p.plan_publication([good], '2026-09-29'))
+        bundle = p.read_json(good)
+        bundle['lesson']['title'] = 'conflict'
+        self.write(good, bundle)
+        valid, errors = p.isolate_submissions([good], '2026-09-30')
+        self.assertEqual(valid, [])
+        self.assertIn('禁止覆蓋', errors[0]['error'])
 
 
 if __name__ == '__main__':

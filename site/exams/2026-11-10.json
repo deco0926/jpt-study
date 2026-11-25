@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-10",
+  "title": "今日驗收",
+  "description": "N4 Day 2 補課⑪｜15題四選一；80%通過，僅考本次教材及明確N5複習。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ツ」讀音是？",
+      "options": [
+        "shi",
+        "tsu",
+        "so",
+        "n"
+      ],
+      "answer": 1,
+      "explanation": "ツ＝tsu，シ＝shi。"
+    },
+    {
+      "id": "q2",
+      "category": "vocab",
+      "question": "「予定」的讀音是？",
+      "options": [
+        "よやく",
+        "やくそく",
+        "よてい",
+        "じゅんび"
+      ],
+      "answer": 2,
+      "explanation": "予定（よてい）＝計畫。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「変更」的意思是？",
+      "options": [
+        "準備",
+        "變更",
+        "預約",
+        "參加"
+      ],
+      "answer": 1,
+      "explanation": "変更＝變更。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「調べる」意思是？",
+      "options": [
+        "查詢",
+        "游泳",
+        "唱歌",
+        "開車"
+      ],
+      "answer": 0,
+      "explanation": "調べる＝查詢。"
+    },
+    {
+      "id": "q5",
+      "category": "grammar",
+      "question": "「行く」的可能形是？",
+      "options": [
+        "行こう",
+        "行ける",
+        "行かない",
+        "行った"
+      ],
+      "answer": 1,
+      "explanation": "五段く→ける。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「食べる」的標準可能形是？",
+      "options": [
+        "食べよう",
+        "食べた",
+        "食べられる",
+        "食べない"
+      ],
+      "answer": 2,
+      "explanation": "一段去る＋られる。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「行く」的意向形是？",
+      "options": [
+        "行ける",
+        "行った",
+        "行こう",
+        "行かない"
+      ],
+      "answer": 2,
+      "explanation": "五段く→こう。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「読む」的意向形是？",
+      "options": [
+        "読める",
+        "読もう",
+        "読まない",
+        "読んだ"
+      ],
+      "answer": 1,
+      "explanation": "五段む→もう。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「食べる」的意向形是？",
+      "options": [
+        "食べよう",
+        "食べられる",
+        "食べない",
+        "食べた"
+      ],
+      "answer": 0,
+      "explanation": "一段去る＋よう。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「する」的意向形是？",
+      "options": [
+        "できる",
+        "しない",
+        "した",
+        "しよう"
+      ],
+      "answer": 3,
+      "explanation": "する→しよう。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「来る」的意向形是？",
+      "options": [
+        "来られる（こられる）",
+        "来よう（こよう）",
+        "来た（きた）",
+        "来ない（こない）"
+      ],
+      "answer": 1,
+      "explanation": "来る→来よう（こよう）。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「図書館に行こうと思います」表示？",
+      "options": [
+        "已去圖書館",
+        "不能去圖書館",
+        "打算去圖書館",
+        "禁止去圖書館"
+      ],
+      "answer": 2,
+      "explanation": "意向形＋と思います＝打算。"
+    },
+    {
+      "id": "q13",
+      "category": "mixed",
+      "question": "「行かなくてもいいです」意思是？",
+      "options": [
+        "必須去",
+        "不必去",
+        "不能去",
+        "已經去了"
+      ],
+      "answer": 1,
+      "explanation": "なくてもいい＝不必做。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "『午後は予定があります。だから午前に会おうと思います。』打算何時見面？",
+      "options": [
+        "上午",
+        "下午",
+        "晚上",
+        "明年"
+      ],
+      "answer": 0,
+      "explanation": "下午有安排，所以打算上午見。"
+    },
+    {
+      "id": "q15",
+      "category": "listening",
+      "question": "A『明日、一緒に行こう。』B『明日は行けない。日曜日なら行ける。』B何時能去？",
+      "options": [
+        "明天",
+        "昨天",
+        "星期日",
+        "今天"
+      ],
+      "answer": 2,
+      "explanation": "日曜日なら行ける＝星期日能去。"
+    }
+  ]
+}

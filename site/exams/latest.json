@@ -1,203 +1,203 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-11-23",
   "title": "今日驗收",
-  "description": "N4 Day 2 補課⑦：る動詞分類、普通形四格、と思います、閱讀及N5間隔複習。",
+  "description": "N4 Day 5：意見、引用、原因、五段動詞ば形、片假名、單字、閱讀與N5可能形複習。",
   "passScore": 80,
   "questions": [
     {
       "id": "q1",
       "category": "kana",
-      "question": "「ヌ」的讀音是？",
+      "question": "「ヌ」的讀音？",
       "options": [
         "su",
         "nu",
-        "n",
+        "shi",
         "tsu"
       ],
       "answer": 1,
-      "explanation": "ヌ＝nu，和ス（su）形狀不同。"
+      "explanation": "ヌ讀作nu。"
     },
     {
       "id": "q2",
-      "category": "vocab",
-      "question": "「借りる（かりる）」的意思？",
+      "category": "kana",
+      "question": "「ソ」的讀音？",
       "options": [
-        "借入",
-        "歸還",
-        "切開",
-        "關閉"
+        "n",
+        "so",
+        "shi",
+        "tsu"
       ],
-      "answer": 0,
-      "explanation": "借りる＝向人借、借入。"
+      "answer": 1,
+      "explanation": "ソ讀作so，ン讀作n。"
     },
     {
       "id": "q3",
       "category": "vocab",
-      "question": "「集まる（あつまる）」的意思？",
+      "question": "「理由」的讀音？",
       "options": [
-        "忘記",
-        "開始",
-        "集合",
-        "結束"
+        "れんらく",
+        "りゆう",
+        "いけん",
+        "じゅんび"
       ],
-      "answer": 2,
-      "explanation": "集まる表示集合、聚集。"
+      "answer": 1,
+      "explanation": "理由讀作りゆう。"
     },
     {
       "id": "q4",
-      "category": "grammar",
-      "question": "「切る」的ない形是？",
+      "category": "vocab",
+      "question": "「連絡」的意思？",
       "options": [
-        "切ない",
-        "切らない",
-        "切りない",
-        "切るない"
+        "準備",
+        "說明",
+        "聯絡",
+        "回覆"
       ],
-      "answer": 1,
-      "explanation": "切る是五段動詞：る→ら＋ない。"
+      "answer": 2,
+      "explanation": "連絡表示聯絡。"
     },
     {
       "id": "q5",
-      "category": "grammar",
-      "question": "「借りる」的ない形是？",
+      "category": "vocab",
+      "question": "「間に合う」的意思？",
       "options": [
-        "借らない",
-        "借りらない",
-        "借りない",
-        "借るない"
+        "趕得上",
+        "遲到",
+        "擔心",
+        "參加"
       ],
-      "answer": 2,
-      "explanation": "借りる是一段動詞：去る＋ない。"
+      "answer": 0,
+      "explanation": "間に合う表示趕得上。"
     },
     {
       "id": "q6",
       "category": "grammar",
-      "question": "「開ける」的ない形是？",
+      "question": "「我認為明天會下雨」應選？",
       "options": [
-        "開けない",
-        "開からない",
-        "開けらない",
-        "開けるない"
+        "明日は雨が降ると言いました。",
+        "明日は雨が降ると思います。",
+        "明日は雨が降るので。",
+        "明日は雨が降れば。"
       ],
-      "answer": 0,
-      "explanation": "開ける是一段：開けない。"
+      "answer": 1,
+      "explanation": "自己的推測用と思います。"
     },
     {
       "id": "q7",
       "category": "grammar",
-      "question": "「帰る」的ない形是？",
+      "question": "「田中說明天會來」應選？",
       "options": [
-        "帰ない",
-        "帰りない",
-        "帰るない",
-        "帰らない"
+        "田中さんは明日来ると思います。",
+        "田中さんは明日来るので。",
+        "田中さんは明日来ると言いました。",
+        "田中さんは明日来れば。"
       ],
-      "answer": 3,
-      "explanation": "帰る是五段動詞：帰らない。"
+      "answer": 2,
+      "explanation": "轉述說過的話用と言いました。"
     },
     {
       "id": "q8",
       "category": "grammar",
-      "question": "「行きませんでした」轉普通形，正確的是？",
+      "question": "この駅は便利（　）、よく使います。",
       "options": [
-        "行かない",
-        "行かなかった",
-        "行った",
-        "行く"
+        "だので",
+        "なので",
+        "のので",
+        "でので"
       ],
       "answer": 1,
-      "explanation": "ませんでした是過去否定：行かなかった。"
+      "explanation": "な形容詞接なので。"
     },
     {
       "id": "q9",
       "category": "grammar",
-      "question": "「行きました」轉普通形，正確的是？",
+      "question": "明日は試験（　）、勉強します。",
       "options": [
-        "行った",
-        "行きた",
-        "行かない",
-        "行かなかった"
+        "だので",
+        "にので",
+        "なので",
+        "をので"
       ],
-      "answer": 0,
-      "explanation": "行く的た形是特例：行った。"
+      "answer": 2,
+      "explanation": "名詞接なので。"
     },
     {
       "id": "q10",
       "category": "grammar",
-      "question": "「授業は九時に始まらないと思います。」表示？",
+      "question": "時間がない（　）、急ぎます。",
       "options": [
-        "認為課程九點開始",
-        "認為課程已結束",
-        "認為課程九點不會開始",
-        "要求九點上課"
+        "ので",
+        "なで",
+        "だので",
+        "をので"
       ],
-      "answer": 2,
-      "explanation": "始まらない＝不開始；と思います表示推測。"
+      "answer": 0,
+      "explanation": "ない直接接ので。"
     },
     {
       "id": "q11",
       "category": "grammar",
-      "question": "「この本は必要（　）と思います。」應填？",
+      "question": "「急ぐ」的ば形？",
       "options": [
-        "な",
-        "で",
-        "に",
-        "だ"
+        "急ぐば",
+        "急ぎば",
+        "急げば",
+        "急がば"
       ],
-      "answer": 3,
-      "explanation": "必要是な形容詞，現在肯定接と思います要用だ。"
+      "answer": 2,
+      "explanation": "ぐ改成げ再加ば。"
     },
     {
       "id": "q12",
       "category": "grammar",
-      "question": "「この本は高い（　）思います。」應填？",
+      "question": "「読む」的ば形？",
       "options": [
-        "だと",
-        "なと",
-        "と",
-        "で"
+        "読めば",
+        "読まば",
+        "読みば",
+        "読むば"
       ],
-      "answer": 2,
-      "explanation": "い形容詞直接接と思います：高いと思います。"
+      "answer": 0,
+      "explanation": "む改成め再加ば。"
     },
     {
       "id": "q13",
       "category": "grammar",
-      "question": "「窓を開けてもいいです。」表示？",
+      "question": "「使えます」與「使ってもいいです」的差別？",
       "options": [
-        "可以開窗",
-        "不可以開窗",
-        "必須關窗",
-        "請不要開窗"
+        "都表示禁止",
+        "前者能力、後者許可",
+        "前者許可、後者能力",
+        "兩者都是過去式"
       ],
-      "answer": 0,
-      "explanation": "～てもいいです＝可以做。"
+      "answer": 1,
+      "explanation": "可能形表示能力，てもいい表示許可。"
     },
     {
       "id": "q14",
       "category": "reading",
-      "question": "「明日は九時に駅に集まります。」集合時間是？",
+      "question": "田中さんはバスが遅れたので、会議に遅れると言いました。遲到原因是？",
       "options": [
-        "今天九點",
-        "明天九點",
-        "明天下午三點",
-        "昨天九點"
+        "電車停駛",
+        "沒有準備",
+        "公車誤點",
+        "睡過頭"
       ],
-      "answer": 1,
-      "explanation": "明日＝明天；九時＝九點。"
+      "answer": 2,
+      "explanation": "バスが遅れたので＝因為公車誤點。"
     },
     {
       "id": "q15",
       "category": "reading",
-      "question": "「田中さんは本を借りるので、図書館に行くと思います。」說話者認為田中會去哪？",
+      "question": "急げば、九時に間に合います。趕上九點的條件是？",
       "options": [
-        "車站",
-        "學校",
-        "圖書館",
-        "家"
+        "先回信",
+        "趕快",
+        "明天出發",
+        "不參加"
       ],
-      "answer": 2,
-      "explanation": "図書館に行くと思います＝認為會去圖書館。"
+      "answer": 1,
+      "explanation": "急げば表示如果趕快。"
     }
   ]
 }

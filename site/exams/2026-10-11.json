@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-11",
+  "title": "今日驗收",
+  "description": "N4 Day 2補課⑩：動詞／形容詞／名詞普通形四格、普通形＋と思います、集合通知閱讀及片假名速度。15題四選一；12題以上通過。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「シ」的讀音是？",
+      "options": [
+        "tsu",
+        "shi",
+        "so",
+        "n"
+      ],
+      "answer": 1,
+      "explanation": "シ＝shi；ツ＝tsu，注意短筆方向。"
+    },
+    {
+      "id": "q2",
+      "category": "kana",
+      "question": "「ル」的讀音是？",
+      "options": [
+        "re",
+        "n",
+        "ru",
+        "so"
+      ],
+      "answer": 2,
+      "explanation": "ル＝ru；レ＝re。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「集合する（しゅうごうする）」是？",
+      "options": [
+        "聯絡",
+        "集合",
+        "預約",
+        "確認"
+      ],
+      "answer": 1,
+      "explanation": "集合する表示集合，常見駅で集合する。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「変更する（へんこうする）」是？",
+      "options": [
+        "確認",
+        "趕得上",
+        "變更",
+        "遲到"
+      ],
+      "answer": 2,
+      "explanation": "予定を変更する＝更改計畫。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「間に合う（まにあう）」是？",
+      "options": [
+        "趕得上",
+        "忘記",
+        "遲到",
+        "放假"
+      ],
+      "answer": 0,
+      "explanation": "電車に間に合う＝趕上電車。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「急ぐ」的た形是？",
+      "options": [
+        "急った",
+        "急いだ",
+        "急んだ",
+        "急した"
+      ],
+      "answer": 1,
+      "explanation": "ぐ→いだ：急ぐ→急いだ。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「間に合う」的過去否定普通形是？",
+      "options": [
+        "間に合わなかった",
+        "間に合った",
+        "間に合わない",
+        "間に合いなかった"
+      ],
+      "answer": 0,
+      "explanation": "五段う→わない→わなかった。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「遅れる」的過去否定普通形是？",
+      "options": [
+        "遅れなかった",
+        "遅れった",
+        "遅らなかった",
+        "遅れない"
+      ],
+      "answer": 0,
+      "explanation": "遅れる是一段動詞：遅れない→遅れなかった。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「早い」的過去否定普通形是？",
+      "options": [
+        "早いなかった",
+        "早くなかった",
+        "早かった",
+        "早じゃなかった"
+      ],
+      "answer": 1,
+      "explanation": "い形容詞去い＋くなかった。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「便利」的過去肯定普通形是？",
+      "options": [
+        "便利な",
+        "便利かった",
+        "便利だった",
+        "便利じゃなかった"
+      ],
+      "answer": 2,
+      "explanation": "な形容詞句尾過去肯定是便利だった。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「休み」接と思います的現在肯定是？",
+      "options": [
+        "休みなと思います",
+        "休みだと思います",
+        "休みと思います",
+        "休みでと思います"
+      ],
+      "answer": 1,
+      "explanation": "名詞現在肯定普通形是休みだ，再接と思います。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「集合時間は早くないと思います。」的意思？",
+      "options": [
+        "我覺得集合時間很早",
+        "我覺得集合時間不早",
+        "我想集合時間昨天很早",
+        "我想集合已結束"
+      ],
+      "answer": 1,
+      "explanation": "早くない＝不早，と思います＝我覺得。"
+    },
+    {
+      "id": "q13",
+      "category": "reading",
+      "question": "「昨日、山田さんは映画のチケットを予約した。でも、友達は仕事があって、映画に行かなかった。」誰昨天沒去看電影？",
+      "options": [
+        "山田",
+        "兩人都去了",
+        "朋友",
+        "沒有提到"
+      ],
+      "answer": 2,
+      "explanation": "友達は映画に行かなかった＝朋友沒去看電影。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "「山田さんは予約を変更した。」山田做了什麼？",
+      "options": [
+        "更改預約",
+        "買了車票",
+        "確認天氣",
+        "聯絡車站"
+      ],
+      "answer": 0,
+      "explanation": "予約＝預約；変更した＝更改了。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "「二人は午後二時に駅で集合します。」兩人在哪裡、幾點集合？",
+      "options": [
+        "車站、下午兩點",
+        "學校、下午兩點",
+        "車站、上午兩點",
+        "車站、下午三點"
+      ],
+      "answer": 0,
+      "explanation": "午後二時＝下午兩點；駅で集合＝在車站集合。"
+    }
+  ]
+}

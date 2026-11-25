@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-11",
+  "title": "今日驗收",
+  "description": "Day2補課⑫：意向形、計畫表現、可能形、單字、假名與閱讀",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ン」讀音？",
+      "options": [
+        "so",
+        "shi",
+        "n",
+        "tsu"
+      ],
+      "answer": 2,
+      "explanation": "ン＝n。"
+    },
+    {
+      "id": "q2",
+      "category": "vocab",
+      "question": "「連絡」讀音？",
+      "options": [
+        "れんらく",
+        "れんがく",
+        "れんりょく",
+        "れいらく"
+      ],
+      "answer": 0,
+      "explanation": "連絡＝れんらく。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「間に合う」意思？",
+      "options": [
+        "出發",
+        "趕得上",
+        "集合",
+        "邀請"
+      ],
+      "answer": 1,
+      "explanation": "間に合う＝趕得上。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「相談」意思？",
+      "options": [
+        "商量",
+        "出發",
+        "遲到",
+        "集合"
+      ],
+      "answer": 0,
+      "explanation": "相談＝商量。"
+    },
+    {
+      "id": "q5",
+      "category": "grammar",
+      "question": "「誘う」意向形？",
+      "options": [
+        "誘える",
+        "誘わない",
+        "誘おう",
+        "誘った"
+      ],
+      "answer": 2,
+      "explanation": "誘う→誘おう。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「手伝う」意向形？",
+      "options": [
+        "手伝おう",
+        "手伝える",
+        "手伝った",
+        "手伝わない"
+      ],
+      "answer": 0,
+      "explanation": "手伝う→手伝おう。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「来る」意向形？",
+      "options": [
+        "来られる（こられる）",
+        "来よう（こよう）",
+        "来ない（こない）",
+        "来た（きた）"
+      ],
+      "answer": 1,
+      "explanation": "来る→来よう。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「友達を誘おうと思っています」表示？",
+      "options": [
+        "不能邀請",
+        "已邀請",
+        "一直有邀請的打算",
+        "禁止邀請"
+      ],
+      "answer": 2,
+      "explanation": "表示持續的打算。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「行くつもりです」表示？",
+      "options": [
+        "打算去",
+        "能去",
+        "去過",
+        "不必去"
+      ],
+      "answer": 0,
+      "explanation": "辭書形＋つもり。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「行かないつもりです」表示？",
+      "options": [
+        "必須去",
+        "打算不去",
+        "不能去",
+        "正在去"
+      ],
+      "answer": 1,
+      "explanation": "ない形＋つもり。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「九時に出発する予定です」表示？",
+      "options": [
+        "九點已出發",
+        "九點不能出發",
+        "預定九點出發",
+        "九點出發吧"
+      ],
+      "answer": 2,
+      "explanation": "辭書形＋予定。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「旅行（　）予定です」應填？",
+      "options": [
+        "を",
+        "が",
+        "に",
+        "の"
+      ],
+      "answer": 3,
+      "explanation": "名詞＋の＋予定。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "哪個表示能去？",
+      "options": [
+        "行こう",
+        "行ける",
+        "行くつもり",
+        "行く予定"
+      ],
+      "answer": 1,
+      "explanation": "行ける是可能形。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "『明日は九時に駅に集まる予定です。』何時集合？",
+      "options": [
+        "下午三點",
+        "明天九點",
+        "今天九點",
+        "明天十點"
+      ],
+      "answer": 1,
+      "explanation": "明日は九時に。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "『午後は都合が悪いので、午前に友達に連絡するつもりです。』何時聯絡？",
+      "options": [
+        "下午",
+        "晚上",
+        "上午",
+        "明年"
+      ],
+      "answer": 2,
+      "explanation": "午前＝上午。"
+    }
+  ]
+}

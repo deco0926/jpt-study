@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-06",
+  "title": "今日驗收",
+  "description": "N4 Day 2 補課：る動詞分類、普通形四格、單字、假名、閱讀及N5複習。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ツ」的讀音？",
+      "options": [
+        "shi",
+        "tsu",
+        "so",
+        "n"
+      ],
+      "answer": 1,
+      "explanation": "ツ＝tsu，シ＝shi。"
+    },
+    {
+      "id": "q2",
+      "category": "kana",
+      "question": "「ン」的讀音？",
+      "options": [
+        "so",
+        "nu",
+        "n",
+        "su"
+      ],
+      "answer": 2,
+      "explanation": "ン＝n，ソ＝so。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「約束」是什麼意思？",
+      "options": [
+        "結束",
+        "約定",
+        "開始",
+        "搬運"
+      ],
+      "answer": 1,
+      "explanation": "約束（やくそく）＝約定。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「閉める」是什麼意思？",
+      "options": [
+        "打開",
+        "回家",
+        "關閉",
+        "借入"
+      ],
+      "answer": 2,
+      "explanation": "閉める（しめる）＝關閉。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「予定」是什麼意思？",
+      "options": [
+        "預定、計畫",
+        "約定",
+        "修理",
+        "跑步"
+      ],
+      "answer": 0,
+      "explanation": "予定（よてい）＝預定、計畫。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「切る」的ない形？",
+      "options": [
+        "切ない",
+        "切りない",
+        "切らない",
+        "切れない"
+      ],
+      "answer": 2,
+      "explanation": "切る是五段動詞：切らない。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「切る」的た形？",
+      "options": [
+        "切た",
+        "切った",
+        "切りた",
+        "切んだ"
+      ],
+      "answer": 1,
+      "explanation": "五段る→った：切った。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「帰る」的過去否定？",
+      "options": [
+        "帰りなかった",
+        "帰なかった",
+        "帰らなかった",
+        "帰った"
+      ],
+      "answer": 2,
+      "explanation": "帰る→帰らない→帰らなかった。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「借りる」的ない形？",
+      "options": [
+        "借らない",
+        "借りない",
+        "借りらない",
+        "借れない"
+      ],
+      "answer": 1,
+      "explanation": "借りる是一段動詞，去る加ない。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「開ける」的た形？",
+      "options": [
+        "開けった",
+        "開けんだ",
+        "開けた",
+        "開かった"
+      ],
+      "answer": 2,
+      "explanation": "一段：開ける→開けた。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「閉める」的過去否定？",
+      "options": [
+        "閉めなかった",
+        "閉まなかった",
+        "閉めった",
+        "閉めない"
+      ],
+      "answer": 0,
+      "explanation": "閉める→閉めない→閉めなかった。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「友達はもう帰った（　）思います。」",
+      "options": [
+        "だ",
+        "に",
+        "と",
+        "を"
+      ],
+      "answer": 2,
+      "explanation": "動詞普通形＋と思います。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "「ドアを閉めてください。」表示？",
+      "options": [
+        "請關門",
+        "不必關門",
+        "昨天關門",
+        "不能關門"
+      ],
+      "answer": 0,
+      "explanation": "て形＋ください表示請做。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "「昨日、図書館で本を借りました。そのあと家に帰りました。」正確的是？",
+      "options": [
+        "昨天借書後回家",
+        "昨天買書後出門",
+        "明天去借書",
+        "昨天沒回家"
+      ],
+      "answer": 0,
+      "explanation": "借りました＝借了；そのあと＝之後。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "「明日は友達と遊ぶ予定です。」表示？",
+      "options": [
+        "昨天和朋友玩",
+        "明天預計和朋友玩",
+        "今天必須工作",
+        "明天不會出門"
+      ],
+      "answer": 1,
+      "explanation": "明日＝明天；遊ぶ予定＝預計玩。"
+    }
+  ]
+}

@@ -1,5 +1,15 @@
 # AGENTS.md
 
+## 2026-11-25 使用者更新：考前刷題優先
+
+首頁現為 JLPT N4 每日 30 分鐘濃縮模擬，使用 `site/sprint.js`、`practice-core.js`、`sprint.css` 與 `site/practice/`。11/25–12/5 的 11 份原創題組預先保存，依台灣日期開放；不再每日生成教材。每日20題：一般8、閱讀6、聽力6；作答25分鐘＋訂正5分鐘。這是獨立 schema，不適用下方舊教材15題限制。
+
+聽力使用 `site/audio/` 已生成音檔；逐字稿只在交卷後的解析顯示。帳號紀錄仍寫入 `users/{uid}/examAttempts`，每次作答保留完整題目、選項、選答、正解、解析、文章／逐字稿與時間；依帳號隔離本機備份，待傳可重試，穩定 attemptId 防重複。雲端歷史以分頁讀取，不刪舊成績。未登入明確標示僅本機保存。
+
+舊教材入口改為 `site/lessons.html`；既有 localStorage key、今日驗收及 Firebase 歷史必須保留。不得將私人紀錄提交至 repo。未發布錯稿已依欄位原意修復；已發布日期不可覆寫。發布佇列以日期為單位隔離壞稿，將錯誤寫入 `site/publication-status.json`，不阻塞其他合格日期。
+
+修改後檢查：`python -m unittest discover -s tests -v`、`node --test tests/practice-core.test.mjs`、`python scripts/validate_practice.py`。新題須保留日期檔與音檔，不能只改 latest。`scripts/build_practice_bank.py` 可重建這11份預備題組，但發布後更正必須審核，不能任意重新隨機產生並覆寫既有題目。
+
 本檔案是給 Codex / AI coding agent 的專案操作規則。
 
 開始任何開發工作前：

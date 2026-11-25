@@ -5,32 +5,34 @@
     "title": "N4 Day 2 補課⑧｜前に・後で・場合與行程閱讀",
     "duration": "110～135分鐘",
     "goal": "掌握前に、た後で、場合三種接續，能理解行程先後及條件通知；保留假名與N5允許／禁止複習。",
-    "minimum": "單字10個至少認得8個；能各造1句前に／後で／場合；15題至少答對12題。",
+    "minimum": [
+      "單字10個至少認得8個；能各造1句前に／後で／場合；15題至少答對12題。"
+    ],
     "kana": {
       "items": [
         {
-          "char": "シ",
-          "reading": "shi",
           "confusable": "ツ",
-          "example": "シャツ（襯衫）"
+          "example": "シャツ（襯衫）",
+          "kana": "シ",
+          "romaji": "shi"
         },
         {
-          "char": "ツ",
-          "reading": "tsu",
           "confusable": "シ",
-          "example": "シャツ（襯衫）"
+          "example": "シャツ（襯衫）",
+          "kana": "ツ",
+          "romaji": "tsu"
         },
         {
-          "char": "ソ",
-          "reading": "so",
           "confusable": "ン",
-          "example": "ソース（醬汁）"
+          "example": "ソース（醬汁）",
+          "kana": "ソ",
+          "romaji": "so"
         },
         {
-          "char": "ン",
-          "reading": "n",
           "confusable": "ソ",
-          "example": "パン（麵包）"
+          "example": "パン（麵包）",
+          "kana": "ン",
+          "romaji": "n"
         }
       ],
       "notes": [
@@ -438,7 +440,7 @@
       },
       {
         "id": "q11",
-        "category": "review",
+        "category": "mixed",
         "question": "先に出発してもいいです。",
         "options": [
           "必須先出發",
@@ -451,7 +453,7 @@
       },
       {
         "id": "q12",
-        "category": "review",
+        "category": "mixed",
         "question": "ここで食べてはいけません。",
         "options": [
           "可以在這裡吃",

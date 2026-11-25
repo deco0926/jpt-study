@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-05",
+  "title": "今日驗收",
+  "description": "N4 Day2補課：假名、單字、五段與一段活用、音便、と思います及閱讀。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「シ」的讀音？",
+      "options": [
+        "tsu",
+        "shi",
+        "so",
+        "su"
+      ],
+      "answer": 1,
+      "explanation": "シ＝shi。"
+    },
+    {
+      "id": "q2",
+      "category": "kana",
+      "question": "「ン」的讀音？",
+      "options": [
+        "so",
+        "nu",
+        "n",
+        "shi"
+      ],
+      "answer": 2,
+      "explanation": "ン＝n。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「運ぶ」的意思？",
+      "options": [
+        "借書",
+        "搬運",
+        "修理",
+        "回家"
+      ],
+      "answer": 1,
+      "explanation": "運ぶ＝搬運。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「図書館」的意思？",
+      "options": [
+        "圖書館",
+        "車站",
+        "教室",
+        "商店"
+      ],
+      "answer": 0,
+      "explanation": "図書館＝圖書館。"
+    },
+    {
+      "id": "q5",
+      "category": "vocab",
+      "question": "「間に合う」的意思？",
+      "options": [
+        "遲到",
+        "休息",
+        "趕得上",
+        "等待"
+      ],
+      "answer": 2,
+      "explanation": "間に合う＝趕得上。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「帰る」的ない形？",
+      "options": [
+        "帰りない",
+        "帰らない",
+        "帰ない",
+        "帰れない"
+      ],
+      "answer": 1,
+      "explanation": "五段帰る→帰らない。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「帰る」的た形？",
+      "options": [
+        "帰た",
+        "帰りた",
+        "帰った",
+        "帰んだ"
+      ],
+      "answer": 2,
+      "explanation": "五段る→った。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「起きる」的ない形？",
+      "options": [
+        "起きない",
+        "起きらない",
+        "起きるない",
+        "起かない"
+      ],
+      "answer": 0,
+      "explanation": "一段去る＋ない。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「借りる」的過去否定？",
+      "options": [
+        "借りった",
+        "借りなかった",
+        "借らなかった",
+        "借りない"
+      ],
+      "answer": 1,
+      "explanation": "借りる→借りなかった。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「運ぶ」的た形？",
+      "options": [
+        "運びた",
+        "運った",
+        "運いた",
+        "運んだ"
+      ],
+      "answer": 3,
+      "explanation": "ぶ→んだ。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「急ぐ」的た形？",
+      "options": [
+        "急いだ",
+        "急いた",
+        "急んだ",
+        "急った"
+      ],
+      "answer": 0,
+      "explanation": "ぐ→いだ。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「直す」的て形？",
+      "options": [
+        "直んで",
+        "直って",
+        "直して",
+        "直いて"
+      ],
+      "answer": 2,
+      "explanation": "す→して。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "「田中さんはもう帰った（　）思います。」",
+      "options": [
+        "だ",
+        "な",
+        "に",
+        "と"
+      ],
+      "answer": 3,
+      "explanation": "普通形＋と思います。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "『昨日、図書館で本を借りました。そのあと家に帰りました。』正確的是？",
+      "options": [
+        "昨天借書後回家",
+        "昨天買書後去車站",
+        "明天要借書",
+        "昨天沒有回家"
+      ],
+      "answer": 0,
+      "explanation": "借りました＝借了；そのあと＝之後。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "『明日は友達と遊ぶ予定です。』明天預計做什麼？",
+      "options": [
+        "修理時鐘",
+        "搬行李",
+        "和朋友玩",
+        "去游泳"
+      ],
+      "answer": 2,
+      "explanation": "遊ぶ予定＝預計玩。"
+    }
+  ]
+}

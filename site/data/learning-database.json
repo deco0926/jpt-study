@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedThrough": "2026-10-08",
+  "updatedThrough": "2026-11-23",
   "vocabulary": [
     {
       "word": "バス",
@@ -30,9 +30,9 @@
       "word": "行く",
       "reading": "いく / iku",
       "meaning": "去",
-      "usage": "目的地通常放在「に」前面。",
-      "example": "スーパーに行きます。",
-      "translation": "去超市。",
+      "usage": "学校に行く；た形特例：行った",
+      "example": "昨日、学校に行かなかった。",
+      "translation": "昨天沒有去學校。",
       "category": "動詞",
       "forms": {
         "masu": "行きます",
@@ -41,19 +41,19 @@
         "te": "行って"
       },
       "firstSeen": "2026-08-29",
-      "lastSeen": "2026-08-29"
+      "lastSeen": "2026-10-10"
     },
     {
       "word": "電車",
       "reading": "でんしゃ / densha",
-      "meaning": "電車",
-      "usage": "表示交通手段時可接「で」。",
-      "example": "電車で行きます。",
-      "translation": "搭電車去。",
+      "meaning": "電車、火車",
+      "usage": "電車に乗る＝搭電車；漢字：電（でん）、車（しゃ）。",
+      "example": "電車が遅れるので、連絡します。",
+      "translation": "因為電車會誤點，所以我會聯絡。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-08-29",
-      "lastSeen": "2026-08-29"
+      "lastSeen": "2026-10-26"
     },
     {
       "word": "食べる",
@@ -100,13 +100,13 @@
       "word": "店",
       "reading": "みせ / mise",
       "meaning": "店、商店",
-      "usage": "表示目的地時可接「に」。",
-      "example": "店に行きます。",
-      "translation": "去商店。",
+      "usage": "店で働く；漢字店（みせ／てん）。",
+      "example": "この店で働いています。",
+      "translation": "我在這間店工作。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-08-30",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-10-23"
     },
     {
       "word": "本",
@@ -151,11 +151,11 @@
     },
     {
       "word": "買う",
-      "reading": "かう / kau",
-      "meaning": "買",
-      "usage": "禮貌形是「買います」。",
-      "example": "アイスを買います。",
-      "translation": "買冰淇淋。",
+      "reading": "かう",
+      "meaning": "購買",
+      "usage": "切符を買う",
+      "example": "駅で切符を買います。",
+      "translation": "在車站買票。",
       "category": "動詞",
       "forms": {
         "masu": "買います",
@@ -164,15 +164,15 @@
         "te": "買って"
       },
       "firstSeen": "2026-08-30",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-11-03"
     },
     {
       "word": "飲む",
-      "reading": "のむ / nomu",
+      "reading": "のむ",
       "meaning": "喝",
-      "usage": "禮貌形是「飲みます」。",
-      "example": "水を飲みます。",
-      "translation": "喝水。",
+      "usage": "水を飲む",
+      "example": "朝、水を飲みます。",
+      "translation": "早上喝水。",
       "category": "動詞",
       "forms": {
         "masu": "飲みます",
@@ -181,7 +181,7 @@
         "te": "飲んで"
       },
       "firstSeen": "2026-08-30",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-11-04"
     },
     {
       "word": "一緒に",
@@ -293,11 +293,11 @@
     },
     {
       "word": "帰る",
-      "reading": "かえる / kaeru",
-      "meaning": "回去、回家",
-      "usage": "禮貌形是「帰ります」。",
-      "example": "家に帰ります。",
-      "translation": "回家。",
+      "reading": "かえる",
+      "meaning": "回家",
+      "usage": "五段：家に帰る。",
+      "example": "六時に帰ります。",
+      "translation": "六點回家。",
       "category": "動詞",
       "forms": {
         "masu": "帰ります",
@@ -306,7 +306,7 @@
         "te": "帰って"
       },
       "firstSeen": "2026-09-02",
-      "lastSeen": "2026-09-02"
+      "lastSeen": "2026-11-20"
     },
     {
       "word": "昨日",
@@ -371,14 +371,14 @@
     {
       "word": "便利",
       "reading": "べんり",
-      "meaning": "方便的",
+      "meaning": "方便",
       "usage": "便利な場所",
-      "example": "電車は便利だと思います。",
-      "translation": "我覺得電車很方便。",
+      "example": "この駅は便利です。",
+      "translation": "這個車站很方便。",
       "category": "形容詞",
       "forms": null,
       "firstSeen": "2026-09-03",
-      "lastSeen": "2026-09-28"
+      "lastSeen": "2026-11-23"
     },
     {
       "word": "古い",
@@ -443,14 +443,14 @@
     {
       "word": "静か",
       "reading": "しずか / shizuka",
-      "meaning": "安靜的",
-      "usage": "静かな場所",
-      "example": "ここは静かだと思います。",
-      "translation": "我覺得這裡很安靜。",
+      "meaning": "安靜（複習）",
+      "usage": "な形容詞：静かだ／静かなので；静かな駅。",
+      "example": "この駅は静かなので、好きです。",
+      "translation": "因為這座車站很安靜，所以我喜歡。",
       "category": "形容詞",
       "forms": null,
       "firstSeen": "2026-09-03",
-      "lastSeen": "2026-10-02"
+      "lastSeen": "2026-10-26"
     },
     {
       "word": "高い",
@@ -466,15 +466,15 @@
     },
     {
       "word": "予定",
-      "reading": "よてい / yotei",
-      "meaning": "預定、計畫",
-      "usage": "予定があります",
-      "example": "明日は予定があります。",
-      "translation": "明天有安排。",
+      "reading": "よてい",
+      "meaning": "計畫、預定",
+      "usage": "予定を決める",
+      "example": "明日の予定を決めます。",
+      "translation": "決定明天的計畫。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-04",
-      "lastSeen": "2026-10-05"
+      "lastSeen": "2026-11-21"
     },
     {
       "word": "会う",
@@ -577,23 +577,23 @@
     },
     {
       "word": "時間",
-      "reading": "じかん / jikan",
+      "reading": "じかん",
       "meaning": "時間",
-      "usage": "可表示時間本身，也常出現在詢問時間的句子裡。",
-      "example": "勉強する時間です。",
-      "translation": "是讀書的時間。",
+      "usage": "時間がある",
+      "example": "今日は時間があります。",
+      "translation": "今天有時間。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-04",
-      "lastSeen": "2026-09-04"
+      "lastSeen": "2026-11-09"
     },
     {
       "word": "起きる",
-      "reading": "おきる / okiru",
+      "reading": "おきる",
       "meaning": "起床",
-      "usage": "七時に起きる。漢字：起＝起來。",
-      "example": "毎朝七時に起きます。",
-      "translation": "每天早上七點起床。",
+      "usage": "早く起きる",
+      "example": "七時に起きます。",
+      "translation": "七點起床。",
       "category": "動詞",
       "forms": {
         "masu": "起きます",
@@ -602,7 +602,7 @@
         "te": "起きて"
       },
       "firstSeen": "2026-09-04",
-      "lastSeen": "2026-10-07"
+      "lastSeen": "2026-11-05"
     },
     {
       "word": "ここ",
@@ -630,11 +630,11 @@
     },
     {
       "word": "休む",
-      "reading": "やすむ / yasumu",
+      "reading": "やすむ",
       "meaning": "休息、請假",
       "usage": "学校を休む",
-      "example": "明日は学校を休みます。",
-      "translation": "明天向學校請假。",
+      "example": "昨日学校を休みました。",
+      "translation": "昨天向學校請假。",
       "category": "動詞",
       "forms": {
         "masu": "休みます",
@@ -643,15 +643,15 @@
         "te": "休んで"
       },
       "firstSeen": "2026-09-05",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-11-04"
     },
     {
       "word": "使う",
-      "reading": "つかう / tsukau",
+      "reading": "つかう",
       "meaning": "使用",
-      "usage": "常見搭配：電話を使う。",
-      "example": "電話を使います。",
-      "translation": "使用電話。",
+      "usage": "辞書を使う",
+      "example": "日本語の辞書を使います。",
+      "translation": "使用日文辭典。",
       "category": "動詞",
       "forms": {
         "masu": "使います",
@@ -660,7 +660,7 @@
         "te": "使って"
       },
       "firstSeen": "2026-09-05",
-      "lastSeen": "2026-09-05"
+      "lastSeen": "2026-11-03"
     },
     {
       "word": "写真",
@@ -676,11 +676,11 @@
     },
     {
       "word": "書く",
-      "reading": "かく / kaku",
+      "reading": "かく",
       "meaning": "寫",
       "usage": "名前を書く",
-      "example": "名前を書きます。",
-      "translation": "寫名字。",
+      "example": "ここに名前を書きます。",
+      "translation": "在這裡寫名字。",
       "category": "動詞",
       "forms": {
         "masu": "書きます",
@@ -689,7 +689,7 @@
         "te": "書いて"
       },
       "firstSeen": "2026-09-05",
-      "lastSeen": "2026-10-02"
+      "lastSeen": "2026-11-04"
     },
     {
       "word": "聞く",
@@ -710,9 +710,9 @@
     },
     {
       "word": "話す",
-      "reading": "はなす / hanasu",
-      "meaning": "說、談話",
-      "usage": "友達と話す。漢字：話＝說話。",
+      "reading": "はなす",
+      "meaning": "說話",
+      "usage": "日本語で話す",
       "example": "友達と日本語で話します。",
       "translation": "和朋友用日文說話。",
       "category": "動詞",
@@ -723,15 +723,15 @@
         "te": "話して"
       },
       "firstSeen": "2026-09-05",
-      "lastSeen": "2026-10-07"
+      "lastSeen": "2026-11-04"
     },
     {
       "word": "読む",
-      "reading": "よむ / yomu",
-      "meaning": "讀、閱讀",
-      "usage": "常見搭配：本を読む。",
-      "example": "本を読みます。",
-      "translation": "讀書。",
+      "reading": "よむ",
+      "meaning": "閱讀",
+      "usage": "本を読む",
+      "example": "毎晩本を読みます。",
+      "translation": "每晚讀書。",
       "category": "動詞",
       "forms": {
         "masu": "読みます",
@@ -740,7 +740,7 @@
         "te": "読んで"
       },
       "firstSeen": "2026-09-05",
-      "lastSeen": "2026-09-05"
+      "lastSeen": "2026-11-04"
     },
     {
       "word": "電話",
@@ -756,7 +756,7 @@
     },
     {
       "word": "入る",
-      "reading": "はいる / hairu",
+      "reading": "はいる",
       "meaning": "進入",
       "usage": "部屋に入る",
       "example": "部屋に入ります。",
@@ -769,15 +769,15 @@
         "te": "入って"
       },
       "firstSeen": "2026-09-06",
-      "lastSeen": "2026-09-06"
+      "lastSeen": "2026-11-06"
     },
     {
       "word": "出る",
       "reading": "でる / deru",
-      "meaning": "出去、離開",
-      "usage": "部屋を出る",
-      "example": "部屋を出ます。",
-      "translation": "離開房間。",
+      "meaning": "出去、離開、出席",
+      "usage": "一段動詞；家を出る。",
+      "example": "八時に家を出ます。",
+      "translation": "八點出門。",
       "category": "動詞",
       "forms": {
         "masu": "出ます",
@@ -786,7 +786,7 @@
         "te": "出て"
       },
       "firstSeen": "2026-09-06",
-      "lastSeen": "2026-09-06"
+      "lastSeen": "2026-10-30"
     },
     {
       "word": "宿題",
@@ -802,9 +802,9 @@
     },
     {
       "word": "待つ",
-      "reading": "まつ / matsu",
+      "reading": "まつ",
       "meaning": "等待",
-      "usage": "駅で待つ。漢字：待＝等待。",
+      "usage": "友達を待つ",
       "example": "駅で友達を待ちます。",
       "translation": "在車站等朋友。",
       "category": "動詞",
@@ -815,15 +815,15 @@
         "te": "待って"
       },
       "firstSeen": "2026-09-06",
-      "lastSeen": "2026-10-07"
+      "lastSeen": "2026-11-03"
     },
     {
       "word": "忘れる",
-      "reading": "わすれる / wasureru",
+      "reading": "わすれる",
       "meaning": "忘記",
-      "usage": "一段動詞；約束を忘れる。漢字「忘」讀わす。",
-      "example": "大切な約束を忘れません。",
-      "translation": "不會忘記重要的約定。",
+      "usage": "一段：かぎを忘れる。",
+      "example": "かぎを忘れました。",
+      "translation": "忘了鑰匙。",
       "category": "動詞",
       "forms": {
         "masu": "忘れます",
@@ -832,15 +832,15 @@
         "te": "忘れて"
       },
       "firstSeen": "2026-09-06",
-      "lastSeen": "2026-10-08"
+      "lastSeen": "2026-11-20"
     },
     {
       "word": "急ぐ",
-      "reading": "いそぐ / isogu",
+      "reading": "いそぐ",
       "meaning": "趕快",
-      "usage": "急いでください",
-      "example": "急ぎます。",
-      "translation": "趕快。",
+      "usage": "駅まで急ぐ",
+      "example": "時間がないので急ぎます。",
+      "translation": "因為沒時間所以趕快。",
       "category": "動詞",
       "forms": {
         "masu": "急ぎます",
@@ -849,15 +849,15 @@
         "te": "急いで"
       },
       "firstSeen": "2026-09-06",
-      "lastSeen": "2026-09-06"
+      "lastSeen": "2026-11-23"
     },
     {
       "word": "持つ",
-      "reading": "もつ / motsu",
-      "meaning": "拿、持有",
-      "usage": "かばんを持つ",
-      "example": "かばんを持ちます。",
-      "translation": "拿包包。",
+      "reading": "もつ",
+      "meaning": "拿著、攜帶",
+      "usage": "傘を持つ",
+      "example": "今日は傘を持ちます。",
+      "translation": "今天會帶傘。",
       "category": "動詞",
       "forms": {
         "masu": "持ちます",
@@ -866,7 +866,7 @@
         "te": "持って"
       },
       "firstSeen": "2026-09-06",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-03"
     },
     {
       "word": "部屋",
@@ -882,11 +882,11 @@
     },
     {
       "word": "閉める",
-      "reading": "しめる / shimeru",
-      "meaning": "關上（某物）",
-      "usage": "一段動詞；ドアを閉める。漢字「閉」讀し。",
-      "example": "夜、窓を閉めます。",
-      "translation": "晚上關上窗戶。",
+      "reading": "しめる",
+      "meaning": "關閉",
+      "usage": "一段：ドアを閉める。",
+      "example": "ドアを閉めます。",
+      "translation": "關門。",
       "category": "動詞",
       "forms": {
         "masu": "閉めます",
@@ -895,15 +895,15 @@
         "te": "閉めて"
       },
       "firstSeen": "2026-09-06",
-      "lastSeen": "2026-10-08"
+      "lastSeen": "2026-11-20"
     },
     {
       "word": "開ける",
-      "reading": "あける / akeru",
-      "meaning": "打開（某物）",
-      "usage": "一段動詞；ドアを開ける。漢字「開」讀あ。",
-      "example": "朝、窓を開けます。",
-      "translation": "早上打開窗戶。",
+      "reading": "あける",
+      "meaning": "打開",
+      "usage": "一段：窓を開ける。",
+      "example": "窓を開けます。",
+      "translation": "打開窗戶。",
       "category": "動詞",
       "forms": {
         "masu": "開けます",
@@ -912,43 +912,43 @@
         "te": "開けて"
       },
       "firstSeen": "2026-09-06",
-      "lastSeen": "2026-10-08"
+      "lastSeen": "2026-11-20"
     },
     {
       "word": "働く",
       "reading": "はたらく / hataraku",
       "meaning": "工作",
-      "usage": "会社で働く＝在公司工作。",
-      "example": "会社で働きます。",
-      "translation": "在公司工作。",
+      "usage": "店で働く；五段動詞：働く／働かない／働いた／働かなかった。",
+      "example": "明日は店で働く予定です。",
+      "translation": "明天預計在店裡工作。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-07",
-      "lastSeen": "2026-09-07"
+      "lastSeen": "2026-10-23"
     },
     {
       "word": "必要",
-      "reading": "ひつよう / hitsuyou",
-      "meaning": "必要（的）",
-      "usage": "な形容詞；必要なもの／必要だと思います。漢字「必」讀ひつ、「要」讀よう。",
-      "example": "この本は必要だと思います。",
-      "translation": "我認為這本書是必要的。",
+      "reading": "ひつよう",
+      "meaning": "必要",
+      "usage": "予約が必要だ",
+      "example": "予約が必要です。",
+      "translation": "需要預約。",
       "category": "形容詞",
       "forms": null,
       "firstSeen": "2026-09-07",
-      "lastSeen": "2026-10-08"
+      "lastSeen": "2026-11-16"
     },
     {
       "word": "早い",
       "reading": "はやい / hayai",
-      "meaning": "早；快",
-      "usage": "今天先掌握時間上的「早」。",
-      "example": "明日は早く起きます。",
-      "translation": "明天會早起。",
+      "meaning": "早、快",
+      "usage": "い形容詞；早い電車／早いと思います。",
+      "example": "この電車は早いです。",
+      "translation": "這班電車很快。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-07",
-      "lastSeen": "2026-09-07"
+      "lastSeen": "2026-10-31"
     },
     {
       "word": "病院",
@@ -1214,7 +1214,7 @@
     },
     {
       "word": "泳ぐ",
-      "reading": "およぐ / oyogu",
+      "reading": "およぐ",
       "meaning": "游泳",
       "usage": "海で泳ぐ",
       "example": "夏は海で泳ぎます。",
@@ -1227,7 +1227,7 @@
         "te": "泳いで"
       },
       "firstSeen": "2026-09-10",
-      "lastSeen": "2026-10-02"
+      "lastSeen": "2026-11-09"
     },
     {
       "word": "海",
@@ -1279,11 +1279,11 @@
     },
     {
       "word": "遊ぶ",
-      "reading": "あそぶ / asobu",
-      "meaning": "玩、遊玩",
-      "usage": "友達と遊ぶ。",
-      "example": "日曜日に友達と遊びます。",
-      "translation": "星期日和朋友玩。",
+      "reading": "あそぶ",
+      "meaning": "玩耍",
+      "usage": "友達と遊ぶ",
+      "example": "友達と遊びます。",
+      "translation": "和朋友玩。",
       "category": "動詞",
       "forms": {
         "masu": "遊びます",
@@ -1292,7 +1292,7 @@
         "te": "遊んで"
       },
       "firstSeen": "2026-09-10",
-      "lastSeen": "2026-10-07"
+      "lastSeen": "2026-11-05"
     },
     {
       "word": "食べたい",
@@ -1344,15 +1344,15 @@
     },
     {
       "word": "忙しい",
-      "reading": "いそがしい / isogashii",
-      "meaning": "忙碌的",
+      "reading": "いそがしい",
+      "meaning": "忙碌",
       "usage": "仕事が忙しい",
-      "example": "今日は忙しいです。",
-      "translation": "今天很忙。",
+      "example": "今日は仕事が忙しいです。",
+      "translation": "今天工作很忙。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-11",
-      "lastSeen": "2026-10-02"
+      "lastSeen": "2026-11-10"
     },
     {
       "word": "町",
@@ -1428,15 +1428,15 @@
     },
     {
       "word": "先に",
-      "reading": "さきに / saki ni",
-      "meaning": "先、先做",
-      "usage": "順序題常見提示。",
-      "example": "先に宿題をします。",
-      "translation": "先做作業。",
+      "reading": "さきに",
+      "meaning": "先、提前",
+      "usage": "先に行く",
+      "example": "先に行きます。",
+      "translation": "我先走。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-12",
-      "lastSeen": "2026-09-12"
+      "lastSeen": "2026-11-15"
     },
     {
       "word": "勉強",
@@ -1464,15 +1464,15 @@
     },
     {
       "word": "始める",
-      "reading": "はじめる / hajimeru",
-      "meaning": "開始（某事）",
-      "usage": "他動詞；～を始める。漢字：始（はじ）＝開始。",
+      "reading": "はじめる",
+      "meaning": "開始（他動詞）",
+      "usage": "勉強を始める；始（はじ）",
       "example": "勉強を始めます。",
       "translation": "開始念書。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-30"
+      "lastSeen": "2026-11-08"
     },
     {
       "word": "最近",
@@ -1489,38 +1489,38 @@
     {
       "word": "用事",
       "reading": "ようじ / youji",
-      "meaning": "事情、要辦的事",
-      "usage": "常見：用事があります。漢字：事（じ／こと）＝事情。",
+      "meaning": "要辦的事",
+      "usage": "用事があります；「事」讀じ／こと",
       "example": "今日は用事があります。",
-      "translation": "今天有事要辦。",
+      "translation": "今天有事情要辦。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-09-30"
+      "lastSeen": "2026-10-17"
     },
     {
       "word": "約束",
-      "reading": "やくそく / yakusoku",
-      "meaning": "約定、約會",
-      "usage": "友達と約束がある。漢字「約」讀やく、「束」讀そく。",
-      "example": "明日は友達と約束があります。",
-      "translation": "明天和朋友有約。",
+      "reading": "やくそく",
+      "meaning": "約定",
+      "usage": "約束を守る",
+      "example": "友達と約束しました。",
+      "translation": "和朋友約好了。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-10-08"
+      "lastSeen": "2026-11-12"
     },
     {
       "word": "終わる",
-      "reading": "おわる / owaru",
+      "reading": "おわる",
       "meaning": "結束",
-      "usage": "試験が終わる。漢字「終」讀お。",
-      "example": "試験は三時に終わります。",
-      "translation": "考試三點結束。",
+      "usage": "仕事が終わる；終（お）",
+      "example": "仕事が終わりました。",
+      "translation": "工作結束了。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-24",
-      "lastSeen": "2026-10-08"
+      "lastSeen": "2026-11-08"
     },
     {
       "word": "問題",
@@ -1550,19 +1550,19 @@
       "word": "天気",
       "reading": "てんき / tenki",
       "meaning": "天氣",
-      "usage": "天気がいい",
+      "usage": "天気がいい／悪い；漢字：天（てん）、気（き）。",
       "example": "今日は天気がいいです。",
       "translation": "今天天氣很好。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-10-01"
+      "lastSeen": "2026-10-25"
     },
     {
       "word": "思う",
-      "reading": "おもう / omou",
+      "reading": "おもう",
       "meaning": "想、認為",
-      "usage": "～と思います",
+      "usage": "～と思います；思（おも）",
       "example": "明日は晴れると思います。",
       "translation": "我想明天會放晴。",
       "category": "動詞",
@@ -1573,7 +1573,7 @@
         "te": "思って"
       },
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "word": "来週",
@@ -1601,15 +1601,15 @@
     },
     {
       "word": "試験",
-      "reading": "しけん / shiken",
+      "reading": "しけん",
       "meaning": "考試",
-      "usage": "試験を受ける。",
-      "example": "十二月に試験を受けます。",
-      "translation": "十二月參加考試。",
+      "usage": "試験を受ける",
+      "example": "来月試験があります。",
+      "translation": "下個月有考試。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-10-06"
+      "lastSeen": "2026-11-09"
     },
     {
       "word": "降る",
@@ -1632,37 +1632,37 @@
       "word": "難しい",
       "reading": "むずかしい / muzukashii",
       "meaning": "困難的",
-      "usage": "難しい問題。",
-      "example": "この漢字は難しいと思います。",
-      "translation": "我覺得這個漢字很難。",
+      "usage": "い形容詞：難しい／難しくない／難しかった／難しくなかった。",
+      "example": "この問題は難しくない。",
+      "translation": "這道題目不難。",
       "category": "形容詞",
       "forms": null,
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-10-06"
+      "lastSeen": "2026-10-15"
     },
     {
       "word": "雨",
       "reading": "あめ / ame",
       "meaning": "雨",
-      "usage": "雨が降る",
-      "example": "雨が降ると思います。",
-      "translation": "我想會下雨。",
+      "usage": "雨です＝下雨天；雨の日＝下雨的日子。",
+      "example": "明日は雨だと思います。",
+      "translation": "我想明天會下雨。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-10-01"
+      "lastSeen": "2026-10-25"
     },
     {
       "word": "会議",
-      "reading": "かいぎ / kaigi",
+      "reading": "かいぎ",
       "meaning": "會議",
-      "usage": "会議があります",
-      "example": "午後、会議があります。",
-      "translation": "下午有會議。",
+      "usage": "会議が始まる",
+      "example": "会議は九時に始まります。",
+      "translation": "會議九點開始。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-11-21"
     },
     {
       "word": "先生",
@@ -1679,14 +1679,14 @@
     {
       "word": "大切",
       "reading": "たいせつ / taisetsu",
-      "meaning": "重要、珍惜的",
-      "usage": "大切なこと",
-      "example": "これは大切なことです。",
-      "translation": "這是重要的事情。",
+      "meaning": "重要、珍貴",
+      "usage": "な形容詞；大切な約束／大切だと思います。",
+      "example": "この約束は大切です。",
+      "translation": "這個約定很重要。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-05"
+      "lastSeen": "2026-10-30"
     },
     {
       "word": "明後日",
@@ -1738,23 +1738,23 @@
     },
     {
       "word": "連絡",
-      "reading": "れんらく / renraku",
+      "reading": "れんらく",
       "meaning": "聯絡",
-      "usage": "友達に連絡する。漢字：連＝連接；絡＝聯絡。",
+      "usage": "友達に連絡する",
       "example": "あとで友達に連絡します。",
       "translation": "等一下聯絡朋友。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-07"
+      "lastSeen": "2026-11-23"
     },
     {
       "word": "遅れる",
-      "reading": "おくれる / okureru",
+      "reading": "おくれる",
       "meaning": "遲到、延誤",
-      "usage": "学校に遅れる。漢字：遅＝遲。",
-      "example": "学校に遅れません。",
-      "translation": "上學不會遲到。",
+      "usage": "会議に遅れる",
+      "example": "バスが遅れました。",
+      "translation": "公車誤點了。",
       "category": "動詞",
       "forms": {
         "masu": "遅れます",
@@ -1763,19 +1763,19 @@
         "te": "遅れて"
       },
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-06"
+      "lastSeen": "2026-11-23"
     },
     {
       "word": "場所",
       "reading": "ばしょ",
-      "meaning": "場所、地點",
-      "usage": "便利な場所",
-      "example": "この場所は便利だと思います。",
-      "translation": "我覺得這個地方很方便。",
+      "meaning": "場所",
+      "usage": "場所を決める",
+      "example": "場所を決めます。",
+      "translation": "場所（例句：場所を決める）。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-09-28",
-      "lastSeen": "2026-09-28"
+      "lastSeen": "2026-11-11"
     },
     {
       "word": "曇り",
@@ -1803,11 +1803,11 @@
     },
     {
       "word": "間に合う",
-      "reading": "まにあう / maniau",
-      "meaning": "趕得上、來得及",
-      "usage": "電車に間に合う。",
-      "example": "電車に間に合います。",
-      "translation": "趕得上電車。",
+      "reading": "まにあう",
+      "meaning": "趕得上",
+      "usage": "電車に間に合う",
+      "example": "急げば電車に間に合います。",
+      "translation": "如果趕快就能趕上電車。",
       "category": "動詞",
       "forms": {
         "masu": "間に合います",
@@ -1816,7 +1816,7 @@
         "te": "間に合って"
       },
       "firstSeen": "2026-09-29",
-      "lastSeen": "2026-10-06"
+      "lastSeen": "2026-11-23"
     },
     {
       "word": "雪",
@@ -1833,14 +1833,19 @@
     {
       "word": "取る",
       "reading": "とる / toru",
-      "meaning": "拿、取得",
-      "usage": "写真を取る（今日只練動詞變化）",
-      "example": "今日は休みを取ります。",
-      "translation": "今天請假。",
-      "category": "名詞",
-      "forms": null,
+      "meaning": "拿取、取得",
+      "usage": "五段動詞；切符を取る。",
+      "example": "切符を取りました。",
+      "translation": "已經拿到票了。",
+      "category": "動詞",
+      "forms": {
+        "masu": "取ります",
+        "nai": "取らない",
+        "past": "取りました",
+        "te": "取って"
+      },
       "firstSeen": "2026-10-02",
-      "lastSeen": "2026-10-02"
+      "lastSeen": "2026-11-02"
     },
     {
       "word": "学生",
@@ -1914,11 +1919,11 @@
     },
     {
       "word": "走る",
-      "reading": "はしる / hashiru",
+      "reading": "はしる",
       "meaning": "跑",
       "usage": "公園を走る",
-      "example": "朝、公園を走ります。",
-      "translation": "早上在公園跑步。",
+      "example": "毎朝、公園を走ります。",
+      "translation": "每天早上在公園跑步。",
       "category": "動詞",
       "forms": {
         "masu": "走ります",
@@ -1927,7 +1932,7 @@
         "te": "走って"
       },
       "firstSeen": "2026-10-04",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-06"
     },
     {
       "word": "する",
@@ -1965,56 +1970,61 @@
     },
     {
       "word": "決める",
-      "reading": "きめる / kimeru",
+      "reading": "きめる",
       "meaning": "決定",
-      "usage": "予定を決める。漢字：決＝決定。",
-      "example": "旅行の予定を決めます。",
-      "translation": "決定旅行的計畫。",
-      "category": "名詞",
-      "forms": null,
+      "usage": "一段：予定を決める。",
+      "example": "予定を決めます。",
+      "translation": "決定計畫。",
+      "category": "動詞",
+      "forms": {
+        "masu": "決めます",
+        "nai": "決めない",
+        "past": "決めました",
+        "te": "決めて"
+      },
       "firstSeen": "2026-10-06",
-      "lastSeen": "2026-10-06"
+      "lastSeen": "2026-11-20"
     },
     {
       "word": "理由",
-      "reading": "りゆう / riyuu",
+      "reading": "りゆう",
       "meaning": "理由",
-      "usage": "理由を話す。",
-      "example": "先生に理由を話します。",
-      "translation": "向老師說明理由。",
+      "usage": "理由を説明する",
+      "example": "遅れた理由を説明します。",
+      "translation": "說明遲到的理由。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-10-06",
-      "lastSeen": "2026-10-06"
+      "lastSeen": "2026-11-23"
     },
     {
       "word": "続ける",
-      "reading": "つづける / tsuzukeru",
+      "reading": "つづける",
       "meaning": "繼續",
-      "usage": "勉強を続ける。漢字：続＝繼續。",
-      "example": "日本語の勉強を続けます。",
-      "translation": "繼續學日文。",
-      "category": "名詞",
-      "forms": null,
+      "usage": "一段：勉強を続ける。",
+      "example": "勉強を続けます。",
+      "translation": "繼續學習。",
+      "category": "動詞",
+      "forms": {
+        "masu": "続けます",
+        "nai": "続けない",
+        "past": "続けました",
+        "te": "続けて"
+      },
       "firstSeen": "2026-10-06",
-      "lastSeen": "2026-10-06"
+      "lastSeen": "2026-11-20"
     },
     {
       "word": "調べる",
-      "reading": "しらべる / shiraberu",
-      "meaning": "調查、查詢",
-      "usage": "辞書で調べる。",
-      "example": "言葉を辞書で調べます。",
-      "translation": "用字典查單字。",
-      "category": "動詞",
-      "forms": {
-        "masu": "調べます",
-        "nai": "調べない",
-        "past": "調べました",
-        "te": "調べて"
-      },
+      "reading": "しらべる",
+      "meaning": "查詢、調查",
+      "usage": "時間を調べる。漢字與搭配一併記憶。",
+      "example": "電車の時間を調べます。",
+      "translation": "查詢電車時間。",
+      "category": "名詞",
+      "forms": null,
       "firstSeen": "2026-10-06",
-      "lastSeen": "2026-10-06"
+      "lastSeen": "2026-11-19"
     },
     {
       "word": "もう",
@@ -2030,27 +2040,27 @@
     },
     {
       "word": "心配",
-      "reading": "しんぱい / shinpai",
+      "reading": "しんぱい",
       "meaning": "擔心",
-      "usage": "心配する。",
-      "example": "試験を心配しています。",
-      "translation": "正在擔心考試。",
+      "usage": "試験が心配",
+      "example": "試験が心配です。",
+      "translation": "擔心考試。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-10-07",
-      "lastSeen": "2026-10-07"
+      "lastSeen": "2026-11-23"
     },
     {
       "word": "確認",
-      "reading": "かくにん / kakunin",
+      "reading": "かくにん",
       "meaning": "確認",
-      "usage": "予定を確認する。漢字：確＝確實；認＝確認。",
-      "example": "明日の予定を確認します。",
-      "translation": "確認明天的行程。",
+      "usage": "時間を確認する。漢字與搭配一併記憶。",
+      "example": "時間を確認します。",
+      "translation": "確認時間。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-10-07",
-      "lastSeen": "2026-10-07"
+      "lastSeen": "2026-11-19"
     },
     {
       "word": "絶対",
@@ -2068,9 +2078,9 @@
       "word": "間違える",
       "reading": "まちがえる / machigaeru",
       "meaning": "弄錯、答錯",
-      "usage": "答えを間違える。",
-      "example": "答えを間違えました。",
-      "translation": "答錯了。",
+      "usage": "一段動詞；時間を間違える。",
+      "example": "時間を間違えました。",
+      "translation": "把時間弄錯了。",
       "category": "動詞",
       "forms": {
         "masu": "間違えます",
@@ -2079,55 +2089,1174 @@
         "te": "間違えて"
       },
       "firstSeen": "2026-10-07",
-      "lastSeen": "2026-10-07"
+      "lastSeen": "2026-10-31"
     },
     {
       "word": "借りる",
-      "reading": "かりる / kariru",
-      "meaning": "借入、向人借",
-      "usage": "一段動詞；図書館で本を借りる。漢字「借」讀か。",
+      "reading": "かりる",
+      "meaning": "借入",
+      "usage": "一段：本を借りる。",
       "example": "図書館で本を借ります。",
       "translation": "在圖書館借書。",
-      "category": "名詞",
-      "forms": null,
+      "category": "動詞",
+      "forms": {
+        "masu": "借ります",
+        "nai": "借りない",
+        "past": "借りました",
+        "te": "借りて"
+      },
       "firstSeen": "2026-10-08",
-      "lastSeen": "2026-10-08"
+      "lastSeen": "2026-11-20"
     },
     {
       "word": "切る",
-      "reading": "きる / kiru",
+      "reading": "きる",
       "meaning": "切、剪",
-      "usage": "五段動詞；紙を切る。漢字「切」讀き。",
-      "example": "はさみで紙を切ります。",
-      "translation": "用剪刀剪紙。",
-      "category": "名詞",
-      "forms": null,
+      "usage": "五段：紙を切る。",
+      "example": "紙を切ります。",
+      "translation": "剪紙。",
+      "category": "動詞",
+      "forms": {
+        "masu": "切ります",
+        "nai": "切らない",
+        "past": "切りました",
+        "te": "切って"
+      },
       "firstSeen": "2026-10-08",
-      "lastSeen": "2026-10-08"
+      "lastSeen": "2026-11-20"
     },
     {
       "word": "始まる",
-      "reading": "はじまる / hajimaru",
+      "reading": "はじまる",
       "meaning": "開始（自動詞）",
-      "usage": "授業が始まる。漢字「始」讀はじ。",
-      "example": "授業は九時に始まります。",
-      "translation": "課程九點開始。",
+      "usage": "授業が始まる；始（はじ）",
+      "example": "授業が始まります。",
+      "translation": "課程開始。",
       "category": "名詞",
       "forms": null,
       "firstSeen": "2026-10-08",
-      "lastSeen": "2026-10-08"
+      "lastSeen": "2026-11-08"
     },
     {
       "word": "集まる",
-      "reading": "あつまる / atsumaru",
-      "meaning": "集合、聚集",
-      "usage": "五段動詞；駅に集まる。漢字「集」讀あつ。",
-      "example": "九時に駅に集まります。",
-      "translation": "九點在車站集合。",
+      "reading": "あつまる",
+      "meaning": "集合",
+      "usage": "駅に集まる",
+      "example": "駅に集まります。",
+      "translation": "集合（例句：駅に集まる）。",
+      "category": "動詞",
+      "forms": {
+        "masu": "集まります",
+        "nai": "集まらない",
+        "past": "集まりました",
+        "te": "集まって"
+      },
+      "firstSeen": "2026-10-08",
+      "lastSeen": "2026-11-11"
+    },
+    {
+      "word": "切符",
+      "reading": "きっぷ / kippu",
+      "meaning": "車票",
+      "usage": "切符を買う；切讀きっ、符讀ぷ（在本詞中）",
+      "example": "駅で切符を買います。",
+      "translation": "在車站買車票。",
       "category": "名詞",
       "forms": null,
-      "firstSeen": "2026-10-08",
-      "lastSeen": "2026-10-08"
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10"
+    },
+    {
+      "word": "予約する",
+      "reading": "よやくする",
+      "meaning": "預約",
+      "usage": "ホテルを予約する＝預訂飯店；漢字予（よ）、約（やく）。",
+      "example": "旅行に行く前に、ホテルを予約します。",
+      "translation": "旅行前先預訂飯店。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-28"
+    },
+    {
+      "word": "休み",
+      "reading": "やすみ / yasumi",
+      "meaning": "休假、休息日",
+      "usage": "名詞：休みだ／休みではない／休みだった／休みではなかった。",
+      "example": "明日は休みだと思います。",
+      "translation": "我想明天是休息日。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-25"
+    },
+    {
+      "word": "変更する",
+      "reading": "へんこうする / henkou suru",
+      "meaning": "變更",
+      "usage": "予定を変更する；漢字変＝へん、更＝こう。",
+      "example": "昨日、予定を変更した。",
+      "translation": "昨天更改了計畫。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-11"
+    },
+    {
+      "word": "確認する",
+      "reading": "かくにんする",
+      "meaning": "確認",
+      "usage": "時間を確認する；確（かく）、認（にん）。",
+      "example": "出発する前に、時間を確認します。",
+      "translation": "出發前確認時間。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "word": "遅い",
+      "reading": "おそい / osoi",
+      "meaning": "晚的、慢的",
+      "usage": "時間が遅い／帰るのが遅い；漢字遅（おそ）。",
+      "example": "今日は帰る時間が遅いと思います。",
+      "translation": "我想今天回家的時間會比較晚。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-23"
+    },
+    {
+      "word": "集合する",
+      "reading": "しゅうごうする",
+      "meaning": "集合",
+      "usage": "九時に集合する＝九點集合；漢字集（しゅう）、合（ごう）。",
+      "example": "明日は九時に学校の前で集合します。",
+      "translation": "明天九點在學校前集合。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "word": "体験",
+      "reading": "たいけん / taiken",
+      "meaning": "體驗",
+      "usage": "体験授業（たいけんじゅぎょう）＝體驗課；漢字體（たい）、験（けん）。",
+      "example": "日曜日に体験授業があります。",
+      "translation": "星期日有體驗課。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-15",
+      "lastSeen": "2026-10-15"
+    },
+    {
+      "word": "参加",
+      "reading": "さんか",
+      "meaning": "參加",
+      "usage": "会議に参加する",
+      "example": "会議に参加します。",
+      "translation": "參加會議。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-15",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "word": "教室",
+      "reading": "きょうしつ / kyoushitsu",
+      "meaning": "教室",
+      "usage": "教室で勉強する（在教室學習）；教（きょう）、室（しつ）。",
+      "example": "教室で日本語を勉強します。",
+      "translation": "在教室學日文。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-15",
+      "lastSeen": "2026-10-15"
+    },
+    {
+      "word": "申し込む",
+      "reading": "もうしこむ / moushikomu",
+      "meaning": "報名、申請",
+      "usage": "五段動詞；体験授業に申し込む；申し込む／申し込まない／申し込んだ／申し込まなかった。漢字申（もう）與込（こ）。",
+      "example": "昨日、体験授業に申し込んだ。",
+      "translation": "昨天報名了體驗課。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-15",
+      "lastSeen": "2026-10-15"
+    },
+    {
+      "word": "締め切り",
+      "reading": "しめきり",
+      "meaning": "截止日期、期限",
+      "usage": "締め切りまでに＝截止前；切（き）。",
+      "example": "申込書の締め切りは金曜日です。",
+      "translation": "申請表的截止日是星期五。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-15",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "word": "資料",
+      "reading": "しりょう",
+      "meaning": "資料",
+      "usage": "資料を読む",
+      "example": "資料を読みます。",
+      "translation": "閱讀資料。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-15",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "word": "変更",
+      "reading": "へんこう",
+      "meaning": "變更",
+      "usage": "予定を変更する。漢字與搭配一併記憶。",
+      "example": "予定を変更します。",
+      "translation": "變更計畫。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-18",
+      "lastSeen": "2026-11-19"
+    },
+    {
+      "word": "準備",
+      "reading": "じゅんび",
+      "meaning": "準備",
+      "usage": "試験の準備をする",
+      "example": "明日の試験の準備をします。",
+      "translation": "準備明天的考試。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-18",
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "word": "出発",
+      "reading": "しゅっぱつ",
+      "meaning": "出發",
+      "usage": "九時に出発する。漢字與搭配一併記憶。",
+      "example": "九時に出発します。",
+      "translation": "九點出發。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-20",
+      "lastSeen": "2026-11-19"
+    },
+    {
+      "word": "到着",
+      "reading": "とうちゃく",
+      "meaning": "抵達",
+      "usage": "駅に到着する",
+      "example": "駅に到着しました。",
+      "translation": "抵達車站了。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-20",
+      "lastSeen": "2026-11-14"
+    },
+    {
+      "word": "返す",
+      "reading": "かえす / kaesu",
+      "meaning": "歸還",
+      "usage": "本を返す；五段動詞：返さない／返した。",
+      "example": "金曜日に本を返す予定です。",
+      "translation": "預計星期五還書。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-20",
+      "lastSeen": "2026-10-22"
+    },
+    {
+      "word": "集合",
+      "reading": "しゅうごう / shuugou",
+      "meaning": "集合",
+      "usage": "九時に集合する；漢字：集（しゅう）、合（ごう）。",
+      "example": "明日は九時に集合します。",
+      "translation": "明天九點集合。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-20",
+      "lastSeen": "2026-10-20"
+    },
+    {
+      "word": "図書館",
+      "reading": "としょかん",
+      "meaning": "圖書館",
+      "usage": "図書館へ行く",
+      "example": "午後、図書館へ行きます。",
+      "translation": "下午去圖書館。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-22",
+      "lastSeen": "2026-11-05"
+    },
+    {
+      "word": "貸す",
+      "reading": "かす / kasu",
+      "meaning": "借出、借給",
+      "usage": "友達に本を貸す；五段動詞：貸さない／貸した。",
+      "example": "友達に本を貸しました。",
+      "translation": "我把書借給了朋友。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-22",
+      "lastSeen": "2026-10-22"
+    },
+    {
+      "word": "店長",
+      "reading": "てんちょう / tenchou",
+      "meaning": "店長",
+      "usage": "店長に連絡する；漢字長（ちょう）。",
+      "example": "店長に連絡します。",
+      "translation": "我要聯絡店長。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-23",
+      "lastSeen": "2026-10-23"
+    },
+    {
+      "word": "連絡する",
+      "reading": "れんらくする",
+      "meaning": "聯絡、通知",
+      "usage": "先生に連絡する；連（れん）、絡（らく）。",
+      "example": "駅に着いてから、先生に連絡します。",
+      "translation": "抵達車站後聯絡老師。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-23",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "word": "都合",
+      "reading": "つごう",
+      "meaning": "方便與否、時間安排",
+      "usage": "都合がいい",
+      "example": "明日は都合がいいです。",
+      "translation": "明天方便。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-23",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "word": "中止する",
+      "reading": "ちゅうしする / chuushi suru",
+      "meaning": "中止、取消",
+      "usage": "イベントを中止する＝取消活動；する動詞。",
+      "example": "雨なので、イベントを中止する予定です。",
+      "translation": "因為下雨，預計取消活動。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-25",
+      "lastSeen": "2026-10-25"
+    },
+    {
+      "word": "晴れる",
+      "reading": "はれる / hareru",
+      "meaning": "放晴",
+      "usage": "一段動詞：晴れる／晴れない／晴れた／晴れなかった。",
+      "example": "明日は晴れると思います。",
+      "translation": "我想明天會放晴。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-25",
+      "lastSeen": "2026-10-25"
+    },
+    {
+      "word": "楽しい",
+      "reading": "たのしい / tanoshii",
+      "meaning": "快樂、有趣",
+      "usage": "い形容詞：楽しい／楽しくない／楽しかった／楽しくなかった。",
+      "example": "昨日のイベントは楽しかったと思います。",
+      "translation": "我覺得昨天的活動很有趣。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-25",
+      "lastSeen": "2026-10-25"
+    },
+    {
+      "word": "大変",
+      "reading": "たいへん / taihen",
+      "meaning": "辛苦、嚴重、費力",
+      "usage": "な形容詞：大変だ／大変なので；大変な仕事。",
+      "example": "今日は大変なので、早く帰ります。",
+      "translation": "因為今天很辛苦，所以我會早點回家。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-26",
+      "lastSeen": "2026-10-26"
+    },
+    {
+      "word": "故障",
+      "reading": "こしょう / koshou",
+      "meaning": "故障",
+      "usage": "故障する＝發生故障；電車の故障＝電車故障。",
+      "example": "電車が故障したので、遅れました。",
+      "translation": "因為電車故障，所以遲到了。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-26",
+      "lastSeen": "2026-10-26"
+    },
+    {
+      "word": "混む",
+      "reading": "こむ / komu",
+      "meaning": "擁擠",
+      "usage": "五段動詞：混む／混まない／混んだ／混まなかった；電車が混む。",
+      "example": "朝は電車が混むから、早く出ます。",
+      "translation": "因為早上電車很擁擠，所以我會早點出門。",
+      "category": "動詞",
+      "forms": {
+        "masu": "混みます",
+        "nai": "混まない",
+        "past": "混みました",
+        "te": "混んで"
+      },
+      "firstSeen": "2026-10-26",
+      "lastSeen": "2026-10-26"
+    },
+    {
+      "word": "乗り換える",
+      "reading": "のりかえる",
+      "meaning": "轉乘",
+      "usage": "電車を乗り換える＝轉乘電車；一段動詞。",
+      "example": "電車を乗り換えてから、学校に行きます。",
+      "translation": "轉乘電車後再去學校。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-27",
+      "lastSeen": "2026-10-27"
+    },
+    {
+      "word": "出発する",
+      "reading": "しゅっぱつする",
+      "meaning": "出發",
+      "usage": "駅を出発する＝從車站出發；する動詞。漢字：出（しゅっ）、発（ぱつ）。",
+      "example": "八時に駅を出発します。",
+      "translation": "八點從車站出發。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-27",
+      "lastSeen": "2026-10-27"
+    },
+    {
+      "word": "到着する",
+      "reading": "とうちゃくする",
+      "meaning": "抵達",
+      "usage": "駅に到着する＝抵達車站；する動詞。漢字：着（ちゃく）。",
+      "example": "駅に到着してから、連絡します。",
+      "translation": "抵達車站後再聯絡。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-27",
+      "lastSeen": "2026-10-27"
+    },
+    {
+      "word": "後で",
+      "reading": "あとで",
+      "meaning": "之後、稍後",
+      "usage": "食べた後で＝吃完後；会議の後で＝會議後。",
+      "example": "会議の後で、連絡します。",
+      "translation": "會議結束後再聯絡。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-27",
+      "lastSeen": "2026-10-27"
+    },
+    {
+      "word": "降りる",
+      "reading": "おりる / oriru",
+      "meaning": "下車、下來",
+      "usage": "一段動詞；駅で降りる。漢字：降（お）。",
+      "example": "次の駅で降ります。",
+      "translation": "在下一站下車。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-27",
+      "lastSeen": "2026-10-30"
+    },
+    {
+      "word": "受付",
+      "reading": "うけつけ",
+      "meaning": "櫃台、受理處",
+      "usage": "受付で聞く",
+      "example": "受付で聞いてください。",
+      "translation": "請在櫃台詢問。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-11-16"
+    },
+    {
+      "word": "持っていく",
+      "reading": "もっていく",
+      "meaning": "帶去",
+      "usage": "申込書を持っていく＝把申請表帶去。",
+      "example": "受付に行くとき、申込書を持っていきます。",
+      "translation": "去接待處時會帶申請表。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-28"
+    },
+    {
+      "word": "提出する",
+      "reading": "ていしゅつする",
+      "meaning": "提交、繳交",
+      "usage": "申込書を提出する；提（てい）、出（しゅつ）。",
+      "example": "金曜日までに申込書を提出します。",
+      "translation": "最晚星期五提交申請表。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "word": "申込書",
+      "reading": "もうしこみしょ",
+      "meaning": "申請表、報名表",
+      "usage": "申込書を書く／提出する＝填寫／提交申請表。",
+      "example": "申込書を書くとき、名前を確認します。",
+      "translation": "填寫申請表時確認姓名。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-28"
+    },
+    {
+      "word": "記入する",
+      "reading": "きにゅうする",
+      "meaning": "填寫、記入",
+      "usage": "名前を記入する＝填寫姓名。",
+      "example": "名前を記入してから、提出します。",
+      "translation": "填寫姓名後再提交。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-28"
+    },
+    {
+      "word": "開始する",
+      "reading": "かいしする",
+      "meaning": "開始",
+      "usage": "会議が開始する＝會議開始。",
+      "example": "会議が開始するまでに、受付に行きます。",
+      "translation": "在會議開始前會去接待處。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-28"
+    },
+    {
+      "word": "案内",
+      "reading": "あんない",
+      "meaning": "指引、通知、介紹",
+      "usage": "案内を読む＝閱讀通知；案内所＝服務中心。",
+      "example": "受付で案内を読みました。",
+      "translation": "我在接待處讀了通知。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "word": "準備する",
+      "reading": "じゅんびする",
+      "meaning": "準備",
+      "usage": "準備してから＝準備好之後。",
+      "example": "準備してから、学校に行きます。",
+      "translation": "準備好後再去學校。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "word": "乗る",
+      "reading": "のる / noru",
+      "meaning": "搭乘、乘坐",
+      "usage": "五段動詞；電車に乗る。漢字：乗（の）。",
+      "example": "毎朝、電車に乗ります。",
+      "translation": "每天早上搭電車。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-30",
+      "lastSeen": "2026-10-30"
+    },
+    {
+      "word": "着く",
+      "reading": "つく / tsuku",
+      "meaning": "抵達",
+      "usage": "五段動詞；駅に着く。漢字：着（つ）。",
+      "example": "九時に駅に着きます。",
+      "translation": "九點抵達車站。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-10-30",
+      "lastSeen": "2026-10-30"
+    },
+    {
+      "word": "予約",
+      "reading": "よやく",
+      "meaning": "預約",
+      "usage": "ホテルを予約する",
+      "example": "ホテルを予約しました。",
+      "translation": "預約了飯店。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-11-02",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "word": "受け取る",
+      "reading": "うけとる / uketoru",
+      "meaning": "收到、領取",
+      "usage": "五段動詞；荷物を受け取る。",
+      "example": "昨日、荷物を受け取りました。",
+      "translation": "昨天收到了包裹。",
+      "category": "動詞",
+      "forms": {
+        "masu": "受け取ります",
+        "nai": "受け取らない",
+        "past": "受け取りました",
+        "te": "受け取って"
+      },
+      "firstSeen": "2026-11-02",
+      "lastSeen": "2026-11-02"
+    },
+    {
+      "word": "大事",
+      "reading": "だいじ / daiji",
+      "meaning": "重要",
+      "usage": "大事な物＝重要物品；な形容詞。",
+      "example": "この荷物は大事です。",
+      "translation": "這個包裹很重要。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-11-02",
+      "lastSeen": "2026-11-02"
+    },
+    {
+      "word": "届く",
+      "reading": "とどく",
+      "meaning": "送達",
+      "usage": "荷物が届く",
+      "example": "荷物は昨日届きました。",
+      "translation": "包裹昨天送到了。",
+      "category": "動詞",
+      "forms": {
+        "masu": "届きます",
+        "nai": "届かない",
+        "past": "届きました",
+        "te": "届いて"
+      },
+      "firstSeen": "2026-11-02",
+      "lastSeen": "2026-11-03"
+    },
+    {
+      "word": "送る",
+      "reading": "おくる",
+      "meaning": "寄送",
+      "usage": "荷物を送る",
+      "example": "友達に荷物を送ります。",
+      "translation": "寄包裹給朋友。",
+      "category": "動詞",
+      "forms": {
+        "masu": "送ります",
+        "nai": "送らない",
+        "past": "送りました",
+        "te": "送って"
+      },
+      "firstSeen": "2026-11-02",
+      "lastSeen": "2026-11-03"
+    },
+    {
+      "word": "選ぶ",
+      "reading": "えらぶ",
+      "meaning": "選擇",
+      "usage": "服を選ぶ",
+      "example": "新しい服を選びます。",
+      "translation": "選擇新衣服。",
+      "category": "動詞",
+      "forms": {
+        "masu": "選びます",
+        "nai": "選ばない",
+        "past": "選びました",
+        "te": "選んで"
+      },
+      "firstSeen": "2026-11-02",
+      "lastSeen": "2026-11-03"
+    },
+    {
+      "word": "住所",
+      "reading": "じゅうしょ",
+      "meaning": "地址",
+      "usage": "住所を書く",
+      "example": "ここに住所を書きます。",
+      "translation": "在這裡寫地址。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-11-03",
+      "lastSeen": "2026-11-03"
+    },
+    {
+      "word": "探す",
+      "reading": "さがす",
+      "meaning": "尋找",
+      "usage": "鍵を探す",
+      "example": "駅で鍵を探しました。",
+      "translation": "在車站找了鑰匙。",
+      "category": "動詞",
+      "forms": {
+        "masu": "探します",
+        "nai": "探さない",
+        "past": "探しました",
+        "te": "探して"
+      },
+      "firstSeen": "2026-11-04",
+      "lastSeen": "2026-11-04"
+    },
+    {
+      "word": "消す",
+      "reading": "けす",
+      "meaning": "關掉、擦掉",
+      "usage": "電気を消す",
+      "example": "寝る前に電気を消します。",
+      "translation": "睡前關燈。",
+      "category": "動詞",
+      "forms": {
+        "masu": "消します",
+        "nai": "消さない",
+        "past": "消しました",
+        "te": "消して"
+      },
+      "firstSeen": "2026-11-04",
+      "lastSeen": "2026-11-04"
+    },
+    {
+      "word": "覚える",
+      "reading": "おぼえる",
+      "meaning": "記住",
+      "usage": "漢字を覚える",
+      "example": "新しい漢字を覚えます。",
+      "translation": "記住新的漢字。",
+      "category": "動詞",
+      "forms": {
+        "masu": "覚えます",
+        "nai": "覚えない",
+        "past": "覚えました",
+        "te": "覚えて"
+      },
+      "firstSeen": "2026-11-04",
+      "lastSeen": "2026-11-04"
+    },
+    {
+      "word": "作る",
+      "reading": "つくる",
+      "meaning": "製作",
+      "usage": "料理を作る",
+      "example": "夕食を作ります。",
+      "translation": "做晚餐。",
+      "category": "動詞",
+      "forms": {
+        "masu": "作ります",
+        "nai": "作らない",
+        "past": "作りました",
+        "te": "作って"
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05"
+    },
+    {
+      "word": "直す",
+      "reading": "なおす",
+      "meaning": "修理",
+      "usage": "時計を直す",
+      "example": "時計を直します。",
+      "translation": "修理時鐘。",
+      "category": "動詞",
+      "forms": {
+        "masu": "直します",
+        "nai": "直さない",
+        "past": "直しました",
+        "te": "直して"
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05"
+    },
+    {
+      "word": "運ぶ",
+      "reading": "はこぶ",
+      "meaning": "搬運",
+      "usage": "荷物を運ぶ",
+      "example": "荷物を運びます。",
+      "translation": "搬運行李。",
+      "category": "動詞",
+      "forms": {
+        "masu": "運びます",
+        "nai": "運ばない",
+        "past": "運びました",
+        "te": "運んで"
+      },
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05"
+    },
+    {
+      "word": "できる",
+      "reading": "できる",
+      "meaning": "能做到",
+      "usage": "料理ができる",
+      "example": "私は料理ができます。",
+      "translation": "我會做菜。",
+      "category": "動詞",
+      "forms": {
+        "masu": "できます",
+        "nai": "できない",
+        "past": "できました",
+        "te": "できて"
+      },
+      "firstSeen": "2026-11-09",
+      "lastSeen": "2026-11-09"
+    },
+    {
+      "word": "上手",
+      "reading": "じょうず",
+      "meaning": "擅長",
+      "usage": "料理が上手",
+      "example": "母は料理が上手です。",
+      "translation": "媽媽很會做菜。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-11-09",
+      "lastSeen": "2026-11-09"
+    },
+    {
+      "word": "可能",
+      "reading": "かのう",
+      "meaning": "可能",
+      "usage": "可能な方法／可能だと思います",
+      "example": "この方法は可能だと思います。",
+      "translation": "我認為這個方法可行。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-11-09",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "word": "弾く",
+      "reading": "ひく",
+      "meaning": "彈奏",
+      "usage": "ピアノを弾く",
+      "example": "姉はピアノを弾きます。",
+      "translation": "姊姊彈鋼琴。",
+      "category": "動詞",
+      "forms": {
+        "masu": "弾きます",
+        "nai": "弾かない",
+        "past": "弾きました",
+        "te": "弾いて"
+      },
+      "firstSeen": "2026-11-09",
+      "lastSeen": "2026-11-09"
+    },
+    {
+      "word": "練習",
+      "reading": "れんしゅう",
+      "meaning": "練習",
+      "usage": "毎日練習する",
+      "example": "毎日日本語を練習します。",
+      "translation": "每天練習日文。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-11-09",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "word": "話せる",
+      "reading": "はなせる",
+      "meaning": "能說",
+      "usage": "日本語が話せる",
+      "example": "日本語が少し話せます。",
+      "translation": "會說一點日文。",
+      "category": "動詞",
+      "forms": {
+        "masu": "話せます",
+        "nai": "話せない",
+        "past": "話せました",
+        "te": "話せて"
+      },
+      "firstSeen": "2026-11-09",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "word": "読める",
+      "reading": "よめる",
+      "meaning": "能閱讀",
+      "usage": "日本語が読める",
+      "example": "簡単な日本語が読めます。",
+      "translation": "能讀簡單的日文。",
+      "category": "動詞",
+      "forms": {
+        "masu": "読めます",
+        "nai": "読めない",
+        "past": "読めました",
+        "te": "読めて"
+      },
+      "firstSeen": "2026-11-09",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "word": "運転",
+      "reading": "うんてん",
+      "meaning": "駕駛",
+      "usage": "車を運転する",
+      "example": "父は車を運転します。",
+      "translation": "爸爸開車。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-11-09",
+      "lastSeen": "2026-11-09"
+    },
+    {
+      "word": "食べられる",
+      "reading": "たべられる",
+      "meaning": "能吃",
+      "usage": "辛い物が食べられる",
+      "example": "私は辛い物が食べられます。",
+      "translation": "我能吃辣。",
+      "category": "動詞",
+      "forms": {
+        "masu": "食べられます",
+        "nai": "食べられない",
+        "past": "食べられました",
+        "te": "食べられて"
+      },
+      "firstSeen": "2026-11-09",
+      "lastSeen": "2026-11-09"
+    },
+    {
+      "word": "会える",
+      "reading": "あえる",
+      "meaning": "能見面",
+      "usage": "友達に会える",
+      "example": "明日は友達に会えます。",
+      "translation": "明天能見到朋友。",
+      "category": "動詞",
+      "forms": {
+        "masu": "会えます",
+        "nai": "会えない",
+        "past": "会えました",
+        "te": "会えて"
+      },
+      "firstSeen": "2026-11-10",
+      "lastSeen": "2026-11-10"
+    },
+    {
+      "word": "行ける",
+      "reading": "いける",
+      "meaning": "能去",
+      "usage": "学校に行ける",
+      "example": "明日は学校に行けます。",
+      "translation": "明天能去學校。",
+      "category": "動詞",
+      "forms": {
+        "masu": "行けます",
+        "nai": "行けない",
+        "past": "行けました",
+        "te": "行けて"
+      },
+      "firstSeen": "2026-11-10",
+      "lastSeen": "2026-11-10"
+    },
+    {
+      "word": "手伝う",
+      "reading": "てつだう",
+      "meaning": "幫忙",
+      "usage": "準備を手伝う",
+      "example": "友達の準備を手伝います。",
+      "translation": "幫朋友準備。",
+      "category": "動詞",
+      "forms": {
+        "masu": "手伝います",
+        "nai": "手伝わない",
+        "past": "手伝いました",
+        "te": "手伝って"
+      },
+      "firstSeen": "2026-11-11",
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "word": "相談",
+      "reading": "そうだん",
+      "meaning": "商量",
+      "usage": "友達に相談する",
+      "example": "友達に相談します。",
+      "translation": "商量（例句：友達に相談する）。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-11-11",
+      "lastSeen": "2026-11-11"
+    },
+    {
+      "word": "誘う",
+      "reading": "さそう",
+      "meaning": "邀請",
+      "usage": "友達を誘う",
+      "example": "友達を誘います。",
+      "translation": "邀請（例句：友達を誘う）。",
+      "category": "動詞",
+      "forms": {
+        "masu": "誘います",
+        "nai": "誘わない",
+        "past": "誘いました",
+        "te": "誘って"
+      },
+      "firstSeen": "2026-11-11",
+      "lastSeen": "2026-11-11"
+    },
+    {
+      "word": "決定",
+      "reading": "けってい",
+      "meaning": "決定",
+      "usage": "場所を決定する",
+      "example": "旅行の日を決定しました。",
+      "translation": "決定了旅行日期。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-11-12",
+      "lastSeen": "2026-11-12"
+    },
+    {
+      "word": "知らせる",
+      "reading": "しらせる",
+      "meaning": "通知、告知",
+      "usage": "友達に知らせる",
+      "example": "時間を友達に知らせます。",
+      "translation": "把時間告訴朋友。",
+      "category": "動詞",
+      "forms": {
+        "masu": "知らせます",
+        "nai": "知らせない",
+        "past": "知らせました",
+        "te": "知らせて"
+      },
+      "firstSeen": "2026-11-13",
+      "lastSeen": "2026-11-13"
+    },
+    {
+      "word": "場合",
+      "reading": "ばあい",
+      "meaning": "情況",
+      "usage": "雨の場合",
+      "example": "雨の場合は中止です。",
+      "translation": "下雨的情況就取消。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-11-14",
+      "lastSeen": "2026-11-16"
+    },
+    {
+      "word": "会場",
+      "reading": "かいじょう",
+      "meaning": "會場",
+      "usage": "試験会場",
+      "example": "会場は駅の近くです。",
+      "translation": "會場在車站附近。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-11-16",
+      "lastSeen": "2026-11-16"
+    },
+    {
+      "word": "変える",
+      "reading": "かえる",
+      "meaning": "改變",
+      "usage": "予定を変える",
+      "example": "予定を変えない。",
+      "translation": "不改變計畫。",
+      "category": "動詞",
+      "forms": {
+        "masu": "変えます",
+        "nai": "変えない",
+        "past": "変えました",
+        "te": "変えて"
+      },
+      "firstSeen": "2026-11-17",
+      "lastSeen": "2026-11-17"
+    },
+    {
+      "word": "使える",
+      "reading": "つかえる",
+      "meaning": "能使用",
+      "usage": "パソコンが使える",
+      "example": "このパソコンが使えます。",
+      "translation": "可以使用這台電腦。",
+      "category": "動詞",
+      "forms": {
+        "masu": "使えます",
+        "nai": "使えない",
+        "past": "使えました",
+        "te": "使えて"
+      },
+      "firstSeen": "2026-11-21",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "word": "泳げる",
+      "reading": "およげる",
+      "meaning": "會游泳",
+      "usage": "百メートル泳げる",
+      "example": "百メートル泳げます。",
+      "translation": "能游一百公尺。",
+      "category": "動詞",
+      "forms": {
+        "masu": "泳げます",
+        "nai": "泳げない",
+        "past": "泳げました",
+        "te": "泳げて"
+      },
+      "firstSeen": "2026-11-21",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "word": "意見",
+      "reading": "いけん",
+      "meaning": "意見",
+      "usage": "意見を言う",
+      "example": "会議で意見を言います。",
+      "translation": "在會議上發表意見。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-11-22",
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "word": "説明",
+      "reading": "せつめい",
+      "meaning": "說明",
+      "usage": "文法を説明する",
+      "example": "先生が文法を説明します。",
+      "translation": "老師說明文法。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-11-22",
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "word": "返事",
+      "reading": "へんじ",
+      "meaning": "回覆",
+      "usage": "メールに返事をする",
+      "example": "メールに返事をします。",
+      "translation": "回覆電子郵件。",
+      "category": "名詞",
+      "forms": null,
+      "firstSeen": "2026-11-22",
+      "lastSeen": "2026-11-23"
     }
   ],
   "grammar": [
@@ -2505,26 +3634,26 @@
     },
     {
       "pattern": "動詞て形＋から",
-      "meaning": "做完A之後，再做B。",
-      "connection": "A動詞て形＋から、B。例如：食べてから、行きます。",
-      "usage": "用來清楚表示兩個動作的先後順序；閱讀與聽力很常問「先做什麼、之後做什麼」。",
+      "meaning": "表示『做完A之後再做B』，強調先完成A再進行B；不同於表示『因為』的普通形＋から。",
+      "connection": "準備する→準備してから；到着する→到着してから；乗り換える→乗り換えてから；降りる→降りてから。",
+      "usage": "說明動作的先後順序，A先、B後。『準備してから出発する』是先準備後出發。",
       "examples": [
         {
-          "jp": "朝ご飯を食べてから、学校に行きます。",
-          "zh": "吃完早餐後去學校。"
+          "jp": "準備してから、出発します。",
+          "zh": "準備好之後再出發。"
         },
         {
-          "jp": "日本語を勉強してから、寝ます。",
-          "zh": "學完日文後睡覺。"
+          "jp": "駅に到着してから、連絡します。",
+          "zh": "到車站之後再聯絡。"
         },
         {
-          "jp": "友達と会ってから、家に帰ります。",
-          "zh": "和朋友見面後回家。"
+          "jp": "電車を降りてから、電話しました。",
+          "zh": "下電車後才打了電話。"
         }
       ],
       "category": "て形",
       "firstSeen": "2026-09-04",
-      "lastSeen": "2026-09-04"
+      "lastSeen": "2026-10-27"
     },
     {
       "pattern": "動詞て形＋ください",
@@ -3747,26 +4876,26 @@
     },
     {
       "pattern": "形容詞／名詞＋と思います",
-      "meaning": "い形容詞直接接；な形容詞與名詞現在肯定用だ。",
-      "connection": "おもしろいと思います／元気だと思います／先生だと思います。",
-      "usage": "避免おもしろいだ、元気なと思います。",
+      "meaning": "い形容詞直接接「と思います」；な形容詞及名詞的現在肯定普通形需加「だ」。",
+      "connection": "早いと思います／大切だと思います／学生だと思います。否定例：早くないと思います／大切ではないと思います／学生ではないと思います。",
+      "usage": "大切な約束是修飾名詞；表達想法時是大切だと思います，不能寫大切なと思います。",
       "examples": [
         {
-          "jp": "この本はおもしろいと思います。",
-          "zh": "我覺得這本書很有趣。"
+          "jp": "この電車は早いと思います。",
+          "zh": "我認為這班電車很快。"
         },
         {
-          "jp": "田中さんは元気だと思います。",
-          "zh": "我覺得田中很有精神。"
+          "jp": "連絡は大切だと思います。",
+          "zh": "我認為聯絡很重要。"
         },
         {
-          "jp": "あの人は先生だと思います。",
-          "zh": "我想那個人是老師。"
+          "jp": "あの人は学生だと思います。",
+          "zh": "我認為那個人是學生。"
         }
       ],
       "category": "形容詞",
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-30"
     },
     {
       "pattern": "普通形四格＋と思います",
@@ -3793,26 +4922,26 @@
     },
     {
       "pattern": "普通形＋と思います",
-      "meaning": "表示我想、我認為。動詞用普通形；い形容詞直接接；な形容詞與名詞現在肯定用だ。",
-      "connection": "来ないと思います／高いと思います／必要だと思います／先生だと思います。",
-      "usage": "先讀と思います前面的形式，再判斷內容。",
+      "meaning": "表示『我認為／我想』，前面要接普通形。",
+      "connection": "動詞：行く／行かない／行った＋と思います；い形容詞：高いと思います；な形容詞／名詞現在肯定：必要だ／先生だと思います。",
+      "usage": "な形容詞與名詞肯定現在時不可用『なと思います』。",
       "examples": [
         {
-          "jp": "田中さんは今日は来ないと思います。",
-          "zh": "我想田中今天不會來。"
+          "jp": "明日は雨が降ると思います。",
+          "zh": "我想明天會下雨。"
         },
         {
-          "jp": "この映画はおもしろいと思います。",
-          "zh": "我覺得這部電影很有趣。"
+          "jp": "今日は遅れないと思います。",
+          "zh": "我想今天不會遲到。"
         },
         {
-          "jp": "これは必要だと思います。",
-          "zh": "我覺得這是必要的。"
+          "jp": "準備が必要だと思います。",
+          "zh": "我認為準備是必要的。"
         }
       ],
       "category": "時態整理",
       "firstSeen": "2026-09-25",
-      "lastSeen": "2026-10-05"
+      "lastSeen": "2026-11-19"
     },
     {
       "pattern": "舊內容：～なければなりません vs ～なくてもいいです",
@@ -4146,26 +5275,26 @@
     },
     {
       "pattern": "動詞普通形＋と思います",
-      "meaning": "我想～／我認為～。",
-      "connection": "行く／行かない／行った／行かなかった＋と思います。",
-      "usage": "聽力要等普通形句尾再判斷。",
+      "meaning": "表達自己的看法、預測或推測：我認為～／我想～。",
+      "connection": "動詞四格＋と思います：集まると思います／集まらないと思います／集まったと思います／集まらなかったと思います。",
+      "usage": "「と」前面的普通形決定肯否與時態；不可寫「集まりますと思います」。",
       "examples": [
         {
-          "jp": "田中さんは明日来ると思います。",
-          "zh": "我想田中明天會來。"
+          "jp": "田中さんは九時に駅に集まると思います。",
+          "zh": "我想田中先生九點會在車站集合。"
         },
         {
-          "jp": "田中さんは明日来ないと思います。",
-          "zh": "我想田中明天不會來。"
+          "jp": "明日は本を借りないと思います。",
+          "zh": "我想明天不會借書。"
         },
         {
-          "jp": "田中さんは昨日来なかったと思います。",
-          "zh": "我想田中昨天沒有來。"
+          "jp": "田中さんはもう時間を決めたと思います。",
+          "zh": "我想田中先生已經決定時間了。"
         }
       ],
       "category": "時態整理",
       "firstSeen": "2026-10-02",
-      "lastSeen": "2026-10-06"
+      "lastSeen": "2026-10-31"
     },
     {
       "pattern": "舊內容：～なければなりません／～なくてもいいです",
@@ -4537,26 +5666,26 @@
     },
     {
       "pattern": "N5間隔複習：～てもいいです／～てはいけません",
-      "meaning": "～てもいいです＝可以做；～てはいけません＝不可以做。與～ないでください（請不要）區分。",
-      "connection": "動詞て形＋もいいです／はいけません；開ける→開けて、閉める→閉めて。",
-      "usage": "同一動作搭配不同句尾，語氣不同；不能只看到て形就判斷允許。",
+      "meaning": "前者允許，後者禁止，與～なくてもいいです（不必）不同。",
+      "connection": "動詞て形＋もいいです／はいけません；ない形去い＋くてもいいです。",
+      "usage": "許可、禁止、不必三者分清。",
       "examples": [
         {
-          "jp": "窓を開けてもいいです。",
-          "zh": "可以打開窗戶。"
+          "jp": "ここで写真を撮ってもいいです。",
+          "zh": "可以在這裡拍照。"
         },
         {
-          "jp": "ここで写真を撮ってはいけません。",
-          "zh": "這裡不可以拍照。"
+          "jp": "ここで食べてはいけません。",
+          "zh": "不能在這裡吃東西。"
         },
         {
-          "jp": "ドアを閉めないでください。",
-          "zh": "請不要關門。"
+          "jp": "明日は来なくてもいいです。",
+          "zh": "明天不必來。"
         }
       ],
       "category": "許可・禁止",
       "firstSeen": "2026-10-08",
-      "lastSeen": "2026-10-08"
+      "lastSeen": "2026-11-17"
     },
     {
       "pattern": "です／ます體→動詞普通形四格",
@@ -4649,6 +5778,4002 @@
       "category": "時態整理",
       "firstSeen": "2026-10-08",
       "lastSeen": "2026-10-08"
+    },
+    {
+      "pattern": "N5間隔複習：～ないでください／～なくてもいいです",
+      "meaning": "～ないでください＝請不要；～なくてもいいです＝不必，兩者意思不同。",
+      "connection": "忘れない→忘れないでください（請不要忘記）；行かない→行かなくてもいいです（不必去）。",
+      "usage": "句尾決定意思；不要把「不必去」誤解成「禁止去」。助詞回顧：駅で（動作地點）、学校に（目的地）、友達に（聯絡對象）、友達を（等待對象）。",
+      "examples": [
+        {
+          "jp": "約束を忘れないでください。",
+          "zh": "請不要忘記約定。"
+        },
+        {
+          "jp": "今日は学校に行かなくてもいいです。",
+          "zh": "今天不必去學校。"
+        },
+        {
+          "jp": "駅で友達を待ちます。",
+          "zh": "在車站等朋友。"
+        }
+      ],
+      "category": "請求・邀請",
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10"
+    },
+    {
+      "pattern": "ない形→なかった形（過去否定）",
+      "meaning": "表示過去沒有做；把ない形最後的「ない」改成「なかった」。",
+      "connection": "書く→書かない→書かなかった；読む→読まない→読まなかった；買う→買わない→買わなかった；行く→行かない→行かなかった；調べる→調べない→調べなかった；する→しない→しなかった；来る→来ない→来なかった（こなかった）。",
+      "usage": "與昨日、先週等過去時間詞常一起出現；不能把買う誤變成買あない，五段う→わない。",
+      "examples": [
+        {
+          "jp": "昨日は新聞を読まなかった。",
+          "zh": "昨天沒有讀報紙。"
+        },
+        {
+          "jp": "昨日は学校に行かなかった。",
+          "zh": "昨天沒有去學校。"
+        },
+        {
+          "jp": "昨日は切符を買わなかった。",
+          "zh": "昨天沒有買車票。"
+        }
+      ],
+      "category": "ない形",
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10"
+    },
+    {
+      "pattern": "一段／不規則動詞的過去形",
+      "meaning": "一段動詞去る＋た；する→した；来る→来た（きた）。",
+      "connection": "調べる→調べた；忘れる→忘れた；する→した；来る→来た（きた）。",
+      "usage": "一段與五段不可混淆；例如帰る是五段→帰った，調べる是一段→調べた。",
+      "examples": [
+        {
+          "jp": "昨日、辞書で調べた。",
+          "zh": "昨天用字典查了。"
+        },
+        {
+          "jp": "昨日、友達に連絡した。",
+          "zh": "昨天聯絡了朋友。"
+        },
+        {
+          "jp": "友達は昨日来た。",
+          "zh": "朋友昨天來了。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10"
+    },
+    {
+      "pattern": "五段動詞た形：五組音變與行く例外",
+      "meaning": "た形是動詞過去肯定的普通形；看原形最後一個假名決定音變。",
+      "connection": "う／つ／る→った（買う→買った、待つ→待った、帰る→帰った）；む／ぶ／ぬ→んだ（読む→読んだ）；く→いた（書く→書いた）；ぐ→いだ（泳ぐ→泳いだ）；す→した（話す→話した）。行く例外→行った。",
+      "usage": "說昨天做了什麼，或在N4短文辨認已發生事件。注意読む→読んだ，不是読った。",
+      "examples": [
+        {
+          "jp": "昨日、手紙を書いた。",
+          "zh": "昨天寫了信。"
+        },
+        {
+          "jp": "昨日、駅で切符を買った。",
+          "zh": "昨天在車站買了車票。"
+        },
+        {
+          "jp": "昨日、友達と話した。",
+          "zh": "昨天和朋友說話了。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10"
+    },
+    {
+      "pattern": "動詞普通形四格：現在／未來與過去",
+      "meaning": "動詞四格依序是辭書形、ない形、た形、なかった形。",
+      "connection": "行きます→行く；行きません→行かない；行きました→行った；行きませんでした→行かなかった。読む／読まない／読んだ／読まなかった。",
+      "usage": "先看時間（明日、昨日），再看動詞末尾肯定或否定；日文現在形也可表示未來。",
+      "examples": [
+        {
+          "jp": "明日は学校に行く。",
+          "zh": "明天去學校。"
+        },
+        {
+          "jp": "明日は学校に行かない。",
+          "zh": "明天不去學校。"
+        },
+        {
+          "jp": "昨日は学校に行かなかった。",
+          "zh": "昨天沒有去學校。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10"
+    },
+    {
+      "pattern": "普通形＋と思います：想法與推測",
+      "meaning": "表示「我想……／我認為……」，不表示百分之百確定。",
+      "connection": "動詞普通形＋と思います：来る／来ない／来た／来なかった＋と思います。い形容詞：高いと思います。な形容詞：必要だと思います。名詞：先生だと思います。",
+      "usage": "說話者的判斷，不是客觀保證。な形容詞與名詞現在肯定接と思います時要有「だ」，不要寫必要と思います。",
+      "examples": [
+        {
+          "jp": "友達は明日来ないと思います。",
+          "zh": "我想朋友明天不會來。"
+        },
+        {
+          "jp": "友達は昨日来なかったと思います。",
+          "zh": "我想朋友昨天沒有來。"
+        },
+        {
+          "jp": "この切符は高いと思います。",
+          "zh": "我覺得這張車票很貴。"
+        },
+        {
+          "jp": "連絡は必要だと思います。",
+          "zh": "我認為聯絡是必要的。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10"
+    },
+    {
+      "pattern": "閱讀／文字聽解：もう・でも・そして與事件順序",
+      "meaning": "もう＝已經；でも＝但是；そして＝然後。先抓昨天發生什麼，再看後續行動及明天的想法。",
+      "connection": "昨日＋た形／なかった形；明日＋辭書形＋と思います。補充：二人で＝兩人一起；映画を見に行く＝去看電影（N5目的＋に行く）。",
+      "usage": "今天文字模擬聽解：先讀懂關鍵詞，再遮住文字請朗讀一遍並只聽句尾；沒有提供真實音檔，不等同正式JLPT聽力。",
+      "examples": [
+        {
+          "jp": "昨日、山田さんは駅で友達を待った。でも、友達は来なかった。",
+          "zh": "昨天山田在車站等朋友，但是朋友沒來。"
+        },
+        {
+          "jp": "山田さんは家に帰った。そして、友達に連絡した。",
+          "zh": "山田回家了，然後聯絡朋友。"
+        },
+        {
+          "jp": "明日は二人で映画を見に行くと思います。",
+          "zh": "我想明天兩個人會一起去看電影。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10"
+    },
+    {
+      "pattern": "N4閱讀與文字聽解：でも／そして、時間與訊息順序",
+      "meaning": "でも＝但是、そして＝然後。昨日常搭過去形，明日常搭現在／未來形；辨認時間變更與行動順序。",
+      "connection": "讀解先備詞：映画（えいが）電影、チケット（票券）、仕事（しごと）工作、午後（ごご）下午、二時（にじ）兩點、予定（よてい）計畫、連絡（れんらく）聯絡。文字聽解先理解，再遮字自行朗讀，這不是真實音檔。",
+      "usage": "閱讀文章：昨日、山田さんは映画のチケットを予約した。でも、友達は仕事があって、映画に行かなかった。山田さんは予約を変更した。明日は天気がいいと思います。二人は午後二時に駅で集合します。問題：昨天誰沒去看電影？朋友。山田改了什麼？預約。明天幾點在哪集合？下午兩點、車站。",
+      "examples": [
+        {
+          "jp": "昨日、山田さんは映画のチケットを予約した。",
+          "zh": "昨天山田預約了電影票。"
+        },
+        {
+          "jp": "でも、友達は映画に行かなかった。",
+          "zh": "但是朋友沒有去看電影。"
+        },
+        {
+          "jp": "二人は午後二時に駅で集合します。",
+          "zh": "兩人明天下午兩點在車站集合。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-11"
+    },
+    {
+      "pattern": "N5間隔複習：動作地點で、目的地に、請不要／不必",
+      "meaning": "で表示動作發生的場所，に表示移動目的地；～ないでください是請不要，～なくてもいいです是不必。",
+      "connection": "駅で集合する（在車站集合）；駅に行く（去車站）；遅れないでください（請不要遲到）；急がなくてもいいです（不必趕）。",
+      "usage": "兩個句型都由ない形接續，意思卻不同；閱讀集合通知時常看到～ないでください。這是今天約15%的N5間隔複習。",
+      "examples": [
+        {
+          "jp": "駅で集合してください。",
+          "zh": "請在車站集合。"
+        },
+        {
+          "jp": "約束に遅れないでください。",
+          "zh": "請不要赴約遲到。"
+        },
+        {
+          "jp": "今日は急がなくてもいいです。",
+          "zh": "今天不必趕。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-11"
+    },
+    {
+      "pattern": "い形容詞普通形四格：早い／早くない／早かった／早くなかった",
+      "meaning": "い形容詞也有現在肯定、現在否定、過去肯定、過去否定四種普通形。",
+      "connection": "早い→早くない（去い＋くない）→早かった（去い＋かった）→早くなかった（去い＋くなかった）；遅い→遅くない／遅かった／遅くなかった。特例いい→よくない／よかった／よくなかった。",
+      "usage": "形容詞不用動詞的た形規則；過去否定不是早いなかった。接と思います直接接普通形，不加だ。",
+      "examples": [
+        {
+          "jp": "集合時間は早いと思います。",
+          "zh": "我覺得集合時間很早。"
+        },
+        {
+          "jp": "昨日の集合時間は早くなかった。",
+          "zh": "昨天的集合時間不早。"
+        },
+        {
+          "jp": "昨日は帰る時間が遅かった。",
+          "zh": "昨天回家的時間很晚。"
+        }
+      ],
+      "category": "形容詞",
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-11"
+    },
+    {
+      "pattern": "な形容詞普通形四格：便利だ／便利じゃない／便利だった／便利じゃなかった",
+      "meaning": "な形容詞在句尾普通形的現在肯定用だ，過去肯定用だった；否定用じゃない、じゃなかった。",
+      "connection": "便利だ／便利じゃない／便利だった／便利じゃなかった；必要だ／必要じゃない／必要だった／必要じゃなかった。較正式否定也可用ではない／ではなかった。",
+      "usage": "修飾名詞時用便利な駅；但接と思います時用便利だと思います，不是便利なと思います。注意現在肯定才有だ，否定直接接じゃない。",
+      "examples": [
+        {
+          "jp": "この駅は便利だと思います。",
+          "zh": "我覺得這個車站很方便。"
+        },
+        {
+          "jp": "前の駅は便利じゃなかった。",
+          "zh": "以前那個車站不方便。"
+        },
+        {
+          "jp": "連絡は必要だったと思います。",
+          "zh": "我想當時有必要聯絡。"
+        }
+      ],
+      "category": "形容詞",
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-11"
+    },
+    {
+      "pattern": "動詞四格：辭書形／ない形／た形／なかった形",
+      "meaning": "普通形依現在／未來與過去、肯定與否定形成四格；日文現在形也可表示未來。",
+      "connection": "急ぐ→急がない→急いだ→急がなかった；遅れる→遅れない→遅れた→遅れなかった；行く→行かない→行った→行かなかった（行った是特例）；間に合う→間に合わない→間に合った→間に合わなかった。",
+      "usage": "ぐ結尾的た形是いだ；う結尾ない形是わない；一段動詞遅れる去る後接ない／た／なかった。先看昨天或明天，再判斷動詞句尾。",
+      "examples": [
+        {
+          "jp": "昨日、駅まで急いだ。",
+          "zh": "昨天趕去車站。"
+        },
+        {
+          "jp": "昨日は約束に遅れなかった。",
+          "zh": "昨天赴約沒有遲到。"
+        },
+        {
+          "jp": "明日は電車に間に合うと思います。",
+          "zh": "我想明天趕得上電車。"
+        }
+      ],
+      "category": "ない形",
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-11"
+    },
+    {
+      "pattern": "名詞普通形四格：休みだ／休みじゃない／休みだった／休みじゃなかった",
+      "meaning": "名詞作句尾述語時也有四格，變化和な形容詞的句尾形式相同。",
+      "connection": "休みだ／休みじゃない／休みだった／休みじゃなかった；現在肯定接と思います須用休みだと思います；過去肯定用休みだったと思います。",
+      "usage": "與禮貌形對照：休みです→休みだ；休みではありません→休みじゃない；休みでした→休みだった；休みではありませんでした→休みじゃなかった。",
+      "examples": [
+        {
+          "jp": "今日は休みだと思います。",
+          "zh": "我想今天放假。"
+        },
+        {
+          "jp": "昨日は休みじゃなかった。",
+          "zh": "昨天沒有放假。"
+        },
+        {
+          "jp": "昨日は休みだったと思います。",
+          "zh": "我想昨天放假了。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-11"
+    },
+    {
+      "pattern": "普通形＋と思います：跨動詞、形容詞與名詞表達推測",
+      "meaning": "「我想／我認為……」，是說話者的判斷，不等於百分之百確定。",
+      "connection": "動詞：間に合う／間に合わない／間に合った／間に合わなかった＋と思います；い形容詞：早い／早くない／早かった＋と思います；な形容詞：便利だ／便利じゃない／便利だった＋と思います；名詞：休みだ／休みじゃなかった＋と思います。",
+      "usage": "接續前面用普通形，不用ます；名詞／な形容詞現在肯定加だ，い形容詞不加だ。要分清「昨天發生的事」與「明天的推測」。",
+      "examples": [
+        {
+          "jp": "明日は駅で集合すると思います。",
+          "zh": "我想明天會在車站集合。"
+        },
+        {
+          "jp": "集合時間は早くないと思います。",
+          "zh": "我覺得集合時間不早。"
+        },
+        {
+          "jp": "この駅は便利だと思います。",
+          "zh": "我覺得這個車站很方便。"
+        },
+        {
+          "jp": "昨日は休みじゃなかったと思います。",
+          "zh": "我想昨天沒有放假。"
+        }
+      ],
+      "category": "形容詞",
+      "firstSeen": "2026-10-11",
+      "lastSeen": "2026-10-11"
+    },
+    {
+      "pattern": "N4短文閱讀：體驗課日期變更",
+      "meaning": "閱讀訓練：找出原先安排與後來更改的日期，不要把先出現的時間當答案。",
+      "connection": "閱讀前詞彙：金曜日＝星期五、土曜日＝星期六、日曜日＝星期日、昨日＝昨天、家＝家；『予定だった』＝原本預定；『日曜日になった』＝改成星期日；『連絡があった』＝收到通知。",
+      "usage": "短文：『金曜日に体験授業に申し込んだ。昨日、学校から連絡があった。体験授業は日曜日になった。土曜日は家で日本語を勉強する。日曜日は九時に教室に行くと思います。』全文：星期五報名體驗課；昨天收到學校通知；體驗課改成星期日；星期六在家學日文；我想星期日九點會去教室。問日期先看『～になった』。",
+      "examples": [
+        {
+          "jp": "体験授業は日曜日になった。",
+          "zh": "體驗課改成星期日。"
+        },
+        {
+          "jp": "土曜日は家で日本語を勉強する。",
+          "zh": "星期六在家學日文。"
+        },
+        {
+          "jp": "日曜日は九時に教室に行くと思います。",
+          "zh": "我想星期日九點會去教室。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-15",
+      "lastSeen": "2026-10-15"
+    },
+    {
+      "pattern": "N5間隔複習：～なければなりません／～なくてもいいです／～ないでください",
+      "meaning": "必須做／不做也可以／請不要做，三者都從ない形變化但意思不同。",
+      "connection": "行かない→行かなければなりません（必須去）；行かなくてもいいです（不必去）；行かないでください（請不要去）。",
+      "usage": "今天舊內容複習約15%；再複習助詞：教室で勉強する＝動作場所，教室に行く＝移動目的地。",
+      "examples": [
+        {
+          "jp": "明日は学校に行かなければなりません。",
+          "zh": "明天必須去學校。"
+        },
+        {
+          "jp": "明日は学校に行かなくてもいいです。",
+          "zh": "明天不必去學校。"
+        },
+        {
+          "jp": "授業に遅れないでください。",
+          "zh": "請不要上課遲到。"
+        }
+      ],
+      "category": "請求・邀請",
+      "firstSeen": "2026-10-15",
+      "lastSeen": "2026-10-15"
+    },
+    {
+      "pattern": "い形容詞・な形容詞：普通形四格",
+      "meaning": "形容詞也有現在／過去的肯定與否定，接N4句型時要分辨詞類。",
+      "connection": "い形容詞：難しい／難しくない／難しかった／難しくなかった；な形容詞：便利だ／便利じゃない／便利だった／便利じゃなかった。い形容詞不用加だ；な形容詞句尾肯定普通形加だ。",
+      "usage": "な形容詞修飾名詞用『便利な学校』，但接『と思います』用『便利だと思います』。口語じゃない也可用ではない。",
+      "examples": [
+        {
+          "jp": "この問題は難しくない。",
+          "zh": "這題不難。"
+        },
+        {
+          "jp": "昨日の問題は難しかった。",
+          "zh": "昨天的題目很難。"
+        },
+        {
+          "jp": "この学校は便利だ。",
+          "zh": "這所學校很方便。"
+        },
+        {
+          "jp": "前の教室は便利じゃなかった。",
+          "zh": "之前的教室不方便。"
+        }
+      ],
+      "category": "形容詞",
+      "firstSeen": "2026-10-15",
+      "lastSeen": "2026-10-15"
+    },
+    {
+      "pattern": "五段・一段・不規則動詞：普通形四格",
+      "meaning": "現在肯定／現在否定／過去肯定／過去否定，是普通形的四個基本形式。",
+      "connection": "五段：申し込む→申し込む／申し込まない／申し込んだ／申し込まなかった（む→まない，む→んだ）。一段：食べる→食べる／食べない／食べた／食べなかった（去る接ない／た）。不規則：参加する→参加する／参加しない／参加した／参加しなかった。",
+      "usage": "先看時間詞：明日配現在／未來，昨日配過去。ませんでした→なかった；しました→した。不要把五段む結尾錯變成『申し込みない』。",
+      "examples": [
+        {
+          "jp": "昨日、体験授業に申し込んだ。",
+          "zh": "昨天報名了體驗課。"
+        },
+        {
+          "jp": "昨日は体験授業に申し込まなかった。",
+          "zh": "昨天沒有報名體驗課。"
+        },
+        {
+          "jp": "明日は説明会に参加する。",
+          "zh": "明天參加說明會。"
+        },
+        {
+          "jp": "昨日は説明会に参加しなかった。",
+          "zh": "昨天沒有參加說明會。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-15",
+      "lastSeen": "2026-10-15"
+    },
+    {
+      "pattern": "文字模擬聽解：否定時間與辨識活動",
+      "meaning": "先看對話所問的是『課程日期』還是『到教室時間』；本節是文字模擬，並非音檔。",
+      "connection": "先備詞：始まる＝開始；何時＝幾點；土曜日＝星期六；日曜日＝星期日。對話：女『体験授業は土曜日ですか。』男『いいえ、日曜日だと思います。九時に教室に行きます。』",
+      "usage": "翻譯：女：體驗課是星期六嗎？男：不是，我想是星期日。我九點會去教室。『いいえ』否定星期六；星期日是課程日期；九點是去教室的時間，並沒有說九點開課。請遮住文字自己朗讀兩次，注意被否定的選項。",
+      "examples": [
+        {
+          "jp": "体験授業は土曜日ですか。",
+          "zh": "體驗課是星期六嗎？"
+        },
+        {
+          "jp": "いいえ、日曜日だと思います。",
+          "zh": "不是，我想是星期日。"
+        },
+        {
+          "jp": "九時に教室に行きます。",
+          "zh": "九點去教室。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-10-15",
+      "lastSeen": "2026-10-15"
+    },
+    {
+      "pattern": "時間詞＋普通形：現在否定與過去否定",
+      "meaning": "『～ない』是現在／未來否定，『～なかった』是過去否定；閱讀先找昨日、明日、金曜日等時間。",
+      "connection": "申し込まない→申し込まなかった；参加しない→参加しなかった；遅れない→遅れなかった。",
+      "usage": "今天練習分辨『明日は参加しない』與『昨日は参加しなかった』，避免因兩句都有ない就混淆。",
+      "examples": [
+        {
+          "jp": "明日は体験授業に参加しない。",
+          "zh": "明天不參加體驗課。"
+        },
+        {
+          "jp": "昨日は体験授業に参加しなかった。",
+          "zh": "昨天沒有參加體驗課。"
+        },
+        {
+          "jp": "昨日は授業に遅れなかった。",
+          "zh": "昨天上課沒有遲到。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-10-15",
+      "lastSeen": "2026-10-15"
+    },
+    {
+      "pattern": "N5 間隔複習：～てもいい／～てはいけない／～ないでください",
+      "meaning": "～てもいい＝可以；～てはいけない＝禁止；～ないでください＝請不要。三者不能混淆。",
+      "connection": "借りる→借りて／借りない；借りてもいいです／借りてはいけません／借りないでください。",
+      "usage": "考題要先看句尾，分清允許、禁止和請求；這段是舊內容複習。",
+      "examples": [
+        {
+          "jp": "この本を借りてもいいです。",
+          "zh": "可以借這本書。"
+        },
+        {
+          "jp": "この本を借りてはいけません。",
+          "zh": "不可以借這本書。"
+        },
+        {
+          "jp": "この本を借りないでください。",
+          "zh": "請不要借這本書。"
+        }
+      ],
+      "category": "請求・邀請",
+      "firstSeen": "2026-10-17",
+      "lastSeen": "2026-10-17"
+    },
+    {
+      "pattern": "動詞普通形四格：現在肯定／否定、過去肯定／否定",
+      "meaning": "能把禮貌形轉成普通形並判斷時間與肯否。",
+      "connection": "行きます→行く；行きません→行かない；行きました→行った；行きませんでした→行かなかった。借りる→借りない→借りた→借りなかった；する→しない→した→しなかった。",
+      "usage": "昨日通常搭配過去；明日通常搭配現在／未來。行く的た形是行った，不是行きた。",
+      "examples": [
+        {
+          "jp": "明日は学校に行く。",
+          "zh": "明天去學校。"
+        },
+        {
+          "jp": "昨日は学校に行かなかった。",
+          "zh": "昨天沒去學校。"
+        },
+        {
+          "jp": "昨日、図書館で本を借りた。",
+          "zh": "昨天在圖書館借了書。"
+        },
+        {
+          "jp": "昨日は勉強しなかった。",
+          "zh": "昨天沒有念書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-17",
+      "lastSeen": "2026-10-17"
+    },
+    {
+      "pattern": "普通形前的動詞分類：五段／一段／不規則",
+      "meaning": "辨識動詞類型，避免把所有「る」結尾動詞都當一段。",
+      "connection": "五段：帰る→帰らない、切る→切らない；一段：借りる→借りない、忘れる→忘れない、決める→決めない；不規則：する→しない、来る（くる）→来ない（こない）。",
+      "usage": "五段る動詞要把る變らない；一段去る加ない。讀音以漢字旁的假名為準。",
+      "examples": [
+        {
+          "jp": "今日は早く帰る。",
+          "zh": "今天早點回去。"
+        },
+        {
+          "jp": "明日は本を借りない。",
+          "zh": "明天不借書。"
+        },
+        {
+          "jp": "約束を忘れない。",
+          "zh": "不會忘記約定。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-17",
+      "lastSeen": "2026-10-17"
+    },
+    {
+      "pattern": "普通形＋と思います：表達想法與推測",
+      "meaning": "「我認為～／我想～」。と思います前面用普通形，保留句子的肯定、否定和時態。",
+      "connection": "動詞普通形＋と思います：帰ると思います／帰らないと思います／帰ったと思います／帰らなかったと思います。",
+      "usage": "想表達推測時使用；不要接帰りますと思います。重點先讀「と」前面的完整活用。",
+      "examples": [
+        {
+          "jp": "田中さんは六時に帰ると思います。",
+          "zh": "我想田中先生六點回家。"
+        },
+        {
+          "jp": "今日は電車に乗らないと思います。",
+          "zh": "我想今天不會搭電車。"
+        },
+        {
+          "jp": "田中さんはもう駅に着いたと思います。",
+          "zh": "我想田中先生已經抵達車站了。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-10-17",
+      "lastSeen": "2026-10-30"
+    },
+    {
+      "pattern": "N5間隔複習：～なければなりません／～なくてもいいです",
+      "meaning": "前者是必須做；後者是不必做。",
+      "connection": "行かない→行かなければなりません／行かなくてもいいです。",
+      "usage": "留意兩個句尾意思相反。",
+      "examples": [
+        {
+          "jp": "明日は早く行かなければなりません。",
+          "zh": "明天必須早點去。"
+        },
+        {
+          "jp": "今日は学校に行かなくてもいいです。",
+          "zh": "今天不必去學校。"
+        },
+        {
+          "jp": "試験の準備をしなければなりません。",
+          "zh": "必須準備考試。"
+        }
+      ],
+      "category": "許可・禁止",
+      "firstSeen": "2026-10-18",
+      "lastSeen": "2026-11-19"
+    },
+    {
+      "pattern": "る動詞：五段與一段的ない形／た形",
+      "meaning": "並非所有以る結尾的動詞都是一段。先判別動詞類別再變形。",
+      "connection": "五段：帰る→帰らない→帰った；一段：借りる→借りない→借りた、調べる→調べない→調べた；不規則：する→しない→した。",
+      "usage": "五段る：る→らない、過去る→った；一段：去る＋ない／た。帰る是五段，借りる是 一段。",
+      "examples": [
+        {
+          "jp": "今日は早く帰る。",
+          "zh": "今天早點回家。"
+        },
+        {
+          "jp": "昨日は本を借りなかった。",
+          "zh": "昨天沒有借書。"
+        },
+        {
+          "jp": "昨日、電車の時間を調べた。",
+          "zh": "昨天查了電車時間。"
+        }
+      ],
+      "category": "ない形",
+      "firstSeen": "2026-10-18",
+      "lastSeen": "2026-10-18"
+    },
+    {
+      "pattern": "動詞辭書形＋予定です：已排定的計畫",
+      "meaning": "表示已經打算或安排要做某事；比「と思います」更有具體計畫的感覺。",
+      "connection": "動詞辭書形＋予定です：行く予定です／勉強する予定です。否定計畫可說行かない予定です；過去安排可說行く予定でした。",
+      "usage": "「明日、図書館に行く予定です」表示已有打算；「行くと思います」只是認為可能會去。此處不擴充其他未教過的予定句型。",
+      "examples": [
+        {
+          "jp": "明日は図書館で勉強する予定です。",
+          "zh": "明天預計在圖書館讀書。"
+        },
+        {
+          "jp": "日曜日は友達に会う予定です。",
+          "zh": "星期日預計和朋友見面。"
+        },
+        {
+          "jp": "明日は出かけない予定です。",
+          "zh": "明天打算不出門。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-18",
+      "lastSeen": "2026-10-18"
+    },
+    {
+      "pattern": "普通形四格：動詞現在／過去與肯定／否定",
+      "meaning": "普通形是日常對話及N4句型的基礎。現在形也可表示未來；過去肯定常用た形，過去否定常用なかった形。",
+      "connection": "行きます→行く、行きません→行かない、行きました→行った、行きませんでした→行かなかった。借ります→借りる／借りない／借りた／借りなかった。する→する／しない／した／しなかった。",
+      "usage": "昨日通常接過去，明日通常接現在／未來。行く的た形例外是行った，不是行きた。",
+      "examples": [
+        {
+          "jp": "明日は駅に行く。",
+          "zh": "明天去車站。"
+        },
+        {
+          "jp": "昨日は駅に行かなかった。",
+          "zh": "昨天沒去車站。"
+        },
+        {
+          "jp": "昨日、図書館で本を借りた。",
+          "zh": "昨天在圖書館借了書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-18",
+      "lastSeen": "2026-10-18"
+    },
+    {
+      "pattern": "普通形＋と思います：個人想法／推測",
+      "meaning": "表示「我認為……／我想……」，說話者未必有確定安排。",
+      "connection": "動詞普通形＋と思います：行く／行かない／行った／行かなかった＋と思います。い形容詞直接接：高いと思います；な形容詞與名詞現在肯定用だ：必要だと思います／学生だと思います。",
+      "usage": "「行きますと思います」「必要ですと思います」不正確；否定「必要ではないと思います」可用。",
+      "examples": [
+        {
+          "jp": "明日は電車が遅れると思います。",
+          "zh": "我認為明天電車會誤點。"
+        },
+        {
+          "jp": "田中さんは昨日来なかったと思います。",
+          "zh": "我認為田中昨天沒來。"
+        },
+        {
+          "jp": "試験の準備は必要だと思います。",
+          "zh": "我認為準備考試是必要的。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-10-18",
+      "lastSeen": "2026-10-18"
+    },
+    {
+      "pattern": "N4閱讀與聽解策略：先辨時間，再判斷推測或安排",
+      "meaning": "讀解找明日／昨日／午前／今夜，聽解找預定與否定句尾。",
+      "connection": "先備詞：明日（あした）明天、昨日（きのう）昨天、駅（えき）車站、午前（ごぜん）上午、電車（でんしゃ）電車、今夜（こんや）今晚、でも但是、だから所以。",
+      "usage": "閱讀短文：明日は友達と駅で会う約束があります。午前九時に集合する予定です。でも、電車が遅れると思います。だから、今夜、出発の時間を確認する予定です。昨日は友達に連絡しました。問題：幾點集合？為何確認出發時間？答：上午九點；因為擔心電車誤點。聽解替代文字（非音檔）：男「明日、何時に出発しますか。」女「九時に出発する予定です。」男「田中さんも来ますか。」女「田中さんは来ないと思います。」答：九點出發；認為田中不會來。",
+      "examples": [
+        {
+          "jp": "午前九時に集合する予定です。",
+          "zh": "預計上午九點集合。"
+        },
+        {
+          "jp": "電車が遅れると思います。",
+          "zh": "我想電車會誤點。"
+        },
+        {
+          "jp": "田中さんは来ないと思います。",
+          "zh": "我認為田中不會來。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-10-20",
+      "lastSeen": "2026-10-20"
+    },
+    {
+      "pattern": "る結尾動詞：五段與一段辨識",
+      "meaning": "不是所有る結尾動詞都直接去る接ない。帰る／切る是五段；借りる／忘れる是一段。",
+      "connection": "五段：帰る→帰らない→帰った；切る→切らない→切った。一段：借りる→借りない→借りた；忘れる→忘れない→忘れた。另：返す→返さない→返した。",
+      "usage": "「い／え段＋る」常見一段，但帰る／切る等是例外，須記憶。",
+      "examples": [
+        {
+          "jp": "今日は早く帰らない。",
+          "zh": "今天不會提早回家。"
+        },
+        {
+          "jp": "昨日、約束を忘れた。",
+          "zh": "昨天忘了約定。"
+        },
+        {
+          "jp": "明日、本を借りる。",
+          "zh": "明天借書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-20",
+      "lastSeen": "2026-10-20"
+    },
+    {
+      "pattern": "普通形四格：現在／過去 × 肯定／否定",
+      "meaning": "普通形用於親近會話與N4文法接續；四格依序為辭書形、ない形、た形、なかった形。",
+      "connection": "待ちます→待つ；待ちません→待たない；待ちました→待った；待ちませんでした→待たなかった。行く／行かない／行った／行かなかった；する／しない／した／しなかった。",
+      "usage": "先看時間詞昨日／明日，再判斷句尾。注意過去否定不能只用ない。",
+      "examples": [
+        {
+          "jp": "明日は駅で友達を待つ。",
+          "zh": "明天在車站等朋友。"
+        },
+        {
+          "jp": "昨日は駅で待たなかった。",
+          "zh": "昨天沒有在車站等。"
+        },
+        {
+          "jp": "昨日、本を返した。",
+          "zh": "昨天還了書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-20",
+      "lastSeen": "2026-10-20"
+    },
+    {
+      "pattern": "辭書形＋予定です：預定與計畫",
+      "meaning": "表示已有安排的計畫，和表示推測的「と思います」不同。",
+      "connection": "行く予定です（預計去）；行かない予定です（預計不去）；行く予定でした（原本預計去）。",
+      "usage": "「明日は図書館に行くと思います」是想法；「明日は図書館に行く予定です」表示有安排。",
+      "examples": [
+        {
+          "jp": "明日は九時に集合する予定です。",
+          "zh": "明天預計九點集合。"
+        },
+        {
+          "jp": "日曜日は出かけない予定です。",
+          "zh": "星期日預計不出門。"
+        },
+        {
+          "jp": "昨日は本を返す予定でした。",
+          "zh": "昨天原本預計要還書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-20",
+      "lastSeen": "2026-10-20"
+    },
+    {
+      "pattern": "N4 閱讀與模擬聽解：先辨時間，再看動詞與語氣",
+      "meaning": "閱讀練習：『私は土曜日に図書館へ行く予定です。日本語の本を二冊借りる予定です。でも、友達は来ないと思います。』二冊（にさつ）＝兩本；問題：誰有確定的安排？答案：我。朋友會來嗎？說話者推測不會。",
+      "connection": "模擬聽解文字稿：『男：明日は何時に図書館へ行きますか。女：三時に行く予定です。男：田中さんも来ますか。女：来ないと思います。』聽前詞彙：何時（なんじ）幾點、三時（さんじ）三點。",
+      "usage": "文字稿只能模擬聽解理解，不是真實音檔；可用裝置朗讀功能播放兩次，先不看稿作答。先抓時間詞、預定者與推測內容。",
+      "examples": [
+        {
+          "jp": "私は土曜日に図書館へ行く予定です。",
+          "zh": "我預計星期六去圖書館。"
+        },
+        {
+          "jp": "日本語の本を二冊借りる予定です。",
+          "zh": "預計借兩本日文書。"
+        },
+        {
+          "jp": "友達は来ないと思います。",
+          "zh": "我想朋友不會來。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-10-22",
+      "lastSeen": "2026-10-22"
+    },
+    {
+      "pattern": "N5 間隔複習：てください／ないでください／なくてもいいです",
+      "meaning": "請做、請不要做、不必做，是三種不同意思。",
+      "connection": "返す→返して→返してください；忘れる→忘れない→忘れないでください；返さない→返さなくてもいいです。",
+      "usage": "『返さないでください』＝請不要還；『返さなくてもいいです』＝不必還。複習助詞：図書館で借りる／友達に貸す／友達から借りる。",
+      "examples": [
+        {
+          "jp": "金曜日までに本を返してください。",
+          "zh": "請在星期五以前還書。"
+        },
+        {
+          "jp": "約束を忘れないでください。",
+          "zh": "請不要忘記約定。"
+        },
+        {
+          "jp": "今日は本を返さなくてもいいです。",
+          "zh": "今天不必還書。"
+        }
+      ],
+      "category": "請求・邀請",
+      "firstSeen": "2026-10-22",
+      "lastSeen": "2026-10-22"
+    },
+    {
+      "pattern": "と思います／予定です：情境判斷",
+      "meaning": "と思います是想法或推測；予定です是已有安排。兩句都可能提到未來，但說話者的確定程度與性質不同。",
+      "connection": "『友達は来ると思います』＝我認為朋友會來；『私は三時に行く予定です』＝我已安排三點去。",
+      "usage": "判題先找主語、是否有已定時間與安排；不是看到明日就一律選予定です。",
+      "examples": [
+        {
+          "jp": "友達は三時に来ると思います。",
+          "zh": "我想朋友三點會來。（推測）"
+        },
+        {
+          "jp": "私は三時に図書館へ行く予定です。",
+          "zh": "我預計三點去圖書館。（計畫）"
+        },
+        {
+          "jp": "今日は図書館が休みだと思います。",
+          "zh": "我想圖書館今天休館。（推測）"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-10-22",
+      "lastSeen": "2026-10-22"
+    },
+    {
+      "pattern": "動詞辭書形／ない形＋予定です",
+      "meaning": "表達已決定的安排或計畫，不等於猜測。",
+      "connection": "肯定計畫：働く予定です／休む予定です；否定計畫：働かない予定です／休まない予定です；過去原訂：働く予定でした（只表示原先安排，不保證已實現）。",
+      "usage": "預計自己做什麼用予定です；對別人是否會做的推測可用と思います。『休みます予定です』錯，應用『休む予定です』。",
+      "examples": [
+        {
+          "jp": "土曜日は店で働く予定です。",
+          "zh": "星期六預計在店裡工作。"
+        },
+        {
+          "jp": "日曜日は働かない予定です。",
+          "zh": "星期日預計不工作。"
+        },
+        {
+          "jp": "昨日は休む予定でしたが、働きました。",
+          "zh": "昨天原本預計休息，但實際工作了。"
+        }
+      ],
+      "category": "ない形",
+      "firstSeen": "2026-10-22",
+      "lastSeen": "2026-10-23"
+    },
+    {
+      "pattern": "普通形四格：五段／一段／不規則動詞",
+      "meaning": "普通形有現在肯定（辭書形）、現在否定（ない形）、過去肯定（た形）、過去否定（なかった形）四格。",
+      "connection": "五段：返す／返さない／返した／返さなかった；一段：借りる／借りない／借りた／借りなかった；不規則：する／しない／した／しなかった。注意五段的返す→返した，不是返すた。",
+      "usage": "看到ます／ません／ました／ませんでした，先判斷動詞類別，再對應四格。練習不看答案說出返す、借りる、する各四格。",
+      "examples": [
+        {
+          "jp": "今日は図書館で本を借りる。",
+          "zh": "今天在圖書館借書。"
+        },
+        {
+          "jp": "昨日は本を返さなかった。",
+          "zh": "昨天沒有還書。"
+        },
+        {
+          "jp": "先週、友達に本を貸した。",
+          "zh": "上週把書借給了朋友。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-22",
+      "lastSeen": "2026-10-22"
+    },
+    {
+      "pattern": "N5 間隔複習：～ています／～てはいけません／～なくてもいいです",
+      "meaning": "～ています：正在或持續的狀態；～てはいけません：禁止；～なくてもいいです：不必。",
+      "connection": "働く→働いています；食べる→食べてはいけません；働かない→働かなくてもいいです（ない去い＋くてもいい）。",
+      "usage": "『働かなくてもいい』不是禁止工作，而是『不工作也可以』。助詞複習：店で働く（場所で）、店長に連絡する（對象に）。",
+      "examples": [
+        {
+          "jp": "私はこの店で働いています。",
+          "zh": "我在這間店工作。"
+        },
+        {
+          "jp": "ここで食べてはいけません。",
+          "zh": "這裡禁止吃東西。"
+        },
+        {
+          "jp": "明日は働かなくてもいいです。",
+          "zh": "明天不必工作。"
+        }
+      ],
+      "category": "許可・禁止",
+      "firstSeen": "2026-10-23",
+      "lastSeen": "2026-10-23"
+    },
+    {
+      "pattern": "と思います vs 予定です：判斷確定程度",
+      "meaning": "『と思います』是判斷或猜測；『予定です』是已經安排的行程。",
+      "connection": "店長は休むと思います＝我推測店長會休息；私は休む予定です＝我已安排自己休息。『明日』只是時間詞，不能只憑它決定用哪個句型。",
+      "usage": "閱讀時先找誰做事、句尾是推測還是預定，再回答。",
+      "examples": [
+        {
+          "jp": "私は明日休む予定です。",
+          "zh": "我明天預計休息。（計畫）"
+        },
+        {
+          "jp": "店長は明日働くと思います。",
+          "zh": "我想店長明天會工作。（推測）"
+        },
+        {
+          "jp": "明日は都合がいいと思います。",
+          "zh": "我想明天時間方便。（判斷）"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-10-23",
+      "lastSeen": "2026-10-23"
+    },
+    {
+      "pattern": "普通形四格：働く／休む／決める／する",
+      "meaning": "普通形的四格是現在（或未來）肯定、現在否定、過去肯定、過去否定；分清五段動詞、一段動詞與不規則動詞。",
+      "connection": "働く→働く／働かない／働いた／働かなかった；休む→休む／休まない／休んだ／休まなかった；決める→決める／決めない／決めた／決めなかった；する→する／しない／した／しなかった。五段く→いた（例：働く→働いた）；む→んだ（休む→休んだ）。",
+      "usage": "ます／ません／ました／ませんでした要能換回四格。先看原形的動詞類別；不要把『働く』誤變成『働くた』，也不要把『休む』變成『休みた』。",
+      "examples": [
+        {
+          "jp": "昨日、店で働いた。",
+          "zh": "昨天在店裡工作了。"
+        },
+        {
+          "jp": "昨日は休まなかった。",
+          "zh": "昨天沒有休息。"
+        },
+        {
+          "jp": "昨日、予定を決めた。",
+          "zh": "昨天決定了行程。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-23",
+      "lastSeen": "2026-10-23"
+    },
+    {
+      "pattern": "閱讀與模擬聽解：排班資訊",
+      "meaning": "閱讀：『田中さんは土曜日に店で働く予定です。日曜日は休む予定です。でも、店長は日曜日も働くと思います。』問題：田中星期六做什麼？星期日誰的安排已確定、誰只是推測？",
+      "connection": "聽解前先學：何時（なんじ）幾點、明日（あした）明天、日曜日（にちようび）星期日、いいえ不是。模擬聽解稿：女『明日は店で働く予定ですか。』男『いいえ、明日は休む予定です。』女『店長も休みますか。』男『店長は働くと思います。』",
+      "usage": "先遮住稿、用裝置朗讀兩遍再答：男生明天工作嗎？店長明天是否確定工作？答案：男生預計休息；店長工作只是男生的推測。閱讀答案：田中星期六預計工作、星期日預計休息；店長星期日工作是推測。這是文字稿模擬，非正式音檔。",
+      "examples": [
+        {
+          "jp": "田中さんは土曜日に店で働く予定です。",
+          "zh": "田中星期六預計在店裡工作。"
+        },
+        {
+          "jp": "日曜日は休む予定です。",
+          "zh": "星期日預計休息。"
+        },
+        {
+          "jp": "店長は日曜日も働くと思います。",
+          "zh": "我想店長星期日也會工作。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-23",
+      "lastSeen": "2026-10-23"
+    },
+    {
+      "pattern": "い形容詞的普通形四格＋と思います",
+      "meaning": "い形容詞可直接接「と思います」表達自己的看法；四格需辨別時間和肯否。",
+      "connection": "忙しい（現在肯定）／忙しくない（現在否定）／忙しかった（過去肯定）／忙しくなかった（過去否定）。「と思います」前面不用加「だ」。",
+      "usage": "現在肯定：忙しいと思います；現在否定：忙しくないと思います；過去肯定：忙しかったと思います；過去否定：忙しくなかったと思います。楽しい亦同。",
+      "examples": [
+        {
+          "jp": "明日は忙しいと思います。",
+          "zh": "我想明天會很忙。"
+        },
+        {
+          "jp": "今日は忙しくないと思います。",
+          "zh": "我想今天不忙。"
+        },
+        {
+          "jp": "昨日は楽しかったと思います。",
+          "zh": "我覺得昨天很有趣。"
+        },
+        {
+          "jp": "昨日は忙しくなかったと思います。",
+          "zh": "我想昨天並不忙。"
+        }
+      ],
+      "category": "形容詞",
+      "firstSeen": "2026-10-25",
+      "lastSeen": "2026-10-25"
+    },
+    {
+      "pattern": "と思います vs 予定です：推測與已安排",
+      "meaning": "「普通形＋と思います」表示想法／推測；「動詞辭書形或ない形＋予定です」表示事先安排。",
+      "connection": "晴れると思います＝推測會放晴；連絡する予定です＝預計要聯絡；連絡しない予定です＝預計不聯絡；中止する予定でした＝原本預計中止。",
+      "usage": "「予定です」不直接接形容詞普通形（如忙しい予定です不作本課句型）；用於預定行動時接動詞辭書形／ない形。",
+      "examples": [
+        {
+          "jp": "明日は晴れると思います。",
+          "zh": "我想明天會放晴。（推測）"
+        },
+        {
+          "jp": "明日は友達に連絡する予定です。",
+          "zh": "明天預計聯絡朋友。（已安排）"
+        },
+        {
+          "jp": "雨なので、イベントを中止する予定です。",
+          "zh": "因為下雨，預計取消活動。（已安排）"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-10-25",
+      "lastSeen": "2026-10-25"
+    },
+    {
+      "pattern": "な形容詞的普通形四格＋と思います",
+      "meaning": "な形容詞在「と思います」前用普通形；現在肯定要用「だ」，不能直接用「です」。",
+      "connection": "便利だ／便利ではない（也可便利じゃない）／便利だった／便利ではなかった。静か也依相同規則。",
+      "usage": "正確：便利だと思います。錯誤：便利ですと思います、便利と思います（本課以標準肯定形練習）。注意「便利な駅」是修飾名詞，與句尾「便利だ」不同。",
+      "examples": [
+        {
+          "jp": "この駅は便利だと思います。",
+          "zh": "我覺得這個車站很方便。"
+        },
+        {
+          "jp": "この公園は静かではないと思います。",
+          "zh": "我覺得這座公園不安靜。"
+        },
+        {
+          "jp": "昨日の駅は便利だったと思います。",
+          "zh": "我覺得昨天去的那座車站很方便。"
+        },
+        {
+          "jp": "あの公園は静かではなかったと思います。",
+          "zh": "我覺得那座公園當時不安靜。"
+        }
+      ],
+      "category": "形容詞",
+      "firstSeen": "2026-10-25",
+      "lastSeen": "2026-10-25"
+    },
+    {
+      "pattern": "動詞普通形四格複習：帰る／晴れる／連絡する",
+      "meaning": "普通形的現在肯定／現在否定／過去肯定／過去否定，是接「と思います」的基礎。",
+      "connection": "帰る（五段）：帰る／帰らない／帰った／帰らなかった；晴れる（一段）：晴れる／晴れない／晴れた／晴れなかった；連絡する：連絡する／連絡しない／連絡した／連絡しなかった。",
+      "usage": "「る」結尾不代表一定是一段：帰る為五段，晴れる為一段；ます形與普通形要一一對應。",
+      "examples": [
+        {
+          "jp": "明日は早く帰る。",
+          "zh": "明天會早點回家。"
+        },
+        {
+          "jp": "昨日は晴れなかった。",
+          "zh": "昨天沒有放晴。"
+        },
+        {
+          "jp": "昨日、友達に連絡した。",
+          "zh": "昨天聯絡了朋友。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-25",
+      "lastSeen": "2026-10-25"
+    },
+    {
+      "pattern": "名詞的普通形四格＋と思います",
+      "meaning": "名詞句接「と思います」時，現在肯定同樣使用「だ」；過去肯定使用「だった」。",
+      "connection": "休みだ／休みではない／休みだった／休みではなかった；雨だ／雨ではない／雨だった／雨ではなかった。",
+      "usage": "「明日は休みだと思います」是推測；若已確認安排，改用「明日は休みです」直接陳述。",
+      "examples": [
+        {
+          "jp": "明日は休みだと思います。",
+          "zh": "我想明天是休息日。"
+        },
+        {
+          "jp": "今日は休みではないと思います。",
+          "zh": "我想今天不是休息日。"
+        },
+        {
+          "jp": "昨日は雨だったと思います。",
+          "zh": "我想昨天下雨了。"
+        },
+        {
+          "jp": "昨日は休みではなかったと思います。",
+          "zh": "我想昨天不是休息日。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-10-25",
+      "lastSeen": "2026-10-25"
+    },
+    {
+      "pattern": "閱讀與文字稿模擬聽解：先看時間與說話者",
+      "meaning": "閱讀與聽解先分辨「昨天／明天」「已安排／只是推測」，再決定事件是否確定。",
+      "connection": "先備詞：イベント＝活動；公園（こうえん）＝公園；朝（あさ）＝早上；だから＝所以；雨なので＝因為下雨。閱讀：明日は雨だと思います。でも、友達に連絡する予定です。昨日は忙しくなかったので、駅に行きました。模擬聽解：女「明日は晴れると思いますか。」男「はい。でも、イベントを中止する予定です。」女「友達に連絡しますか。」男「はい、今日連絡する予定です。」",
+      "usage": "閱讀自測：①明天的天氣是確定下雨嗎？（不是，只是推測）②明天是否已安排聯絡朋友？（是）③昨天忙嗎？（不忙）。聽解自測：①男生認為會放晴嗎？（會）②活動是否預計中止？（是）③預計何時聯絡朋友？（今天）。文字稿可用裝置朗讀兩遍，但不是正式音檔。",
+      "examples": [
+        {
+          "jp": "明日は雨だと思います。でも、友達に連絡する予定です。",
+          "zh": "我想明天會下雨，但我預計聯絡朋友。"
+        },
+        {
+          "jp": "昨日は忙しくなかったので、駅に行きました。",
+          "zh": "昨天不忙，所以去了車站。"
+        },
+        {
+          "jp": "今日は友達に連絡する予定です。",
+          "zh": "今天預計聯絡朋友。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-10-25",
+      "lastSeen": "2026-10-25"
+    },
+    {
+      "pattern": "N5間隔複習：～ないでください／～てもいいです",
+      "meaning": "請不要做／可以做；與條件形不同。",
+      "connection": "遅れる→遅れないでください；調べる→調べてもいいです。",
+      "usage": "複習ない形、て形與助詞に／を。",
+      "examples": [
+        {
+          "jp": "授業に遅れないでください。",
+          "zh": "請不要上課遲到。"
+        },
+        {
+          "jp": "ここで時間を調べてもいいです。",
+          "zh": "可以在這裡查時間。"
+        },
+        {
+          "jp": "友達に連絡してください。",
+          "zh": "請聯絡朋友。"
+        }
+      ],
+      "category": "請求・邀請",
+      "firstSeen": "2026-10-26",
+      "lastSeen": "2026-11-13"
+    },
+    {
+      "pattern": "から與ので比較：同樣是理由，語氣不同",
+      "meaning": "から常見於直接說明或個人判斷；ので常較柔和、客觀。不是任何情況都只能選其中一個。",
+      "connection": "混むから／混むので；早いから／早いので；大変だから／大変なので；会議だから／会議なので。",
+      "usage": "今日重點是接續正確，不要把語氣差異誤認成絕對規則。",
+      "examples": [
+        {
+          "jp": "電車が混むから、早く出ます。",
+          "zh": "因為電車擁擠，所以早點出門。（直接說明）"
+        },
+        {
+          "jp": "電車が混むので、早く出ます。",
+          "zh": "因為電車擁擠，所以早點出門。（較柔和）"
+        },
+        {
+          "jp": "今日は大変なので、早く帰ります。",
+          "zh": "因為今天很辛苦，所以早點回家。（較柔和）"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-26",
+      "lastSeen": "2026-10-26"
+    },
+    {
+      "pattern": "原因理由①：普通形＋から／だから",
+      "meaning": "「因為……所以……」。から偏直接，常用來表達個人判斷、說明原因。",
+      "connection": "動詞普通形＋から（混むから）；い形容詞普通形＋から（早いから）；な形容詞現在肯定＋だから（静かだから）；名詞現在肯定＋だから（会議だから）。否定或過去形可接から，如混まないから、静かではないから、会議だったから。",
+      "usage": "前半句是原因，後半句是結果；不要寫「静かだだから」「会議だだから」。",
+      "examples": [
+        {
+          "jp": "朝は電車が混むから、早く出ます。",
+          "zh": "因為早上電車擁擠，所以我會早點出門。"
+        },
+        {
+          "jp": "朝は早いから、今夜は早く寝ます。",
+          "zh": "因為明早很早，所以今晚會早點睡。"
+        },
+        {
+          "jp": "この駅は静かだから、好きです。",
+          "zh": "因為這座車站安靜，所以我喜歡。"
+        },
+        {
+          "jp": "今日は会議だから、早く行きます。",
+          "zh": "因為今天有會議，所以我會早點去。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-26",
+      "lastSeen": "2026-10-26"
+    },
+    {
+      "pattern": "原因理由②：普通形＋ので／なので",
+      "meaning": "「因為……所以……」。ので常較柔和、客觀，適合禮貌說明理由。",
+      "connection": "動詞普通形＋ので（遅れるので）；い形容詞普通形＋ので（早いので）；な形容詞現在肯定＋なので（静かなので）；名詞現在肯定＋なので（会議なので）。過去／否定接續如遅れたので、静かではないので、会議だったので。",
+      "usage": "「静かだので」「会議だので」錯誤；現在肯定名詞／な形容詞的だ改為な再接ので。",
+      "examples": [
+        {
+          "jp": "電車が遅れたので、先生に連絡しました。",
+          "zh": "因為電車誤點，所以聯絡了老師。"
+        },
+        {
+          "jp": "朝は早いので、今夜は早く寝ます。",
+          "zh": "因為明早很早，所以今晚會早點睡。"
+        },
+        {
+          "jp": "今日は会議なので、早く行きます。",
+          "zh": "因為今天有會議，所以我會早點去。"
+        },
+        {
+          "jp": "この駅は静かなので、好きです。",
+          "zh": "因為這座車站安靜，所以我喜歡。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-26",
+      "lastSeen": "2026-10-26"
+    },
+    {
+      "pattern": "普通形四格：混む（五段）／遅れる（一段）",
+      "meaning": "原因理由句需要先能正確使用普通形。現在肯定／否定、過去肯定／否定不能混淆。",
+      "connection": "混む→混む／混まない／混んだ／混まなかった；遅れる→遅れる／遅れない／遅れた／遅れなかった。混む的た形是混んだ，不是混った。",
+      "usage": "現在肯定也可指未來；昨天的事情用過去形。",
+      "examples": [
+        {
+          "jp": "朝は電車が混む。",
+          "zh": "早上的電車很擁擠。"
+        },
+        {
+          "jp": "昨日は電車が混まなかった。",
+          "zh": "昨天電車不擁擠。"
+        },
+        {
+          "jp": "昨日は電車が遅れた。",
+          "zh": "昨天電車誤點了。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-26",
+      "lastSeen": "2026-10-26"
+    },
+    {
+      "pattern": "普通形＋と思います、辭書形＋予定です（前課回顧）",
+      "meaning": "と思います是推測或意見；予定です是已安排的計畫，兩者不能互換。",
+      "connection": "動詞普通形＋と思います（間に合うと思います）；い形容詞普通形＋と思います（早いと思います）；な形容詞／名詞現在肯定＋だと思います（静かだと思います／会議だと思います）；動詞辭書形＋予定です（早く出る予定です）。",
+      "usage": "「電車が遅れると思います」是預測；「早く出る予定です」是安排。",
+      "examples": [
+        {
+          "jp": "明日は電車が混むと思います。",
+          "zh": "我想明天電車會很擁擠。"
+        },
+        {
+          "jp": "今日は会議だと思います。",
+          "zh": "我想今天有會議。"
+        },
+        {
+          "jp": "明日は早く出る予定です。",
+          "zh": "明天預計早點出門。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-10-26",
+      "lastSeen": "2026-10-26"
+    },
+    {
+      "pattern": "閱讀與文字稿模擬聽解：找出原因、結果、計畫",
+      "meaning": "先辨識「ので／から」前後因果，再辨別「と思います」是推測、「予定です」是計畫。",
+      "connection": "先備詞：朝（あさ）＝早上、先生（せんせい）＝老師、今夜（こんや）＝今晚、駅（えき）＝車站。閱讀：今日は会議なので、朝早く出る予定です。でも、電車が遅れたので、会議に間に合いませんでした。先生に連絡しました。模擬聽解：女「明日は電車が混むと思いますか。」男「はい。だから、早く出る予定です。」女「会議に間に合いますか。」男「はい、間に合うと思います。」",
+      "usage": "閱讀問答：①為何早出門？（有會議）②為何沒趕上會議？（電車誤點）③有聯絡誰？（老師）。聽解問答：①電車擁擠是推測還是已確定？（推測）②男生有何計畫？（早點出門）③男生認為趕得上嗎？（認為趕得上）。文字稿可自行朗讀或用裝置朗讀兩遍，不是真實JLPT音檔。",
+      "examples": [
+        {
+          "jp": "今日は会議なので、朝早く出る予定です。",
+          "zh": "因為今天有會議，所以預計早上早點出門。"
+        },
+        {
+          "jp": "電車が遅れたので、会議に間に合いませんでした。",
+          "zh": "因為電車誤點，所以沒趕上會議。"
+        },
+        {
+          "jp": "だから、早く出る予定です。",
+          "zh": "所以預計早點出門。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-26",
+      "lastSeen": "2026-10-26"
+    },
+    {
+      "pattern": "N5間隔複習：～てはいけません／～てもいいです",
+      "meaning": "『～てはいけません』表示禁止；『～てもいいです』表示許可。兩者都接動詞て形，意思不同。",
+      "connection": "入る→入ってはいけません／入ってもいいです；電話する→電話してはいけません／電話してもいいです。",
+      "usage": "交通與場所規則的基本辨識。",
+      "examples": [
+        {
+          "jp": "ここに入ってはいけません。",
+          "zh": "不可以進入這裡。"
+        },
+        {
+          "jp": "ここで休んでもいいです。",
+          "zh": "可以在這裡休息。"
+        },
+        {
+          "jp": "電車の中で電話してはいけません。",
+          "zh": "不可以在電車內講電話。"
+        }
+      ],
+      "category": "許可・禁止",
+      "firstSeen": "2026-10-27",
+      "lastSeen": "2026-10-27"
+    },
+    {
+      "pattern": "動詞た形＋後で／名詞＋の後で",
+      "meaning": "表示『做完A以後，再做B』。和てから都能說先後順序，但後で可表示稍後進行，不一定緊接。",
+      "connection": "降りる→降りた後で；到着する→到着した後で；会議→会議の後で。『後で』讀作あとで。",
+      "usage": "安排後續行動；A先、B後。動詞用た形接後で，名詞用の後で。",
+      "examples": [
+        {
+          "jp": "電車を降りた後で、連絡します。",
+          "zh": "下電車後再聯絡。"
+        },
+        {
+          "jp": "会議の後で、電話します。",
+          "zh": "開完會後再打電話。"
+        },
+        {
+          "jp": "駅に到着した後で、時間を確認しました。",
+          "zh": "抵達車站後確認了時間。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-27",
+      "lastSeen": "2026-10-27"
+    },
+    {
+      "pattern": "動詞普通形四格：出発する／降りる",
+      "meaning": "普通形可表示現在／未來與過去的肯定、否定。今天用する動詞與一段動詞，確認四格和前に／後で的接續基礎。",
+      "connection": "出発する／出発しない／出発した／出発しなかった；降りる／降りない／降りた／降りなかった。現在肯定是辭書形；過去肯定是た形；否定是ない形／なかった形。",
+      "usage": "先判斷時間（明日、昨日），再看動詞形式。『前に』接動詞辭書形，『後で』接動詞た形。",
+      "examples": [
+        {
+          "jp": "明日は八時に出発する。",
+          "zh": "明天八點出發。"
+        },
+        {
+          "jp": "昨日は出発しなかった。",
+          "zh": "昨天沒有出發。"
+        },
+        {
+          "jp": "昨日は電車を降りた。",
+          "zh": "昨天已下電車。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-27",
+      "lastSeen": "2026-10-27"
+    },
+    {
+      "pattern": "動詞辭書形＋前に／名詞＋の前に",
+      "meaning": "表示『做A之前，先做B』。不論主要句子是過去或未來，A的動詞仍用辭書形。",
+      "connection": "出発する＋前に→出発する前に；会議＋の前に→会議の前に。不能把出発した前に當作這個基本句型。",
+      "usage": "行程安排、提醒與先後順序。『A前に、B』表示B先發生。",
+      "examples": [
+        {
+          "jp": "出発する前に、時間を確認します。",
+          "zh": "出發之前先確認時間。"
+        },
+        {
+          "jp": "電車に乗る前に、連絡しました。",
+          "zh": "上電車之前已先聯絡。"
+        },
+        {
+          "jp": "会議の前に、準備をします。",
+          "zh": "開會前先做準備。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-27",
+      "lastSeen": "2026-10-27"
+    },
+    {
+      "pattern": "原因的～から／～ので vs 順序的～てから（前課複習）",
+      "meaning": "『混むから』＝因為擁擠；『混むので』＝因為擁擠（通常較柔和）；『降りてから』＝下車之後。不是看到から就一律翻成因為。",
+      "connection": "動詞普通形＋から／ので；な形容詞與名詞現在肯定用だから／なので；動詞て形＋から表示先後。",
+      "usage": "判斷原因還是順序，先看から前面的動詞是普通形或て形，再看語境。",
+      "examples": [
+        {
+          "jp": "電車が混むから、早く出ます。",
+          "zh": "因為電車擁擠，所以早點出門。"
+        },
+        {
+          "jp": "今日は会議なので、早く出ます。",
+          "zh": "因為今天有會議，所以早點出門。"
+        },
+        {
+          "jp": "電車を降りてから、連絡します。",
+          "zh": "下電車後再聯絡。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-10-27",
+      "lastSeen": "2026-10-27"
+    },
+    {
+      "pattern": "閱讀與模擬聽解：先後順序辨識",
+      "meaning": "先認識『八時＝はちじ』『駅＝えき』『学校＝がっこう』『電話＝でんわ』『会議＝かいぎ』『電車＝でんしゃ』，再用前に、てから、後で找出事件順序。",
+      "connection": "閱讀：『八時に出発する前に、時間を確認しました。駅に到着してから、電車を乗り換えました。学校に着いた後で、先生に連絡しました。』模擬聽解文字稿：『女：いつ連絡しますか。男：電車を降りてから、連絡します。女：その前に何をしますか。男：時間を確認します。』",
+      "usage": "閱讀問：①時間確認在出發前或後？（前）②轉乘在抵達車站前或後？（後）③聯絡老師在到校前或後？（後）。聽解問：①男生何時聯絡？（下電車後）②聯絡前做什麼？（確認時間）。此處為文字稿模擬，不是真實音檔。",
+      "examples": [
+        {
+          "jp": "出発する前に、時間を確認しました。",
+          "zh": "出發前確認了時間。"
+        },
+        {
+          "jp": "駅に到着してから、電車を乗り換えました。",
+          "zh": "到車站後轉乘電車。"
+        },
+        {
+          "jp": "学校に着いた後で、先生に連絡しました。",
+          "zh": "到學校後聯絡了老師。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-10-27",
+      "lastSeen": "2026-10-27"
+    },
+    {
+      "pattern": "N5間隔複習：動詞て形／た形與～てください",
+      "meaning": "て形可用於請求或銜接動作；た形表示過去或完成，也能接後で／とき。『～てください』表示請做某事。",
+      "connection": "書く→書いて→書いた；待つ→待って→待った；する→して→した；記入する→記入して→記入した。",
+      "usage": "先確認動詞活用，再選擇適當句型。",
+      "examples": [
+        {
+          "jp": "名前を書いてください。",
+          "zh": "請寫姓名。"
+        },
+        {
+          "jp": "申込書を書いた後で、提出します。",
+          "zh": "寫完申請表後提交。"
+        },
+        {
+          "jp": "ここで待ってください。",
+          "zh": "請在這裡等候。"
+        }
+      ],
+      "category": "請求・邀請",
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-28"
+    },
+    {
+      "pattern": "前に／てから／後で／とき 比較",
+      "meaning": "前に表示A之前先做B；てから表示完成A再做B；た形＋後で表示A完成後再做B；とき則指出A發生的時間點。",
+      "connection": "予約する前に；記入してから；提出した後で；提出するとき。動詞前に用辭書形、てから用て形、後で用た形。",
+      "usage": "同一個情境以不同句型說出事件順序，不可把前に接成『予約した前に』。",
+      "examples": [
+        {
+          "jp": "出発する前に、ホテルを予約します。",
+          "zh": "出發前先預訂飯店。"
+        },
+        {
+          "jp": "名前を記入してから、提出します。",
+          "zh": "填寫姓名後再提交。"
+        },
+        {
+          "jp": "申込書を提出した後で、連絡しました。",
+          "zh": "提交申請表後聯絡了。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-28"
+    },
+    {
+      "pattern": "動詞辭書形＋とき／動詞た形＋とき",
+      "meaning": "表示『做某事的時候』。辭書形＋とき常指動作尚未完成或正在開始的時點；た形＋とき表示該動作已完成時的情境。具體時間仍要看語境。",
+      "connection": "乗る＋とき→乗るとき；乗った＋とき→乗ったとき；終わった＋とき→終わったとき。主句可用現在或過去。",
+      "usage": "辨認某個行動發生時的狀態；『電車に乗るとき』常指上車時／上車前後的時點；『電車に乗ったとき』強調已經上車的時點。",
+      "examples": [
+        {
+          "jp": "電車に乗るとき、時間を確認します。",
+          "zh": "要搭電車時，我會確認時間。"
+        },
+        {
+          "jp": "電車に乗ったとき、先生に連絡しました。",
+          "zh": "上了電車時，我聯絡了老師。"
+        },
+        {
+          "jp": "会議が終わったとき、受付に行きました。",
+          "zh": "會議結束時，我去了接待處。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-28"
+    },
+    {
+      "pattern": "時間／事件＋までに",
+      "meaning": "表示『最晚在某時間之前完成』，強調截止期限；不表示動作持續到那個時刻。",
+      "connection": "金曜日＋までに→金曜日までに；八時＋までに→八時までに；会議が開始する＋までに→会議が開始するまでに。",
+      "usage": "交件、集合、到達等必須在期限前完成的行動。",
+      "examples": [
+        {
+          "jp": "金曜日までに申込書を提出します。",
+          "zh": "最晚星期五以前提交申請表。"
+        },
+        {
+          "jp": "八時までに受付に行きます。",
+          "zh": "八點前會到接待處。"
+        },
+        {
+          "jp": "会議が開始するまでに、準備します。",
+          "zh": "會議開始之前會準備好。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-28"
+    },
+    {
+      "pattern": "閱讀與文字稿模擬聽解：期限與事件順序",
+      "meaning": "先備詞：金曜日（きんようび）＝星期五；名前（なまえ）＝姓名；受付（うけつけ）＝服務台；八時（はちじ）＝八點。閱讀：『申込書の締め切りは金曜日です。金曜日までに申込書を提出してください。提出する前に、名前を確認してください。』模擬聽解文字稿：『女：会議は八時に開始します。いつ受付に行きますか。男：八時までに行きます。申込書を記入してから、受付に行きます。』",
+      "connection": "までに標示截止；前に標示先做；てから標示完成後再做。",
+      "usage": "閱讀問題：①截止日是？（星期五）②提交前要做什麼？（確認姓名）。聽解問題：①何時前到接待處？（八點前）②先填表還是先到接待處？（先填表）。文字稿模擬不是真實聽力音檔。",
+      "examples": [
+        {
+          "jp": "金曜日までに申込書を提出してください。",
+          "zh": "請在星期五以前提交申請表。"
+        },
+        {
+          "jp": "提出する前に、名前を確認してください。",
+          "zh": "提交前請確認姓名。"
+        },
+        {
+          "jp": "申込書を記入してから、受付に行きます。",
+          "zh": "填好申請表後再去接待處。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-28"
+    },
+    {
+      "pattern": "～まで vs ～までに",
+      "meaning": "まで表示『一直到某時間為止』的持續範圍；までに表示『不晚於某時間』的截止點。",
+      "connection": "八時まで待ちます（一直等到八點）；八時までに行きます（八點以前到）。補充詞：待つ（まつ）＝等待。",
+      "usage": "看動詞是否為持續活動或要在期限前完成。",
+      "examples": [
+        {
+          "jp": "八時まで待ちます。",
+          "zh": "會一直等到八點。"
+        },
+        {
+          "jp": "八時までに行きます。",
+          "zh": "八點以前會到。"
+        },
+        {
+          "jp": "金曜日までに提出します。",
+          "zh": "星期五以前會提交。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-28"
+    },
+    {
+      "pattern": "N5間隔複習：～ないでください／～なければなりません／～なくてもいいです",
+      "meaning": "～ないでください＝請不要；～なければなりません＝必須；～なくてもいいです＝不必。都要先辨認動詞ない形與整個句尾。",
+      "connection": "行かない→行かないでください／行かなければなりません／行かなくてもいいです。",
+      "usage": "不要因為都含『ない』就誤判為同一意思。",
+      "examples": [
+        {
+          "jp": "ここに入らないでください。",
+          "zh": "請不要進入這裡。"
+        },
+        {
+          "jp": "金曜日までに提出しなければなりません。",
+          "zh": "必須在星期五以前提交。"
+        },
+        {
+          "jp": "今日は学校に行かなくてもいいです。",
+          "zh": "今天不必去學校。"
+        }
+      ],
+      "category": "請求・邀請",
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "pattern": "動詞て形＋から：先做A再做B",
+      "meaning": "先完成前項動作，再進行後項動作。這裡的『から』表示順序，不是『因為』。",
+      "connection": "準備する→準備してから；提出する→提出してから；着く→着いてから。",
+      "usage": "常用於填寫、交件、聯絡等流程。『遅れるから』則是原因，需分辨。",
+      "examples": [
+        {
+          "jp": "準備してから、出発します。",
+          "zh": "準備好之後再出發。"
+        },
+        {
+          "jp": "申込書を提出してから、受付に行きます。",
+          "zh": "提交申請表後再去接待處。"
+        },
+        {
+          "jp": "駅に着いてから、先生に連絡します。",
+          "zh": "抵達車站後再聯絡老師。"
+        }
+      ],
+      "category": "て形",
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "pattern": "動詞辭書形＋前に／動詞た形＋後で",
+      "meaning": "前に＝做A之前先做B；後で＝完成A後再做B。前に用辭書形，後で用た形；名詞則是名詞＋の前に／の後で。",
+      "connection": "出発する前に／出発した後で；会議の前に／会議の後で。",
+      "usage": "同一事件可換視角描述先後，但不可寫『出発した前に』。",
+      "examples": [
+        {
+          "jp": "出発する前に、時間を確認します。",
+          "zh": "出發前先確認時間。"
+        },
+        {
+          "jp": "申込書を提出した後で、先生に連絡しました。",
+          "zh": "提交申請表後聯絡老師。"
+        },
+        {
+          "jp": "会議の後で、受付に行きました。",
+          "zh": "會議後去了接待處。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "pattern": "動詞辭書形／た形＋とき",
+      "meaning": "表示『……的時候』。辭書形＋とき常聚焦動作開始前後或尚未完成的階段；た形＋とき通常聚焦動作已完成時，仍需看上下文。",
+      "connection": "遅れる＋とき→遅れるとき；駅に着いた＋とき→駅に着いたとき；名詞＋のとき（如子どものとき）。",
+      "usage": "遇到通知或集合情境，用『遅れるときは連絡してください』提醒遲到時通知。",
+      "examples": [
+        {
+          "jp": "遅れるときは、先生に連絡してください。",
+          "zh": "會遲到時，請聯絡老師。"
+        },
+        {
+          "jp": "電車に乗るとき、時間を確認します。",
+          "zh": "要搭電車時確認時間。"
+        },
+        {
+          "jp": "駅に着いたとき、先生に連絡しました。",
+          "zh": "抵達車站時聯絡了老師。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "pattern": "文字稿模擬聽解：時間與行動順序",
+      "meaning": "先備詞：何時（なんじ）幾點、集合（しゅうごう）集合、受付（うけつけ）接待處。這是文字稿模擬，非真實音檔。對話：『女：明日は何時に集合しますか。男：九時に集合します。でも、八時半までに受付に来てください。女：受付に行く前に何をしますか。男：申込書を準備します。』",
+      "connection": "問題① 集合時間？九時。問題② 最晚幾點到受付？八時半。問題③ 去受付前先做什麼？準備申請表。",
+      "usage": "朗讀兩輪，第二輪遮住中文，只記下兩個時間與事件先後。",
+      "examples": [
+        {
+          "jp": "九時に集合します。",
+          "zh": "九點集合。"
+        },
+        {
+          "jp": "八時半までに受付に来てください。",
+          "zh": "請最晚八點半到接待處。"
+        },
+        {
+          "jp": "受付に行く前に、申込書を準備します。",
+          "zh": "去接待處前先準備申請表。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "pattern": "時間＋まで／時間＋までに",
+      "meaning": "まで＝動作持續到某個時間；までに＝最晚在指定時間以前完成。兩者不可互換。",
+      "connection": "九時まで待ちます＝一直等到九點；九時までに来てください＝最晚九點到。",
+      "usage": "閱讀公告時先找動詞：待つ、勉強する等持續動作用まで；提出する、来る等完成目標常用までに。",
+      "examples": [
+        {
+          "jp": "九時まで待ちます。",
+          "zh": "一直等到九點。"
+        },
+        {
+          "jp": "九時までに学校に来てください。",
+          "zh": "請最晚九點到學校。"
+        },
+        {
+          "jp": "金曜日までに申込書を提出します。",
+          "zh": "最晚星期五提交申請表。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "pattern": "普通形四格：する／遅れる／行く",
+      "meaning": "現在肯定用辭書形、現在否定用ない形、過去肯定用た形、過去否定用なかった。普通形不是直接刪掉ます。",
+      "connection": "する／しない／した／しなかった；遅れる／遅れない／遅れた／遅れなかった；行く／行かない／行った／行かなかった。",
+      "usage": "今天先能辨認現在與過去的肯定、否定，再選前に、てから、後で、とき等接續。",
+      "examples": [
+        {
+          "jp": "明日は学校に行く。",
+          "zh": "明天去學校。"
+        },
+        {
+          "jp": "昨日は学校に行かなかった。",
+          "zh": "昨天沒有去學校。"
+        },
+        {
+          "jp": "今日は遅れない。",
+          "zh": "今天不會遲到。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "pattern": "閱讀練習：集合公告與期限",
+      "meaning": "先備詞：明日（あした）明天、学校（がっこう）學校、九時（くじ）九點、八時半（はちじはん）八點半、申込書（もうしこみしょ）申請表、先生（せんせい）老師。短文：『明日は九時に学校の前で集合します。八時半までに受付に来てください。申込書を提出してから、集合場所に行ってください。遅れるときは、先生に連絡してください。』",
+      "connection": "問題① 最晚幾點到受付？答：八時半。問題② 先交申請表還是先去集合地點？答：先交申請表。問題③ 遲到時做什麼？答：聯絡老師。",
+      "usage": "依序標記『までに』的期限、『てから』的順序及『とき』的情境。",
+      "examples": [
+        {
+          "jp": "八時半までに受付に来てください。",
+          "zh": "請最晚八點半到接待處。"
+        },
+        {
+          "jp": "申込書を提出してから、集合場所に行ってください。",
+          "zh": "提交申請表後再去集合地點。"
+        },
+        {
+          "jp": "遅れるときは、先生に連絡してください。",
+          "zh": "會遲到時請聯絡老師。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "pattern": "N5間隔複習：～てもいいです／～てはいけません／～ないでください",
+      "meaning": "可以做／不可以做／請不要做，三者語氣不同。",
+      "connection": "動詞て形＋もいいです／はいけません；動詞ない形去い＋いでください。例如乗ってもいい、乗ってはいけません、乗らないでください。",
+      "usage": "て形是允許或禁止的共同接續，但意思由句尾決定；ないでください是請求對方不要做。",
+      "examples": [
+        {
+          "jp": "この電車に乗ってもいいです。",
+          "zh": "可以搭這班電車。"
+        },
+        {
+          "jp": "ここで写真を撮ってはいけません。",
+          "zh": "這裡不可以拍照。"
+        },
+        {
+          "jp": "ここで降りないでください。",
+          "zh": "請不要在這裡下車。"
+        }
+      ],
+      "category": "請求・邀請",
+      "firstSeen": "2026-10-30",
+      "lastSeen": "2026-10-30"
+    },
+    {
+      "pattern": "る動詞的兩種分類：五段與一段",
+      "meaning": "「る」結尾不保證是一段動詞。五段動詞要把る變成ら＋ない；一段動詞去掉る再加ない。",
+      "connection": "五段：帰る→帰らない、乗る→乗らない；一段：降りる→降りない、出る→出ない、遅れる→遅れない。",
+      "usage": "「い／え段＋る」多數是一段，但帰る、切る等是例外；請記住動詞類型，不要單憑最後一個字猜。",
+      "examples": [
+        {
+          "jp": "今日は電車に乗らない。",
+          "zh": "今天不搭電車。"
+        },
+        {
+          "jp": "次の駅では降りない。",
+          "zh": "不在下一站下車。"
+        },
+        {
+          "jp": "明日は家を出ない。",
+          "zh": "明天不出門。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-30",
+      "lastSeen": "2026-10-30"
+    },
+    {
+      "pattern": "動詞普通形四格：現在與過去、肯定與否定",
+      "meaning": "普通形四格依序是辭書形／ない形／た形／なかった形。現在形也可表示未來。",
+      "connection": "帰る／帰らない／帰った／帰らなかった；降りる／降りない／降りた／降りなかった；する／しない／した／しなかった。",
+      "usage": "先判斷時間，再看肯否；五段る動詞的た形常是った，一段動詞則去る＋た。ない→なかった是過去否定。",
+      "examples": [
+        {
+          "jp": "昨日、家に帰った。",
+          "zh": "昨天回家了。"
+        },
+        {
+          "jp": "昨日は電車に乗らなかった。",
+          "zh": "昨天沒有搭電車。"
+        },
+        {
+          "jp": "昨日は駅で降りなかった。",
+          "zh": "昨天沒有在車站下車。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-30",
+      "lastSeen": "2026-10-30"
+    },
+    {
+      "pattern": "禮貌形轉普通形：ます／ません／ました／ませんでした",
+      "meaning": "轉換時不可只刪掉ます；要選正確的動詞活用。",
+      "connection": "乗ります→乗る、乗りません→乗らない、乗りました→乗った、乗りませんでした→乗らなかった；出ます→出る、出ません→出ない、出ました→出た、出ませんでした→出なかった。",
+      "usage": "練習時從原形開始重建四格；看到ませんでした一定想到過去否定。",
+      "examples": [
+        {
+          "jp": "今日は八時に家を出る。",
+          "zh": "今天八點出門。"
+        },
+        {
+          "jp": "昨日は家を出なかった。",
+          "zh": "昨天沒有出門。"
+        },
+        {
+          "jp": "昨日、九時に駅に着いた。",
+          "zh": "昨天九點抵達車站。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-10-30",
+      "lastSeen": "2026-10-30"
+    },
+    {
+      "pattern": "N5間隔複習：て形、ない形與許可／禁止／請求",
+      "meaning": "～てもいいです＝可以；～てはいけません＝不可以；～ないでください＝請不要。",
+      "connection": "開ける→開けて／開けない：開けてもいいです／開けてはいけません／開けないでください。",
+      "usage": "要分辨許可、禁止和請求；注意「ないでください」前保留ない形的ない，不是接て形。",
+      "examples": [
+        {
+          "jp": "窓を開けてもいいです。",
+          "zh": "可以開窗。"
+        },
+        {
+          "jp": "ここでドアを開けてはいけません。",
+          "zh": "這裡不可以開門。"
+        },
+        {
+          "jp": "約束を忘れないでください。",
+          "zh": "請不要忘記約定。"
+        }
+      ],
+      "category": "ない形",
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31"
+    },
+    {
+      "pattern": "い形容詞／な形容詞／名詞＋と思います",
+      "meaning": "い形容詞直接接と思います；な形容詞及名詞的現在肯定普通形要加だ。",
+      "connection": "早いと思います／早くないと思います；便利だと思います／便利ではないと思います；学生だと思います／学生ではないと思います。",
+      "usage": "便利な駅（修飾名詞）與便利だと思います（句子接想法）不同；「便利なと思います」錯誤。",
+      "examples": [
+        {
+          "jp": "この駅は便利だと思います。",
+          "zh": "我認為這個車站很方便。"
+        },
+        {
+          "jp": "この電車は早くないと思います。",
+          "zh": "我認為這班電車不快。"
+        },
+        {
+          "jp": "あの人は学生だと思います。",
+          "zh": "我想那個人是學生。"
+        }
+      ],
+      "category": "形容詞",
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31"
+    },
+    {
+      "pattern": "る結尾動詞辨識：五段與一段",
+      "meaning": "不能看見る就直接去掉；切る是五段、借りる與開ける是一段。",
+      "connection": "五段：切る→切らない→切った→切らなかった；一段：借りる→借りない→借りた→借りなかった；開ける→開けない→開けた→開けなかった。",
+      "usage": "切る（きる）雖然是い段＋る，仍屬五段；借りる（かりる）是一段。請整組記憶，先辨類再活用。",
+      "examples": [
+        {
+          "jp": "今日は紙を切らない。",
+          "zh": "今天不剪紙。"
+        },
+        {
+          "jp": "昨日、図書館で本を借りた。",
+          "zh": "昨天在圖書館借了書。"
+        },
+        {
+          "jp": "昨日は窓を開けなかった。",
+          "zh": "昨天沒有打開窗戶。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31"
+    },
+    {
+      "pattern": "普通形四格與ます形互換",
+      "meaning": "普通形有非過去肯定、非過去否定、過去肯定、過去否定；非過去可指現在或未來。",
+      "connection": "切ります／切りません／切りました／切りませんでした ↔ 切る／切らない／切った／切らなかった；借ります／借りません／借りました／借りませんでした ↔ 借りる／借りない／借りた／借りなかった。",
+      "usage": "先看ませんでした＝過去否定；ません＝非過去否定；ました＝過去肯定；ます＝非過去肯定。不能直接刪掉ます。",
+      "examples": [
+        {
+          "jp": "明日、本を借りる。",
+          "zh": "明天要借書。"
+        },
+        {
+          "jp": "今日はドアを閉めない。",
+          "zh": "今天不關門。"
+        },
+        {
+          "jp": "昨日は時間を間違えなかった。",
+          "zh": "昨天沒有弄錯時間。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-10-31"
+    },
+    {
+      "pattern": "N4短文閱讀與模擬聽解：先找時間、主語與否定",
+      "meaning": "閱讀：明日は集合場所を確認します。田中さんは荷物を送らないと思います。でも、友達は昨日荷物を受け取りました。模擬聽解文字：『ホテルを予約しましたか。』『いいえ、まだ予約していません。明日予約すると思います。』",
+      "connection": "明日＝明天；昨日＝昨天；まだ～ていません＝還沒有；受け取りました＝已收到。這些詞與句型均在今日或N5內容中出現。",
+      "usage": "先閱讀一次並回答：誰可能不寄包裹？朋友何時收到？對話中飯店是否已預約？再請人把對話念兩遍，只聽不看文字回答。這是文字模擬，非真實音檔。",
+      "examples": [
+        {
+          "jp": "田中さんは荷物を送らないと思います。",
+          "zh": "我想田中先生不會寄包裹。"
+        },
+        {
+          "jp": "友達は昨日荷物を受け取りました。",
+          "zh": "朋友昨天收到包裹了。"
+        },
+        {
+          "jp": "まだ予約していません。明日予約すると思います。",
+          "zh": "還沒有預約。我想明天會預約。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-11-02",
+      "lastSeen": "2026-11-02"
+    },
+    {
+      "pattern": "い形容詞、な形容詞與名詞＋と思います",
+      "meaning": "形容詞、名詞也能表達看法，但接續不同。",
+      "connection": "い形容詞：早いと思います／早くないと思います；な形容詞：大事だと思います／大事ではないと思います；名詞：予約だと思います。",
+      "usage": "な形容詞修飾名詞用「な」（大事な物），接と思います的現在肯定用「だ」（大事だと思います）。",
+      "examples": [
+        {
+          "jp": "この荷物は大事だと思います。",
+          "zh": "我認為這個包裹很重要。"
+        },
+        {
+          "jp": "明日は都合がよくないと思います。",
+          "zh": "我認為明天時間不方便。"
+        },
+        {
+          "jp": "これはホテルの予約だと思います。",
+          "zh": "我想這是飯店的預約。"
+        }
+      ],
+      "category": "形容詞",
+      "firstSeen": "2026-11-02",
+      "lastSeen": "2026-11-02"
+    },
+    {
+      "pattern": "五段動詞的た形：く→いた、ぶ→んだ",
+      "meaning": "除了る結尾的五段動詞，也要辨認其他字尾的普通形過去肯定。",
+      "connection": "届く→届かない→届いた→届かなかった；選ぶ→選ばない→選んだ→選ばなかった。注意：行く→行った是已學過的例外。",
+      "usage": "與N5學過的て形對照：届いて→届いた；選んで→選んだ。",
+      "examples": [
+        {
+          "jp": "荷物は昨日届いた。",
+          "zh": "包裹昨天送到了。"
+        },
+        {
+          "jp": "昨日、プレゼントを選んだ。",
+          "zh": "昨天選了禮物。"
+        },
+        {
+          "jp": "昨日はプレゼントを選ばなかった。",
+          "zh": "昨天沒有挑禮物。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-02",
+      "lastSeen": "2026-11-02"
+    },
+    {
+      "pattern": "普通形＋と思います：肯定、否定與時態",
+      "meaning": "用來表達個人想法、判斷或推測；前面使用普通形而非ます形。",
+      "connection": "動詞普通形＋と思います：届くと思います／届かないと思います／届いたと思います／届かなかったと思います。",
+      "usage": "在不確定包裹是否到達、他人是否預約時，使用と思います比直接斷言更自然。",
+      "examples": [
+        {
+          "jp": "荷物は明日届くと思います。",
+          "zh": "我想包裹明天會送到。"
+        },
+        {
+          "jp": "田中さんはホテルを予約しないと思います。",
+          "zh": "我想田中先生不會預約飯店。"
+        },
+        {
+          "jp": "友達はもう荷物を受け取ったと思います。",
+          "zh": "我想朋友已經收到包裹了。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-11-02",
+      "lastSeen": "2026-11-02"
+    },
+    {
+      "pattern": "複習進階：る動詞不能只看字尾",
+      "meaning": "送る／取る／受け取る是五段動詞；調べる是一段動詞。看到る不能直接判斷ない形。",
+      "connection": "五段：送る→送らない→送った→送らなかった；取る→取らない→取った→取らなかった；一段：調べる→調べない→調べた→調べなかった。",
+      "usage": "先記動詞分類，再按現在肯定、現在否定、過去肯定、過去否定的順序練四格。",
+      "examples": [
+        {
+          "jp": "今日は荷物を送らない。",
+          "zh": "今天不寄包裹。"
+        },
+        {
+          "jp": "昨日、切符を取った。",
+          "zh": "昨天拿到了票。 "
+        },
+        {
+          "jp": "昨日は電車の時間を調べなかった。",
+          "zh": "昨天沒有查詢電車時間。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-02",
+      "lastSeen": "2026-11-02"
+    },
+    {
+      "pattern": "五段動詞普通形四格：使う／買う",
+      "meaning": "う結尾五段動詞的ない形與た形。",
+      "connection": "使う／使わない／使った／使わなかった；買う／買わない／買った／買わなかった。",
+      "usage": "う→わない（不是あない）；う結尾た形變った。",
+      "examples": [
+        {
+          "jp": "今日は辞書を使わない。",
+          "zh": "今天不用辭典。"
+        },
+        {
+          "jp": "昨日、切符を買った。",
+          "zh": "昨天買了票。"
+        },
+        {
+          "jp": "昨日は服を買わなかった。",
+          "zh": "昨天沒有買衣服。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-03",
+      "lastSeen": "2026-11-03"
+    },
+    {
+      "pattern": "五段動詞普通形四格：待つ／持つ",
+      "meaning": "辨認非過去肯定、非過去否定、過去肯定、過去否定。",
+      "connection": "待つ／待たない／待った／待たなかった；持つ／持たない／持った／持たなかった。",
+      "usage": "五段つ結尾的た形是った，ない形將つ變た再加ない。",
+      "examples": [
+        {
+          "jp": "駅で友達を待つ。",
+          "zh": "在車站等朋友。"
+        },
+        {
+          "jp": "今日は友達を待たない。",
+          "zh": "今天不等朋友。"
+        },
+        {
+          "jp": "昨日は傘を持たなかった。",
+          "zh": "昨天沒帶傘。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-03",
+      "lastSeen": "2026-11-03"
+    },
+    {
+      "pattern": "五段音便複習：届く／選ぶ／送る",
+      "meaning": "分辨く→いた、ぶ→んだ、る→った。",
+      "connection": "届く→届いた；選ぶ→選んだ；送る→送った。否定：届かない／選ばない／送らない。",
+      "usage": "以N5已學て形對照：届いて、選んで、送って。行く→行った是特例。",
+      "examples": [
+        {
+          "jp": "荷物は昨日届いた。",
+          "zh": "包裹昨天送到了。"
+        },
+        {
+          "jp": "友達の服を選んだ。",
+          "zh": "選了朋友的衣服。"
+        },
+        {
+          "jp": "荷物を送らなかった。",
+          "zh": "沒有寄包裹。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-03",
+      "lastSeen": "2026-11-03"
+    },
+    {
+      "pattern": "N5間隔複習：て形、ないでください、たことがあります",
+      "meaning": "複習請求不要做與經驗表達。",
+      "connection": "ない形去い＋ないでください；た形＋ことがあります。",
+      "usage": "讀解注意経験和禁止請求不同。",
+      "examples": [
+        {
+          "jp": "ここで話さないでください。",
+          "zh": "請不要在這裡說話。"
+        },
+        {
+          "jp": "海で泳いだことがあります。",
+          "zh": "我曾在海裡游泳。"
+        },
+        {
+          "jp": "寝る前に電気を消してください。",
+          "zh": "睡前請關燈。"
+        }
+      ],
+      "category": "請求・邀請",
+      "firstSeen": "2026-11-04",
+      "lastSeen": "2026-11-04"
+    },
+    {
+      "pattern": "一段動詞：忘れる／覚える",
+      "meaning": "一段動詞去る後接ない、た、なかった。",
+      "connection": "忘れる／忘れない／忘れた／忘れなかった；覚える／覚えない／覚えた／覚えなかった。",
+      "usage": "和五段話す、泳ぐ、読む對比。",
+      "examples": [
+        {
+          "jp": "昨日傘を忘れた。",
+          "zh": "昨天忘了傘。"
+        },
+        {
+          "jp": "今日は漢字を覚えない。",
+          "zh": "今天不記漢字。"
+        },
+        {
+          "jp": "約束を忘れなかった。",
+          "zh": "沒有忘記約定。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-04",
+      "lastSeen": "2026-11-04"
+    },
+    {
+      "pattern": "五段ぐ／む結尾的普通形",
+      "meaning": "掌握ぐ→いだ、む→んだ與否定。",
+      "connection": "泳ぐ／泳がない／泳いだ／泳がなかった；読む／読まない／読んだ／読まなかった。",
+      "usage": "ぐ與く的音便不同：泳いだ、書いた；む與ぶ都變んだ。",
+      "examples": [
+        {
+          "jp": "昨日海で泳いだ。",
+          "zh": "昨天在海裡游泳了。"
+        },
+        {
+          "jp": "今日は本を読まない。",
+          "zh": "今天不讀書。"
+        },
+        {
+          "jp": "昨日は水を飲まなかった。",
+          "zh": "昨天沒有喝水。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-04",
+      "lastSeen": "2026-11-04"
+    },
+    {
+      "pattern": "五段す結尾的普通形四格",
+      "meaning": "掌握す→さない與す→した。",
+      "connection": "話す／話さない／話した／話さなかった；探す／探さない／探した／探さなかった。",
+      "usage": "す結尾的た形不是った；對照て形：話して。",
+      "examples": [
+        {
+          "jp": "昨日友達と話した。",
+          "zh": "昨天和朋友說話了。"
+        },
+        {
+          "jp": "今日は鍵を探さない。",
+          "zh": "今天不找鑰匙。"
+        },
+        {
+          "jp": "昨日は日本語で話さなかった。",
+          "zh": "昨天沒有用日文說話。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-04",
+      "lastSeen": "2026-11-04"
+    },
+    {
+      "pattern": "普通形＋と思います（綜合）",
+      "meaning": "以普通形表達推測；注意時態與否定。",
+      "connection": "動詞普通形＋と思います；名詞、な形容詞現在肯定＋だと思います。",
+      "usage": "可接話す、話さない、話した、話さなかった等四格。",
+      "examples": [
+        {
+          "jp": "田中さんは明日話すと思います。",
+          "zh": "我想田中明天會說話。"
+        },
+        {
+          "jp": "友達はまだ本を読んでいないと思います。",
+          "zh": "我想朋友還沒讀書。"
+        },
+        {
+          "jp": "山田さんは昨日学校を休んだと思います。",
+          "zh": "我想山田昨天請假了。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-11-04",
+      "lastSeen": "2026-11-04"
+    },
+    {
+      "pattern": "N5複習：て形、義務、經驗",
+      "meaning": "回顧請求、必須與曾經",
+      "connection": "運ぶ→運んで；急ぐ→急いで；直す→直して；ない形去い＋ければなりません；た形＋ことがあります",
+      "usage": "複習音便與基本句型",
+      "examples": [
+        {
+          "jp": "荷物を運んでください。",
+          "zh": "請搬運行李。"
+        },
+        {
+          "jp": "早く起きなければなりません。",
+          "zh": "必須早起。"
+        },
+        {
+          "jp": "本を借りたことがあります。",
+          "zh": "曾借過書。"
+        }
+      ],
+      "category": "て形",
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05"
+    },
+    {
+      "pattern": "五段ぶ・ぐ・す音便",
+      "meaning": "掌握た形與ない形",
+      "connection": "運ぶ→運ばない／運んだ／運ばなかった；急ぐ→急がない／急いだ／急がなかった；直す→直さない／直した／直さなかった",
+      "usage": "ぶ→んだ；ぐ→いだ；す→した",
+      "examples": [
+        {
+          "jp": "昨日荷物を運んだ。",
+          "zh": "昨天搬了行李。"
+        },
+        {
+          "jp": "今日は駅へ急がない。",
+          "zh": "今天不急著去車站。"
+        },
+        {
+          "jp": "時計を直さなかった。",
+          "zh": "沒有修理時鐘。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05"
+    },
+    {
+      "pattern": "五段る與一段る",
+      "meaning": "辨認相同る結尾不同活用",
+      "connection": "帰る（五段）→帰らない／帰った／帰らなかった；起きる（一段）→起きない／起きた／起きなかった；借りる→借りない／借りた／借りなかった",
+      "usage": "帰る是五段例外於常見る前い／え段的判斷；須個別記憶",
+      "examples": [
+        {
+          "jp": "昨日六時に帰った。",
+          "zh": "昨天六點回家。"
+        },
+        {
+          "jp": "今日は早く起きなかった。",
+          "zh": "今天沒有早起。"
+        },
+        {
+          "jp": "図書館で本を借りた。",
+          "zh": "在圖書館借了書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05"
+    },
+    {
+      "pattern": "N5間隔複習：てください、なければなりません、たことがあります",
+      "meaning": "複習請求、義務與經驗，和今日活用連結。",
+      "connection": "動詞て形＋ください；ない形去い＋ければなりません；た形＋ことがあります。",
+      "usage": "辨別必須做與曾做過，不混淆時態。",
+      "examples": [
+        {
+          "jp": "ドアを閉めてください。",
+          "zh": "請關門。"
+        },
+        {
+          "jp": "早く起きなければなりません。",
+          "zh": "必須早起。"
+        },
+        {
+          "jp": "本を借りたことがあります。",
+          "zh": "曾經借過書。"
+        }
+      ],
+      "category": "請求・邀請",
+      "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-06"
+    },
+    {
+      "pattern": "五段る動詞與一段る動詞辨識",
+      "meaning": "る結尾不代表一定是一段。切る、帰る、走る、入る是五段；借りる、開ける、閉める、忘れる、始める是一段。",
+      "connection": "五段る→らない／った／らなかった；一段る去る→ない／た／なかった。",
+      "usage": "遇到い段或え段＋る，先查動詞類型，不能只看最後一字。",
+      "examples": [
+        {
+          "jp": "紙を切らない。",
+          "zh": "不剪紙。"
+        },
+        {
+          "jp": "昨日、六時に帰った。",
+          "zh": "昨天六點回家。"
+        },
+        {
+          "jp": "図書館で本を借りた。",
+          "zh": "在圖書館借了書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-06"
+    },
+    {
+      "pattern": "普通形四格：一段る",
+      "meaning": "一段動詞去掉る，依序加ない、た、なかった。",
+      "connection": "借りる／借りない／借りた／借りなかった；開ける／開けない／開けた／開けなかった；閉める／閉めない／閉めた／閉めなかった。",
+      "usage": "不要把借りる錯變成借らない。",
+      "examples": [
+        {
+          "jp": "昨日、本を借りた。",
+          "zh": "昨天借了書。"
+        },
+        {
+          "jp": "朝、窓を開けなかった。",
+          "zh": "早上沒有開窗。"
+        },
+        {
+          "jp": "ドアを閉めない。",
+          "zh": "不關門。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-06"
+    },
+    {
+      "pattern": "普通形四格：五段る",
+      "meaning": "現在肯定、現在否定、過去肯定、過去否定的四格。",
+      "connection": "切る／切らない／切った／切らなかった；帰る／帰らない／帰った／帰らなかった；走る／走らない／走った／走らなかった。",
+      "usage": "五段る的ない形是らない，不是去る直接加ない。",
+      "examples": [
+        {
+          "jp": "今日は紙を切らない。",
+          "zh": "今天不剪紙。"
+        },
+        {
+          "jp": "昨日は家に帰らなかった。",
+          "zh": "昨天沒有回家。"
+        },
+        {
+          "jp": "昨日、公園を走った。",
+          "zh": "昨天在公園跑了步。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-06"
+    },
+    {
+      "pattern": "閱讀與文字模擬聽解",
+      "meaning": "先教昨日（昨天）、明日（明天）、そのあと（之後）、もう（已經）、まだ（尚未）、図書館（圖書館）。",
+      "connection": "閱讀：昨日、私は図書館で本を借りました。そのあと家に帰りました。明日は友達と遊ぶ予定です。",
+      "usage": "理解：昨天借書後回家；明天計畫和朋友玩。文字模擬聽解：A もう帰りましたか。B いいえ、まだ帰っていません。答案：尚未回家。",
+      "examples": [
+        {
+          "jp": "昨日、図書館で本を借りました。",
+          "zh": "昨天在圖書館借書。"
+        },
+        {
+          "jp": "そのあと家に帰りました。",
+          "zh": "之後回家。"
+        },
+        {
+          "jp": "明日は友達と遊ぶ予定です。",
+          "zh": "明天計畫和朋友玩。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-08"
+    },
+    {
+      "pattern": "N5間隔複習：てもいい／なければなりません／たことがある",
+      "meaning": "可以做／必須做／曾經做過。",
+      "connection": "て形＋もいいです；ない形去い＋ければなりません；た形＋ことがあります。",
+      "usage": "三種功能不要混淆。",
+      "examples": [
+        {
+          "jp": "窓を開けてもいいです。",
+          "zh": "可以開窗。"
+        },
+        {
+          "jp": "早く帰らなければなりません。",
+          "zh": "必須早點回家。"
+        },
+        {
+          "jp": "図書館で本を借りたことがあります。",
+          "zh": "曾在圖書館借過書。"
+        }
+      ],
+      "category": "許可・禁止",
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-07"
+    },
+    {
+      "pattern": "五段る與一段る的分類",
+      "meaning": "切る・帰る・始まる・終わる屬五段；借りる・開ける・閉める・忘れる・始める屬一段。",
+      "connection": "五段る→らない／った／らなかった；一段去る→ない／た／なかった。",
+      "usage": "い段或え段＋る常見一段，但切る、帰る是例外，必須記住。",
+      "examples": [
+        {
+          "jp": "紙を切らない。",
+          "zh": "不剪紙。"
+        },
+        {
+          "jp": "昨日、家に帰った。",
+          "zh": "昨天回家了。"
+        },
+        {
+          "jp": "本を借りなかった。",
+          "zh": "沒有借書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-07"
+    },
+    {
+      "pattern": "普通形四格與禮貌形對照",
+      "meaning": "現在肯定／現在否定／過去肯定／過去否定；普通形用於日常敘述及後續接續。",
+      "connection": "切る／切らない／切った／切らなかった；借りる／借りない／借りた／借りなかった。",
+      "usage": "ます→辭書形；ません→ない形；ました→た形；ませんでした→なかった。",
+      "examples": [
+        {
+          "jp": "昨日、窓を開けた。",
+          "zh": "昨天開了窗。"
+        },
+        {
+          "jp": "昨日、ドアを閉めなかった。",
+          "zh": "昨天沒有關門。"
+        },
+        {
+          "jp": "明日は本を借りる。",
+          "zh": "明天要借書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-07"
+    },
+    {
+      "pattern": "自動詞與他動詞：始まる／始める",
+      "meaning": "始まる表示事情開始，始める表示某人開始某件事。",
+      "connection": "授業が始まる／勉強を始める；始まる是五段，始める是一段。",
+      "usage": "先看主語與助詞：課程が始まる；我が勉強を始める。",
+      "examples": [
+        {
+          "jp": "授業が九時に始まります。",
+          "zh": "課程九點開始。"
+        },
+        {
+          "jp": "私は九時に勉強を始めます。",
+          "zh": "我九點開始讀書。"
+        },
+        {
+          "jp": "授業はまだ始まっていません。",
+          "zh": "課程還沒開始。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-07"
+    },
+    {
+      "pattern": "N5間隔複習：許可、義務、經驗",
+      "meaning": "～てもいいです可以；～なければなりません必須；～たことがあります曾經。",
+      "connection": "開けて＋もいいです；帰らない→帰らなければなりません；借りた＋ことがあります。",
+      "usage": "三者意思不同，分清楚て形、ない形、た形。",
+      "examples": [
+        {
+          "jp": "窓を開けてもいいです。",
+          "zh": "可以開窗。"
+        },
+        {
+          "jp": "早く帰らなければなりません。",
+          "zh": "必須早點回家。"
+        },
+        {
+          "jp": "図書館で本を借りたことがあります。",
+          "zh": "曾經在圖書館借書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-08",
+      "lastSeen": "2026-11-08"
+    },
+    {
+      "pattern": "五段る與一段る的ない／た／なかった",
+      "meaning": "切る、帰る屬五段；借りる、開ける屬一段。",
+      "connection": "切る→切らない／切った／切らなかった；帰る→帰らない／帰った／帰らなかった；借りる→借りない／借りた／借りなかった；開ける→開けない／開けた／開けなかった。",
+      "usage": "五段る→らない、った、らなかった；一段去る＋ない、た、なかった。",
+      "examples": [
+        {
+          "jp": "今日は紙を切らない。",
+          "zh": "今天不剪紙。"
+        },
+        {
+          "jp": "昨日、家に帰った。",
+          "zh": "昨天回家了。"
+        },
+        {
+          "jp": "昨日、本を借りなかった。",
+          "zh": "昨天沒有借書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-08",
+      "lastSeen": "2026-11-08"
+    },
+    {
+      "pattern": "動詞普通形四格",
+      "meaning": "現在肯定辭書形、現在否定ない形、過去肯定た形、過去否定なかった形。",
+      "connection": "切ります／切りません／切りました／切りませんでした→切る／切らない／切った／切らなかった。",
+      "usage": "時間詞昨日／明日與動詞結尾共同判斷時態。",
+      "examples": [
+        {
+          "jp": "昨日、窓を開けた。",
+          "zh": "昨天開了窗。"
+        },
+        {
+          "jp": "昨日、窓を開けなかった。",
+          "zh": "昨天沒有開窗。"
+        },
+        {
+          "jp": "明日は本を借りる。",
+          "zh": "明天要借書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-08",
+      "lastSeen": "2026-11-08"
+    },
+    {
+      "pattern": "始まる（自動詞）與始める（他動詞）",
+      "meaning": "事情本身開始用始まる；人開始某事用始める。",
+      "connection": "授業が始まる／勉強を始める；始まらない／始めない。",
+      "usage": "注意助詞が／を；始まる五段、始める一段。",
+      "examples": [
+        {
+          "jp": "授業が九時に始まります。",
+          "zh": "課程九點開始。"
+        },
+        {
+          "jp": "私は九時に勉強を始めます。",
+          "zh": "我九點開始讀書。"
+        },
+        {
+          "jp": "授業はまだ始まっていません。",
+          "zh": "課程還沒開始。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-08",
+      "lastSeen": "2026-11-08"
+    },
+    {
+      "pattern": "N5間隔複習：～てもいいです／～なければなりません",
+      "meaning": "可以做／必須做，與能力可能形不同。",
+      "connection": "開けて＋もいいです；行かない去い＋ければなりません。",
+      "usage": "許可『可以』不一定表示有能力；義務『必須』不等於『能』。",
+      "examples": [
+        {
+          "jp": "窓を開けてもいいです。",
+          "zh": "可以開窗。"
+        },
+        {
+          "jp": "明日は学校に行かなければなりません。",
+          "zh": "明天必須去學校。"
+        },
+        {
+          "jp": "ここで泳いでもいいですか。",
+          "zh": "這裡可以游泳嗎？"
+        }
+      ],
+      "category": "許可・禁止",
+      "firstSeen": "2026-11-09",
+      "lastSeen": "2026-11-09"
+    },
+    {
+      "pattern": "可能形與普通形四格",
+      "meaning": "可能形也有現在肯定、現在否定、過去肯定、過去否定。",
+      "connection": "読める／読めない／読めた／読めなかった；食べられる／食べられない／食べられた／食べられなかった。",
+      "usage": "『読む』是讀；『読める』是能讀。『食べない』是不吃；『食べられない』是不能吃。",
+      "examples": [
+        {
+          "jp": "昨日は忙しくて本が読めなかった。",
+          "zh": "昨天很忙，沒辦法讀書。"
+        },
+        {
+          "jp": "今日は漢字が読める。",
+          "zh": "今天能讀漢字。"
+        },
+        {
+          "jp": "前は泳げなかったが、今は泳げる。",
+          "zh": "以前不會游泳，現在會了。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-09",
+      "lastSeen": "2026-11-09"
+    },
+    {
+      "pattern": "可能形：一段動詞與不規則動詞",
+      "meaning": "表示可以做某事。",
+      "connection": "一段去る＋られる：食べる→食べられる、開ける→開けられる、借りる→借りられる；する→できる；来る（くる）→来られる（こられる）。",
+      "usage": "先記標準形式，口語省略ら的形式暫不作考試標準答案。可能形的否定為食べられない、できない。",
+      "examples": [
+        {
+          "jp": "辛い物が食べられます。",
+          "zh": "我能吃辣。"
+        },
+        {
+          "jp": "今日は車を運転できません。",
+          "zh": "今天不能開車。"
+        },
+        {
+          "jp": "明日、学校に来られますか。",
+          "zh": "明天能來學校嗎？"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-09",
+      "lastSeen": "2026-11-09"
+    },
+    {
+      "pattern": "可能形：五段動詞",
+      "meaning": "表示能力、可能性，『能夠做』。",
+      "connection": "五段動詞最後的う段改成同一行え段＋る：読む→読める、話す→話せる、泳ぐ→泳げる、弾く→弾ける。",
+      "usage": "可能形本身按一段動詞活用：読める／読めない／読めた／読めなかった。能力對象常用が。",
+      "examples": [
+        {
+          "jp": "この本が読めます。",
+          "zh": "我能讀這本書。"
+        },
+        {
+          "jp": "私は日本語が話せない。",
+          "zh": "我不會說日文。"
+        },
+        {
+          "jp": "子どもの時、泳げなかった。",
+          "zh": "小時候不會游泳。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-09",
+      "lastSeen": "2026-11-09"
+    },
+    {
+      "pattern": "N4新文法：意向形（一段／不規則）",
+      "meaning": "一段去る＋よう；する→しよう；来る→来よう（こよう）。",
+      "connection": "食べる→食べよう、決める→決めよう、調べる→調べよう、準備する→準備しよう。",
+      "usage": "意向形與可能形不同：食べよう＝來吃吧；食べられる＝能吃。",
+      "examples": [
+        {
+          "jp": "時間を決めよう。",
+          "zh": "來決定時間吧。"
+        },
+        {
+          "jp": "電車の時間を調べよう。",
+          "zh": "來查電車時間吧。"
+        },
+        {
+          "jp": "試験の準備をしよう。",
+          "zh": "來準備考試吧。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-10",
+      "lastSeen": "2026-11-10"
+    },
+    {
+      "pattern": "N4新文法：意向形（五段）",
+      "meaning": "表達「來做吧／打算做」的意志，常用於提議。",
+      "connection": "五段う段改お段＋う：行く→行こう、読む→読もう、会う→会おう、話す→話そう。",
+      "usage": "朋友間提議可用意向形；禮貌提議常用～ましょう（行きましょう）。",
+      "examples": [
+        {
+          "jp": "明日、一緒に行こう。",
+          "zh": "明天一起去吧。"
+        },
+        {
+          "jp": "この本を読もう。",
+          "zh": "來讀這本書吧。"
+        },
+        {
+          "jp": "友達に会おう。",
+          "zh": "去見朋友吧。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-10",
+      "lastSeen": "2026-11-10"
+    },
+    {
+      "pattern": "N4新文法：～ようと思います",
+      "meaning": "表示說話者目前打算做某事，語氣較柔和。",
+      "connection": "動詞意向形＋と思います：行こうと思います、調べようと思います。",
+      "usage": "第一人稱計畫常用；與單純能力形區分。",
+      "examples": [
+        {
+          "jp": "明日、図書館に行こうと思います。",
+          "zh": "我打算明天去圖書館。"
+        },
+        {
+          "jp": "今夜、試験の準備をしようと思います。",
+          "zh": "我打算今晚準備考試。"
+        },
+        {
+          "jp": "予定を変更しようと思います。",
+          "zh": "我打算變更計畫。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-11-10",
+      "lastSeen": "2026-11-10"
+    },
+    {
+      "pattern": "N5間隔複習：許可／義務與否定",
+      "meaning": "能做（可能形）不等於可以做（許可）；必須做又是不同意思。",
+      "connection": "行ける＝能去；行ってもいい＝可以去；行かなければならない＝必須去；行かなくてもいい＝不必去。",
+      "usage": "辨認～てもいい、～なければなりません、～なくてもいいです。",
+      "examples": [
+        {
+          "jp": "今日は行かなくてもいいです。",
+          "zh": "今天不必去。"
+        },
+        {
+          "jp": "明日は行かなければなりません。",
+          "zh": "明天必須去。"
+        },
+        {
+          "jp": "ここで食べてもいいです。",
+          "zh": "這裡可以吃。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-10",
+      "lastSeen": "2026-11-10"
+    },
+    {
+      "pattern": "可能形複習：一段與不規則",
+      "meaning": "一段去る＋られる；する→できる；来る→来られる（こられる）。",
+      "connection": "食べる→食べられる；調べる→調べられる；準備する→準備できる。",
+      "usage": "標準形式保留ら；能力對象常用が。",
+      "examples": [
+        {
+          "jp": "辛い物が食べられます。",
+          "zh": "能吃辣。"
+        },
+        {
+          "jp": "今日、準備ができます。",
+          "zh": "今天能準備。"
+        },
+        {
+          "jp": "明日は来られません。",
+          "zh": "明天不能來。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-10",
+      "lastSeen": "2026-11-10"
+    },
+    {
+      "pattern": "可能形複習：五段動詞",
+      "meaning": "表示能做；五段動詞う段改え段＋る。",
+      "connection": "行く→行ける；読む→読める；会う→会える；話す→話せる。",
+      "usage": "能力與條件；否定行けない、過去行けた、過去否定行けなかった。",
+      "examples": [
+        {
+          "jp": "明日は学校に行けます。",
+          "zh": "明天能去學校。"
+        },
+        {
+          "jp": "この本が読めません。",
+          "zh": "不能讀這本書。"
+        },
+        {
+          "jp": "昨日は友達に会えなかった。",
+          "zh": "昨天沒辦法見朋友。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-10",
+      "lastSeen": "2026-11-10"
+    },
+    {
+      "pattern": "可能形與意向比較",
+      "meaning": "能力、提議、意圖、預定各有不同",
+      "connection": "行ける／行こう／行くつもり／行く予定",
+      "usage": "可能形表能力，不等於許可或意圖",
+      "examples": [
+        {
+          "jp": "明日は行けません。",
+          "zh": "明天不能去。"
+        },
+        {
+          "jp": "明日は行かないつもりです。",
+          "zh": "打算明天不去。"
+        },
+        {
+          "jp": "明日は九時に行く予定です。",
+          "zh": "預定明天九點去。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-11",
+      "lastSeen": "2026-11-11"
+    },
+    {
+      "pattern": "意向形複習",
+      "meaning": "提議或意志",
+      "connection": "五段う段→お段＋う；一段去る＋よう；する→しよう；来る→来よう（こよう）",
+      "usage": "行こう是去吧；行ける是能去",
+      "examples": [
+        {
+          "jp": "明日、会おう。",
+          "zh": "明天見吧。"
+        },
+        {
+          "jp": "時間を決めよう。",
+          "zh": "來決定時間吧。"
+        },
+        {
+          "jp": "一緒に準備しよう。",
+          "zh": "一起準備吧。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-11",
+      "lastSeen": "2026-11-11"
+    },
+    {
+      "pattern": "～つもりです",
+      "meaning": "打算～",
+      "connection": "動詞辭書形＋つもりです／ない形＋つもりです",
+      "usage": "表示個人的計畫與意圖，否定意圖用ない形",
+      "examples": [
+        {
+          "jp": "明日、ホテルを予約するつもりです。",
+          "zh": "明天打算預約飯店。"
+        },
+        {
+          "jp": "今日は遅れないつもりです。",
+          "zh": "今天打算不遲到。"
+        },
+        {
+          "jp": "来週、予定を変更するつもりです。",
+          "zh": "下週打算更改計畫。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-11",
+      "lastSeen": "2026-11-15"
+    },
+    {
+      "pattern": "～ようと思っています",
+      "meaning": "之前已有、現在仍持續的打算",
+      "connection": "動詞意向形＋と思っています；否定意圖可用～ないつもりです；～ようと思います也可表示當下決定。",
+      "usage": "強調說話者的打算，不代表已確定預約。",
+      "examples": [
+        {
+          "jp": "来週、ホテルを予約しようと思っています。",
+          "zh": "我打算下週預約飯店。"
+        },
+        {
+          "jp": "友達に連絡しようと思っています。",
+          "zh": "我一直打算聯絡朋友。"
+        },
+        {
+          "jp": "旅行の準備をしようと思っています。",
+          "zh": "我打算準備旅行。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-11-11",
+      "lastSeen": "2026-11-12"
+    },
+    {
+      "pattern": "～予定です",
+      "meaning": "預定、已有安排的計畫",
+      "connection": "動詞辭書形＋予定です；名詞＋の＋予定です；予定はありません表示沒有安排。",
+      "usage": "談日程、時間、預約等已安排事項。",
+      "examples": [
+        {
+          "jp": "明日、十時に到着する予定です。",
+          "zh": "預定明天十點抵達。"
+        },
+        {
+          "jp": "来週は旅行の予定です。",
+          "zh": "下週有旅行安排。"
+        },
+        {
+          "jp": "午後に友達と会う予定です。",
+          "zh": "預定下午和朋友見面。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-11",
+      "lastSeen": "2026-11-12"
+    },
+    {
+      "pattern": "N5複習：許可、義務與可能",
+      "meaning": "辨別可以（許可）、必須、不必與能夠（能力／條件）",
+      "connection": "て形＋もいいです；ない形去い＋ければなりません；ない形去い＋くてもいいです；可能形：行ける",
+      "usage": "行ってもいい＝被允許去，不等於行ける＝能去。",
+      "examples": [
+        {
+          "jp": "行ってもいいです。",
+          "zh": "可以去（許可）。"
+        },
+        {
+          "jp": "行かなければなりません。",
+          "zh": "必須去。"
+        },
+        {
+          "jp": "行かなくてもいいです。",
+          "zh": "不必去。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-12",
+      "lastSeen": "2026-11-12"
+    },
+    {
+      "pattern": "意向形複習：～よう／～おう",
+      "meaning": "表示意志或提議『一起做吧』",
+      "connection": "五段う段→お段＋う：誘う→誘おう；一段去る＋よう：食べる→食べよう；する→しよう；来る→来よう（こよう）",
+      "usage": "與可能形區別：行こう＝去吧；行ける＝能去。",
+      "examples": [
+        {
+          "jp": "一緒に出発しよう。",
+          "zh": "一起出發吧。"
+        },
+        {
+          "jp": "友達を誘おう。",
+          "zh": "邀請朋友吧。"
+        },
+        {
+          "jp": "早く帰ろう。",
+          "zh": "早點回家吧。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-12",
+      "lastSeen": "2026-11-12"
+    },
+    {
+      "pattern": "い形容詞／な形容詞／名詞的條件",
+      "meaning": "い形容詞去い＋ければ；な形容詞及名詞＋なら（ば），表示假設條件。",
+      "connection": "早い→早ければ；忙しい→忙しければ；便利→便利なら；明日→明日なら。いい→よければ。",
+      "usage": "不要把な形容詞直接加ければ。",
+      "examples": [
+        {
+          "jp": "出発が早ければ、間に合います。",
+          "zh": "如果出發得早，就趕得上。"
+        },
+        {
+          "jp": "明日なら、大丈夫です。",
+          "zh": "如果是明天就沒問題。"
+        },
+        {
+          "jp": "時間がよければ、連絡してください。",
+          "zh": "如果時間方便，請聯絡我。"
+        }
+      ],
+      "category": "形容詞",
+      "firstSeen": "2026-11-13",
+      "lastSeen": "2026-11-13"
+    },
+    {
+      "pattern": "～たら：完成條件與假設",
+      "meaning": "動詞た形＋ら；可表示「如果～」或「做完～之後」。",
+      "connection": "調べた→調べたら；出発した→出発したら；着いた→着いたら。",
+      "usage": "～たら較適合表達先完成前項再進行後項；～ば常強調一般條件。",
+      "examples": [
+        {
+          "jp": "駅に着いたら、連絡してください。",
+          "zh": "到車站後請聯絡。"
+        },
+        {
+          "jp": "時間を調べたら、知らせます。",
+          "zh": "查完時間就通知。"
+        },
+        {
+          "jp": "雨が降ったら、出発しません。",
+          "zh": "如果下雨，就不出發。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-13",
+      "lastSeen": "2026-11-13"
+    },
+    {
+      "pattern": "～ば：一段動詞及不規則動詞",
+      "meaning": "一段動詞去る加れば；する→すれば、来る→来れば。",
+      "connection": "調べる→調べれば、知らせる→知らせれば、する→すれば、来る（くる）→来れば（くれば）。",
+      "usage": "用於「如果查詢／通知／做／來」等假設。",
+      "examples": [
+        {
+          "jp": "時間を調べれば、わかります。",
+          "zh": "如果查詢時間就會知道。"
+        },
+        {
+          "jp": "早く知らせれば、準備できます。",
+          "zh": "如果早點通知，就能準備。"
+        },
+        {
+          "jp": "準備をすれば、大丈夫です。",
+          "zh": "如果做準備，就沒問題。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-13",
+      "lastSeen": "2026-11-13"
+    },
+    {
+      "pattern": "～ば：五段動詞條件形",
+      "meaning": "表示「如果～就～」，常用於規則、條件及預測。",
+      "connection": "五段動詞最後う段改え段＋ば：急ぐ→急げば、行く→行けば、間に合う→間に合えば。",
+      "usage": "先看條件再看結果；不是過去式。",
+      "examples": [
+        {
+          "jp": "急げば、授業に間に合います。",
+          "zh": "如果趕快，就趕得上課。"
+        },
+        {
+          "jp": "駅に行けば、バスがあります。",
+          "zh": "如果去車站，就有公車。"
+        },
+        {
+          "jp": "時間に間に合えば、一緒に出発します。",
+          "zh": "如果趕得上時間，就一起出發。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-13",
+      "lastSeen": "2026-11-13"
+    },
+    {
+      "pattern": "～た後で（做完某事之後）",
+      "meaning": "先完成前項動作，再做後項動作。",
+      "connection": "動詞た形＋後で；名詞＋の＋後で。",
+      "usage": "先後次序要與前に分清楚。",
+      "examples": [
+        {
+          "jp": "時間を確認した後で、出発します。",
+          "zh": "確認時間後出發。"
+        },
+        {
+          "jp": "駅に到着した後で、連絡します。",
+          "zh": "抵達車站後聯絡。"
+        },
+        {
+          "jp": "試験の後で、友達に会います。",
+          "zh": "考試後見朋友。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-14",
+      "lastSeen": "2026-11-14"
+    },
+    {
+      "pattern": "～てもいいです／～てはいけません（N5複習）",
+      "meaning": "前者表示允許，後者表示禁止。",
+      "connection": "動詞て形＋もいいです／はいけません。",
+      "usage": "與今日行程規則情境搭配複習。",
+      "examples": [
+        {
+          "jp": "先に出発してもいいです。",
+          "zh": "可以先出發。"
+        },
+        {
+          "jp": "ここで食べてもいいです。",
+          "zh": "可以在這裡吃。"
+        },
+        {
+          "jp": "ここで食べてはいけません。",
+          "zh": "不可以在這裡吃。"
+        }
+      ],
+      "category": "許可・禁止",
+      "firstSeen": "2026-11-14",
+      "lastSeen": "2026-11-14"
+    },
+    {
+      "pattern": "～前に（做某事之前）",
+      "meaning": "表示先後順序：在某動作之前做另一件事。",
+      "connection": "動詞辭書形＋前に；名詞＋の＋前に。",
+      "usage": "前面動詞不因主句是過去式而改成た形。",
+      "examples": [
+        {
+          "jp": "出発する前に、時間を確認します。",
+          "zh": "出發前確認時間。"
+        },
+        {
+          "jp": "寝る前に、友達に連絡しました。",
+          "zh": "睡前聯絡了朋友。"
+        },
+        {
+          "jp": "試験の前に、準備をします。",
+          "zh": "考試前做準備。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-14",
+      "lastSeen": "2026-11-14"
+    },
+    {
+      "pattern": "～場合（は）（在……情況下）",
+      "meaning": "說明某種條件或情況成立時如何處理。",
+      "connection": "動詞普通形＋場合（は）；名詞＋の＋場合（は）。",
+      "usage": "今天先練習現在肯定、否定與名詞接續。",
+      "examples": [
+        {
+          "jp": "電車に遅れる場合は、連絡してください。",
+          "zh": "如果會趕不上電車，請聯絡。"
+        },
+        {
+          "jp": "行かない場合は、先に連絡します。",
+          "zh": "如果不去，會先聯絡。"
+        },
+        {
+          "jp": "雨の場合は、予定を変更します。",
+          "zh": "下雨的話，會更改計畫。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-14",
+      "lastSeen": "2026-11-14"
+    },
+    {
+      "pattern": "～た後で",
+      "meaning": "做完～之後",
+      "connection": "動詞た形＋後で／名詞＋の＋後で",
+      "usage": "先完成前一件事再做後一件事",
+      "examples": [
+        {
+          "jp": "予約した後で、友達に連絡します。",
+          "zh": "預約後聯絡朋友。"
+        },
+        {
+          "jp": "勉強した後で、寝ます。",
+          "zh": "讀完書後睡覺。"
+        },
+        {
+          "jp": "授業の後で、駅へ行きます。",
+          "zh": "下課後去車站。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-15",
+      "lastSeen": "2026-11-15"
+    },
+    {
+      "pattern": "～てから",
+      "meaning": "做完～之後再～",
+      "connection": "動詞て形＋から",
+      "usage": "強調兩動作先後；不是原因的から",
+      "examples": [
+        {
+          "jp": "時間を確認してから、出発します。",
+          "zh": "確認時間後出發。"
+        },
+        {
+          "jp": "朝ご飯を食べてから、学校へ行きます。",
+          "zh": "吃完早餐後去學校。"
+        },
+        {
+          "jp": "準備してから、友達に連絡します。",
+          "zh": "準備好再聯絡朋友。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-11-15",
+      "lastSeen": "2026-11-15"
+    },
+    {
+      "pattern": "～前に",
+      "meaning": "在～之前",
+      "connection": "動詞辭書形＋前に／名詞＋の＋前に",
+      "usage": "表示先後順序；前面的動作尚未發生",
+      "examples": [
+        {
+          "jp": "出発する前に、時間を確認します。",
+          "zh": "出發前確認時間。"
+        },
+        {
+          "jp": "寝る前に、勉強します。",
+          "zh": "睡前讀書。"
+        },
+        {
+          "jp": "試験の前に、準備します。",
+          "zh": "考試前做準備。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-15",
+      "lastSeen": "2026-11-15"
+    },
+    {
+      "pattern": "N5複習：～ないでください／～なければなりません",
+      "meaning": "請不要做／必須做",
+      "connection": "ない形＋でください；ない形去い＋ければなりません",
+      "usage": "前者禁止請求，後者義務，不要混淆。",
+      "examples": [
+        {
+          "jp": "ここで写真を撮らないでください。",
+          "zh": "請不要在這裡拍照。"
+        },
+        {
+          "jp": "明日は早く起きなければなりません。",
+          "zh": "明天必須早起。"
+        },
+        {
+          "jp": "受付で名前を書かなければなりません。",
+          "zh": "必須在櫃台寫名字。"
+        }
+      ],
+      "category": "請求・邀請",
+      "firstSeen": "2026-11-16",
+      "lastSeen": "2026-11-16"
+    },
+    {
+      "pattern": "～かどうか",
+      "meaning": "是否……；將是非疑問嵌入句中",
+      "connection": "動詞／い形容詞普通形＋かどうか；な形容詞／名詞去だ＋かどうか",
+      "usage": "常接確認する、分かる、聞く；不可用「だかどうか」。",
+      "examples": [
+        {
+          "jp": "試験があるかどうか、確認します。",
+          "zh": "確認是否有考試。"
+        },
+        {
+          "jp": "間に合うかどうか、分かりません。",
+          "zh": "不知道是否趕得上。"
+        },
+        {
+          "jp": "予約が必要かどうか、聞きます。",
+          "zh": "詢問是否需要預約。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-16",
+      "lastSeen": "2026-11-16"
+    },
+    {
+      "pattern": "～ても",
+      "meaning": "即使……也……；表示逆接讓步",
+      "connection": "動詞て形＋も；い形容詞去い＋くても；な形容詞／名詞＋でも",
+      "usage": "即使條件成立，後項仍成立；和許可的～てもいい不同。",
+      "examples": [
+        {
+          "jp": "雨が降っても、行きます。",
+          "zh": "即使下雨也會去。"
+        },
+        {
+          "jp": "高くても、買います。",
+          "zh": "即使很貴也會買。"
+        },
+        {
+          "jp": "日曜日でも、勉強します。",
+          "zh": "即使星期日也會讀書。"
+        }
+      ],
+      "category": "て形",
+      "firstSeen": "2026-11-16",
+      "lastSeen": "2026-11-16"
+    },
+    {
+      "pattern": "～場合（は）",
+      "meaning": "在……情況下；用於規則、通知與條件說明",
+      "connection": "動詞普通形＋場合；い形容詞＋場合；な形容詞＋な場合；名詞＋の場合",
+      "usage": "通知與規定常用，注意名詞要加の。",
+      "examples": [
+        {
+          "jp": "雨の場合は、試験を延期します。",
+          "zh": "下雨時會延後考試。"
+        },
+        {
+          "jp": "遅れる場合は、連絡してください。",
+          "zh": "若會遲到請聯絡。"
+        },
+        {
+          "jp": "会場が静かでない場合は、受付に言ってください。",
+          "zh": "如果會場不安靜，請告知櫃台。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-16",
+      "lastSeen": "2026-11-16"
+    },
+    {
+      "pattern": "形容詞與名詞＋と思います",
+      "meaning": "表達對事物的看法；注意な形容詞與名詞現在肯定需要だ。",
+      "connection": "い形容詞：高いと思います／高くないと思います；な形容詞：便利だと思います／便利じゃないと思います；名詞：学生だと思います。",
+      "usage": "不能說便利と思います、学生と思います（本課標準句型）。過去可用便利だったと思います。",
+      "examples": [
+        {
+          "jp": "このホテルは高いと思います。",
+          "zh": "我覺得這家飯店很貴。"
+        },
+        {
+          "jp": "この方法は便利だと思います。",
+          "zh": "我覺得這方法很方便。"
+        },
+        {
+          "jp": "あの人は学生だと思います。",
+          "zh": "我認為那個人是學生。"
+        }
+      ],
+      "category": "形容詞",
+      "firstSeen": "2026-11-17",
+      "lastSeen": "2026-11-17"
+    },
+    {
+      "pattern": "普通形＋と思います（動詞）",
+      "meaning": "表示『我認為／我覺得……』，也可表推測。",
+      "connection": "動詞普通形＋と思います；行くと思います／行かないと思います／行ったと思います／行かなかったと思います。",
+      "usage": "と思います前用普通形，不接行きますと思います。主句と思います保持禮貌形。",
+      "examples": [
+        {
+          "jp": "明日は雨が降ると思います。",
+          "zh": "我覺得明天會下雨。"
+        },
+        {
+          "jp": "彼は遅れないと思います。",
+          "zh": "我覺得他不會遲到。"
+        },
+        {
+          "jp": "友達はもう出発したと思います。",
+          "zh": "我想朋友已經出發了。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-11-17",
+      "lastSeen": "2026-11-17"
+    },
+    {
+      "pattern": "補課核心：普通形四格與五段／一段辨識",
+      "meaning": "普通形有非過去肯定、非過去否定、過去肯定、過去否定四格；る結尾不一定是一段動詞。",
+      "connection": "五段：帰る→帰らない→帰った→帰らなかった；一段：決める→決めない→決めた→決めなかった；不規則：する→しない→した→しなかった。",
+      "usage": "先辨動詞類別，再轉換時態；帰る是五段，決める是一段。",
+      "examples": [
+        {
+          "jp": "明日は早く帰る。",
+          "zh": "明天早點回去。"
+        },
+        {
+          "jp": "昨日は帰らなかった。",
+          "zh": "昨天沒回去。"
+        },
+        {
+          "jp": "予定を決めた。",
+          "zh": "決定了行程。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-17",
+      "lastSeen": "2026-11-17"
+    },
+    {
+      "pattern": "閱讀與聽解：時間線、否定與推測",
+      "meaning": "先找昨日／明日等時間詞，再區分說話者的想法和已確定的事實。",
+      "connection": "昨日＋た／なかった；明日＋る／ない；普通形＋と思います表示看法，不保證一定發生。",
+      "usage": "練習短篇行程通知，先讀題再抓時間、是否趕得上及是否改變計畫。",
+      "examples": [
+        {
+          "jp": "昨日は連絡しなかった。",
+          "zh": "昨天沒有聯絡。"
+        },
+        {
+          "jp": "明日は九時に出発すると思います。",
+          "zh": "我想明天九點出發。"
+        },
+        {
+          "jp": "電車に間に合わないと思います。",
+          "zh": "我覺得趕不上電車。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-11-17",
+      "lastSeen": "2026-11-17"
+    },
+    {
+      "pattern": "五段與一段：る動詞的ない形",
+      "meaning": "不能看到る就一律去る。切る、帰る是五段；借りる、決める、調べる是一段。",
+      "connection": "五段：切る→切らない、帰る→帰らない；一段：借りる→借りない、決める→決めない、調べる→調べない。",
+      "usage": "先記住常見例外，再練轉換。",
+      "examples": [
+        {
+          "jp": "今日は紙を切らない。",
+          "zh": "今天不剪紙。"
+        },
+        {
+          "jp": "明日は本を借りない。",
+          "zh": "明天不借書。"
+        },
+        {
+          "jp": "まだ時間を決めない。",
+          "zh": "還不決定時間。"
+        }
+      ],
+      "category": "ない形",
+      "firstSeen": "2026-11-19",
+      "lastSeen": "2026-11-19"
+    },
+    {
+      "pattern": "普通形四格：行く・食べる・する",
+      "meaning": "現在肯定用辭書形、否定用ない形；過去肯定用た形、過去否定用なかった。",
+      "connection": "行く／行かない／行った／行かなかった；食べる／食べない／食べた／食べなかった；する／しない／した／しなかった。",
+      "usage": "先判斷時間與肯否，再選動詞結尾；行く的た形是行った。",
+      "examples": [
+        {
+          "jp": "明日は学校に行く。",
+          "zh": "明天去學校。"
+        },
+        {
+          "jp": "昨日は学校に行かなかった。",
+          "zh": "昨天沒有去學校。"
+        },
+        {
+          "jp": "昨日は日本語を勉強した。",
+          "zh": "昨天學了日文。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-19",
+      "lastSeen": "2026-11-19"
+    },
+    {
+      "pattern": "～前に／～てから：先後順序",
+      "meaning": "前に表示在某事之前；てから表示做完某事之後再做另一事。",
+      "connection": "動詞辭書形＋前に；動詞て形＋から。例：出発する前に／確認してから。",
+      "usage": "時間順序題要看前後動作，不要只看句子排列。",
+      "examples": [
+        {
+          "jp": "出発する前に、時間を確認します。",
+          "zh": "出發前確認時間。"
+        },
+        {
+          "jp": "時間を確認してから、友達に連絡します。",
+          "zh": "確認時間後聯絡朋友。"
+        },
+        {
+          "jp": "勉強する前に、準備をします。",
+          "zh": "念書前先做準備。"
+        }
+      ],
+      "category": "時間・順序",
+      "firstSeen": "2026-11-19",
+      "lastSeen": "2026-11-19"
+    },
+    {
+      "pattern": "N5複習：～なければなりません／～なくてもいいです",
+      "meaning": "前者表示必須；後者表示不必。",
+      "connection": "ない形去い＋ければなりません／くてもいいです：行かない→行かなければなりません／行かなくてもいいです。",
+      "usage": "讀到否定形式時，仍須看整個句尾。",
+      "examples": [
+        {
+          "jp": "今日は勉強しなければなりません。",
+          "zh": "今天必須念書。"
+        },
+        {
+          "jp": "明日は学校に行かなくてもいいです。",
+          "zh": "明天不必去學校。"
+        },
+        {
+          "jp": "今日は早く帰らなくてもいいです。",
+          "zh": "今天不必早回家。"
+        }
+      ],
+      "category": "許可・禁止",
+      "firstSeen": "2026-11-20",
+      "lastSeen": "2026-11-20"
+    },
+    {
+      "pattern": "一段動詞：ない形與た形",
+      "meaning": "一段動詞去掉最後的る，加ない或た。",
+      "connection": "開ける→開けない／開けた；閉める→閉めない／閉めた；忘れる→忘れない／忘れた。",
+      "usage": "也可用ない→なかった構成過去否定。",
+      "examples": [
+        {
+          "jp": "窓を開けない。",
+          "zh": "不開窗。"
+        },
+        {
+          "jp": "ドアを閉めた。",
+          "zh": "關了門。"
+        },
+        {
+          "jp": "かぎを忘れなかった。",
+          "zh": "沒有忘記鑰匙。"
+        }
+      ],
+      "category": "ない形",
+      "firstSeen": "2026-11-20",
+      "lastSeen": "2026-11-20"
+    },
+    {
+      "pattern": "五段る動詞：ない形與た形",
+      "meaning": "五段る動詞的る變らない；過去形變った。",
+      "connection": "切る→切らない／切った；帰る→帰らない／帰った。",
+      "usage": "不要誤寫成切ない、帰た。",
+      "examples": [
+        {
+          "jp": "紙を切った。",
+          "zh": "剪了紙。"
+        },
+        {
+          "jp": "今日は帰らない。",
+          "zh": "今天不回家。"
+        },
+        {
+          "jp": "昨日は帰らなかった。",
+          "zh": "昨天沒有回家。"
+        }
+      ],
+      "category": "ない形",
+      "firstSeen": "2026-11-20",
+      "lastSeen": "2026-11-20"
+    },
+    {
+      "pattern": "五段與一段：る結尾不能只看外形",
+      "meaning": "切る、帰る屬五段；借りる、開ける、閉める、忘れる屬一段。",
+      "connection": "五段る→らない／った：切る→切らない→切った；一段去る＋ない／た：借りる→借りない→借りた。",
+      "usage": "先背常見例外，再判斷動詞類別。",
+      "examples": [
+        {
+          "jp": "紙を切らない。",
+          "zh": "不剪紙。"
+        },
+        {
+          "jp": "今日は早く帰った。",
+          "zh": "今天早點回家了。"
+        },
+        {
+          "jp": "本を借りた。",
+          "zh": "借了書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-20",
+      "lastSeen": "2026-11-20"
+    },
+    {
+      "pattern": "普通形四格：現在肯定、否定、過去肯定、否定",
+      "meaning": "以辭書形、ない形、た形、なかった表達四種時態／極性。",
+      "connection": "借りる／借りない／借りた／借りなかった；帰る／帰らない／帰った／帰らなかった。",
+      "usage": "與ます／ません／ました／ませんでした對照。",
+      "examples": [
+        {
+          "jp": "昨日は本を借りなかった。",
+          "zh": "昨天沒有借書。"
+        },
+        {
+          "jp": "明日は家に帰る。",
+          "zh": "明天回家。"
+        },
+        {
+          "jp": "昨日は早く帰った。",
+          "zh": "昨天早點回家了。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-20",
+      "lastSeen": "2026-11-20"
+    },
+    {
+      "pattern": "N5間隔複習：～てもいい／～てはいけない",
+      "meaning": "前者表示允許，後者表示禁止；和可能形的能力、條件不同。",
+      "connection": "使ってもいいです＝可以使用（被允許）；使えます＝能使用（有能力或條件）。",
+      "usage": "今天對照『許可』與『可能』，避免混淆。",
+      "examples": [
+        {
+          "jp": "このパソコンを使ってもいいです。",
+          "zh": "可以使用這台電腦（獲准）。"
+        },
+        {
+          "jp": "このパソコンが使えます。",
+          "zh": "能使用這台電腦。"
+        },
+        {
+          "jp": "ここで写真を撮ってはいけません。",
+          "zh": "這裡不可以拍照。"
+        }
+      ],
+      "category": "許可・禁止",
+      "firstSeen": "2026-11-21",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "pattern": "可能形入門：五段動詞",
+      "meaning": "表示能力或條件允許，五段動詞末尾う段變成同一行え段＋る。",
+      "connection": "読む→読める；話す→話せる；泳ぐ→泳げる；使う→使える。",
+      "usage": "可能形當作一段動詞活用：読める／読めない／読めた／読めなかった。能力的對象常用が。",
+      "examples": [
+        {
+          "jp": "日本語の本が読めます。",
+          "zh": "能讀日文書。"
+        },
+        {
+          "jp": "日本語が少し話せます。",
+          "zh": "會說一點日文。"
+        },
+        {
+          "jp": "今日は泳げません。",
+          "zh": "今天不能游泳。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-21",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "pattern": "可能形的肯定、否定、過去",
+      "meaning": "可能形本身可按一段動詞變化，普通形和禮貌形都要辨識。",
+      "connection": "読める→読めない→読めた→読めなかった；食べられる→食べられない→食べられた→食べられなかった。",
+      "usage": "区分読む（讀）與読める（能讀）；できない（不能做）與しない（不做）。",
+      "examples": [
+        {
+          "jp": "昨日は忙しくて、本が読めなかった。",
+          "zh": "昨天因為忙，沒辦法讀書。"
+        },
+        {
+          "jp": "今日は資料が読めます。",
+          "zh": "今天能讀資料。"
+        },
+        {
+          "jp": "昨日は参加できました。",
+          "zh": "昨天能參加。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-21",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "pattern": "可能形＋と思います",
+      "meaning": "普通形可能形後接と思います，表示認為能／不能做。",
+      "connection": "読めると思います／読めないと思います；参加できると思います。",
+      "usage": "普通形直接接と思います，不用在動詞後加だ。",
+      "examples": [
+        {
+          "jp": "明日は会議に参加できると思います。",
+          "zh": "我想明天能參加會議。"
+        },
+        {
+          "jp": "この漢字は読めないと思います。",
+          "zh": "我想這個漢字讀不出來。"
+        },
+        {
+          "jp": "日本語で話せると思います。",
+          "zh": "我想能用日文說。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-11-21",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "pattern": "可能形：一段及不規則動詞",
+      "meaning": "一段去る加られる；する→できる；来る（くる）→来られる（こられる）。",
+      "connection": "食べる→食べられる；見る→見られる；する→できる；来る→来られる。",
+      "usage": "本課以標準形食べられる為準；口語食べれる存在，但正式考試先熟記標準形。",
+      "examples": [
+        {
+          "jp": "この料理が食べられます。",
+          "zh": "能吃這道料理。"
+        },
+        {
+          "jp": "今日は会議に参加できません。",
+          "zh": "今天無法參加會議。"
+        },
+        {
+          "jp": "明日、学校に来られますか。",
+          "zh": "明天能來學校嗎？"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-21",
+      "lastSeen": "2026-11-21"
+    },
+    {
+      "pattern": "可能形複習：能力與許可的差異",
+      "meaning": "可能形表能力／客觀條件；～てもいい表允許。",
+      "connection": "読む→読める；食べる→食べられる；する→できる。",
+      "usage": "複習前日主題，不能把『會做』與『被允許做』混淆。",
+      "examples": [
+        {
+          "jp": "日本語が少し話せます。",
+          "zh": "會說一點日文。"
+        },
+        {
+          "jp": "このパソコンを使ってもいいです。",
+          "zh": "可以使用這台電腦（獲得允許）。"
+        },
+        {
+          "jp": "今日は会議に参加できません。",
+          "zh": "今天不能參加會議。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-22",
+      "lastSeen": "2026-11-22"
+    },
+    {
+      "pattern": "閱讀／聽解：先抓誰說、為何、何時",
+      "meaning": "遇到理由、引用、條件句，先找『說話者』『原因』『結果』。",
+      "connection": "と言いました＝他人說；ので＝因為；ば＝如果。",
+      "usage": "閱讀例句與文字模擬聽解，不宣稱有音檔。",
+      "examples": [
+        {
+          "jp": "田中さんは遅れると言いました。",
+          "zh": "田中說會遲到。"
+        },
+        {
+          "jp": "バスが遅れたので、会議に遅れました。",
+          "zh": "因為公車誤點，所以開會遲到了。"
+        },
+        {
+          "jp": "急げば、九時に間に合います。",
+          "zh": "如果趕快，就趕得上九點。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-22",
+      "lastSeen": "2026-11-22"
+    },
+    {
+      "pattern": "～と思います：表達自己的想法",
+      "meaning": "說話者認為／推測某事。",
+      "connection": "動詞普通形＋と思います；い形容詞普通形＋と思います；な形容詞／名詞現在肯定＋だと思います。",
+      "usage": "這是已學普通形的接續複習，作為本日意見表達的基礎。",
+      "examples": [
+        {
+          "jp": "明日は雨が降ると思います。",
+          "zh": "我想明天會下雨。"
+        },
+        {
+          "jp": "この駅は便利だと思います。",
+          "zh": "我認為這個車站很方便。"
+        },
+        {
+          "jp": "今日は間に合わないと思います。",
+          "zh": "我想今天趕不上。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-11-22",
+      "lastSeen": "2026-11-22"
+    },
+    {
+      "pattern": "～と言います：引用說過的話",
+      "meaning": "傳達某人說了什麼；直接引語與間接引語都可用。",
+      "connection": "普通形＋と言います／言いました；引用完整原話時可加「」。",
+      "usage": "注意『と思います』是自己想法，『と言いました』是他人說過的內容。",
+      "examples": [
+        {
+          "jp": "田中さんは明日来ると言いました。",
+          "zh": "田中說明天會來。"
+        },
+        {
+          "jp": "先生は「急いでください」と言いました。",
+          "zh": "老師說『請快一點』。"
+        },
+        {
+          "jp": "友達は今日は忙しいと言いました。",
+          "zh": "朋友說今天很忙。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-11-22",
+      "lastSeen": "2026-11-22"
+    },
+    {
+      "pattern": "～ので：表示原因、理由",
+      "meaning": "因為前項原因，所以後項結果；語氣通常較委婉。",
+      "connection": "動詞／い形容詞普通形＋ので；な形容詞／名詞＋な＋ので。",
+      "usage": "與已學『から』都能表原因；先掌握接續差異，勿把『便利だので』當正確。",
+      "examples": [
+        {
+          "jp": "時間がないので、急ぎます。",
+          "zh": "因為沒時間，所以趕快。"
+        },
+        {
+          "jp": "この駅は便利なので、よく使います。",
+          "zh": "因為這個車站方便，所以經常使用。"
+        },
+        {
+          "jp": "明日は試験なので、勉強します。",
+          "zh": "因為明天有考試，所以要讀書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-22",
+      "lastSeen": "2026-11-22"
+    },
+    {
+      "pattern": "～ば：五段動詞條件形入門",
+      "meaning": "如果符合某條件，就會有某結果。",
+      "connection": "五段動詞最後う段改え段＋ば：急ぐ→急げば、読む→読めば、行く→行けば。",
+      "usage": "今天只要求辨認五段動詞的ば形，其他類型之後再深入。",
+      "examples": [
+        {
+          "jp": "急げば、電車に間に合います。",
+          "zh": "如果趕快，就能趕上電車。"
+        },
+        {
+          "jp": "この資料を読めば、理由がわかります。",
+          "zh": "如果讀這份資料，就會知道理由。"
+        },
+        {
+          "jp": "早く行けば、会議に間に合います。",
+          "zh": "如果早點去，就趕得上會議。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-22",
+      "lastSeen": "2026-11-22"
+    },
+    {
+      "pattern": "N5複習：可能形與許可",
+      "meaning": "能做與可以做的差別",
+      "connection": "使える／使えます＝能力；使ってもいいです＝許可。",
+      "usage": "複習助詞：友達に連絡する、資料を読む。",
+      "examples": [
+        {
+          "jp": "このパソコンが使えます。",
+          "zh": "我會使用這臺電腦。"
+        },
+        {
+          "jp": "このパソコンを使ってもいいです。",
+          "zh": "可以使用這臺電腦。"
+        },
+        {
+          "jp": "友達に連絡します。",
+          "zh": "聯絡朋友。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-23",
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "pattern": "～と思います",
+      "meaning": "我認為、我推測",
+      "connection": "動詞／い形容詞普通形＋と思います；名詞／な形容詞現在肯定＋だと思います。",
+      "usage": "表達自己的想法，不等於轉述他人發言。",
+      "examples": [
+        {
+          "jp": "明日は雨が降ると思います。",
+          "zh": "我想明天會下雨。"
+        },
+        {
+          "jp": "この駅は便利だと思います。",
+          "zh": "我認為這個車站很方便。"
+        },
+        {
+          "jp": "今日は間に合わないと思います。",
+          "zh": "我想今天趕不上。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-11-23",
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "pattern": "～と言います／言いました",
+      "meaning": "說……、曾說……",
+      "connection": "普通形＋と言います／言いました；直接引述可用「……」と言いました。",
+      "usage": "引用或轉述別人說過的話。",
+      "examples": [
+        {
+          "jp": "田中さんは明日来ると言いました。",
+          "zh": "田中說明天會來。"
+        },
+        {
+          "jp": "先生は「急いでください」と言いました。",
+          "zh": "老師說「請快一點」。"
+        },
+        {
+          "jp": "友達は今日は忙しいと言いました。",
+          "zh": "朋友說今天很忙。"
+        }
+      ],
+      "category": "時態整理",
+      "firstSeen": "2026-11-23",
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "pattern": "～ので",
+      "meaning": "因為……",
+      "connection": "動詞／い形容詞普通形＋ので；名詞／な形容詞現在肯定＋なので。",
+      "usage": "說明原因，語氣通常比から委婉。",
+      "examples": [
+        {
+          "jp": "時間がないので、急ぎます。",
+          "zh": "因為沒時間，所以趕快。"
+        },
+        {
+          "jp": "この駅は便利なので、よく使います。",
+          "zh": "因為車站方便，所以經常使用。"
+        },
+        {
+          "jp": "明日は試験なので、勉強します。",
+          "zh": "因為明天有考試，所以念書。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-23",
+      "lastSeen": "2026-11-23"
+    },
+    {
+      "pattern": "～ば（五段動詞）",
+      "meaning": "如果……",
+      "connection": "五段動詞辭書形末尾う段改成同一行え段＋ば；急ぐ→急げば、読む→読めば、行く→行けば。",
+      "usage": "今天只練五段動詞條件形；表示假設條件。",
+      "examples": [
+        {
+          "jp": "急げば、電車に間に合います。",
+          "zh": "如果趕快，就能趕上電車。"
+        },
+        {
+          "jp": "この資料を読めば、理由がわかります。",
+          "zh": "如果讀這份資料，就會知道理由。"
+        },
+        {
+          "jp": "早く行けば、会議に間に合います。",
+          "zh": "如果早點去，就趕得上會議。"
+        }
+      ],
+      "category": "基礎句型",
+      "firstSeen": "2026-11-23",
+      "lastSeen": "2026-11-23"
     }
   ]
 }

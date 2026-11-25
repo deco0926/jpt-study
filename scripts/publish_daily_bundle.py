@@ -343,11 +343,40 @@ def plan_publication(paths, today, strict_date=None):
     return outputs
 
 
+def isolate_submissions(paths, today):
+    """Reject a whole date, never a partial exam, without blocking other dates."""
+    accepted, errors, dates = [], [], {}
+    for path in paths:
+        try:
+            bundle = read_json(path)
+            day = valid_date(bundle.get("date"))
+            require(day <= today, "不可發布未來日期")
+            if path.parent.name == "submissions":
+                require(path.stem == day, "交稿檔名必須與 bundle.date 一致")
+            validate_lesson(bundle.get("lesson"), day)
+            validate_exam(bundle.get("exam"), day)
+            for kind, key in (("lessons", "lesson"), ("exams", "exam")):
+                published = ROOT / "site" / kind / f"{day}.json"
+                require(not published.exists() or read_json(published) == bundle[key],
+                        f"禁止覆蓋已發布內容：{published}")
+            dates.setdefault(day, []).append((path, bundle))
+        except (ValueError, TypeError, KeyError, AttributeError) as error:
+            errors.append({"path": path.relative_to(ROOT).as_posix(), "error": str(error)})
+    for day, entries in sorted(dates.items()):
+        if any(value != entries[0][1] for _, value in entries):
+            errors.extend({"path": path.relative_to(ROOT).as_posix(), "error": f"同日交稿內容衝突：{day}"}
+                          for path, _ in entries)
+        else:
+            accepted.append(entries[0][0])
+    return accepted, errors
+
+
 def main():
     parser = argparse.ArgumentParser(description="Validate and publish immutable daily bundles")
     parser.add_argument("bundle", nargs="?", type=Path)
     parser.add_argument("--queue", action="store_true", help="Process legacy inbox and all dated submissions")
     parser.add_argument("--check", action="store_true", help="Validate without writing")
+    parser.add_argument("--isolate-invalid", action="store_true", help="Report invalid dates and publish other valid dates")
     args = parser.parse_args()
     today = datetime.now(TAIPEI_TIMEZONE).date().isoformat()
     if args.queue:
@@ -358,8 +387,17 @@ def main():
     else:
         paths = [args.bundle.resolve() if args.bundle else DEFAULT_BUNDLE]
         strict_date = os.environ.get("JPT_EXPECTED_DATE") or today
+    errors = []
+    if args.isolate_invalid:
+        require(args.queue, "--isolate-invalid 只能搭配 --queue")
+        paths, errors = isolate_submissions(paths, today)
+        for error in errors:
+            print(f"Rejected {error['path']}: {error['error']}")
     outputs = plan_publication(paths, today, strict_date)
     if not args.check:
+        if args.isolate_invalid:
+            report = ROOT / "site" / "publication-status.json"
+            outputs[report] = {"checkedOn": today, "rejected": errors}
         for path, content in outputs.items():
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(json.dumps(content, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")

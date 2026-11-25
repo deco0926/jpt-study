@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-19",
+  "title": "今日驗收",
+  "description": "N4 Day 2 補課：普通形、動詞分類、と思います、先後順序及N5複習。",
+  "passScore": 80,
+  "questions": [
+    {
+      "id": "q1",
+      "category": "kana",
+      "question": "「ヌ」的讀音？",
+      "options": [
+        "nu",
+        "su",
+        "shi",
+        "n"
+      ],
+      "answer": 0,
+      "explanation": "ヌ＝nu，與ス＝su區別。"
+    },
+    {
+      "id": "q2",
+      "category": "vocab",
+      "question": "「連絡」的意思？",
+      "options": [
+        "準備",
+        "聯絡",
+        "變更",
+        "確認"
+      ],
+      "answer": 1,
+      "explanation": "連絡（れんらく）＝聯絡。"
+    },
+    {
+      "id": "q3",
+      "category": "vocab",
+      "question": "「間に合う」表示？",
+      "options": [
+        "遲到",
+        "出發",
+        "趕得上",
+        "決定"
+      ],
+      "answer": 2,
+      "explanation": "間に合う（まにあう）＝趕得上。"
+    },
+    {
+      "id": "q4",
+      "category": "vocab",
+      "question": "「変更」的讀音？",
+      "options": [
+        "れんらく",
+        "かくにん",
+        "しゅっぱつ",
+        "へんこう"
+      ],
+      "answer": 3,
+      "explanation": "変更讀へんこう。"
+    },
+    {
+      "id": "q5",
+      "category": "grammar",
+      "question": "「行きませんでした」的普通形？",
+      "options": [
+        "行かなかった",
+        "行かない",
+        "行った",
+        "行く"
+      ],
+      "answer": 0,
+      "explanation": "過去否定用なかった。"
+    },
+    {
+      "id": "q6",
+      "category": "grammar",
+      "question": "「食べました」的普通形？",
+      "options": [
+        "食べる",
+        "食べた",
+        "食べない",
+        "食べなかった"
+      ],
+      "answer": 1,
+      "explanation": "過去肯定是食べた。"
+    },
+    {
+      "id": "q7",
+      "category": "grammar",
+      "question": "「切る」的ない形？",
+      "options": [
+        "切りない",
+        "切ない",
+        "切らない",
+        "切るない"
+      ],
+      "answer": 2,
+      "explanation": "切る是五段：切らない。"
+    },
+    {
+      "id": "q8",
+      "category": "grammar",
+      "question": "「借りる」的ない形？",
+      "options": [
+        "借らない",
+        "借りらない",
+        "借るない",
+        "借りない"
+      ],
+      "answer": 3,
+      "explanation": "借りる是一段：借りない。"
+    },
+    {
+      "id": "q9",
+      "category": "grammar",
+      "question": "「帰る」的ない形？",
+      "options": [
+        "帰らない",
+        "帰りない",
+        "帰ない",
+        "帰るない"
+      ],
+      "answer": 0,
+      "explanation": "帰る是五段：帰らない。"
+    },
+    {
+      "id": "q10",
+      "category": "grammar",
+      "question": "「準備が必要（　）と思います。」",
+      "options": [
+        "な",
+        "だ",
+        "に",
+        "で"
+      ],
+      "answer": 1,
+      "explanation": "必要是な形容詞，接と思います用だ。"
+    },
+    {
+      "id": "q11",
+      "category": "grammar",
+      "question": "「出発する前に、時間を確認します。」正確意思？",
+      "options": [
+        "確認後才出發這件事不存在",
+        "出發後確認",
+        "出發前確認時間",
+        "不必確認時間"
+      ],
+      "answer": 2,
+      "explanation": "辭書形＋前に＝在動作之前。"
+    },
+    {
+      "id": "q12",
+      "category": "grammar",
+      "question": "「時間を確認してから、連絡します。」先做什麼？",
+      "options": [
+        "聯絡",
+        "出發",
+        "決定",
+        "確認時間"
+      ],
+      "answer": 3,
+      "explanation": "てから表示完成前項後做後項。"
+    },
+    {
+      "id": "q13",
+      "category": "grammar",
+      "question": "「行かなくてもいいです」表示？",
+      "options": [
+        "不必去",
+        "必須去",
+        "正在去",
+        "已經去了"
+      ],
+      "answer": 0,
+      "explanation": "なくてもいい＝不做也可以。"
+    },
+    {
+      "id": "q14",
+      "category": "reading",
+      "question": "『明日は九時に駅で集合します。』集合地點？",
+      "options": [
+        "學校",
+        "車站",
+        "圖書館",
+        "公司"
+      ],
+      "answer": 1,
+      "explanation": "駅で集合＝在車站集合。"
+    },
+    {
+      "id": "q15",
+      "category": "reading",
+      "question": "『田中さんは予定を変更したので、友達に連絡しました。』田中做了什麼？",
+      "options": [
+        "取消考試",
+        "趕上電車",
+        "更改計畫並聯絡朋友",
+        "先出發後準備"
+      ],
+      "answer": 2,
+      "explanation": "変更した＝變更了；連絡しました＝聯絡了。"
+    }
+  ]
+}
